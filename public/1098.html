@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form 1098 (Mortgage Interest Statement) Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Form 1098 (Mortgage Interest Statement)? Plain-English explanation of Form 1098 (Mortgage Interest Statement) — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
+  <title>Form 1098 Explained in Plain English – TaxPlain</title>
+  <meta name="description" content="What is Form 1098? Plain-English guide to the Mortgage Interest Statement — who gets it, what every box means, how to use it on your taxes, and common mistakes to avoid. No tax jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://taxplain.co/1098">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
@@ -25,25 +28,46 @@
     .logo-text span { color: var(--accent); }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
@@ -54,49 +78,149 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Form 1098 (Mortgage Interest Statement)</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">Form 1098 (Mortgage Interest Statement)</em>?</h1>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Form 1098</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">Form 1098</em>?</h1>
     <span class="category-tag">Tax Form</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
     <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>Form 1098 (Mortgage Interest Statement)</strong> reports the mortgage interest you paid during the year — this information helps you claim the mortgage interest deduction.</p>
+      <div class="section-label">What this form is</div>
+      <p>Form 1098 is the Mortgage Interest Statement — a tax document your lender sends you every January showing how much mortgage interest you paid during the previous year. It's not a form you fill out or file yourself. Your lender files it with the IRS and sends you a copy for your records.</p>
+      <p>Why does it matter? Mortgage interest is one of the most valuable itemized deductions available to homeowners. If you paid significant mortgage interest in the past year and you itemize deductions on your 1040, Form 1098 is the document that unlocks that deduction.</p>
     </div>
 
     <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
+      <div class="section-label">Who receives this form</div>
       <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Homeowners who paid more than $600 in mortgage interest to a lender during the tax year.</p>
+        <div class="range-box blue">
+          <div class="range-box-label">✓ You'll receive a 1098 if...</div>
+          <p>You paid $600 or more in mortgage interest during the year on a loan secured by your primary home or a second home. Your lender is required by law to send it.</p>
         </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Automatically assuming the mortgage interest deduction helps you. With higher standard deductions, many homeowners actually save more by not itemizing.</p>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ You may not receive one if...</div>
+          <p>You paid less than $600 in interest, your loan is from a private individual (not a bank), or your mortgage is on a property that doesn't qualify as a home. You may still be able to deduct the interest — just without the form.</p>
+        </div>
+      </div>
+      <div class="timing-box">
+        <h3>📅 When to expect it</h3>
+        <p>Lenders must send Form 1098 by January 31 each year for the prior tax year. Check your mail and your lender's online portal. If you have multiple mortgages or a home equity loan, you may receive multiple 1098s.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What each box means</div>
+      <h2>Breaking down Form 1098</h2>
+      <p>The form has several boxes — here's what each one actually means in plain English:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Box 1 — Mortgage interest received</strong> — The total interest you paid on your mortgage during the year. This is the main number you'll use on your tax return.</li>
+        <li><strong>Box 2 — Outstanding mortgage principal</strong> — Your loan balance as of January 1 of the tax year (or the origination date if it's a new loan). Used to determine if your loan qualifies for the full deduction.</li>
+        <li><strong>Box 3 — Mortgage origination date</strong> — When your loan began. Affects which tax rules apply to your deduction.</li>
+        <li><strong>Box 4 — Refund of overpaid interest</strong> — If your lender refunded any interest you previously overpaid, it shows here. This amount may need to be added back to your income.</li>
+        <li><strong>Box 5 — Mortgage insurance premiums</strong> — Private mortgage insurance (PMI) you paid. May be deductible depending on your income and current tax law.</li>
+        <li><strong>Box 6 — Points paid on purchase</strong> — Mortgage points you paid when taking out the loan. Points on a home purchase are typically fully deductible in the year paid.</li>
+        <li><strong>Box 7 — Address of property securing the mortgage</strong> — Confirms which property the mortgage is for.</li>
+        <li><strong>Box 8 — Lender's information</strong> — Your lender's name, address, and tax ID number.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">How to use Form 1098 on your taxes</div>
+      <p>You only benefit from Form 1098 if you itemize deductions on Schedule A of your 1040 — meaning your total itemized deductions (mortgage interest + state taxes + charitable donations + medical expenses) exceed the standard deduction ($14,600 single / $29,200 married for 2024).</p>
+      <p>If you itemize, enter the Box 1 amount on Schedule A, Line 8a. If you also paid points (Box 6), those go on Line 8a as well. Your tax software will walk you through this automatically if you enter the 1098 information when prompted.</p>
+      <div class="timing-box">
+        <h3>💡 Standard vs. itemized deduction</h3>
+        <p>Most homeowners assume they should itemize because of mortgage interest — but run the numbers first. If your mortgage interest plus other deductions doesn't exceed the standard deduction, you're better off taking the standard deduction and ignoring the 1098 for deduction purposes. Your tax software will compare both and pick the better option.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Deducting on the wrong loan</div>
+          <p>The mortgage interest deduction only applies to loans secured by a qualified home — your primary residence and one second home. Interest on a third property or investment property follows different rules.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Ignoring the loan limit</div>
+          <p>For mortgages taken out after December 15, 2017, you can only deduct interest on up to $750,000 of mortgage debt ($375,000 if married filing separately). Older loans have a $1 million limit.</p>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top: 16px;">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Missing multiple 1098s</div>
+          <p>If you refinanced during the year, you'll get a 1098 from your old lender and your new lender. Both amounts of interest are deductible — don't forget to include both.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Skipping Box 4</div>
+          <p>If Box 4 shows a refund of overpaid interest, that amount may need to be reported as income if you deducted it in a prior year. Easy to miss and easy to get wrong.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Your lender sends you a 1098 each January showing total interest paid, which you can deduct if you itemize deductions. Points paid on a new mortgage may also be deductible.</p>
+      <div class="section-label">What to do right now</div>
+      <div class="next-steps">
+        Check your mail and your lender's online portal for your 1098 — it should arrive by January 31. When you sit down to file, enter the Box 1 amount into your tax software when it asks about mortgage interest. The software will determine whether itemizing beats your standard deduction. If you refinanced, have both 1098s ready. If you're unsure whether your loan qualifies or whether itemizing makes sense, a tax professional can run the comparison for you in minutes.
+      </div>
     </div>
 
     <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">You can only benefit from the 1098 if you itemize deductions on Schedule A rather than taking the standard deduction. Compare your total itemized deductions to the standard deduction to see which saves you more. A tax professional can help you decide.</div>
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Should I itemize this year, or is the standard deduction still better even with my mortgage interest?</li>
+        <li><span class="q-num">02</span>I refinanced this year — do I have two 1098s to deal with, and how do I handle both?</li>
+        <li><span class="q-num">03</span>My mortgage balance is over $750,000 — how does the loan limit affect my deduction?</li>
+        <li><span class="q-num">04</span>Can I deduct the mortgage interest on my second home or vacation property?</li>
+        <li><span class="q-num">05</span>I paid PMI this year — is that deductible, and does my income affect eligibility?</li>
+        <li><span class="q-num">06</span>I have a home equity loan — is that interest still deductible after the 2017 tax law changes?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Do I have to file Form 1098 with my tax return?</div>
+        <div class="faq-a">No. Form 1098 is sent to you for your records — you don't attach it to your return. Your lender already sent a copy to the IRS. You simply use the numbers from the form when filling out Schedule A if you itemize.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if I never received my Form 1098?</div>
+        <div class="faq-a">Contact your lender directly — they're required to send it by January 31. Most lenders also make it available in your online account. If your lender isn't required to send one (loans under $600 in interest), check your monthly statements to calculate the total interest paid.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is home equity loan interest still deductible?</div>
+        <div class="faq-a">Only if the loan was used to buy, build, or substantially improve the home that secures the loan. Since the 2017 Tax Cuts and Jobs Act, you can no longer deduct home equity interest used for other purposes like paying off credit cards or buying a car.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I deduct mortgage interest if I'm not on the loan but I made the payments?</div>
+        <div class="faq-a">Generally no — you must be legally obligated on the loan and actually make the payments to claim the deduction. There are limited exceptions, such as when a co-owner pays more than their share, so consult a tax professional if your situation is complicated.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between Form 1098 and Form 1098-E?</div>
+        <div class="faq-a">Form 1098 covers mortgage interest on a home loan. Form 1098-E is a completely separate form that reports student loan interest paid during the year. They look similar but serve very different purposes — make sure you're using the right one.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/1040" class="related-chip">Form 1040 →</a>
+        <a href="/schedule-a" class="related-chip">Schedule A →</a>
+        <a href="/1098-e" class="related-chip">Form 1098-E →</a>
+        <a href="/1099-int" class="related-chip">Form 1099-INT →</a>
+        <a href="/w2" class="related-chip">Form W-2 →</a>
+        <a href="/1040-es" class="related-chip">Form 1040-ES →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
+      <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
 
     <footer>
       <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
+      <span>Understand your taxes. No accountant required.</span>
     </footer>
   </div>
 </body>
