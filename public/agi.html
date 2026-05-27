@@ -1,103 +1,717 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGI (Adjusted Gross Income) Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is AGI (Adjusted Gross Income)? Plain-English explanation of AGI (Adjusted Gross Income) — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/agi">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is Adjusted Gross Income (AGI)? – TaxPlain</title>
+<meta name="description" content="What is Adjusted Gross Income (AGI)? Plain-English guide to how AGI works, how it's calculated, why it matters for taxes, and how to lower it legally. No tax jargon.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxplain.co/agi">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #1B4B8A;
+--accent-light: #EAF0FA;
+--accent-border: #B5CEFA;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.warn {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box.blue {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.warn .range-box-label {
+color: var(--warn);
+}
+
+.range-box.blue .range-box-label {
+color: var(--accent);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.timing-box {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 18px 20px;
+margin-top: 16px;
+}
+
+.timing-box h3 {
+font-size: 14px;
+color: var(--amber);
+font-family: 'DM Mono', monospace;
+letter-spacing: 0.5px;
+margin-bottom: 8px;
+}
+
+.timing-box p {
+font-size: 14px;
+color: #78350F;
+line-height: 1.65;
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
-      <a href="/" class="logo-text">tax<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; AGI (Adjusted Gross Income)</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">AGI (Adjusted Gross Income)</em>?</h1>
-    <span class="category-tag">Tax Term</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
-    <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>AGI (Adjusted Gross Income)</strong> your total income minus specific above-the-line deductions — it's the starting point for calculating most tax credits and deductions.</p>
-    </div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
-      <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Every taxpayer — AGI appears on your Form 1040 and affects eligibility for dozens of credits, deductions, and programs.</p>
-        </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Confusing AGI with taxable income. AGI is your income after certain deductions but before the standard or itemized deduction — your taxable income is lower still.</p>
-        </div>
-      </div>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
+</svg>
+</div>
 
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Lower AGI is almost always better. It unlocks more credits, increases deduction limits, and can affect your eligibility for financial aid, insurance subsidies, and Medicare premiums.</p>
-    </div>
+<a href="/" class="logo-text">tax<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">Look for above-the-line deductions that reduce your AGI — contributions to traditional IRAs, HSAs, student loan interest, and self-employed health insurance premiums all lower AGI. A tax professional can help you identify every legal opportunity to reduce your AGI.</div>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/guides">Tax Guides</a> &rsaquo;
+Adjusted Gross Income
+</p>
 
-    <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
-      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
+<h1>
+What is<br>
+<em style="font-style:italic;color:var(--accent)">Adjusted Gross Income (AGI)</em>?
+</h1>
 
-    <footer>
-      <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
-    </footer>
-  </div>
+<span class="category-tag">Tax Term</span>
+
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong>
+TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
+</div>
+
+<div class="card">
+<div class="section-label">What AGI means</div>
+
+<p>
+Adjusted Gross Income — usually shortened to AGI — is one of the most important numbers on your tax return. It's your total income for the year after subtracting certain IRS-approved adjustments, but before taking the standard deduction or itemized deductions.
+</p>
+
+<p>
+Think of AGI as the IRS's "starting point" for your taxes. Many credits, deductions, and tax benefits are based on this number. Lower AGI often means lower taxes and more eligibility for tax breaks.
+</p>
+</div>
+
+<div class="card">
+<div class="section-label">Simple AGI formula</div>
+
+<h2>How AGI is calculated</h2>
+
+<p>
+The formula itself is straightforward:
+</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+<li><strong>Total income</strong> — Wages, freelance income, investment income, retirement income, rental income, unemployment, and more</li>
+<li><strong>Minus adjustments</strong> — Certain deductions the IRS lets you subtract before calculating taxable income</li>
+<li><strong>Equals AGI</strong> — The number used throughout the rest of your return</li>
+</ul>
+
+<div class="timing-box">
+<h3>💡 Example</h3>
+<p>
+If you earned $80,000 from your job and contributed $5,000 to a deductible traditional IRA, your AGI would generally be around $75,000.
+</p>
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">Common adjustments that reduce AGI</div>
+
+<div class="two-col">
+
+<div class="range-box blue">
+<div class="range-box-label">✓ Common deductions</div>
+
+<ul class="symptom-list">
+<li>Traditional IRA contributions</li>
+<li>HSA contributions</li>
+<li>Student loan interest</li>
+<li>Self-employed health insurance</li>
+<li>Half of self-employment tax</li>
+<li>Educator expenses</li>
+</ul>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">↑ Usually not included</div>
+
+<ul class="symptom-list">
+<li>Mortgage interest</li>
+<li>Charitable donations</li>
+<li>Property taxes</li>
+<li>Medical expenses</li>
+<li>State income taxes</li>
+<li>Most work expenses</li>
+</ul>
+</div>
+
+</div>
+
+<p style="margin-top:18px;">
+Those second-category deductions are usually itemized deductions, which happen later on the return after AGI is already calculated.
+</p>
+</div>
+
+<div class="card">
+<div class="section-label">Why AGI matters</div>
+
+<h2>Your AGI controls a lot</h2>
+
+<p>
+AGI affects far more than just your tax bill. Many tax breaks phase out or disappear once your AGI gets too high.
+</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+<li><strong>IRA deductions</strong> — Higher AGI can reduce or eliminate deductibility</li>
+<li><strong>Roth IRA eligibility</strong> — Income limits are based on modified AGI</li>
+<li><strong>Education credits</strong> — American Opportunity and Lifetime Learning Credits use AGI thresholds</li>
+<li><strong>Child Tax Credit</strong> — Begins phasing out at higher incomes</li>
+<li><strong>Premium tax credits</strong> — Health insurance subsidies are tied directly to income</li>
+<li><strong>Student loan repayment plans</strong> — Often use AGI to calculate monthly payments</li>
+<li><strong>IRS identity verification</strong> — Your prior-year AGI is commonly used when e-filing</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="section-label">Where to find AGI</div>
+
+<p>
+Your AGI appears directly on Form 1040. For most recent versions of the return, it's located near the bottom of the first page before deductions and taxable income are calculated.
+</p>
+
+<p>
+If you're trying to e-file and the IRS asks for your prior-year AGI, you can usually find it on last year's return or in your tax software account.
+</p>
+
+<div class="timing-box">
+<h3>📄 Important</h3>
+<p>
+AGI and taxable income are NOT the same thing. Taxable income is usually lower because it subtracts either the standard deduction or itemized deductions after AGI is calculated.
+</p>
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">Common AGI mistakes</div>
+
+<div class="two-col">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Confusing AGI with take-home pay</div>
+
+<p>
+AGI is not what hits your bank account. It includes pre-tax and taxable income before withholding and many payroll deductions.
+</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Forgetting adjustments</div>
+
+<p>
+People commonly miss deductions like HSA contributions, self-employed health insurance, or deductible IRA contributions that reduce AGI directly.
+</p>
+</div>
+
+</div>
+
+<div class="two-col" style="margin-top:16px;">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Using the wrong year's AGI</div>
+
+<p>
+When verifying an e-file return, the IRS wants your prior year's AGI — not your current year's estimate.
+</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Mixing up AGI and MAGI</div>
+
+<p>
+Some tax rules use Modified Adjusted Gross Income (MAGI), which adds certain deductions back into AGI calculations.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">What to do right now</div>
+
+<div class="next-steps">
+Before filing your taxes, check whether you're missing any above-the-line deductions that reduce AGI directly. Lowering AGI can unlock additional credits, reduce student loan payments, increase healthcare subsidies, and lower your overall tax bill. Even relatively small adjustments can have a ripple effect throughout your return.
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">Questions to ask your tax professional</div>
+
+<ul class="questions-list">
+
+<li>
+<span class="q-num">01</span>
+Am I eligible for any above-the-line deductions that reduce AGI directly?
+</li>
+
+<li>
+<span class="q-num">02</span>
+Would contributing to a traditional IRA or HSA lower my taxes this year?
+</li>
+
+<li>
+<span class="q-num">03</span>
+How does my AGI affect my eligibility for credits or deductions?
+</li>
+
+<li>
+<span class="q-num">04</span>
+Do I need to estimate AGI for quarterly taxes or repayment plans?
+</li>
+
+<li>
+<span class="q-num">05</span>
+What is my modified AGI (MAGI), and when does it matter?
+</li>
+
+<li>
+<span class="q-num">06</span>
+Could lowering AGI help me qualify for healthcare subsidies or education credits?
+</li>
+
+</ul>
+</div>
+
+<div class="card">
+
+<div class="section-label">Frequently asked questions</div>
+
+<div class="faq-item">
+<div class="faq-q">Is AGI the same as taxable income?</div>
+
+<div class="faq-a">
+No. AGI is calculated before subtracting the standard deduction or itemized deductions. Taxable income is what remains afterward and is the amount actually used to calculate income tax.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">What is a good AGI?</div>
+
+<div class="faq-a">
+There's no universal "good" AGI. Lower AGI can reduce taxes and increase eligibility for benefits, but it depends entirely on your financial situation and goals.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can I lower my AGI after the year ends?</div>
+
+<div class="faq-a">
+Sometimes. Contributions to traditional IRAs and HSAs can often still be made until the tax filing deadline and counted toward the previous tax year.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Why does the IRS ask for my AGI when e-filing?</div>
+
+<div class="faq-a">
+The IRS uses prior-year AGI as an identity verification tool to help prevent fraudulent returns from being filed in your name.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">What is modified AGI (MAGI)?</div>
+
+<div class="faq-a">
+MAGI is a variation of AGI used for certain tax calculations. It starts with AGI and adds back specific deductions or exclusions depending on the tax rule involved.
+</div>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Related tax guides</div>
+
+<div class="related">
+<a href="/1040" class="related-chip">Form 1040 →</a>
+<a href="/w2" class="related-chip">Form W-2 →</a>
+<a href="/1099" class="related-chip">Form 1099 →</a>
+<a href="/schedule-a" class="related-chip">Schedule A →</a>
+<a href="/schedule-c" class="related-chip">Schedule C →</a>
+<a href="/1040-es" class="related-chip">Form 1040-ES →</a>
+</div>
+
+</div>
+
+<div class="tool-cta">
+<h3>Decode any tax form instantly</h3>
+<p>
+Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
+</p>
+
+<a href="/">Open the Decoder →</a>
+</div>
+
+<footer>
+<span>taxplain.co</span>
+<span>Understand your taxes. No accountant required.</span>
+</footer>
+
+</div>
+
 </body>
 </html>
