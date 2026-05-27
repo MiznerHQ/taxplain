@@ -1,103 +1,699 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>401(k) Contribution Limits & Tax Rules Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is 401(k) Contribution Limits & Tax Rules? Plain-English explanation of 401(k) Contribution Limits & Tax Rules — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/401k">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>401(k) Explained in Plain English – TaxPlain</title>
+<meta name="description" content="What is a 401(k)? Plain-English guide to retirement plans, employer matching, taxes, contribution limits, Roth vs Traditional, penalties, and common mistakes. No finance jargon.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxplain.co/401k">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #FFFFFF;
+  --ink: #0D1B2A;
+  --muted: #6B7A8D;
+  --accent: #1B4B8A;
+  --accent-light: #EAF0FA;
+  --accent-border: #B5CEFA;
+  --warn: #993C1D;
+  --warn-light: #FAECE7;
+  --warn-border: #F5C4B3;
+  --success-light: #EAF3DE;
+  --success-border: #C0DD97;
+  --success-text: #27500A;
+  --amber: #92400E;
+  --amber-light: #FEF3C7;
+  --amber-border: #F59E0B;
+  --border: #DDE3EC;
+  --white: #FFFFFF;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.logo-mark {
+  width: 32px;
+  height: 32px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-mark svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+}
+
+.logo-text {
+  font-family: 'DM Mono', monospace;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.logo-text span {
+  color: var(--accent);
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(20px, 3vw, 26px);
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.category-tag {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.disclaimer {
+  background: var(--amber-light);
+  border: 1px solid var(--amber-border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 36px;
+  font-size: 13px;
+  color: var(--amber);
+  line-height: 1.5;
+}
+
+.card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+p + p {
+  margin-top: 14px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.range-box {
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.range-box.warn {
+  background: var(--warn-light);
+  border: 1px solid var(--warn-border);
+}
+
+.range-box.blue {
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.range-box.warn .range-box-label {
+  color: var(--warn);
+}
+
+.range-box.blue .range-box-label {
+  color: var(--accent);
+}
+
+.range-box p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.symptom-list {
+  list-style: none;
+  padding: 0;
+}
+
+.symptom-list li {
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.6;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+  border-bottom: none;
+}
+
+.symptom-list li::before {
+  content: "→ ";
+  color: var(--muted);
+}
+
+.timing-box {
+  background: var(--amber-light);
+  border: 1px solid var(--amber-border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-top: 16px;
+}
+
+.timing-box h3 {
+  font-size: 14px;
+  color: var(--amber);
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.timing-box p {
+  font-size: 14px;
+  color: #78350F;
+  line-height: 1.65;
+}
+
+.next-steps {
+  background: var(--success-light);
+  border: 1px solid var(--success-border);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--success-text);
+}
+
+.questions-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.questions-list li {
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.65;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 10px;
+}
+
+.questions-list li:last-child {
+  border-bottom: none;
+}
+
+.q-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 500;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.faq-item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-q {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.faq-a {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.tool-cta {
+  background: var(--accent);
+  color: white;
+  border-radius: 12px;
+  padding: 28px;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.tool-cta h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.tool-cta p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 18px;
+  color: white;
+}
+
+.tool-cta a {
+  display: inline-block;
+  background: white;
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+}
+
+.related {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.related-chip {
+  display: block;
+  padding: 12px 16px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--ink);
+  font-family: 'DM Mono', monospace;
+  transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
-      <a href="/" class="logo-text">tax<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; 401(k) Contribution Limits & Tax Rules</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">401(k) Contribution Limits & Tax Rules</em>?</h1>
-    <span class="category-tag">Retirement</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
-    <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>401(k) Contribution Limits & Tax Rules</strong> a workplace retirement savings account that lets you invest pre-tax dollars, reducing your taxable income today.</p>
-    </div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
-      <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Employees whose employers offer a 401(k) plan — contributions reduce your taxable income dollar for dollar up to the annual limit.</p>
-        </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Not contributing enough to get the full employer match. Failing to capture the match is leaving part of your compensation on the table.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>For 2024, you can contribute up to $23,000 ($30,500 if you're 50 or older). Contributions are pre-tax, meaning you don't pay income tax on that money until you withdraw it in retirement.</p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">Contribute at least enough to get your full employer match — that's free money. Consider maxing out your contribution if possible, especially if you're in a high tax bracket. A tax professional can help you decide between traditional and Roth 401(k) options.</div>
-    </div>
-
-    <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
-      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
-
-    <footer>
-      <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
-    </footer>
+<nav>
+  <div class="logo-mark">
+    <svg viewBox="0 0 24 24">
+      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
+    </svg>
   </div>
+
+  <a href="/" class="logo-text">tax<span>plain</span></a>
+</nav>
+
+<p class="breadcrumb">
+  <a href="/">Home</a> &rsaquo;
+  <a href="/guides">Tax Guides</a> &rsaquo;
+  401(k)
+</p>
+
+<h1>What is a<br><em style="font-style:italic;color:var(--accent)">401(k)</em>?</h1>
+
+<span class="category-tag">Retirement Account</span>
+
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified financial advisor or tax professional about your specific situation.
+</div>
+
+<div class="card">
+  <div class="section-label">What this account is</div>
+
+  <p>
+    A 401(k) is an employer-sponsored retirement savings account that lets you invest money for retirement while getting tax advantages from the IRS.
+  </p>
+
+  <p>
+    Think of it as a long-term investing bucket attached to your job. Money goes in from your paycheck automatically, grows over time through investments like mutual funds or index funds, and is generally meant to stay untouched until retirement age.
+  </p>
+
+  <p>
+    The biggest reason people use a 401(k): taxes. Traditional 401(k) contributions reduce your taxable income today, while Roth 401(k) contributions can allow tax-free withdrawals later in retirement.
+  </p>
+</div>
+
+<div class="card">
+
+  <div class="section-label">How it works</div>
+
+  <div class="two-col">
+
+    <div class="range-box blue">
+      <div class="range-box-label">✓ Traditional 401(k)</div>
+      <p>
+        Contributions are made before taxes. You pay less income tax today, but withdrawals in retirement are taxed as ordinary income.
+      </p>
+    </div>
+
+    <div class="range-box blue">
+      <div class="range-box-label">✓ Roth 401(k)</div>
+      <p>
+        Contributions are made after taxes. You don't get a deduction now, but qualified withdrawals in retirement are generally tax-free.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="timing-box">
+    <h3>📅 2024 contribution limits</h3>
+
+    <p>
+      Most employees can contribute up to $23,000 per year to a 401(k). If you're age 50 or older, you can contribute an additional $7,500 catch-up contribution for a total of $30,500.
+    </p>
+  </div>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">Why employer matching matters</div>
+
+  <h2>The closest thing to free money</h2>
+
+  <p>
+    Many employers match part of your contributions. Example: "100% match up to 4%" means if you contribute 4% of your salary, your employer contributes another 4%.
+  </p>
+
+  <p>
+    That's an immediate 100% return on your money before any investment growth. Failing to contribute enough to get the full match is one of the most expensive financial mistakes employees make.
+  </p>
+
+  <ul class="symptom-list" style="margin-top: 12px;">
+    <li><strong>Employee contribution</strong> — Money deducted from your paycheck</li>
+    <li><strong>Employer match</strong> — Extra money your employer adds</li>
+    <li><strong>Vesting schedule</strong> — Rules determining when employer contributions fully belong to you</li>
+    <li><strong>Investment options</strong> — Funds where your money is invested</li>
+    <li><strong>Automatic payroll deductions</strong> — Contributions happen automatically each pay period</li>
+  </ul>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">Common investment choices</div>
+
+  <p>
+    Your 401(k) usually offers a menu of investments. Most people choose combinations of:
+  </p>
+
+  <ul class="symptom-list" style="margin-top: 12px;">
+    <li><strong>Target-date funds</strong> — Automatically become more conservative as retirement approaches</li>
+    <li><strong>Index funds</strong> — Track major markets like the S&amp;P 500 with low fees</li>
+    <li><strong>Bond funds</strong> — Generally lower risk and lower return</li>
+    <li><strong>Stock funds</strong> — Higher long-term growth potential with more volatility</li>
+    <li><strong>International funds</strong> — Exposure to companies outside the U.S.</li>
+  </ul>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">Common mistakes to avoid</div>
+
+  <div class="two-col">
+
+    <div class="range-box warn">
+      <div class="range-box-label">⚠ Missing the Match</div>
+
+      <p>
+        Not contributing enough to receive the full employer match means walking away from free compensation.
+      </p>
+    </div>
+
+    <div class="range-box warn">
+      <div class="range-box-label">⚠ Cashing Out Early</div>
+
+      <p>
+        Withdrawing before age 59½ usually triggers taxes plus a 10% early withdrawal penalty.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="two-col" style="margin-top: 16px;">
+
+    <div class="range-box warn">
+      <div class="range-box-label">⚠ Ignoring Fees</div>
+
+      <p>
+        High investment fees quietly reduce long-term growth. Even a 1% fee difference can cost tens of thousands over decades.
+      </p>
+    </div>
+
+    <div class="range-box warn">
+      <div class="range-box-label">⚠ Never Increasing Contributions</div>
+
+      <p>
+        Many workers stay at the same contribution rate for years. Gradually increasing contributions after raises can dramatically grow retirement savings.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">What happens if you leave your job</div>
+
+  <p>
+    Your 401(k) doesn't disappear when you quit or change employers. Usually you have four options:
+  </p>
+
+  <ul class="symptom-list" style="margin-top: 12px;">
+    <li><strong>Leave it where it is</strong> — Keep the account with your former employer's plan</li>
+    <li><strong>Roll it into a new employer's 401(k)</strong> — Consolidate accounts</li>
+    <li><strong>Roll it into an IRA</strong> — More investment flexibility and control</li>
+    <li><strong>Cash it out</strong> — Usually the worst financial option because of taxes and penalties</li>
+  </ul>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">What to do right now</div>
+
+  <div class="next-steps">
+    If your employer offers a 401(k) match, contribute at least enough to receive the full match as soon as possible. If you're unsure how to invest, a low-cost target-date fund is often a reasonable default starting point for beginners. The most important factor for retirement wealth is usually consistency and time — not picking perfect investments.
+  </div>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">Questions to ask your HR department or advisor</div>
+
+  <ul class="questions-list">
+
+    <li><span class="q-num">01</span>Does my employer offer a matching contribution, and how does it work?</li>
+
+    <li><span class="q-num">02</span>What investment fees am I paying inside the plan?</li>
+
+    <li><span class="q-num">03</span>Should I choose Traditional or Roth contributions based on my tax bracket?</li>
+
+    <li><span class="q-num">04</span>What happens to my account if I leave the company?</li>
+
+    <li><span class="q-num">05</span>Am I fully vested in employer contributions yet?</li>
+
+    <li><span class="q-num">06</span>Can I increase my contribution percentage automatically each year?</li>
+
+  </ul>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">Frequently asked questions</div>
+
+  <div class="faq-item">
+    <div class="faq-q">Is a 401(k) the same as a pension?</div>
+
+    <div class="faq-a">
+      No. A pension is usually funded and managed by an employer with guaranteed retirement payments. A 401(k) is primarily funded by the employee, and the retirement balance depends on contributions plus investment performance.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Can I lose money in a 401(k)?</div>
+
+    <div class="faq-a">
+      Yes. Most 401(k) money is invested in the stock or bond market, so balances can rise and fall over time. Long-term investing historically performs better than short-term investing, but no investment is guaranteed.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Can I borrow from my 401(k)?</div>
+
+    <div class="faq-a">
+      Some plans allow 401(k) loans, but rules vary by employer. If you leave your job before repaying the loan, the remaining balance may become taxable and subject to penalties.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What age can I withdraw money without penalties?</div>
+
+    <div class="faq-a">
+      Generally age 59½. Traditional 401(k) withdrawals are still taxable income, but the additional 10% early withdrawal penalty usually disappears after that age.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What's the difference between a 401(k) and an IRA?</div>
+
+    <div class="faq-a">
+      A 401(k) is employer-sponsored with higher contribution limits. An IRA is an individual retirement account you open yourself. Many people use both together.
+    </div>
+  </div>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">Related tax forms</div>
+
+  <div class="related">
+    <a href="/1040" class="related-chip">Form 1040 →</a>
+    <a href="/w4" class="related-chip">Form W-4 →</a>
+    <a href="/1099-r" class="related-chip">Form 1099-R →</a>
+    <a href="/ira" class="related-chip">IRA →</a>
+    <a href="/roth-ira" class="related-chip">Roth IRA →</a>
+    <a href="/1040-es" class="related-chip">Form 1040-ES →</a>
+  </div>
+
+</div>
+
+<div class="tool-cta">
+
+  <h3>Decode any tax form instantly</h3>
+
+  <p>
+    Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
+  </p>
+
+  <a href="/">Open the Decoder →</a>
+
+</div>
+
+<footer>
+  <span>taxplain.co</span>
+  <span>Understand your taxes. No accountant required.</span>
+</footer>
+
+</div>
+
 </body>
 </html>
