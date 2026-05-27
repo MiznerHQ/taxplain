@@ -1,103 +1,700 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CP2000 Notice Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is CP2000 Notice? Plain-English explanation of CP2000 Notice — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/cp2000">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CP2000 Notice Explained in Plain English – TaxPlain</title>
+<meta name="description" content="What is IRS Notice CP2000? Plain-English guide to why you received it, what it means, deadlines, penalties, how to respond, and what to do next. No tax jargon.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxplain.co/cp2000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #1B4B8A;
+--accent-light: #EAF0FA;
+--accent-border: #B5CEFA;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.warn {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box.blue {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.warn .range-box-label {
+color: var(--warn);
+}
+
+.range-box.blue .range-box-label {
+color: var(--accent);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.timing-box {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 18px 20px;
+margin-top: 16px;
+}
+
+.timing-box h3 {
+font-size: 14px;
+color: var(--amber);
+font-family: 'DM Mono', monospace;
+letter-spacing: 0.5px;
+margin-bottom: 8px;
+}
+
+.timing-box p {
+font-size: 14px;
+color: #78350F;
+line-height: 1.65;
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
-      <a href="/" class="logo-text">tax<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; CP2000 Notice</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">CP2000 Notice</em>?</h1>
-    <span class="category-tag">IRS Notice</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
-    <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>CP2000 Notice</strong> a notice the IRS sends when information on your tax return doesn't match what employers, banks, or other payers reported to them.</p>
-    </div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
-      <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Taxpayers whose reported income, deductions, or credits don't match third-party records like W-2s or 1099s.</p>
-        </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Ignoring the CP2000 and assuming it will go away. If you don't respond, the IRS will automatically assess the additional tax.</p>
-        </div>
-      </div>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
+</svg>
+</div>
 
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>The IRS found a discrepancy between what you reported and what was reported about you. This is a proposal to change your return — not a bill yet.</p>
-    </div>
+<a href="/" class="logo-text">tax<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">You have 60 days to respond. Don't ignore it — review the notice carefully and compare it to your records. If the IRS is right, you can agree and pay. If they're wrong, gather your documents and respond in writing.</div>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/guides">Tax Guides</a> &rsaquo;
+CP2000 Notice
+</p>
 
-    <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
-      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
+<h1>What is<br><em style="font-style:italic;color:var(--accent)">IRS Notice CP2000</em>?</h1>
 
-    <footer>
-      <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
-    </footer>
-  </div>
+<span class="category-tag">IRS Notice</span>
+
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
+</div>
+
+<div class="card">
+<div class="section-label">What this notice is</div>
+
+<p>A CP2000 is an IRS notice that says the income reported on your tax return does not match information the IRS received from employers, banks, brokerages, or payment apps.</p>
+
+<p>It is not a formal audit. Think of it as the IRS saying: “Our records show numbers different from what you filed. Here’s what we think changed.”</p>
+
+<p>The notice usually proposes additional tax because the IRS believes income was left off your return — but sometimes the IRS is wrong, incomplete, or missing context.</p>
+</div>
+
+<div class="card">
+
+<div class="section-label">Why people receive it</div>
+
+<div class="two-col">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Common Trigger</div>
+<p>You forgot to report a W-2, 1099-NEC, 1099-K, 1099-INT, stock sale, crypto transaction, or retirement distribution that the IRS received separately.</p>
+</div>
+
+<div class="range-box blue">
+<div class="range-box-label">✓ Also Common</div>
+<p>The IRS received incomplete basis information on stock or crypto sales, making it look like your entire sale amount was taxable profit.</p>
+</div>
+
+</div>
+
+<div class="timing-box">
+
+<h3>📅 Important timing</h3>
+
+<p>CP2000 notices usually arrive 1–3 years after the original tax return was filed. The notice includes a response deadline — typically 30 days from the date on the letter. Missing the deadline can cause the IRS to automatically assess the proposed tax.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What the notice is actually saying</div>
+
+<h2>Breaking down the CP2000</h2>
+
+<p>The notice is organized around income the IRS believes was reported incorrectly or omitted entirely.</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+
+<li><strong>Proposed changes</strong> — The IRS recalculates your return using information they received from third parties.</li>
+
+<li><strong>Income mismatch</strong> — The IRS compares your filed return against W-2s, 1099s, brokerage statements, and payment processor reports.</li>
+
+<li><strong>Additional tax</strong> — If their calculation increases your taxable income, they propose extra tax owed.</li>
+
+<li><strong>Interest charges</strong> — Interest accrues from the original tax deadline until the balance is paid.</li>
+
+<li><strong>Possible penalties</strong> — Accuracy-related penalties or underpayment penalties may be added.</li>
+
+<li><strong>Response form</strong> — The notice includes a section where you agree or disagree with the proposed changes.</li>
+
+<li><strong>Payment options</strong> — If you agree, you can usually pay immediately or request a payment plan.</li>
+
+<li><strong>Documentation requests</strong> — If you disagree, you must provide supporting records showing why the IRS calculation is incorrect.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Most common CP2000 situations</div>
+
+<p>These are the situations that trigger CP2000 notices most often:</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+
+<li><strong>1099-K income</strong> — Payment app or marketplace income reported by PayPal, Venmo, Stripe, eBay, Etsy, or Airbnb.</li>
+
+<li><strong>Stock sales</strong> — Brokerage reported the sale proceeds but not your original purchase cost (basis).</li>
+
+<li><strong>Crypto transactions</strong> — Exchange reported sales activity the IRS believes created taxable gains.</li>
+
+<li><strong>Freelance income</strong> — 1099-NEC or 1099-MISC income omitted from the return.</li>
+
+<li><strong>Bank interest</strong> — Small 1099-INT forms forgotten because the amount seemed insignificant.</li>
+
+<li><strong>Retirement withdrawals</strong> — 1099-R distributions not reported correctly.</li>
+
+<li><strong>Multiple jobs</strong> — One W-2 accidentally left off during filing.</li>
+
+<li><strong>Dependent conflicts</strong> — Another taxpayer claimed the same dependent.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Common mistakes to avoid</div>
+
+<div class="two-col">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Ignoring The Notice</div>
+
+<p>CP2000 notices do not disappear on their own. If you fail to respond, the IRS will usually finalize the proposed balance and begin collections.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Assuming The IRS Is Right</div>
+
+<p>The IRS calculation is often incomplete. Brokerage basis errors are extremely common and can massively overstate taxes owed.</p>
+</div>
+
+</div>
+
+<div class="two-col" style="margin-top:16px;">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Sending Originals</div>
+
+<p>Never mail original documents. Send copies only, and keep a complete copy of everything you mail to the IRS.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Missing The Deadline</div>
+
+<p>If you need more time, call the number on the notice before the response deadline. The IRS will sometimes grant additional time.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What to do right now</div>
+
+<div class="next-steps">
+
+First, compare the IRS numbers against your original tax return and supporting documents. Do not panic-pay automatically. If the IRS is correct, sign the agreement form and pay or request a payment plan. If the IRS is wrong, respond with a written explanation and supporting documents showing the correct numbers. CP2000 notices involving stock sales, crypto, business income, or large dollar amounts are worth reviewing with a CPA or enrolled agent before responding.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Questions to ask your tax professional</div>
+
+<ul class="questions-list">
+
+<li><span class="q-num">01</span>Did the IRS incorrectly calculate stock or crypto gains because basis information was missing?</li>
+
+<li><span class="q-num">02</span>Are the penalties correct, and can any be removed through penalty abatement?</li>
+
+<li><span class="q-num">03</span>Should I amend my original return instead of only responding to the CP2000?</li>
+
+<li><span class="q-num">04</span>Would an installment agreement reduce collection risk if I cannot pay immediately?</li>
+
+<li><span class="q-num">05</span>Does the IRS calculation affect my state tax return too?</li>
+
+<li><span class="q-num">06</span>Could this notice trigger additional IRS review or future compliance issues?</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Frequently asked questions</div>
+
+<div class="faq-item">
+
+<div class="faq-q">Is a CP2000 the same as an audit?</div>
+
+<div class="faq-a">
+No. A CP2000 is an automated underreporter notice based on income mismatches in IRS records. It is serious, but it is not a full audit examination.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">What happens if I agree with the notice?</div>
+
+<div class="faq-a">
+You sign the response form and either pay the balance or arrange payment with the IRS. Once processed, the IRS updates your account to reflect the new tax amount.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">What if the IRS calculation is wrong?</div>
+
+<div class="faq-a">
+You can dispute the proposed changes by mailing a written explanation and supporting documents. Many CP2000 notices are reduced substantially after taxpayers provide missing basis records or corrected forms.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">Can I ignore a CP2000 if I disagree?</div>
+
+<div class="faq-a">
+No. If you disagree, you still must respond by the deadline. Ignoring the notice usually causes the IRS to finalize the proposed assessment automatically.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">Will I go to jail over a CP2000 notice?</div>
+
+<div class="faq-a">
+Almost certainly not. CP2000 notices are extremely common and are usually resolved through documentation, amended returns, payment plans, or corrected calculations.
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Related tax forms</div>
+
+<div class="related">
+
+<a href="/1040" class="related-chip">Form 1040 →</a>
+
+<a href="/1099-k" class="related-chip">Form 1099-K →</a>
+
+<a href="/1099-nec" class="related-chip">Form 1099-NEC →</a>
+
+<a href="/1099-misc" class="related-chip">Form 1099-MISC →</a>
+
+<a href="/schedule-d" class="related-chip">Schedule D →</a>
+
+<a href="/cp14" class="related-chip">CP14 Notice →</a>
+
+</div>
+
+</div>
+
+<div class="tool-cta">
+
+<h3>Decode any tax form instantly</h3>
+
+<p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+
+<a href="/">Open the Decoder →</a>
+
+</div>
+
+<footer>
+
+<span>taxplain.co</span>
+
+<span>Understand your taxes. No accountant required.</span>
+
+</footer>
+
+</div>
+
 </body>
 </html>
