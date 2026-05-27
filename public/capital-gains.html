@@ -1,103 +1,852 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capital Gains Tax Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Capital Gains Tax? Plain-English explanation of Capital Gains Tax — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/capital-gains">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Gains Tax Explained in Plain English – TaxPlain</title>
+<meta name="description" content="What are capital gains taxes? Plain-English guide to stocks, crypto, home sales, tax rates, short-term vs long-term gains, losses, and how capital gains work on your tax return.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxplain.co/capital-gains">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #1B4B8A;
+--accent-light: #EAF0FA;
+--accent-border: #B5CEFA;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.warn {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box.blue {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.warn .range-box-label {
+color: var(--warn);
+}
+
+.range-box.blue .range-box-label {
+color: var(--accent);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.timing-box {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 18px 20px;
+margin-top: 16px;
+}
+
+.timing-box h3 {
+font-size: 14px;
+color: var(--amber);
+font-family: 'DM Mono', monospace;
+letter-spacing: 0.5px;
+margin-bottom: 8px;
+}
+
+.timing-box p {
+font-size: 14px;
+color: #78350F;
+line-height: 1.65;
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
-      <a href="/" class="logo-text">tax<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Capital Gains Tax</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">Capital Gains Tax</em>?</h1>
-    <span class="category-tag">Tax Term</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
-    <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>Capital Gains Tax</strong> the profit from selling an asset like stocks, real estate, or crypto — taxed at different rates depending on how long you held it.</p>
-    </div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
-      <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Anyone who sold investments, real estate, cryptocurrency, or other assets for more than they paid.</p>
-        </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Selling winning investments without considering the tax impact. A quick calculation before selling can help you decide whether to wait for long-term treatment.</p>
-        </div>
-      </div>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
+</svg>
+</div>
 
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Assets held longer than one year qualify for long-term capital gains rates of 0%, 15%, or 20% depending on income. Short-term gains (held one year or less) are taxed as ordinary income, which is usually much higher.</p>
-    </div>
+<a href="/" class="logo-text">tax<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">Track your holding periods carefully — waiting just past the one-year mark can dramatically reduce your tax rate. Tax-loss harvesting (selling losers to offset winners) can reduce your capital gains tax. A tax professional can help you plan asset sales strategically.</div>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/guides">Tax Guides</a> &rsaquo;
+Capital Gains
+</p>
 
-    <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
-      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
+<h1>
+What are<br>
+<em style="font-style:italic;color:var(--accent)">capital gains</em> taxes?
+</h1>
 
-    <footer>
-      <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
-    </footer>
-  </div>
+<span class="category-tag">Investing Taxes</span>
+
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
+</div>
+
+<div class="card">
+<div class="section-label">What this means</div>
+
+<p>
+A capital gain is the profit you make when you sell something for more than you originally paid for it. Most people encounter capital gains when selling stocks, crypto, ETFs, real estate, or other investments.
+</p>
+
+<p>
+The IRS taxes those profits. The amount you pay depends mainly on two things: how long you owned the asset before selling it, and your total income for the year.
+</p>
+
+<p>
+In plain English: buy low, sell high, and the government wants a percentage of the profit.
+</p>
+</div>
+
+<div class="card">
+<div class="section-label">The two types</div>
+
+<div class="two-col">
+
+<div class="range-box warn">
+<div class="range-box-label">Short-Term Gains</div>
+
+<p>
+Assets owned for 1 year or less before being sold. These are taxed like regular income using ordinary federal income tax brackets — often the more expensive category.
+</p>
+</div>
+
+<div class="range-box blue">
+<div class="range-box-label">Long-Term Gains</div>
+
+<p>
+Assets owned for more than 1 year. These usually qualify for lower tax rates: 0%, 15%, or 20% depending on income.
+</p>
+</div>
+
+</div>
+
+<div class="timing-box">
+<h3>📅 Why timing matters</h3>
+
+<p>
+Selling an investment on day 364 versus day 366 can dramatically change your tax bill. Many investors intentionally wait until they cross the 1-year holding period to qualify for long-term capital gains rates.
+</p>
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">Common things that create capital gains</div>
+
+<h2>Where capital gains usually come from</h2>
+
+<ul class="symptom-list" style="margin-top:12px;">
+
+<li>
+<strong>Stocks and ETFs</strong> — Selling shares for more than you paid
+</li>
+
+<li>
+<strong>Cryptocurrency</strong> — Selling Bitcoin, Ethereum, or swapping one crypto for another
+</li>
+
+<li>
+<strong>Real estate</strong> — Selling investment property or a second home
+</li>
+
+<li>
+<strong>Business sales</strong> — Selling ownership in a business or partnership
+</li>
+
+<li>
+<strong>Collectibles</strong> — Art, trading cards, antiques, rare coins
+</li>
+
+<li>
+<strong>Mutual funds</strong> — Funds sometimes distribute capital gains even if you didn't sell shares
+</li>
+
+<li>
+<strong>Inherited assets</strong> — Assets inherited from someone who passed away can create gains when later sold
+</li>
+
+</ul>
+</div>
+
+<div class="card">
+
+<div class="section-label">How the math works</div>
+
+<h2>The basic formula</h2>
+
+<p>
+The IRS starts with your sale price, subtracts what you originally paid (called your "cost basis"), then taxes the remaining profit.
+</p>
+
+<p>
+Example:
+</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+<li>Bought stock for $5,000</li>
+<li>Sold stock later for $8,000</li>
+<li>Your capital gain = $3,000</li>
+</ul>
+
+<p>
+That $3,000 gets reported on your tax return and taxed according to capital gains rules.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Capital losses</div>
+
+<div class="two-col">
+
+<div class="range-box blue">
+<div class="range-box-label">✓ Losses help</div>
+
+<p>
+If you sell investments for less than you paid, those losses can offset your gains and reduce your taxes.
+</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Wash sale rule</div>
+
+<p>
+You generally cannot sell an investment for a loss and immediately buy the same investment back just to create a tax deduction.
+</p>
+</div>
+
+</div>
+
+<div class="timing-box">
+<h3>📉 Annual deduction limit</h3>
+
+<p>
+If your capital losses exceed your gains, you can usually deduct up to $3,000 of additional losses per year against ordinary income. Extra losses carry forward into future years.
+</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Tax forms involved</div>
+
+<p>
+Capital gains usually appear across several tax documents and schedules:
+</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+
+<li>
+<strong>Form 1099-B</strong> — Reports stock and investment sales from brokers
+</li>
+
+<li>
+<strong>Form 8949</strong> — Detailed list of individual investment transactions
+</li>
+
+<li>
+<strong>Schedule D</strong> — Summarizes total capital gains and losses
+</li>
+
+<li>
+<strong>Form 1040</strong> — Final numbers flow onto your main tax return
+</li>
+
+<li>
+<strong>Crypto exchange statements</strong> — Used to calculate digital asset transactions
+</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Common mistakes to avoid</div>
+
+<div class="two-col">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Forgetting Crypto Trades</div>
+
+<p>
+Many people think crypto-to-crypto swaps are tax-free. They're not. Trading Bitcoin for Ethereum is usually a taxable event.
+</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Ignoring Cost Basis</div>
+
+<p>
+If your broker doesn't have your purchase history, the IRS may assume your cost basis is zero — making your taxable gain appear much larger.
+</p>
+</div>
+
+</div>
+
+<div class="two-col" style="margin-top:16px;">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Missing Carryforward Losses</div>
+
+<p>
+Unused losses from prior years can reduce future taxes, but many taxpayers forget to carry them forward.
+</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Selling Too Early</div>
+
+<p>
+Selling just before the 1-year holding period ends can move you from lower long-term rates into higher ordinary income tax rates.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Home sale exception</div>
+
+<p>
+Selling your primary home is treated differently from most investments.
+</p>
+
+<p>
+If you owned and lived in the home for at least 2 of the last 5 years before selling, many taxpayers can exclude:
+</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+<li>Up to $250,000 of gain if single</li>
+<li>Up to $500,000 of gain if married filing jointly</li>
+</ul>
+
+<p>
+This exclusion usually applies only to a primary residence — not rental or investment property.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What to do right now</div>
+
+<div class="next-steps">
+
+If you sold stocks, crypto, or property this year, gather every 1099-B, brokerage statement, and crypto transaction history before filing your taxes. Capital gains reporting becomes much harder when records are missing. If you traded heavily, used multiple exchanges, sold property, or exercised stock options, hiring a CPA is often worth it — especially because investment tax mistakes can trigger IRS notices years later.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Questions to ask your tax professional</div>
+
+<ul class="questions-list">
+
+<li>
+<span class="q-num">01</span>
+Are all my capital gains classified correctly as short-term or long-term?
+</li>
+
+<li>
+<span class="q-num">02</span>
+Am I carrying forward old capital losses correctly from prior years?
+</li>
+
+<li>
+<span class="q-num">03</span>
+Did my broker report the correct cost basis for every transaction?
+</li>
+
+<li>
+<span class="q-num">04</span>
+Do any of my crypto trades create taxable events I overlooked?
+</li>
+
+<li>
+<span class="q-num">05</span>
+Should I harvest losses before year-end to reduce taxes?
+</li>
+
+<li>
+<span class="q-num">06</span>
+Do I owe estimated quarterly taxes because of investment gains?
+</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Frequently asked questions</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Do I pay taxes if I don't sell the investment?
+</div>
+
+<div class="faq-a">
+Usually no. In most cases, gains are not taxed until you actually sell the asset and "realize" the gain.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+What is the current long-term capital gains tax rate?
+</div>
+
+<div class="faq-a">
+Most taxpayers pay either 0%, 15%, or 20% on long-term gains depending on total taxable income and filing status.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Are crypto gains taxed the same as stock gains?
+</div>
+
+<div class="faq-a">
+Generally yes. The IRS treats cryptocurrency as property, meaning capital gains rules usually apply when crypto is sold, traded, or spent.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Can capital losses reduce my paycheck income taxes?
+</div>
+
+<div class="faq-a">
+Yes — but only up to a point. After offsetting gains, up to $3,000 of extra losses can usually reduce ordinary income each year.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+What happens if I don't report investment sales?
+</div>
+
+<div class="faq-a">
+The IRS receives copies of most brokerage tax forms directly from financial institutions. If you leave transactions off your return, the IRS may automatically generate a tax notice or proposed bill.
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Related tax forms</div>
+
+<div class="related">
+
+<a href="/1099-b" class="related-chip">Form 1099-B →</a>
+
+<a href="/8949" class="related-chip">Form 8949 →</a>
+
+<a href="/schedule-d" class="related-chip">Schedule D →</a>
+
+<a href="/1040" class="related-chip">Form 1040 →</a>
+
+<a href="/1099-div" class="related-chip">Form 1099-DIV →</a>
+
+<a href="/crypto-taxes" class="related-chip">Crypto Taxes →</a>
+
+</div>
+
+</div>
+
+<div class="tool-cta">
+
+<h3>Decode any tax form instantly</h3>
+
+<p>
+Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
+</p>
+
+<a href="/">
+Open the Decoder →
+</a>
+
+</div>
+
+<footer>
+
+<span>taxplain.co</span>
+
+<span>
+Understand your taxes. No accountant required.
+</span>
+
+</footer>
+
+</div>
+
 </body>
 </html>
