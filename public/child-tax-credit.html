@@ -1,103 +1,744 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Child Tax Credit Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Child Tax Credit? Plain-English explanation of Child Tax Credit — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/child-tax-credit">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Child Tax Credit Explained in Plain English – TaxPlain</title>
+<meta name="description" content="What is the Child Tax Credit? Plain-English guide to who qualifies, how much it's worth, income limits, refund rules, common mistakes, and how to claim it on your tax return.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxplain.co/child-tax-credit">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #1B4B8A;
+--accent-light: #EAF0FA;
+--accent-border: #B5CEFA;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.warn {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box.blue {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.warn .range-box-label {
+color: var(--warn);
+}
+
+.range-box.blue .range-box-label {
+color: var(--accent);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.timing-box {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 18px 20px;
+margin-top: 16px;
+}
+
+.timing-box h3 {
+font-size: 14px;
+color: var(--amber);
+font-family: 'DM Mono', monospace;
+letter-spacing: 0.5px;
+margin-bottom: 8px;
+}
+
+.timing-box p {
+font-size: 14px;
+color: #78350F;
+line-height: 1.65;
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
-      <a href="/" class="logo-text">tax<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Child Tax Credit</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">Child Tax Credit</em>?</h1>
-    <span class="category-tag">Tax Credit</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
-    <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>Child Tax Credit</strong> a tax credit of up to $2,000 per qualifying child under age 17 that directly reduces your tax bill.</p>
-    </div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
-      <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Taxpayers with children under 17 who meet income limits — the credit phases out above $200,000 for single filers and $400,000 for married filing jointly.</p>
-        </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Assuming the credit phases out completely at higher incomes. Even above the phase-out threshold, a partial credit may still be available depending on your specific income.</p>
-        </div>
-      </div>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
+</svg>
+</div>
 
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Unlike a deduction, a credit directly reduces your tax bill dollar for dollar. Up to $1,700 of the credit is refundable, meaning you can receive it even if you owe no tax.</p>
-    </div>
+<a href="/" class="logo-text">tax<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">Claim this credit for every qualifying child — it's one of the most valuable credits available to families. Make sure your child has a Social Security number, as the credit requires one. A tax professional can ensure you claim the maximum amount.</div>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/guides">Tax Guides</a> &rsaquo;
+Child Tax Credit
+</p>
 
-    <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
-      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
+<h1>
+What is the<br>
+<em style="font-style:italic;color:var(--accent)">Child Tax Credit</em>?
+</h1>
 
-    <footer>
-      <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
-    </footer>
-  </div>
+<span class="category-tag">Tax Credit</span>
+
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong>
+TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
+</div>
+
+<div class="card">
+<div class="section-label">What this credit is</div>
+
+<p>
+The Child Tax Credit (CTC) is a federal tax break for parents and guardians with qualifying children. It directly reduces the amount of federal income tax you owe — and in some cases, part of the credit can be refunded back to you even if you owe little or no tax.
+</p>
+
+<p>
+Think of it as the government's way of offsetting some of the cost of raising children. Unlike a deduction, which only lowers taxable income, a tax credit reduces your actual tax bill dollar-for-dollar.
+</p>
+</div>
+
+<div class="card">
+<div class="section-label">How much it's worth</div>
+
+<div class="two-col">
+
+<div class="range-box blue">
+<div class="range-box-label">✓ Maximum Credit</div>
+<p>
+For 2024, the Child Tax Credit is worth up to $2,000 per qualifying child under age 17 at the end of the tax year.
+</p>
+</div>
+
+<div class="range-box blue">
+<div class="range-box-label">✓ Refundable Portion</div>
+<p>
+Up to $1,700 of the credit may be refundable through the Additional Child Tax Credit if you don't use the full credit against taxes owed.
+</p>
+</div>
+
+</div>
+
+<div class="timing-box" style="margin-top:16px;">
+<h3>📅 Income phaseout limits</h3>
+
+<p>
+The credit begins phasing out once modified adjusted gross income exceeds $200,000 for single filers or $400,000 for married couples filing jointly. Above those levels, the credit is reduced by $50 for every additional $1,000 of income.
+</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Who qualifies</div>
+
+<h2>Rules for claiming the credit</h2>
+
+<p>
+The IRS has strict qualification rules. Your child generally must meet all of these requirements:
+</p>
+
+<ul class="symptom-list" style="margin-top: 12px;">
+
+<li>
+<strong>Age requirement</strong> — The child must be under age 17 at the end of the tax year.
+</li>
+
+<li>
+<strong>Relationship requirement</strong> — Son, daughter, stepchild, foster child, brother, sister, step-sibling, or descendant of one of them (like a grandchild).
+</li>
+
+<li>
+<strong>Support requirement</strong> — The child cannot provide more than half of their own financial support during the year.
+</li>
+
+<li>
+<strong>Dependent requirement</strong> — You must claim the child as a dependent on your tax return.
+</li>
+
+<li>
+<strong>Residency requirement</strong> — The child must generally live with you for more than half the year.
+</li>
+
+<li>
+<strong>Citizenship requirement</strong> — The child must have a valid Social Security number and be a U.S. citizen, U.S. national, or resident alien.
+</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">How the credit works</div>
+
+<p>
+The Child Tax Credit is claimed directly on your Form 1040. If the credit is larger than the tax you owe, you may qualify for a partial refund through the Additional Child Tax Credit.
+</p>
+
+<p>
+Example: if you owe $1,200 in federal income tax and qualify for a $2,000 Child Tax Credit, the credit wipes out your $1,200 tax bill and may allow part of the remaining credit to be refunded to you.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Common mistakes to avoid</div>
+
+<div class="two-col">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Wrong Dependent Claimed</div>
+
+<p>
+Divorced or separated parents sometimes both claim the same child. The IRS only allows one taxpayer to claim the Child Tax Credit for a qualifying child.
+</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Missing Social Security Number</div>
+
+<p>
+A qualifying child must have a valid Social Security number issued before the tax filing deadline. ITINs generally don't qualify for the Child Tax Credit.
+</p>
+</div>
+
+</div>
+
+<div class="two-col" style="margin-top:16px;">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ High Income Phaseouts</div>
+
+<p>
+Higher-income taxpayers may unexpectedly lose part or all of the credit once income exceeds the phaseout thresholds.
+</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Confusing Credits</div>
+
+<p>
+The Child Tax Credit is different from the Child and Dependent Care Credit and the Earned Income Credit. Some taxpayers qualify for all three.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What to do right now</div>
+
+<div class="next-steps">
+
+If you have children under 17, make sure your tax preparer checks your eligibility for the Child Tax Credit every year — especially after life changes like divorce, custody changes, adoption, or income increases. Keep Social Security cards, school records, and proof the child lived with you in case the IRS asks for documentation later.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Questions to ask your tax professional</div>
+
+<ul class="questions-list">
+
+<li>
+<span class="q-num">01</span>
+Am I eligible for the full Child Tax Credit or is my income too high?
+</li>
+
+<li>
+<span class="q-num">02</span>
+Do I also qualify for the Additional Child Tax Credit refund?
+</li>
+
+<li>
+<span class="q-num">03</span>
+Who should claim the child if the parents are divorced or separated?
+</li>
+
+<li>
+<span class="q-num">04</span>
+Can I combine this credit with the Earned Income Credit or dependent care credits?
+</li>
+
+<li>
+<span class="q-num">05</span>
+Do all of my children qualify, or are some too old?
+</li>
+
+<li>
+<span class="q-num">06</span>
+What records should I keep in case the IRS audits my return?
+</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Frequently asked questions</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Can I claim the Child Tax Credit if my child turned 17 this year?
+</div>
+
+<div class="faq-a">
+Usually no. The child must be under age 17 at the end of the tax year to qualify for the Child Tax Credit. Older dependents may still qualify for the Credit for Other Dependents instead.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Is the Child Tax Credit refundable?
+</div>
+
+<div class="faq-a">
+Partially. The refundable portion is called the Additional Child Tax Credit. Even if you owe little or no federal income tax, you may still receive part of the credit as a refund if you meet the earned income requirements.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+What happens if both parents claim the same child?
+</div>
+
+<div class="faq-a">
+The IRS will reject one return if both are electronically filed with the same dependent Social Security number. If both returns are accepted, the IRS may later audit both taxpayers and apply tie-breaker rules.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Do adopted children qualify?
+</div>
+
+<div class="faq-a">
+Yes. Adopted children generally qualify the same way biological children do as long as they meet the IRS dependency and residency rules.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Does the Child Tax Credit affect my state taxes?
+</div>
+
+<div class="faq-a">
+Sometimes. Some states offer their own child tax credits or use your federal return as the starting point for state tax calculations.
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Related tax forms</div>
+
+<div class="related">
+
+<a href="/1040" class="related-chip">Form 1040 →</a>
+
+<a href="/w2" class="related-chip">Form W-2 →</a>
+
+<a href="/schedule-8812" class="related-chip">Schedule 8812 →</a>
+
+<a href="/earned-income-credit" class="related-chip">Earned Income Credit →</a>
+
+<a href="/dependent-care-credit" class="related-chip">Dependent Care Credit →</a>
+
+<a href="/w4" class="related-chip">Form W-4 →</a>
+
+</div>
+
+</div>
+
+<div class="tool-cta">
+
+<h3>Decode any tax form instantly</h3>
+
+<p>
+Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
+</p>
+
+<a href="/">Open the Decoder →</a>
+
+</div>
+
+<footer>
+
+<span>taxplain.co</span>
+
+<span>Understand your taxes. No accountant required.</span>
+
+</footer>
+
+</div>
+
 </body>
 </html>
