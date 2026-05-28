@@ -1,103 +1,712 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estimated Quarterly Taxes Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Estimated Quarterly Taxes? Plain-English explanation of Estimated Quarterly Taxes — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/estimated-taxes">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estimated Taxes Explained in Plain English – TaxPlain</title>
+<meta name="description" content="What are estimated taxes? Plain-English guide to quarterly estimated tax payments — who must pay, deadlines, penalties, safe harbor rules, Form 1040-ES, and how to avoid IRS surprises.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxplain.co/estimated-taxes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #1B4B8A;
+--accent-light: #EAF0FA;
+--accent-border: #B5CEFA;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.warn {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box.blue {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.warn .range-box-label {
+color: var(--warn);
+}
+
+.range-box.blue .range-box-label {
+color: var(--accent);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.timing-box {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 18px 20px;
+margin-top: 16px;
+}
+
+.timing-box h3 {
+font-size: 14px;
+color: var(--amber);
+font-family: 'DM Mono', monospace;
+letter-spacing: 0.5px;
+margin-bottom: 8px;
+}
+
+.timing-box p {
+font-size: 14px;
+color: #78350F;
+line-height: 1.65;
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
-      <a href="/" class="logo-text">tax<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Estimated Quarterly Taxes</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">Estimated Quarterly Taxes</em>?</h1>
-    <span class="category-tag">Tax Term</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
-    <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>Estimated Quarterly Taxes</strong> quarterly tax payments made by self-employed people and others who don't have taxes withheld from their income.</p>
-    </div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
-      <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Self-employed workers, freelancers, investors with significant dividend or capital gains income, and retirees with pension income.</p>
-        </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Skipping estimated payments and planning to pay everything in April. The underpayment penalty applies even if you pay the full balance when you file.</p>
-        </div>
-      </div>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
+</svg>
+</div>
 
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Estimated taxes are due four times a year — typically April 15, June 15, September 15, and January 15. If you underpay, the IRS charges an underpayment penalty even if you pay everything by April 15.</p>
-    </div>
+<a href="/" class="logo-text">tax<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">Use IRS Form 1040-ES to calculate your estimated payments. A simple approach: pay 100% of last year's tax liability in equal quarterly installments to avoid penalties. A tax professional can help you calculate the right amount.</div>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/guides">Tax Guides</a> &rsaquo;
+Estimated Taxes
+</p>
 
-    <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
-      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
+<h1>
+What are<br>
+<em style="font-style:italic;color:var(--accent)">Estimated Taxes</em>?
+</h1>
 
-    <footer>
-      <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
-    </footer>
-  </div>
+<span class="category-tag">Tax Payments</span>
+
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
+</div>
+
+<div class="card">
+<div class="section-label">What this means</div>
+
+<p>Estimated taxes are quarterly tax payments you send directly to the IRS during the year instead of having taxes automatically withheld from a paycheck.</p>
+
+<p>Think of estimated taxes as the self-employed version of paycheck withholding. If you're a freelancer, contractor, business owner, investor, landlord, or someone earning income without automatic tax withholding, the IRS still expects to get paid throughout the year — not all at once in April.</p>
+
+<p>The system exists because the U.S. tax system is "pay as you go." The IRS wants tax money arriving steadily during the year, not after the year is over.</p>
+</div>
+
+<div class="card">
+<div class="section-label">Who usually has to pay estimated taxes</div>
+
+<div class="two-col">
+
+<div class="range-box blue">
+<div class="range-box-label">✓ Common situations</div>
+<p>Freelancers, gig workers, consultants, Etsy sellers, landlords, investors with large capital gains, and small business owners commonly make quarterly estimated payments.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">↑ IRS trigger</div>
+<p>You generally need estimated payments if you'll owe at least $1,000 in federal taxes after subtracting withholding and refundable credits.</p>
+</div>
+
+</div>
+
+<div class="timing-box" style="margin-top:16px;">
+<h3>📅 Quarterly due dates</h3>
+
+<p>
+Q1: April 15<br>
+Q2: June 15<br>
+Q3: September 15<br>
+Q4: January 15 of the following year
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<div class="section-label">How estimated taxes work</div>
+
+<h2>Breaking down the process</h2>
+
+<p>Estimated taxes are basically an educated guess. You estimate how much income you'll earn during the year, calculate the taxes likely owed, then divide that amount into quarterly payments.</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+
+<li><strong>Estimate income</strong> — Project your freelance income, business profit, investment gains, rental income, or other untaxed earnings for the year.</li>
+
+<li><strong>Subtract deductions</strong> — Business expenses, retirement contributions, health insurance premiums, and other deductions reduce taxable income.</li>
+
+<li><strong>Calculate tax owed</strong> — Apply federal income tax rates plus self-employment tax if applicable.</li>
+
+<li><strong>Divide into quarters</strong> — Most taxpayers split the estimated annual tax into four equal payments.</li>
+
+<li><strong>Pay using Form 1040-ES</strong> — The IRS uses Form 1040-ES vouchers and online payment systems for estimated payments.</li>
+
+<li><strong>Recalculate if income changes</strong> — If you suddenly earn more or less during the year, you can adjust future quarterly payments.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">The safe harbor rule</div>
+
+<p>The IRS understands income is unpredictable. You do not need to perfectly estimate your taxes to avoid penalties.</p>
+
+<p>Most taxpayers avoid underpayment penalties if they pay at least one of these amounts during the year:</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+
+<li><strong>90% of current-year taxes</strong> — Pay at least 90% of what you'll ultimately owe this year.</li>
+
+<li><strong>100% of last year's taxes</strong> — Pay at least the total tax shown on last year's return, even if you earn more this year.</li>
+
+<li><strong>110% rule for higher earners</strong> — If last year's AGI exceeded $150,000, the safe harbor becomes 110% of last year's tax bill.</li>
+
+</ul>
+
+<div class="timing-box">
+<h3>💡 Why this matters</h3>
+
+<p>Many freelancers intentionally use the prior-year safe harbor rule because it's predictable. Even if income spikes unexpectedly, safe harbor payments usually protect against estimated tax penalties.</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Common mistakes to avoid</div>
+
+<div class="two-col">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Forgetting self-employment tax</div>
+
+<p>Freelancers owe both income tax and self-employment tax (Social Security + Medicare). Many new contractors only budget for income tax and get blindsided in April.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Waiting until April</div>
+
+<p>Paying everything with your annual return does not erase estimated tax penalties. The IRS cares when taxes were paid during the year.</p>
+</div>
+
+</div>
+
+<div class="two-col" style="margin-top:16px;">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Ignoring state taxes</div>
+
+<p>Many states also require estimated tax payments. Federal estimated payments do not automatically cover state obligations.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Not saving cash</div>
+
+<p>A common freelancer rule is to automatically set aside 25%–35% of every payment received into a separate savings account for taxes.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Ways to pay estimated taxes</div>
+
+<p>The IRS offers multiple ways to submit quarterly payments:</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+
+<li><strong>IRS Direct Pay</strong> — Free bank transfer directly from your checking account.</li>
+
+<li><strong>IRS Online Account</strong> — View balances and make payments online.</li>
+
+<li><strong>EFTPS</strong> — The Electronic Federal Tax Payment System used by many businesses.</li>
+
+<li><strong>Debit or credit card</strong> — Available through IRS-approved processors, though fees usually apply.</li>
+
+<li><strong>Mailing Form 1040-ES vouchers</strong> — Traditional paper payment method.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What to do right now</div>
+
+<div class="next-steps">
+
+If you earn income without automatic withholding, do not wait until tax season to think about taxes. Calculate a rough percentage to save from every payment now. Even imperfect quarterly payments are far better than ignoring estimated taxes completely. If your income varies heavily or you're unsure how much to pay, a CPA or enrolled agent can help set realistic quarterly estimates and reduce penalty risk.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Questions to ask your tax professional</div>
+
+<ul class="questions-list">
+
+<li><span class="q-num">01</span>Am I required to make estimated tax payments this year?</li>
+
+<li><span class="q-num">02</span>Would the safe harbor rule protect me from penalties?</li>
+
+<li><span class="q-num">03</span>Should I increase paycheck withholding instead of making quarterly payments?</li>
+
+<li><span class="q-num">04</span>How much should I realistically set aside from each client payment?</li>
+
+<li><span class="q-num">05</span>Do I also owe quarterly payments to my state?</li>
+
+<li><span class="q-num">06</span>Would forming an LLC or S-corporation change my estimated tax situation?</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Frequently asked questions</div>
+
+<div class="faq-item">
+
+<div class="faq-q">What happens if I don't pay estimated taxes?</div>
+
+<div class="faq-a">You may owe an underpayment penalty plus interest when you file your annual return. The penalty is usually not catastrophic, but it adds unnecessary cost and compounds over time.</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">Can I make uneven quarterly payments?</div>
+
+<div class="faq-a">Yes. If your income varies seasonally or unpredictably, you can use the IRS annualized income installment method to better match payments to actual earnings throughout the year.</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">Do W-2 employees ever need estimated taxes?</div>
+
+<div class="faq-a">Sometimes. Employees with significant side income, investment gains, rental income, or insufficient paycheck withholding may still need estimated payments.</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">Is Form 1040-ES a tax return?</div>
+
+<div class="faq-a">No. Form 1040-ES is not a return you file with yearly income details. It's primarily a worksheet and payment voucher system used to calculate and send estimated tax payments.</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">Can I avoid estimated payments by increasing paycheck withholding?</div>
+
+<div class="faq-a">Often yes. Some taxpayers with W-2 jobs increase withholding from their paycheck to cover freelance or investment income instead of sending separate quarterly payments.</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Related tax forms</div>
+
+<div class="related">
+
+<a href="/1040" class="related-chip">Form 1040 →</a>
+
+<a href="/1040-es" class="related-chip">Form 1040-ES →</a>
+
+<a href="/1099-nec" class="related-chip">Form 1099-NEC →</a>
+
+<a href="/schedule-c" class="related-chip">Schedule C →</a>
+
+<a href="/w4" class="related-chip">Form W-4 →</a>
+
+<a href="/self-employment-tax" class="related-chip">Self-Employment Tax →</a>
+
+</div>
+
+</div>
+
+<div class="tool-cta">
+
+<h3>Decode any tax form instantly</h3>
+
+<p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+
+<a href="/">Open the Decoder →</a>
+
+</div>
+
+<footer>
+
+<span>taxplain.co</span>
+
+<span>Understand your taxes. No accountant required.</span>
+
+</footer>
+
+</div>
+
 </body>
 </html>
+```
