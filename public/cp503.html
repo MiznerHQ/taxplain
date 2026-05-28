@@ -1,103 +1,638 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CP503 Notice Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is CP503 Notice? Plain-English explanation of CP503 Notice — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/cp503">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CP503 Notice Explained in Plain English – TaxPlain</title>
+<meta name="description" content="What is IRS Notice CP503? Plain-English guide explaining why you received it, what happens next, payment deadlines, penalties, and exactly what to do now.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxplain.co/cp503">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #1B4B8A;
+--accent-light: #EAF0FA;
+--accent-border: #B5CEFA;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.warn {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box.blue {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.warn .range-box-label {
+color: var(--warn);
+}
+
+.range-box.blue .range-box-label {
+color: var(--accent);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.timing-box {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 18px 20px;
+margin-top: 16px;
+}
+
+.timing-box h3 {
+font-size: 14px;
+color: var(--amber);
+font-family: 'DM Mono', monospace;
+letter-spacing: 0.5px;
+margin-bottom: 8px;
+}
+
+.timing-box p {
+font-size: 14px;
+color: #78350F;
+line-height: 1.65;
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
-      <a href="/" class="logo-text">tax<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; CP503 Notice</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">CP503 Notice</em>?</h1>
-    <span class="category-tag">IRS Notice</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
-    <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>CP503 Notice</strong> a second reminder notice the IRS sends when you have an unpaid balance and haven't responded to earlier notices.</p>
-    </div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
-      <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Taxpayers who received a CP501 but did not pay or respond to their balance due.</p>
-        </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Continuing to ignore the notice. After CP503 comes CP504, which is far more serious and can lead to a levy on your assets.</p>
-        </div>
-      </div>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
+</svg>
+</div>
 
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>This is the IRS escalating their collection process. Your account balance remains unpaid and interest and penalties are continuing to accrue.</p>
-    </div>
+<a href="/" class="logo-text">tax<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">Pay the full balance online at IRS.gov/payments or call the number on the notice to discuss payment options. Acting quickly stops penalties from growing. A tax professional can help you negotiate if you can't pay in full.</div>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/guides">IRS Notices</a> &rsaquo;
+CP503
+</p>
 
-    <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
-      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
+<h1>What is<br><em style="font-style:italic;color:var(--accent)">CP503</em>?</h1>
 
-    <footer>
-      <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
-    </footer>
-  </div>
+<span class="category-tag">IRS Notice</span>
+
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
+</div>
+
+<div class="card">
+<div class="section-label">What this notice is</div>
+
+<p>IRS Notice CP503 is the government's second reminder that you still owe unpaid federal taxes. The IRS already sent earlier billing notices, and this letter means they still haven't received payment or heard from you.</p>
+
+<p>Think of CP503 as the IRS escalating the situation. You're no longer in the "friendly reminder" stage. The agency is warning you that your balance is overdue and additional collection actions may happen if the debt remains unpaid.</p>
+
+<p>The notice shows how much you currently owe including taxes, penalties, and interest that have continued growing since the original due date.</p>
+</div>
+
+<div class="card">
+<div class="section-label">Why you received it</div>
+
+<div class="two-col">
+
+<div class="range-box blue">
+<div class="range-box-label">✓ Most Common Reason</div>
+<p>You filed a tax return showing taxes owed, but the IRS never received full payment. Interest and penalties continue accumulating every month.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">↑ Other Possible Causes</div>
+<p>The IRS adjusted your return after filing, removed credits or deductions, applied prior-year balances, or processed missing information that increased your tax bill.</p>
+</div>
+
+</div>
+
+<div class="timing-box">
+<h3>📅 Important timing</h3>
+<p>CP503 usually arrives after earlier notices like CP14 and CP501 were ignored or unpaid. If you continue ignoring the balance, the next step is often CP504 — a much more serious notice warning about potential levies and collection action.</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What the IRS is telling you</div>
+
+<h2>Breaking down the CP503</h2>
+
+<p>The notice itself is usually short and direct. Here's what the IRS is communicating in plain English:</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+
+<li><strong>You still owe money</strong> — The IRS believes your balance remains unpaid.</li>
+
+<li><strong>Interest is increasing daily</strong> — Your balance keeps growing until fully paid.</li>
+
+<li><strong>Penalties are still accruing</strong> — Failure-to-pay penalties continue monthly.</li>
+
+<li><strong>The IRS wants immediate action</strong> — Either pay the balance or arrange a payment plan.</li>
+
+<li><strong>Your account is moving deeper into collections</strong> — Ignoring CP503 increases the chance of future enforcement notices.</li>
+
+<li><strong>The balance may differ from your original return</strong> — Added penalties and interest can substantially increase what you owe.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What happens if you ignore it</div>
+
+<div class="two-col">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Next Notice</div>
+<p>The IRS often sends CP504 next. That notice warns the government may seize state tax refunds or begin levy procedures against certain assets or income.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Growing Balance</div>
+<p>Even if collections don't begin immediately, penalties and interest continue increasing the amount owed every month the balance remains unpaid.</p>
+</div>
+
+</div>
+
+<div class="two-col" style="margin-top:16px;">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Federal Tax Lien Risk</div>
+<p>Larger unpaid balances can eventually lead to a federal tax lien, which may affect credit applications, financing, and property transactions.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Levy Risk Later</div>
+<p>Continued nonpayment can eventually lead to bank levies, wage garnishments, or intercepted refunds after required notices are issued.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What to do right now</div>
+
+<div class="next-steps">
+
+If the balance is correct and you can pay it, pay as quickly as possible to reduce additional penalties and interest. If you can't pay in full, the IRS usually prefers setting up a payment plan over forcing collections later. If you disagree with the amount owed, compare the notice against your tax return and IRS transcripts immediately. Do not ignore CP503 assuming it will disappear — the notices become progressively more serious.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Questions to ask your tax professional</div>
+
+<ul class="questions-list">
+
+<li><span class="q-num">01</span>Does the IRS balance actually match my filed return and payment history?</li>
+
+<li><span class="q-num">02</span>Can I qualify for a monthly installment agreement?</li>
+
+<li><span class="q-num">03</span>Are any penalties eligible for first-time penalty abatement?</li>
+
+<li><span class="q-num">04</span>Did the IRS adjust my return incorrectly?</li>
+
+<li><span class="q-num">05</span>Should I request my IRS account transcript before responding?</li>
+
+<li><span class="q-num">06</span>How much will the balance grow if I wait another six months?</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Frequently asked questions</div>
+
+<div class="faq-item">
+<div class="faq-q">Is CP503 serious?</div>
+<div class="faq-a">Yes. CP503 means the IRS has already sent previous notices and still considers your balance unpaid. While it is not yet a levy notice, it signals that the account is moving deeper into collections.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can the IRS garnish my wages after CP503?</div>
+<div class="faq-a">Usually not immediately. Before wage garnishment or bank levies begin, the IRS must send additional legally required notices. However, ignoring CP503 increases the chance those notices will come next.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">What if I can't afford to pay?</div>
+<div class="faq-a">The IRS offers installment agreements, temporary hardship status, and in some cases settlement options like an Offer in Compromise. Even partial payments help reduce future penalties and interest.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can I dispute the amount?</div>
+<div class="faq-a">Yes. If you believe the IRS balance is wrong, compare the notice against your return, payment records, and IRS transcripts. Mistakes sometimes happen due to missing payments, processing delays, or IRS adjustments.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Will the IRS take my tax refund?</div>
+<div class="faq-a">Possibly. Future federal refunds are often automatically applied to unpaid tax balances. Later notices like CP504 may also warn about state refund offsets.</div>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Related IRS notices</div>
+
+<div class="related">
+
+<a href="/cp14" class="related-chip">CP14 →</a>
+
+<a href="/cp501" class="related-chip">CP501 →</a>
+
+<a href="/cp504" class="related-chip">CP504 →</a>
+
+<a href="/cp2000" class="related-chip">CP2000 →</a>
+
+<a href="/lt11" class="related-chip">LT11 →</a>
+
+<a href="/1040" class="related-chip">Form 1040 →</a>
+
+</div>
+
+</div>
+
+<div class="tool-cta">
+
+<h3>Decode any tax form instantly</h3>
+
+<p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+
+<a href="/">Open the Decoder →</a>
+
+</div>
+
+<footer>
+
+<span>taxplain.co</span>
+
+<span>Understand your taxes. No accountant required.</span>
+
+</footer>
+
+</div>
+
 </body>
 </html>
+```
