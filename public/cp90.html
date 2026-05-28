@@ -1,103 +1,755 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CP90 Notice Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is CP90 Notice? Plain-English explanation of CP90 Notice — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/cp90">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CP90 Notice Explained in Plain English – TaxPlain</title>
+<meta name="description" content="What is IRS Notice CP90? Plain-English guide to IRS intent to levy notices — what it means, deadlines, wage garnishment risk, bank levies, appeal rights, and exactly what to do next.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxplain.co/cp90">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #FFFFFF;
+  --ink: #0D1B2A;
+  --muted: #6B7A8D;
+  --accent: #1B4B8A;
+  --accent-light: #EAF0FA;
+  --accent-border: #B5CEFA;
+  --warn: #993C1D;
+  --warn-light: #FAECE7;
+  --warn-border: #F5C4B3;
+  --success-light: #EAF3DE;
+  --success-border: #C0DD97;
+  --success-text: #27500A;
+  --amber: #92400E;
+  --amber-light: #FEF3C7;
+  --amber-border: #F59E0B;
+  --border: #DDE3EC;
+  --white: #FFFFFF;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.logo-mark {
+  width: 32px;
+  height: 32px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-mark svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+}
+
+.logo-text {
+  font-family: 'DM Mono', monospace;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.logo-text span {
+  color: var(--accent);
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(20px, 3vw, 26px);
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.category-tag {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.disclaimer {
+  background: var(--amber-light);
+  border: 1px solid var(--amber-border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 36px;
+  font-size: 13px;
+  color: var(--amber);
+  line-height: 1.5;
+}
+
+.card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+p + p {
+  margin-top: 14px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.range-box {
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.range-box.warn {
+  background: var(--warn-light);
+  border: 1px solid var(--warn-border);
+}
+
+.range-box.blue {
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.range-box.warn .range-box-label {
+  color: var(--warn);
+}
+
+.range-box.blue .range-box-label {
+  color: var(--accent);
+}
+
+.range-box p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.symptom-list {
+  list-style: none;
+  padding: 0;
+}
+
+.symptom-list li {
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.6;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+  border-bottom: none;
+}
+
+.symptom-list li::before {
+  content: "→ ";
+  color: var(--muted);
+}
+
+.timing-box {
+  background: var(--amber-light);
+  border: 1px solid var(--amber-border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-top: 16px;
+}
+
+.timing-box h3 {
+  font-size: 14px;
+  color: var(--amber);
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.timing-box p {
+  font-size: 14px;
+  color: #78350F;
+  line-height: 1.65;
+}
+
+.next-steps {
+  background: var(--success-light);
+  border: 1px solid var(--success-border);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--success-text);
+}
+
+.questions-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.questions-list li {
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.65;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 10px;
+}
+
+.questions-list li:last-child {
+  border-bottom: none;
+}
+
+.q-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 500;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.faq-item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-q {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.faq-a {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.tool-cta {
+  background: var(--accent);
+  color: white;
+  border-radius: 12px;
+  padding: 28px;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.tool-cta h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.tool-cta p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 18px;
+  color: white;
+}
+
+.tool-cta a {
+  display: inline-block;
+  background: white;
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+}
+
+.related {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.related-chip {
+  display: block;
+  padding: 12px 16px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--ink);
+  font-family: 'DM Mono', monospace;
+  transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
-      <a href="/" class="logo-text">tax<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; CP90 Notice</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">CP90 Notice</em>?</h1>
-    <span class="category-tag">IRS Notice</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
-    <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>CP90 Notice</strong> one of the most serious IRS notices — a Final Notice of Intent to Levy and Notice of Your Right to a Hearing.</p>
-    </div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
-      <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Taxpayers with seriously delinquent tax debt who have ignored all previous collection notices.</p>
-        </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Missing the 30-day deadline to request a hearing. Once the deadline passes you lose your right to appeal the levy before it happens.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>The IRS is telling you they are about to seize your wages, bank accounts, or other assets. This is the last warning before collection action begins. You have 30 days to respond.</p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">Request a Collection Due Process hearing immediately — this is your legal right and temporarily stops the levy. Contact a tax professional right away as the 30-day deadline is firm and missing it removes important protections.</div>
-    </div>
-
-    <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
-      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
-
-    <footer>
-      <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
-    </footer>
+<nav>
+  <div class="logo-mark">
+    <svg viewBox="0 0 24 24">
+      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
+    </svg>
   </div>
+  <a href="/" class="logo-text">tax<span>plain</span></a>
+</nav>
+
+<p class="breadcrumb">
+  <a href="/">Home</a> &rsaquo;
+  <a href="/guides">Tax Guides</a> &rsaquo;
+  CP90 Notice
+</p>
+
+<h1>
+What is<br>
+<em style="font-style:italic;color:var(--accent)">IRS Notice CP90</em>?
+</h1>
+
+<span class="category-tag">IRS Notice</span>
+
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
+</div>
+
+<div class="card">
+  <div class="section-label">What this notice is</div>
+
+  <p>
+    IRS Notice CP90 is one of the most serious collection letters the IRS sends. It means the IRS intends to levy (seize) your assets to collect unpaid taxes and is giving you formal notice of your right to request a hearing before they do it.
+  </p>
+
+  <p>
+    In plain English: the IRS believes you still owe back taxes after previous notices, and they are now preparing to take money directly from your paycheck, bank account, state refund, or other property if you do not act quickly.
+  </p>
+
+  <p>
+    CP90 is not the actual levy yet — but it is the final warning immediately before aggressive collection action begins.
+  </p>
+</div>
+
+<div class="card">
+  <div class="section-label">Why this matters</div>
+
+  <div class="two-col">
+
+    <div class="range-box warn">
+      <div class="range-box-label">⚠ Serious collection stage</div>
+      <p>
+        CP90 usually means your account has already gone through multiple earlier IRS notices like CP14, CP501, CP503, or CP504.
+      </p>
+    </div>
+
+    <div class="range-box warn">
+      <div class="range-box-label">⚠ Levy risk</div>
+      <p>
+        If ignored, the IRS can garnish wages, freeze bank accounts, take future refunds, or seize certain assets after the deadline passes.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="timing-box">
+    <h3>📅 Critical deadline</h3>
+    <p>
+      You generally have 30 days from the date on the CP90 notice to request a Collection Due Process (CDP) hearing. Missing this deadline can remove important appeal rights and allow the IRS to move forward with levy action.
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="section-label">What the IRS is saying</div>
+
+  <h2>Breaking down the CP90</h2>
+
+  <p>
+    The notice usually contains several key pieces of information:
+  </p>
+
+  <ul class="symptom-list" style="margin-top: 12px;">
+
+    <li>
+      <strong>Total balance owed</strong> — Your unpaid tax, plus penalties and interest that continue growing daily.
+    </li>
+
+    <li>
+      <strong>Tax years involved</strong> — The exact years the IRS says still have unpaid balances.
+    </li>
+
+    <li>
+      <strong>Intent to levy</strong> — The IRS formally warning that it may seize wages, bank funds, or other assets.
+    </li>
+
+    <li>
+      <strong>Collection Due Process rights</strong> — Your legal right to request an independent appeal hearing before levy action begins.
+    </li>
+
+    <li>
+      <strong>Payment options</strong> — Instructions for paying in full, requesting a payment plan, or contacting the IRS.
+    </li>
+
+    <li>
+      <strong>Response deadline</strong> — The date by which you must act to preserve appeal rights.
+    </li>
+
+  </ul>
+</div>
+
+<div class="card">
+
+  <div class="section-label">What the IRS can levy</div>
+
+  <p>
+    If the issue is not resolved, the IRS may legally take money or property through levy action. Common levy targets include:
+  </p>
+
+  <ul class="symptom-list" style="margin-top: 12px;">
+
+    <li><strong>Wages</strong> — Continuous wage garnishment from your employer.</li>
+
+    <li><strong>Bank accounts</strong> — Frozen bank funds that can later be sent to the IRS.</li>
+
+    <li><strong>State tax refunds</strong> — Future refunds applied toward your balance.</li>
+
+    <li><strong>Social Security benefits</strong> — Partial federal payment offsets.</li>
+
+    <li><strong>Business income</strong> — Accounts receivable or merchant payment seizures.</li>
+
+    <li><strong>Certain property</strong> — In severe cases, vehicles, real estate, or other assets.</li>
+
+  </ul>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">Common mistakes to avoid</div>
+
+  <div class="two-col">
+
+    <div class="range-box warn">
+      <div class="range-box-label">⚠ Ignoring the notice</div>
+
+      <p>
+        Many people freeze because the letter sounds scary. But ignoring CP90 is usually the worst move. The IRS often becomes more flexible when you respond before levy action starts.
+      </p>
+    </div>
+
+    <div class="range-box warn">
+      <div class="range-box-label">⚠ Missing the 30-day hearing deadline</div>
+
+      <p>
+        Requesting a Collection Due Process hearing within the deadline can temporarily stop levy action while your case is reviewed.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="two-col" style="margin-top: 16px;">
+
+    <div class="range-box warn">
+      <div class="range-box-label">⚠ Assuming you have no options</div>
+
+      <p>
+        Even if you cannot pay in full, the IRS may approve installment agreements, hardship status, or settlement programs depending on your situation.
+      </p>
+    </div>
+
+    <div class="range-box warn">
+      <div class="range-box-label">⚠ Throwing away IRS mail</div>
+
+      <p>
+        Earlier IRS notices often contain deadlines and rights that become harder to recover once missed. Always open every IRS letter immediately.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">What to do right now</div>
+
+  <div class="next-steps">
+
+    Do not panic — but do not delay. First, verify the balance and tax years listed on the notice. Then decide whether you can pay in full, need a payment plan, or should request a Collection Due Process hearing before the deadline expires. If the amount is large, you are self-employed, or the IRS is threatening wage or bank levies, this is the point where hiring a CPA, enrolled agent, or tax attorney becomes extremely valuable.
+
+  </div>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">Questions to ask a tax professional</div>
+
+  <ul class="questions-list">
+
+    <li>
+      <span class="q-num">01</span>
+      Should I request a Collection Due Process hearing before the deadline?
+    </li>
+
+    <li>
+      <span class="q-num">02</span>
+      Am I eligible for an installment agreement or hardship status?
+    </li>
+
+    <li>
+      <span class="q-num">03</span>
+      Can any penalties or interest be reduced or removed?
+    </li>
+
+    <li>
+      <span class="q-num">04</span>
+      Is the IRS balance accurate, and were all payments properly credited?
+    </li>
+
+    <li>
+      <span class="q-num">05</span>
+      Is the IRS close to the collection statute expiration date?
+    </li>
+
+    <li>
+      <span class="q-num">06</span>
+      What assets or income streams are most at risk of levy?
+    </li>
+
+  </ul>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">Frequently asked questions</div>
+
+  <div class="faq-item">
+
+    <div class="faq-q">
+      Is CP90 worse than CP504?
+    </div>
+
+    <div class="faq-a">
+      Generally yes. CP504 warns about possible levy action, especially against state tax refunds. CP90 is a more formal final notice that includes Collection Due Process appeal rights before broader levy action can begin.
+    </div>
+
+  </div>
+
+  <div class="faq-item">
+
+    <div class="faq-q">
+      Can the IRS really take money from my bank account?
+    </div>
+
+    <div class="faq-a">
+      Yes. If levy action proceeds, the IRS can freeze funds in your bank account. Banks usually hold the money temporarily before sending it to the IRS, which creates a short window to resolve the issue.
+    </div>
+
+  </div>
+
+  <div class="faq-item">
+
+    <div class="faq-q">
+      What is a Collection Due Process hearing?
+    </div>
+
+    <div class="faq-a">
+      It's an independent IRS appeals process where you can challenge the collection action or propose alternatives like payment plans, hardship status, or offers in compromise.
+    </div>
+
+  </div>
+
+  <div class="faq-item">
+
+    <div class="faq-q">
+      Can I stop a wage garnishment after CP90?
+    </div>
+
+    <div class="faq-a">
+      Often yes — especially if you act before the levy begins. Payment agreements, hardship determinations, or timely appeals may prevent or release garnishments.
+    </div>
+
+  </div>
+
+  <div class="faq-item">
+
+    <div class="faq-q">
+      What happens if I already missed the 30-day deadline?
+    </div>
+
+    <div class="faq-a">
+      You may lose formal Collection Due Process rights, but you can still contact the IRS to request payment arrangements or alternative appeals. The sooner you act, the better your options usually are.
+    </div>
+
+  </div>
+
+</div>
+
+<div class="card">
+
+  <div class="section-label">Related tax notices</div>
+
+  <div class="related">
+
+    <a href="/cp14" class="related-chip">CP14 Notice →</a>
+
+    <a href="/cp501" class="related-chip">CP501 Notice →</a>
+
+    <a href="/cp503" class="related-chip">CP503 Notice →</a>
+
+    <a href="/cp504" class="related-chip">CP504 Notice →</a>
+
+    <a href="/cp2000" class="related-chip">CP2000 Notice →</a>
+
+    <a href="/1040" class="related-chip">Form 1040 →</a>
+
+  </div>
+
+</div>
+
+<div class="tool-cta">
+
+  <h3>Decode any tax form instantly</h3>
+
+  <p>
+    Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
+  </p>
+
+  <a href="/">Open the Decoder →</a>
+
+</div>
+
+<footer>
+
+  <span>taxplain.co</span>
+
+  <span>Understand your taxes. No accountant required.</span>
+
+</footer>
+
+</div>
+
 </body>
 </html>
+```
