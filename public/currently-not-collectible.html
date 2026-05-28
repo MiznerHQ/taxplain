@@ -1,103 +1,673 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Currently Not Collectible Status Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Currently Not Collectible Status? Plain-English explanation of Currently Not Collectible Status — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/currently-not-collectible">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currently Not Collectible (CNC) Status Explained – TaxPlain</title>
+<meta name="description" content="What does Currently Not Collectible status mean with the IRS? Plain-English explanation of CNC hardship status, who qualifies, what happens next, and whether the IRS can still collect later.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxplain.co/currently-not-collectible">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #1B4B8A;
+--accent-light: #EAF0FA;
+--accent-border: #B5CEFA;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.warn {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box.blue {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.warn .range-box-label {
+color: var(--warn);
+}
+
+.range-box.blue .range-box-label {
+color: var(--accent);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.timing-box {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 18px 20px;
+margin-top: 16px;
+}
+
+.timing-box h3 {
+font-size: 14px;
+color: var(--amber);
+font-family: 'DM Mono', monospace;
+letter-spacing: 0.5px;
+margin-bottom: 8px;
+}
+
+.timing-box p {
+font-size: 14px;
+color: #78350F;
+line-height: 1.65;
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
-      <a href="/" class="logo-text">tax<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Currently Not Collectible Status</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">Currently Not Collectible Status</em>?</h1>
-    <span class="category-tag">IRS Program</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
-    <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>Currently Not Collectible Status</strong> an IRS status that temporarily stops all collection activity when you can prove you have no ability to pay.</p>
-    </div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
-      <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Taxpayers experiencing genuine financial hardship where paying would leave them unable to cover basic living expenses.</p>
-        </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Thinking CNC status permanently resolves the debt. It's a temporary pause — you need a long-term plan for dealing with the underlying liability.</p>
-        </div>
-      </div>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
+</svg>
+</div>
 
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>CNC status doesn't eliminate your debt — it just pauses collection while you're in hardship. The IRS reviews your status periodically. Interest and penalties continue to accrue, but no levies or garnishments will occur.</p>
-    </div>
+<a href="/" class="logo-text">tax<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">Request CNC status by calling the IRS or working with a tax professional who can document your hardship. The statute of limitations on collection (10 years) continues to run while you're in CNC status. A tax professional can advise on long-term strategy.</div>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/guides">Tax Guides</a> &rsaquo;
+Currently Not Collectible
+</p>
 
-    <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
-      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
+<h1>What is<br><em style="font-style:italic;color:var(--accent)">Currently Not Collectible</em> status?</h1>
 
-    <footer>
-      <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
-    </footer>
-  </div>
+<span class="category-tag">IRS Collections</span>
+
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong>
+TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
+</div>
+
+<div class="card">
+<div class="section-label">What this means</div>
+
+<p>Currently Not Collectible (often shortened to CNC) is an IRS hardship status that temporarily stops active collection efforts because the IRS believes you cannot reasonably afford to pay your tax debt right now.</p>
+
+<p>Think of it like the IRS pressing “pause” on collections. They are acknowledging that forcing payment would create financial hardship — meaning you cannot pay basic living expenses and your tax debt at the same time.</p>
+
+<p>CNC status does not erase your tax debt. The balance still exists, and interest and penalties usually continue growing. But while you're in CNC, the IRS generally stops aggressive collection actions like bank levies and wage garnishments.</p>
+</div>
+
+<div class="card">
+<div class="section-label">What usually happens</div>
+
+<div class="two-col">
+
+<div class="range-box blue">
+<div class="range-box-label">✓ IRS Usually Stops</div>
+<p>Wage garnishments, bank levies, repeated collection notices, and forced payment demands while hardship status remains active.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">↑ Debt Still Exists</div>
+<p>Your tax balance does not disappear. Interest and penalties usually continue until the debt is paid or the collection statute expires.</p>
+</div>
+
+</div>
+
+<div class="timing-box">
+<h3>📅 Important reality check</h3>
+<p>CNC status is temporary. The IRS may review your income again later. If your finances improve, collections can restart and the IRS may ask you to begin payments.</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">How the IRS decides</div>
+
+<h2>Who qualifies for CNC status?</h2>
+
+<p>The IRS looks at whether paying your taxes would prevent you from covering necessary living expenses like housing, utilities, food, transportation, and medical care.</p>
+
+<ul class="symptom-list" style="margin-top: 12px;">
+
+<li><strong>Low income</strong> — Your income barely covers basic monthly expenses</li>
+
+<li><strong>Unemployment</strong> — Loss of work or reduced hours making payment impossible</li>
+
+<li><strong>Medical hardship</strong> — Significant healthcare expenses or disability</li>
+
+<li><strong>Fixed income</strong> — Retirement or Social Security income that leaves little disposable cash</li>
+
+<li><strong>No collectible assets</strong> — Little equity or property the IRS could realistically seize</li>
+
+<li><strong>Financial documentation</strong> — Bank statements, pay stubs, expenses, and financial forms showing hardship</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What the IRS may still do</div>
+
+<p>Even in Currently Not Collectible status, the IRS still keeps the debt on your account.</p>
+
+<ul class="symptom-list" style="margin-top: 12px;">
+
+<li>The IRS may keep future tax refunds and apply them to your balance</li>
+
+<li>A federal tax lien may still be filed in some cases</li>
+
+<li>Interest and penalties generally continue accruing</li>
+
+<li>The IRS can review your finances periodically</li>
+
+<li>You still must file future tax returns on time</li>
+
+<li>New tax debt can cause CNC status to end</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Common mistakes to avoid</div>
+
+<div class="two-col">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Ignoring Future Taxes</div>
+<p>CNC status only applies to existing debt. If you stop filing or create new tax balances, the IRS can remove hardship status quickly.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Assuming Debt Is Forgiven</div>
+<p>Currently Not Collectible status is not the same as debt cancellation. Your balance usually continues growing from penalties and interest.</p>
+</div>
+
+</div>
+
+<div class="two-col" style="margin-top:16px;">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Missing IRS Mail</div>
+<p>The IRS may periodically review your financial condition. Ignoring review letters can lead to collections restarting.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Waiting Too Long</div>
+<p>Many taxpayers wait until after levies begin before seeking hardship status. Earlier action usually gives you more options.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What to do right now</div>
+
+<div class="next-steps">
+
+If you truly cannot afford to pay your IRS debt, gather proof of your income, expenses, debts, and assets before contacting the IRS. Be prepared to explain your monthly financial situation in detail. The IRS typically wants a financial statement showing why collection would create hardship. If your case involves large balances, levies, liens, or multiple years of unfiled returns, speaking with a CPA, enrolled agent, or tax attorney is usually worth it.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Questions to ask a tax professional</div>
+
+<ul class="questions-list">
+
+<li><span class="q-num">01</span>Would I qualify for Currently Not Collectible status based on my income and expenses?</li>
+
+<li><span class="q-num">02</span>Should I request CNC status or an installment agreement instead?</li>
+
+<li><span class="q-num">03</span>How long is left on the IRS collection statute for my debt?</li>
+
+<li><span class="q-num">04</span>Will the IRS file a federal tax lien against me?</li>
+
+<li><span class="q-num">05</span>What financial documents should I prepare before calling the IRS?</li>
+
+<li><span class="q-num">06</span>Could I qualify for an Offer in Compromise instead of hardship status?</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Frequently asked questions</div>
+
+<div class="faq-item">
+<div class="faq-q">Does Currently Not Collectible status erase tax debt?</div>
+<div class="faq-a">
+No. CNC status only pauses active collections because of financial hardship. The underlying tax debt usually still exists, along with ongoing interest and penalties.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can the IRS still take my refund?</div>
+<div class="faq-a">
+Usually yes. Future federal tax refunds are often applied automatically to your outstanding tax balance even while in CNC status.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">How long does CNC status last?</div>
+<div class="faq-a">
+It varies. The IRS may periodically review your financial condition. If your income increases or expenses decrease significantly, collections may resume.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Will the IRS stop calling and sending notices?</div>
+<div class="faq-a">
+Collection activity usually slows significantly, but you may still receive account notices, balance reminders, or requests for updated financial information.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can I apply for CNC status myself?</div>
+<div class="faq-a">
+Yes. Many taxpayers request hardship status directly with the IRS by providing financial information. More complex cases may benefit from professional representation.
+</div>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Related tax topics</div>
+
+<div class="related">
+
+<a href="/cp14" class="related-chip">CP14 Notice →</a>
+
+<a href="/cp2000" class="related-chip">CP2000 Notice →</a>
+
+<a href="/installment-agreement" class="related-chip">Installment Agreement →</a>
+
+<a href="/offer-in-compromise" class="related-chip">Offer in Compromise →</a>
+
+<a href="/tax-lien" class="related-chip">Federal Tax Lien →</a>
+
+<a href="/wage-garnishment" class="related-chip">IRS Wage Garnishment →</a>
+
+</div>
+
+</div>
+
+<div class="tool-cta">
+
+<h3>Decode any tax form instantly</h3>
+
+<p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+
+<a href="/">Open the Decoder →</a>
+
+</div>
+
+<footer>
+
+<span>taxplain.co</span>
+
+<span>Understand your taxes. No accountant required.</span>
+
+</footer>
+
+</div>
+
 </body>
 </html>
+```
