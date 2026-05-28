@@ -1,103 +1,679 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FICA Tax (Federal Insurance Contributions Act) Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is FICA Tax (Federal Insurance Contributions Act)? Plain-English explanation of FICA Tax (Federal Insurance Contributions Act) — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/fica">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is FICA Tax? Explained in Plain English – TaxPlain</title>
+<meta name="description" content="What is FICA tax? Plain-English guide to Social Security and Medicare payroll taxes — how they work, who pays them, paycheck deductions, self-employment rules, and common mistakes.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxplain.co/fica">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #1B4B8A;
+--accent-light: #EAF0FA;
+--accent-border: #B5CEFA;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.warn {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box.blue {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.warn .range-box-label {
+color: var(--warn);
+}
+
+.range-box.blue .range-box-label {
+color: var(--accent);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.timing-box {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 18px 20px;
+margin-top: 16px;
+}
+
+.timing-box h3 {
+font-size: 14px;
+color: var(--amber);
+font-family: 'DM Mono', monospace;
+letter-spacing: 0.5px;
+margin-bottom: 8px;
+}
+
+.timing-box p {
+font-size: 14px;
+color: #78350F;
+line-height: 1.65;
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
-      <a href="/" class="logo-text">tax<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; FICA Tax (Federal Insurance Contributions Act)</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">FICA Tax (Federal Insurance Contributions Act)</em>?</h1>
-    <span class="category-tag">Tax Term</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>FICA Tax (Federal Insurance Contributions Act)</strong> the payroll taxes that fund Social Security and Medicare — they're automatically withheld from every employee's paycheck.</p>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
+</svg>
+</div>
 
-    <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
-      <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Every employed worker in the United States — both employees and their employers pay FICA taxes.</p>
-        </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Self-employed people forgetting to account for the full 15.3% self-employment tax when estimating quarterly payments.</p>
-        </div>
-      </div>
-    </div>
+<a href="/" class="logo-text">tax<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>FICA consists of 6.2% for Social Security and 1.45% for Medicare, totaling 7.65% from your paycheck. Your employer matches this amount. Self-employed people pay the full 15.3% as self-employment tax.</p>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/guides">Tax Guides</a> &rsaquo;
+FICA Tax
+</p>
 
-    <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">You can't avoid FICA as an employee, but self-employed people can deduct half of self-employment tax on their return. A tax professional can help self-employed people structure their business to optimize FICA obligations.</div>
-    </div>
+<h1>What is<br><em style="font-style:italic;color:var(--accent)">FICA Tax</em>?</h1>
 
-    <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
-      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
+<span class="category-tag">Payroll Tax</span>
 
-    <footer>
-      <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
-    </footer>
-  </div>
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
+</div>
+
+<div class="card">
+<div class="section-label">What this tax is</div>
+
+<p>FICA stands for the Federal Insurance Contributions Act. It's the payroll tax automatically taken out of most employees’ paychecks to fund Social Security and Medicare.</p>
+
+<p>In plain English: FICA is the reason your paycheck is smaller than your salary. Part of every paycheck goes toward retirement benefits, disability benefits, survivor benefits, and Medicare healthcare coverage for older Americans.</p>
+
+<p>Most workers split the cost with their employer. You pay one portion through paycheck withholding, and your employer pays an equal matching amount separately.</p>
+</div>
+
+<div class="card">
+<div class="section-label">How much comes out of your paycheck</div>
+
+<div class="two-col">
+
+<div class="range-box blue">
+<div class="range-box-label">✓ Social Security Tax</div>
+<p>Employees pay 6.2% of wages toward Social Security, up to the annual wage limit. Employers match another 6.2%.</p>
+</div>
+
+<div class="range-box blue">
+<div class="range-box-label">✓ Medicare Tax</div>
+<p>Employees pay 1.45% of wages toward Medicare, and employers match another 1.45%. Higher earners may owe an additional Medicare tax.</p>
+</div>
+
+</div>
+
+<div class="timing-box" style="margin-top:16px;">
+<h3>💵 Example</h3>
+
+<p>If you earn $1,000 gross pay, roughly $76.50 goes to FICA taxes before you receive your paycheck: $62 for Social Security and $14.50 for Medicare.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">What FICA actually pays for</div>
+
+<h2>Where the money goes</h2>
+
+<ul class="symptom-list" style="margin-top: 12px;">
+
+<li><strong>Social Security retirement benefits</strong> — Monthly income for retired workers who paid into the system during their careers</li>
+
+<li><strong>Disability benefits</strong> — Payments for workers who become disabled and can no longer work</li>
+
+<li><strong>Survivor benefits</strong> — Financial support for spouses and children after a worker dies</li>
+
+<li><strong>Medicare Part A</strong> — Hospital insurance for Americans age 65 and older</li>
+
+<li><strong>Current beneficiaries</strong> — Today's workers help fund benefits for current retirees and Medicare recipients</li>
+
+</ul>
+</div>
+
+<div class="card">
+<div class="section-label">Who pays FICA taxes</div>
+
+<div class="two-col">
+
+<div class="range-box blue">
+<div class="range-box-label">✓ Employees</div>
+
+<p>Most workers receiving W-2 wages automatically pay FICA through payroll withholding. You'll see it listed on your pay stub and Form W-2.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">↑ Self-Employed Workers</div>
+
+<p>Freelancers, gig workers, and business owners pay self-employment tax instead — effectively both the employee and employer portions combined.</p>
+</div>
+
+</div>
+
+<div class="timing-box" style="margin-top:16px;">
+<h3>📄 Important distinction</h3>
+
+<p>Federal income tax and FICA tax are separate. Even if you owe little or no federal income tax, FICA taxes may still come out of your paycheck.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">Common payroll terms explained</div>
+
+<ul class="symptom-list" style="margin-top: 12px;">
+
+<li><strong>Gross pay</strong> — Your earnings before taxes or deductions</li>
+
+<li><strong>Net pay</strong> — Your take-home pay after taxes and deductions</li>
+
+<li><strong>Payroll withholding</strong> — Taxes automatically deducted from your paycheck</li>
+
+<li><strong>Employer match</strong> — The equal amount your employer contributes toward Social Security and Medicare taxes</li>
+
+<li><strong>Self-employment tax</strong> — The Social Security and Medicare tax paid by self-employed workers</li>
+
+<li><strong>W-2</strong> — The year-end form showing wages earned and taxes withheld</li>
+
+</ul>
+</div>
+
+<div class="card">
+<div class="section-label">Common mistakes to avoid</div>
+
+<div class="two-col">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Confusing FICA With Income Tax</div>
+
+<p>FICA taxes fund Social Security and Medicare. Federal income tax funds the federal government generally. They're different taxes withheld separately.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Ignoring Self-Employment Tax</div>
+
+<p>New freelancers are often shocked by taxes because they're responsible for both halves of Social Security and Medicare taxes themselves.</p>
+</div>
+
+</div>
+
+<div class="two-col" style="margin-top: 16px;">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Assuming Overtime Avoids FICA</div>
+
+<p>Overtime pay is generally still subject to Social Security and Medicare taxes just like regular wages.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Forgetting Additional Medicare Tax</div>
+
+<p>High-income earners may owe an extra 0.9% Medicare tax once earnings exceed IRS thresholds.</p>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">What to do right now</div>
+
+<div class="next-steps">
+Check your latest pay stub and identify the lines labeled “Social Security,” “Medicare,” or “FICA.” That’s the amount being withheld for payroll taxes. If you’re self-employed, estimate self-employment taxes early so you aren’t surprised by a large tax bill at filing time.
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">Questions to ask your tax professional</div>
+
+<ul class="questions-list">
+
+<li><span class="q-num">01</span>Am I paying the correct amount of payroll tax based on my income type?</li>
+
+<li><span class="q-num">02</span>Do I need to make estimated quarterly tax payments as a freelancer or contractor?</li>
+
+<li><span class="q-num">03</span>Am I eligible for any deductions that reduce self-employment taxes?</li>
+
+<li><span class="q-num">04</span>Did my employer withhold too much or too little Medicare tax?</li>
+
+<li><span class="q-num">05</span>How does Social Security tax affect my future retirement benefits?</li>
+
+<li><span class="q-num">06</span>Should I consider an S-corporation structure to reduce self-employment tax exposure?</li>
+
+</ul>
+</div>
+
+<div class="card">
+<div class="section-label">Frequently asked questions</div>
+
+<div class="faq-item">
+<div class="faq-q">Is FICA the same as Social Security tax?</div>
+
+<div class="faq-a">
+Not exactly. FICA includes both Social Security tax and Medicare tax together. Social Security is one component of FICA.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Why do I pay FICA even if I don't use Medicare yet?</div>
+
+<div class="faq-a">
+FICA taxes fund the system broadly. Current workers help fund benefits for current retirees and Medicare recipients, while building eligibility for their own future benefits.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Do independent contractors pay FICA?</div>
+
+<div class="faq-a">
+Independent contractors usually pay self-employment tax instead of traditional payroll withholding. The tax covers the employee and employer portions of Social Security and Medicare taxes.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can I get FICA taxes refunded?</div>
+
+<div class="faq-a">
+Sometimes. If too much Social Security tax was withheld because you worked multiple jobs, you may receive a credit or refund when filing your tax return.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Are FICA taxes optional?</div>
+
+<div class="faq-a">
+Generally no. Most employees and self-employed workers are legally required to pay Social Security and Medicare taxes unless a narrow exemption applies.
+</div>
+</div>
+
+</div>
+
+<div class="card">
+<div class="section-label">Related tax forms</div>
+
+<div class="related">
+
+<a href="/w2" class="related-chip">Form W-2 →</a>
+
+<a href="/w4" class="related-chip">Form W-4 →</a>
+
+<a href="/1099-nec" class="related-chip">Form 1099-NEC →</a>
+
+<a href="/schedule-c" class="related-chip">Schedule C →</a>
+
+<a href="/1040-es" class="related-chip">Form 1040-ES →</a>
+
+<a href="/self-employment-tax" class="related-chip">Self-Employment Tax →</a>
+
+</div>
+</div>
+
+<div class="tool-cta">
+<h3>Decode any tax form instantly</h3>
+
+<p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+
+<a href="/">Open the Decoder →</a>
+</div>
+
+<footer>
+<span>taxplain.co</span>
+<span>Understand your taxes. No accountant required.</span>
+</footer>
+
+</div>
 </body>
 </html>
+```
