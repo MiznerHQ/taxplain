@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Offer in Compromise Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Offer in Compromise? Plain-English explanation of Offer in Compromise — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
+  <meta name="description" content="What is an Offer in Compromise? Plain-English guide to the IRS OIC program — who qualifies, how to apply with Form 656, costs, acceptance rates, and exactly what to do. No tax jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://taxplain.co/offer-in-compromise">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
@@ -25,25 +28,46 @@
     .logo-text span { color: var(--accent); }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
@@ -55,48 +79,158 @@
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
     <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Offer in Compromise</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">Offer in Compromise</em>?</h1>
+    <h1>What is an<br><em style="font-style:italic;color:var(--accent)">Offer in Compromise</em>?</h1>
     <span class="category-tag">IRS Program</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
-
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. An Offer in Compromise involves full financial disclosure and strict compliance — consult a qualified tax professional or enrolled agent before applying.</div>
     <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>Offer in Compromise</strong> an IRS program that allows eligible taxpayers to settle their tax debt for less than the full amount owed.</p>
+      <div class="section-label">What this program is</div>
+      <p>An Offer in Compromise (OIC) is an IRS program that lets eligible taxpayers settle their federal tax debt for less than the full amount owed. Think of it as the IRS agreeing to take a discounted lump sum because they've determined it's the most they can realistically collect from you — and that collecting the full amount would cause genuine financial hardship or isn't worth pursuing.</p>
+      <p>This is not debt forgiveness on demand. The IRS accepts roughly one-third of OIC applications. They scrutinize every asset, income source, and expense before deciding whether your offer amount matches your "reasonable collection potential" — the maximum they believe they could extract from you over time.</p>
+      <div class="timing-box">
+        <h3>⏱️ Expect 6–12+ months for a decision</h3>
+        <p>While your OIC is under review, the IRS generally pauses collection activity — no levies or garnishments. But the process is slow. Most offers take six months to a year (or longer) to evaluate. You must stay current on all tax filings and payments during the entire review period or your offer is automatically rejected.</p>
+      </div>
     </div>
-
     <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
+      <div class="section-label">Who qualifies</div>
       <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Taxpayers who genuinely cannot pay their full tax debt and can demonstrate that the settlement amount is the most the IRS could realistically collect.</p>
+        <div class="range-box blue">
+          <div class="range-box-label">✓ Must meet all of these</div>
+          <p>Filed all required tax returns. Received a bill for at least one tax debt included in the offer. Made all required estimated tax payments for the current year. Not in an open bankruptcy proceeding. If you're an employer, made all required federal tax deposits for the current and prior two quarters.</p>
         </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Filing an OIC without understanding the eligibility requirements. Many applications are rejected because the taxpayer could actually afford to pay through an installment agreement.</p>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Usually won't qualify if</div>
+          <p>You can pay the full debt through an installment agreement or by liquidating assets. You have significant equity in your home, retirement accounts, or investments the IRS can reach. Your income comfortably covers living expenses plus a monthly payment plan. The IRS believes they can collect the full amount within the collection statute (generally 10 years).</p>
         </div>
       </div>
     </div>
-
     <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>The IRS evaluates your income, expenses, assets, and future earning potential. If paying in full would create economic hardship, you may qualify. The IRS accepts fewer than half of all applications.</p>
+      <div class="section-label">Three reasons the IRS accepts an OIC</div>
+      <h2>Grounds for an offer</h2>
+      <p>Every OIC must fit one of three legal categories. Most individual taxpayers apply under the first one.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Doubt as to collectibility</strong> — The most common basis. You agree you owe the tax, but you genuinely cannot pay the full amount. The IRS calculates your reasonable collection potential (RCP) and accepts an offer at or above that number. This is filed on Form 656 with Form 433-A (OIC).</li>
+        <li><strong>Doubt as to liability</strong> — You dispute that you owe the tax at all — for example, the IRS assessed tax you believe is incorrect and you haven't had a chance to challenge it. Filed on Form 656-L instead of Form 656. No financial disclosure required, but the legal bar is high.</li>
+        <li><strong>Effective tax administration (ETA)</strong> — You can technically pay, but doing so would create an economic hardship or would be unfair given exceptional circumstances (serious illness, advanced age, etc.). Rare and difficult to prove. Also filed on Form 656 with full financial disclosure.</li>
+      </ul>
     </div>
-
+    <div class="card">
+      <div class="section-label">How the IRS calculates your offer</div>
+      <h2>Reasonable Collection Potential (RCP)</h2>
+      <p>The IRS won't accept an offer below what they calculate as your RCP — the total they believe they could collect from your future income plus available assets. The formula has two parts:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Future income potential</strong> — Your monthly income minus allowable living expenses (based on IRS national and local standards), multiplied by either 12 months (lump-sum offer) or 24 months (periodic payment offer)</li>
+        <li><strong>Net realizable equity in assets</strong> — Cash, investments, home equity (minus mortgage and a quick-sale discount), vehicles, and other property the IRS could seize or lien</li>
+      </ul>
+      <p style="margin-top: 14px;">Your offer amount must equal or exceed RCP. If the IRS calculates your RCP at $40,000 and you offer $15,000, the offer will be rejected unless you document special circumstances that justify a lower amount.</p>
+    </div>
+    <div class="card">
+      <div class="section-label">Forms and costs to apply</div>
+      <h2>What you need to submit</h2>
+      <p>The complete application package is in the Form 656-B booklet. Here's every piece:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Form 656</strong> — The offer itself: proposed settlement amount, payment terms, and tax periods covered</li>
+        <li><strong>Form 433-A (OIC)</strong> — Full financial disclosure for individuals and self-employed (income, expenses, assets, bank accounts)</li>
+        <li><strong>Form 433-B (OIC)</strong> — Financial disclosure for businesses (if business tax debt is included)</li>
+        <li><strong>$205 application fee</strong> — Non-refundable, even if the offer is rejected. Waived if you qualify for Low-Income Certification (based on household size and AGI)</li>
+        <li><strong>Initial payment</strong> — Required with submission unless low-income certified. Lump-sum option: 20% of offer amount upfront, balance within 5 months of acceptance. Periodic payment option: first monthly installment upfront, then monthly payments during the review period</li>
+        <li><strong>Supporting documentation</strong> — Pay stubs, bank statements, mortgage statements, vehicle titles, and anything that verifies the numbers on Form 433-A</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Applying when you can pay</div>
+          <p>If the IRS determines you can afford an installment agreement, your OIC will be rejected — and you'll lose the $205 fee plus your initial payment (applied to your debt). Run the IRS Pre-Qualifier tool at IRS.gov/OIC before spending time on a full application.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Hiding assets or income</div>
+          <p>The IRS cross-checks Form 433-A against bank records, property records, and prior returns. Undisclosed accounts or transferred assets discovered during review result in automatic rejection and possible fraud investigation.</p>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top: 16px;">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Missing filings during review</div>
+          <p>You must file all past-due returns before applying — and stay current on all new filings and estimated payments while the offer is pending. One missed quarterly estimated payment can kill an otherwise strong offer.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Offering too little</div>
+          <p>An offer below your calculated RCP is rejected without negotiation. Use the IRS formula (or have a professional calculate RCP) and offer at or above that number. Lowball offers waste the fee and months of waiting.</p>
+        </div>
+      </div>
+    </div>
     <div class="card">
       <div class="section-label">What to do right now</div>
-      <div class="action-box">Calculate your reasonable collection potential before applying — the IRS uses a specific formula. Applications cost $205 and require full financial disclosure. A tax professional significantly improves your chances of a successful offer.</div>
+      <div class="next-steps">
+        Step one: go to IRS.gov/OIC and run the Offer in Compromise Pre-Qualifier tool — it takes 10 minutes and tells you honestly whether you're likely eligible. Step two: if you pass the pre-qualifier, file every missing tax return and get current on estimated payments before applying. Step three: gather three months of bank statements, pay stubs, mortgage info, and asset documentation. Step four: hire an enrolled agent or tax attorney who specializes in OICs — the acceptance rate for professionally prepared offers is significantly higher than DIY submissions, and the $205 fee is wasted if you get rejected.
+      </div>
     </div>
-
+    <div class="card">
+      <div class="section-label">If your offer is accepted</div>
+      <h2>Compliance requirements after approval</h2>
+      <p>An accepted OIC is a binding contract. Breaking any term voids the settlement and restores the full original debt plus interest and penalties.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Pay the agreed amount</strong> — Lump-sum within 5 months of acceptance, or monthly installments per your payment plan</li>
+        <li><strong>File all tax returns on time</strong> — For 5 years after acceptance, every return must be filed by the deadline</li>
+        <li><strong>Pay all taxes on time</strong> — No new delinquencies for 5 years, including estimated tax payments</li>
+        <li><strong>Tax liens remain until paid</strong> — The IRS won't release federal tax liens until your offer terms are fully satisfied</li>
+        <li><strong>Refunds are applied to your debt</strong> — Any tax refunds during the review period and for the tax year your offer is accepted go toward your liability</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Based on my income and assets, what is my calculated reasonable collection potential?</li>
+        <li><span class="q-num">02</span>Am I better off with an OIC, an installment agreement, or currently not collectible status?</li>
+        <li><span class="q-num">03</span>Do I qualify for Low-Income Certification to waive the $205 application fee?</li>
+        <li><span class="q-num">04</span>Should I use the lump-sum or periodic payment option given my cash flow?</li>
+        <li><span class="q-num">05</span>Are there any unfiled returns or missing estimated payments that would disqualify me?</li>
+        <li><span class="q-num">06</span>What special circumstances might justify an offer below my calculated RCP?</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">How much does the IRS usually settle for?</div>
+        <div class="faq-a">There's no standard discount percentage. The settlement amount depends entirely on your RCP calculation — your income, allowable expenses, and asset equity. Some taxpayers settle for pennies on the dollar; others with higher RCPs pay 70–90% of what they owe. The IRS publishes annual data showing average accepted offers, but your number is unique to your financial situation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Will an OIC stop IRS collection actions?</div>
+        <div class="faq-a">Generally yes — while your offer is being evaluated, the IRS suspends levies, garnishments, and most collection enforcement. However, they can continue collection if they determine your offer has no chance of acceptance, or if you fail to stay current on filings and payments during the review period.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I apply for an OIC if I haven't filed all my tax returns?</div>
+        <div class="faq-a">No. All required returns must be filed before the IRS will consider your offer. If they discover unfiled returns during review, they'll apply your initial payment to your debt, return your application, and reject the offer — and you cannot appeal that rejection.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between an OIC and an installment agreement?</div>
+        <div class="faq-a">An installment agreement lets you pay the full amount owed over time (up to 72 months for most taxpayers). An OIC settles the debt for less than the full amount. If you can afford monthly payments on the full balance, the IRS expects an installment agreement — not an OIC. The installment agreement is faster to set up and doesn't require full asset disclosure.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I apply for an OIC online?</div>
+        <div class="faq-a">Yes. Individual taxpayers can check eligibility, submit offers, and make payments through their IRS Individual Online Account at IRS.gov/account. You can also mail the paper application package from Form 656-B. Both methods require the same forms and documentation.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Related IRS programs and notices</div>
+      <div class="related">
+        <a href="/cp504" class="related-chip">CP504 Notice →</a>
+        <a href="/letter-3219" class="related-chip">Letter 3219 →</a>
+        <a href="/1040" class="related-chip">Form 1040 →</a>
+        <a href="/1040-es" class="related-chip">Form 1040-ES →</a>
+        <a href="/magi" class="related-chip">MAGI →</a>
+        <a href="/schedule-c" class="related-chip">Schedule C →</a>
+      </div>
+    </div>
     <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
+      <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
-
     <footer>
       <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
+      <span>Understand your taxes. No accountant required.</span>
     </footer>
   </div>
 </body>
