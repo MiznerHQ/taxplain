@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roth IRA Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Roth IRA? Plain-English explanation of Roth IRA — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
+  <meta name="description" content="What is a Roth IRA? Plain-English guide to tax-free retirement savings — who qualifies, contribution limits, withdrawal rules, Roth vs. Traditional, backdoor Roth, and exactly what to do. No tax jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://taxplain.co/roth-ira">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
@@ -25,25 +28,46 @@
     .logo-text span { color: var(--accent); }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
@@ -55,48 +79,139 @@
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
     <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Roth IRA</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">Roth IRA</em>?</h1>
+    <h1>What is a<br><em style="font-style:italic;color:var(--accent)">Roth IRA</em>?</h1>
     <span class="category-tag">Retirement</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
-
     <div class="card">
       <div class="section-label">What it is</div>
-      <p>The <strong>Roth IRA</strong> a retirement account where you contribute after-tax dollars and all future growth and withdrawals are completely tax-free.</p>
+      <p>A Roth IRA is a retirement savings account where you contribute money you've already paid taxes on — and in return, all future growth and qualified withdrawals are completely tax-free. It's not a tax form you file. It's an account you open at a brokerage (Fidelity, Vanguard, Schwab, etc.) and fund each year.</p>
+      <p>The core trade-off is simple: you pay taxes now so you never pay taxes on that money again — not on the gains, not on the withdrawals in retirement. For many people, especially younger workers or anyone who expects to be in a higher tax bracket later, that's a powerful deal.</p>
     </div>
-
     <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
+      <div class="section-label">Who can contribute</div>
       <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Taxpayers with earned income below the income limits — for 2024, phase-out begins at $146,000 for single filers and $230,000 for married filing jointly.</p>
+        <div class="range-box blue">
+          <div class="range-box-label">✓ You can contribute if...</div>
+          <p>You have earned income (wages, self-employment, etc.) and your modified adjusted gross income (MAGI) is below the IRS limit for your filing status. For 2024, full contributions are allowed up to $146,000 (single) or $230,000 (married filing jointly).</p>
         </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Withdrawing Roth IRA earnings before age 59½ without a qualifying exception. Earnings (not contributions) withdrawn early are subject to taxes and a 10% penalty.</p>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Income too high?</div>
+          <p>Above those thresholds, your ability to contribute phases out and eventually disappears. High earners sometimes use a "backdoor Roth" strategy — contributing to a Traditional IRA and converting it — but this has its own rules and potential tax traps.</p>
+        </div>
+      </div>
+      <div class="timing-box" style="margin-top:16px;">
+        <h3>📅 Contribution deadline</h3>
+        <p>You can contribute to a Roth IRA for the prior tax year until the federal filing deadline — typically April 15. For example, a 2024 Roth IRA contribution can be made anytime from January 1, 2024 through April 15, 2025. You don't need to wait until you've filed your taxes.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Key numbers to know</div>
+      <h2>2024 contribution limits</h2>
+      <p>These are the main rules that apply to most people. Limits are indexed for inflation and typically update each year.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Annual contribution limit</strong> — $7,000 per year ($8,000 if you're age 50 or older). This is the combined limit across all your IRAs — Roth and Traditional together.</li>
+        <li><strong>Earned income requirement</strong> — You can only contribute up to the amount you earned. If you made $4,000 in wages, your max contribution is $4,000, not $7,000.</li>
+        <li><strong>No age limit</strong> — As long as you have earned income, you can contribute at any age. (The old rule blocking contributions after 70½ was removed in 2020.)</li>
+        <li><strong>No tax deduction</strong> — Roth contributions are made with after-tax dollars. You won't see them reduce your taxable income on your 1040 the way Traditional IRA contributions can.</li>
+        <li><strong>Tax-free qualified withdrawals</strong> — Withdraw contributions anytime, tax-free. Withdraw earnings tax-free once the account has been open 5+ years and you're 59½ or older (or meet another qualifying exception).</li>
+        <li><strong>No required minimum distributions</strong> — Unlike Traditional IRAs and 401(k)s, Roth IRAs have no RMDs during your lifetime. The money can keep growing tax-free as long as you live.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Roth vs. Traditional IRA</div>
+      <p>Both are individual retirement accounts, but the tax treatment is opposite. Choosing between them comes down to when you want to pay taxes — now or later.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Roth IRA</strong> — Pay taxes now. Withdrawals in retirement are tax-free. Best when you expect your tax rate to be higher in retirement than it is today.</li>
+        <li><strong>Traditional IRA</strong> — Get a tax deduction now (if eligible). Pay taxes on every dollar you withdraw in retirement. Best when you're in a high bracket now and expect to be in a lower one later.</li>
+        <li><strong>Employer 401(k)</strong> — If your employer offers a match, contribute enough to get the full match first — that's free money. Then consider maxing a Roth IRA for tax diversification before going back to the 401(k).</li>
+      </ul>
+      <div class="timing-box" style="margin-top:16px;">
+        <h3>💡 Tax diversification</h3>
+        <p>Many financial planners recommend having both Roth and Traditional accounts. In retirement, you can pull from Traditional accounts in low-income years (paying lower tax rates) and from Roth accounts in high-income years — giving you control over your tax bill year by year.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Early earnings withdrawal</div>
+          <p>Withdrawing investment earnings before age 59½ (without a qualifying exception) triggers income tax plus a 10% penalty. Your original contributions can always be withdrawn tax-free — but the growth cannot.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Exceeding the limit</div>
+          <p>Contributing more than $7,000 ($8,000 if 50+) across all IRAs triggers a 6% excess contribution penalty every year until you fix it. Track contributions across all accounts — including spousal IRAs.</p>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top: 16px;">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Backdoor Roth pro-rata rule</div>
+          <p>If you have existing Traditional IRA balances, a backdoor Roth conversion may be partially taxable due to the IRS pro-rata rule. Many high earners miss this and get surprised with a tax bill.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Missing the deadline</div>
+          <p>Unlike a 401(k) where contributions come from each paycheck, Roth IRA contributions are manual. Forgetting to contribute by April 15 means losing that year's slot forever — you can't go back and fill it later.</p>
         </div>
       </div>
     </div>
-
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Contributions are not tax-deductible, but qualified withdrawals in retirement are 100% tax-free including all the growth. There are no required minimum distributions during your lifetime, making it a powerful estate planning tool.</p>
-    </div>
-
     <div class="card">
       <div class="section-label">What to do right now</div>
-      <div class="action-box">Contribute as early as possible to maximize tax-free growth. If your income exceeds the limit, ask a tax professional about the backdoor Roth IRA strategy. The earlier you contribute, the more powerful the tax-free compounding becomes.</div>
+      <div class="next-steps">
+        If you haven't opened a Roth IRA yet, pick a low-cost brokerage and open one today — it takes about 10 minutes. Set up automatic monthly contributions ($583/month hits the $7,000 annual limit). If you're unsure whether Roth or Traditional is better for your situation, or your income is near the phase-out limits, a tax professional can run the comparison in one session. The earlier you start, the more years of tax-free compounding you get.
+      </div>
     </div>
-
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Given my current income and expected retirement income, is a Roth or Traditional IRA better for me?</li>
+        <li><span class="q-num">02</span>Am I under the income limit to contribute directly to a Roth IRA, or do I need a backdoor Roth strategy?</li>
+        <li><span class="q-num">03</span>If I do a backdoor Roth, do I have existing Traditional IRA balances that trigger the pro-rata rule?</li>
+        <li><span class="q-num">04</span>Should I contribute to a Roth IRA, my employer's 401(k), or both — and in what order?</li>
+        <li><span class="q-num">05</span>Can I still make a contribution for last tax year before the April 15 deadline?</li>
+        <li><span class="q-num">06</span>Does my spouse qualify for a spousal Roth IRA even if they don't have earned income?</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can I withdraw my Roth IRA contributions anytime?</div>
+        <div class="faq-a">Yes. Because you already paid taxes on contributions, you can withdraw them at any time for any reason — no taxes, no penalties. Only the investment earnings are restricted before age 59½.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between a Roth IRA and a Roth 401(k)?</div>
+        <div class="faq-a">Both use after-tax contributions and offer tax-free withdrawals in retirement. A Roth IRA is an individual account you open yourself with higher investment flexibility and no RMDs. A Roth 401(k) is through your employer, has higher contribution limits ($23,000 in 2024), but is subject to RMDs unless rolled into a Roth IRA at retirement.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is a backdoor Roth IRA?</div>
+        <div class="faq-a">It's a legal strategy for high earners above the income limit: contribute to a Traditional IRA (which has no income limit for non-deductible contributions), then convert it to a Roth IRA. The conversion itself is not restricted by income. However, if you have other Traditional IRA money, the IRS applies the pro-rata rule and part of the conversion may be taxable.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I have both a Roth IRA and a Traditional IRA?</div>
+        <div class="faq-a">Yes, but the $7,000 annual contribution limit ($8,000 if 50+) applies to the combined total across all your IRAs. You can't put $7,000 in each — it's $7,000 total split however you want between Roth and Traditional.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I report Roth IRA contributions on my tax return?</div>
+        <div class="faq-a">Roth contributions themselves don't appear on your 1040 because they're not deductible. Your brokerage sends you Form 5498 by May 31 showing your contributions — keep it for your records, but you don't file it with your return. If you do a Roth conversion from a Traditional IRA, that conversion amount is reported and may be taxable.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Related tax topics</div>
+      <div class="related">
+        <a href="/ira" class="related-chip">Traditional IRA →</a>
+        <a href="/401k" class="related-chip">401(k) →</a>
+        <a href="/magi" class="related-chip">MAGI →</a>
+        <a href="/1040" class="related-chip">Form 1040 →</a>
+        <a href="/w2" class="related-chip">Form W-2 →</a>
+        <a href="/tax-bracket" class="related-chip">Tax Brackets →</a>
+      </div>
+    </div>
     <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
+      <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
-
     <footer>
       <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
+      <span>Understand your taxes. No accountant required.</span>
     </footer>
   </div>
 </body>
