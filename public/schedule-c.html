@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Schedule C (Profit or Loss from Business) Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Schedule C (Profit or Loss from Business)? Plain-English explanation of Schedule C (Profit or Loss from Business) — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
+  <title>Schedule C Explained in Plain English – TaxPlain</title>
+  <meta name="description" content="What is Schedule C? Plain-English guide to reporting self-employment and freelance business income — who must file, every expense category, net profit, self-employment tax, common mistakes, and exactly what to do. No tax jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://taxplain.co/schedule-c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
@@ -25,25 +28,46 @@
     .logo-text span { color: var(--accent); }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
@@ -54,49 +78,147 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Schedule C (Profit or Loss from Business)</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">Schedule C (Profit or Loss from Business)</em>?</h1>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Schedule C</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">Schedule C</em>?</h1>
     <span class="category-tag">Tax Form</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
-
     <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>Schedule C (Profit or Loss from Business)</strong> the form self-employed people and sole proprietors use to report business income and expenses on their personal tax return.</p>
+      <div class="section-label">What this form is</div>
+      <p>Schedule C (Profit or Loss from Business) is the form self-employed people, freelancers, and sole proprietors attach to their Form 1040 to report business income and expenses. If you work for yourself — not as an employee with a W-2 — this is how the IRS knows what your business earned and what it cost to run.</p>
+      <p>The math is straightforward: total business income minus total business expenses equals net profit (or loss). That net profit flows to your 1040 as taxable income and also triggers self-employment tax on Schedule SE. Every legitimate expense you deduct on Schedule C directly reduces both your income tax and your self-employment tax bill.</p>
     </div>
-
     <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
+      <div class="section-label">Who must file</div>
       <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Sole proprietors, freelancers, independent contractors, and single-member LLC owners who have business income or losses.</p>
+        <div class="range-box blue">
+          <div class="range-box-label">✓ You need Schedule C if...</div>
+          <p>You're a sole proprietor, freelancer, independent contractor, gig worker, or single-member LLC owner with business income. If you received a 1099-NEC or earned more than $400 in self-employment income, you must file — even if your expenses wiped out your profit.</p>
         </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Mixing personal and business expenses or failing to track small expenses. Every receipt matters — business deductions directly reduce your self-employment tax.</p>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ You may NOT need it if...</div>
+          <p>Your business is structured as a partnership, S-corp, or C-corp — those use different forms (Schedule E, Form 1120-S, etc.). Side income under $400 with no other filing requirement may not trigger a Schedule C, but you still owe tax on it.</p>
+        </div>
+      </div>
+      <div class="timing-box" style="margin-top:16px;">
+        <h3>📅 Filing deadline</h3>
+        <p>Schedule C is filed with your Form 1040, due April 15 each year for the prior tax year. If you owe self-employment tax, you should also be making quarterly estimated tax payments throughout the year via Form 1040-ES — waiting until April 15 can trigger underpayment penalties.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">What each section covers</div>
+      <h2>Breaking down Schedule C</h2>
+      <p>The form walks you through your business from top to bottom. Here's what each part is actually asking:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Part I — Income</strong> — Gross receipts or sales (Line 1), returns and allowances (Line 2), and other income like interest or refunds (Line 6). Line 7 is your total income.</li>
+        <li><strong>Part II — Expenses</strong> — Lines 8–27a list every deductible business expense category: advertising, car/truck, contract labor, insurance, legal fees, office expenses, supplies, travel, meals (50% deductible), utilities, and more.</li>
+        <li><strong>Line 28 — Total expenses</strong> — Add up everything in Part II. This is the number that directly reduces your taxable profit.</li>
+        <li><strong>Line 29 — Tentative profit or loss</strong> — Income minus expenses. A negative number means you had a business loss.</li>
+        <li><strong>Line 30 — Home office deduction</strong> — If you use part of your home exclusively for business, you can deduct a portion of rent, mortgage interest, utilities, and insurance here.</li>
+        <li><strong>Line 31 — Net profit or loss</strong> — The final number that flows to Schedule 1 (Line 3) and then to your 1040. This also feeds into Schedule SE for self-employment tax.</li>
+        <li><strong>Part III — Cost of Goods Sold</strong> — If you sell physical products, this section tracks inventory: beginning inventory, purchases, ending inventory. Relevant for Etsy sellers, retailers, and resellers.</li>
+        <li><strong>Part IV — Vehicle information</strong> — If you claim car/truck expenses, you report whether you used the standard mileage rate or actual expenses, and total business miles driven.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Common deductible expenses</div>
+      <p>Most freelancers leave money on the table by not tracking small expenses. Here are the categories Schedule C covers that apply to most self-employed people:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Software and subscriptions</strong> — Adobe, Canva, QuickBooks, project management tools, cloud storage</li>
+        <li><strong>Phone and internet</strong> — Business-use percentage of your cell phone and home internet bills</li>
+        <li><strong>Contract labor</strong> — Payments to subcontractors or freelancers you hired (report on 1099-NEC if over $600)</li>
+        <li><strong>Professional services</strong> — Accountant, lawyer, business consultant fees</li>
+        <li><strong>Education and training</strong> — Courses, certifications, and books directly related to your current business</li>
+        <li><strong>Business meals</strong> — 50% deductible when discussing business with a client or prospect</li>
+        <li><strong>Travel</strong> — Flights, hotels, and transportation for business trips (not commuting)</li>
+        <li><strong>Health insurance premiums</strong> — Deductible on Form 1040 as an above-the-line adjustment if you're self-employed and not eligible for employer coverage</li>
+      </ul>
+      <div class="timing-box" style="margin-top:16px;">
+        <h3>💡 QBI deduction</h3>
+        <p>If your net profit qualifies, you may also be eligible for the Qualified Business Income (QBI) deduction — up to 20% of your business profit deducted from your taxable income. This is calculated separately on Form 8995 and can save thousands, but has income limits and rules for certain professions.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Mixing personal and business</div>
+          <p>Using one bank account for everything makes it impossible to track deductions and is a red flag in audits. Open a separate business checking account and run all business income and expenses through it.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Forgetting 1099 income</div>
+          <p>Even if a client didn't send you a 1099-NEC, you're still required to report the income. The IRS receives copies of 1099s from payers and matches them against your return.</p>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top: 16px;">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ No quarterly estimated payments</div>
+          <p>Self-employment income has no automatic withholding. If you wait until April 15 to pay the full year's tax, you'll owe interest and possibly underpayment penalties on top of the tax itself.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Deducting personal expenses</div>
+          <p>Commuting, personal clothing, and general life expenses aren't deductible just because you work from home. Every deduction must be ordinary and necessary for your specific business.</p>
         </div>
       </div>
     </div>
-
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Your net profit from Schedule C is subject to both income tax and self-employment tax (15.3%). Every legitimate business expense reduces your taxable profit — tracking expenses carefully can significantly reduce your tax bill.</p>
-    </div>
-
     <div class="card">
       <div class="section-label">What to do right now</div>
-      <div class="action-box">Keep meticulous records of all business income and expenses throughout the year. Use accounting software or a spreadsheet. A tax professional can identify deductions you may have missed and help you avoid audit red flags.</div>
+      <div class="next-steps">
+        If you're self-employed and haven't been tracking expenses, start today — open a separate business bank account, save every receipt, and use free accounting software like Wave or QuickBooks Self-Employed. When tax season arrives, gather all 1099-NEC forms, your income records, and expense receipts. Tax software like FreeTaxUSA or TurboTax Self-Employed handles Schedule C well for straightforward situations. If you had significant income, multiple income streams, or a home office, a CPA who specializes in freelancers will likely save you more than their fee.
+      </div>
     </div>
-
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Am I missing any business deductions I haven't been tracking — home office, mileage, phone, software?</li>
+        <li><span class="q-num">02</span>Should I use the standard mileage rate or actual vehicle expenses for my car deduction?</li>
+        <li><span class="q-num">03</span>Do I qualify for the QBI (Section 199A) deduction, and how much could it save me?</li>
+        <li><span class="q-num">04</span>Am I paying enough in quarterly estimated taxes to avoid underpayment penalties?</li>
+        <li><span class="q-num">05</span>Should I form an LLC or S-corp to reduce self-employment tax on my income?</li>
+        <li><span class="q-num">06</span>Do I need to issue 1099-NEC forms to any subcontractors I paid over $600 this year?</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need Schedule C if I only had a small side gig?</div>
+        <div class="faq-a">If your net self-employment earnings exceed $400, yes — you must file Schedule C and pay self-employment tax regardless of how small the income seems. Below $400, you may not be required to file Schedule C, but the income is still technically taxable and should be reported on your 1040.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between Schedule C and a 1099-NEC?</div>
+        <div class="faq-a">They're completely different things. A 1099-NEC is a tax document a client sends you showing how much they paid you — you don't fill it out. Schedule C is the form you fill out and attach to your 1040 to report all your business income and expenses. You may receive multiple 1099-NECs from different clients, and all of that income goes on one Schedule C.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I deduct my home office on Schedule C?</div>
+        <div class="faq-a">Yes, if you use part of your home regularly and exclusively for business. You can use the simplified method ($5 per square foot, up to 300 sq ft = $1,500 max) or the regular method (actual expenses prorated by business-use percentage). The home office deduction goes on Line 30 of Schedule C.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What happens if my business had a loss?</div>
+        <div class="faq-a">A net loss on Schedule C (expenses exceeding income) reduces your overall taxable income on your 1040 — which can lower your tax bill or increase your refund. However, the IRS may scrutinize businesses that consistently report losses, as this can indicate a hobby rather than a profit-motivated business. The hobby loss rules limit deductions if your activity isn't genuinely run for profit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How does Schedule C connect to self-employment tax?</div>
+        <div class="faq-a">Your net profit from Schedule C Line 31 flows to Schedule SE, where self-employment tax is calculated at 15.3% (12.4% Social Security + 2.9% Medicare) on 92.35% of your net earnings. You can deduct half of your self-employment tax as an above-the-line adjustment on your 1040 — so it partially offsets itself.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/1040" class="related-chip">Form 1040 →</a>
+        <a href="/1099-nec" class="related-chip">Form 1099-NEC →</a>
+        <a href="/self-employment-tax" class="related-chip">Self-Employment Tax →</a>
+        <a href="/1040-es" class="related-chip">Form 1040-ES →</a>
+        <a href="/qbi-deduction" class="related-chip">QBI Deduction →</a>
+        <a href="/home-office-deduction" class="related-chip">Home Office →</a>
+      </div>
+    </div>
     <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
+      <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
-
     <footer>
       <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
+      <span>Understand your taxes. No accountant required.</span>
     </footer>
   </div>
 </body>
