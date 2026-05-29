@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QBI Deduction (Qualified Business Income) Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is QBI Deduction (Qualified Business Income)? Plain-English explanation of QBI Deduction (Qualified Business Income) — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
+  <meta name="description" content="What is the QBI deduction? Plain-English guide to Section 199A — who qualifies, 2024 income limits, SSTB rules, how to calculate your 20% write-off, and exactly what to do. No tax jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://taxplain.co/qbi-deduction">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
@@ -25,25 +28,46 @@
     .logo-text span { color: var(--accent); }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
@@ -54,49 +78,160 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; QBI Deduction (Qualified Business Income)</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">QBI Deduction (Qualified Business Income)</em>?</h1>
-    <span class="category-tag">Deduction</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
-
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; QBI Deduction</p>
+    <h1>What is the<br><em style="font-style:italic;color:var(--accent)">QBI Deduction</em>?</h1>
+    <span class="category-tag">Tax Deduction</span>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. QBI calculations involve complex phase-outs and limitations — consult a qualified tax professional for your specific situation.</div>
     <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>QBI Deduction (Qualified Business Income)</strong> a deduction of up to 20% of qualified business income for self-employed people and pass-through business owners.</p>
+      <div class="section-label">What this deduction is</div>
+      <p>The Qualified Business Income (QBI) deduction — also called the Section 199A deduction — lets eligible self-employed people and pass-through business owners deduct up to 20% of their net business income from federal taxes. Created by the 2017 Tax Cuts and Jobs Act and made permanent in 2025, it's one of the most valuable tax breaks for freelancers, sole proprietors, S-corp owners, and partners.</p>
+      <p>In plain terms: if your business earns $100,000 in qualified income and you qualify for the full deduction, you could deduct $20,000 — meaning you only pay income tax on $80,000 of that business income. You don't need to itemize to claim it. The deduction works alongside the standard deduction.</p>
+      <div class="timing-box">
+        <h3>💡 The overall cap</h3>
+        <p>Your QBI deduction can never exceed 20% of your taxable income (calculated before the QBI deduction) minus any net capital gains. So even if your business QBI qualifies for a large deduction, a low overall taxable income can limit what you actually get.</p>
+      </div>
     </div>
-
     <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
+      <div class="section-label">Who qualifies</div>
       <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Sole proprietors, S-corp shareholders, and partners in partnerships with qualified business income — subject to income limits for certain service businesses.</p>
+        <div class="range-box blue">
+          <div class="range-box-label">✓ Eligible income sources</div>
+          <p>Sole proprietorships (Schedule C). S-corporation pass-through income (Schedule E). Partnership and LLC income (Schedule E or K-1). Certain REIT dividends and publicly traded partnership income. Trust and estate beneficiaries with QBI.</p>
         </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Failing to claim the QBI deduction at all. It's one of the most valuable deductions for self-employed people, yet many miss it entirely because it's relatively new and complex.</p>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Not eligible</div>
+          <p>W-2 employee wages — even from your own S-corp salary. C-corporation income (taxed at the corporate level). Investment income that isn't from a qualified trade or business. Reasonable compensation paid to S-corp owner-employees (only the pass-through profit counts).</p>
         </div>
       </div>
     </div>
-
     <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>If your taxable income is below $182,050 (single) or $364,200 (married, 2023), you can generally deduct 20% of your net business income. Above these limits, complex rules apply, especially for service businesses.</p>
+      <div class="section-label">2024 income thresholds</div>
+      <h2>When limits kick in</h2>
+      <p>Your taxable income (before the QBI deduction) determines whether you get the full 20% or face additional restrictions. These are the 2024 numbers:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Below $191,950 (single) / $383,900 (married filing jointly)</strong> — Full 20% QBI deduction with no W-2 wage or property limitations. Simplest scenario. Use Form 8995.</li>
+        <li><strong>$191,950–$241,950 (single) / $383,900–$483,900 (MFJ)</strong> — Phase-in range. W-2 wage and qualified property (UBIA) limitations gradually apply. For specified service businesses (SSTBs), the deduction gradually phases out.</li>
+        <li><strong>Above $241,950 (single) / $483,900 (MFJ)</strong> — Full W-2 wage and UBIA limitations apply for non-SSTB businesses. SSTB owners lose the QBI deduction entirely at these income levels.</li>
+      </ul>
     </div>
-
+    <div class="card">
+      <div class="section-label">Specified service trades (SSTBs)</div>
+      <h2>Businesses with extra restrictions</h2>
+      <p>If your business is classified as a Specified Service Trade or Business (SSTB), the QBI deduction phases out faster as your income rises. SSTBs include:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Health</strong> — Doctors, dentists, nurses, therapists, and other medical professionals</li>
+        <li><strong>Law and accounting</strong> — Attorneys, CPAs, enrolled agents, tax preparers</li>
+        <li><strong>Consulting</strong> — Management, financial, and business consultants providing professional advice</li>
+        <li><strong>Performing arts and athletics</strong> — Actors, musicians, professional athletes</li>
+        <li><strong>Financial services</strong> — Financial advisors, brokers, investment managers</li>
+        <li><strong>Other</strong> — Actuarial science, brokerage services, investing/trading, dealing in securities</li>
+      </ul>
+      <p style="margin-top: 14px;">Engineers, architects, and real estate agents/brokers are explicitly excluded from the SSTB definition — they get the same QBI rules as non-service businesses even at high incomes (subject to W-2 wage limits above the threshold).</p>
+    </div>
+    <div class="card">
+      <div class="section-label">How to calculate it</div>
+      <h2>Simple vs. complex scenarios</h2>
+      <p>The calculation depends on your taxable income level and business type:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Simple (below threshold)</strong> — QBI deduction = 20% of your net qualified business income, capped at 20% of taxable income minus net capital gains. Reported on Form 8995.</li>
+        <li><strong>Complex (above threshold, non-SSTB)</strong> — Deduction limited to the greater of: (a) 50% of W-2 wages paid by the business, or (b) 25% of W-2 wages plus 2.5% of the unadjusted basis of qualified property (UBIA). Reported on Form 8995-A.</li>
+        <li><strong>SSTB in phase-out range</strong> — A percentage of your QBI is excluded based on how far into the phase-out range your income falls. Form 8995-A worksheets calculate the exact reduction.</li>
+        <li><strong>Multiple businesses</strong> — QBI is calculated separately for each trade or business, then combined. A loss in one business can offset QBI from another.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Not claiming it at all</div>
+          <p>The QBI deduction doesn't appear automatically — you must calculate and claim it on your return. Many self-employed taxpayers miss it entirely, leaving thousands on the table. Tax software usually handles it, but verify Form 8995 or 8995-A is included in your filing.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Including W-2 wages as QBI</div>
+          <p>If you're an S-corp owner, only your K-1 pass-through profit qualifies — not the W-2 salary you pay yourself. Including salary in QBI overstates the deduction and triggers IRS adjustments.</p>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top: 16px;">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Ignoring the SSTB classification</div>
+          <p>A consultant earning $300,000 thinks they get the full 20% deduction — but SSTB phase-out rules may reduce or eliminate it. Know whether your business is an SSTB before estimating your tax savings.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Using gross instead of net income</div>
+          <p>QBI is net business income after expenses — not gross receipts. A freelancer who earned $150,000 but spent $50,000 on expenses has $100,000 in QBI, and the 20% deduction applies to $100,000 — not $150,000.</p>
+        </div>
+      </div>
+    </div>
     <div class="card">
       <div class="section-label">What to do right now</div>
-      <div class="action-box">This deduction can be extremely valuable for self-employed people — it's like paying tax on only 80% of your business income. A tax professional is highly recommended for maximizing and correctly calculating the QBI deduction.</div>
+      <div class="next-steps">
+        If you're self-employed or own a pass-through business, check whether your 2024 taxable income falls below $191,950 (single) or $383,900 (married filing jointly). If yes, you're likely eligible for the full 20% deduction on net business income — make sure your tax preparer or software includes Form 8995. If you're above those thresholds or in an SSTB, the calculation gets complex fast — a CPA or enrolled agent who specializes in pass-through entities can often save more than their fee by optimizing W-2 salary (for S-corps), timing income, and navigating the phase-out rules.
+      </div>
     </div>
-
+    <div class="card">
+      <div class="section-label">Forms you'll need</div>
+      <h2>Where the QBI deduction lives on your return</h2>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Form 8995</strong> — Simplified QBI deduction for taxpayers below the income threshold or with straightforward situations</li>
+        <li><strong>Form 8995-A</strong> — Required when above the threshold, for SSTB phase-outs, or when W-2 wage/UBIA limitations apply</li>
+        <li><strong>Schedule C</strong> — Sole proprietors report business income here; net profit flows to QBI calculation</li>
+        <li><strong>Schedule E</strong> — S-corp K-1 and partnership income reported here</li>
+        <li><strong>Form 1040, Line 13</strong> — The final QBI deduction amount appears here as a below-the-line deduction</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Am I below the income threshold for the full 20% QBI deduction, or do W-2 wage limitations apply?</li>
+        <li><span class="q-num">02</span>Is my business classified as an SSTB — and if so, how much of my deduction is phased out?</li>
+        <li><span class="q-num">03</span>For my S-corp, is my W-2 salary set at a reasonable level to maximize QBI without triggering IRS scrutiny?</li>
+        <li><span class="q-num">04</span>Should I aggregate any of my businesses for QBI purposes, or keep them separate?</li>
+        <li><span class="q-num">05</span>Are there strategies to reduce taxable income below the threshold — retirement contributions, timing expenses, deferring income?</li>
+        <li><span class="q-num">06</span>Did my return include Form 8995 or 8995-A, and was the deduction calculated correctly?</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Is the QBI deduction the same as a business expense deduction?</div>
+        <div class="faq-a">No. Business expenses (supplies, mileage, home office, etc.) reduce your gross income on Schedule C before QBI is calculated. The QBI deduction is an additional 20% write-off applied to your net business income after expenses — it's a separate, second layer of tax savings on top of normal business deductions.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need to itemize to claim the QBI deduction?</div>
+        <div class="faq-a">No. The QBI deduction is a below-the-line deduction on Form 1040 — completely independent of whether you take the standard deduction or itemize on Schedule A. Most QBI claimants take the standard deduction and still get the full QBI benefit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does the QBI deduction reduce self-employment tax?</div>
+        <div class="faq-a">No. The QBI deduction only reduces income tax — not self-employment tax (Social Security and Medicare). Your SE tax is calculated on net business earnings before the QBI deduction. This is a common source of confusion for sole proprietors.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I claim QBI on rental property income?</div>
+        <div class="faq-a">Sometimes. Rental income qualifies only if your rental activity rises to the level of a trade or business under IRS rules — generally meaning you spend substantial time managing the properties. Passive rental income from a typical landlord often does not qualify. Real estate agents and brokers are explicitly eligible regardless.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is the QBI deduction permanent?</div>
+        <div class="faq-a">Yes. Section 199A was originally set to expire after 2025, but federal legislation made it permanent. The 20% deduction is now a permanent part of the tax code for qualifying pass-through business owners, though income thresholds adjust for inflation each year.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Related tax forms and terms</div>
+      <div class="related">
+        <a href="/schedule-c" class="related-chip">Schedule C →</a>
+        <a href="/1099-nec" class="related-chip">Form 1099-NEC →</a>
+        <a href="/1040" class="related-chip">Form 1040 →</a>
+        <a href="/magi" class="related-chip">MAGI →</a>
+        <a href="/1040-es" class="related-chip">Form 1040-ES →</a>
+        <a href="/w2" class="related-chip">Form W-2 →</a>
+      </div>
+    </div>
     <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
+      <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
-
     <footer>
       <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
+      <span>Understand your taxes. No accountant required.</span>
     </footer>
   </div>
 </body>
