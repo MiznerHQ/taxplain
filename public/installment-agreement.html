@@ -1,103 +1,664 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IRS Installment Agreement Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is IRS Installment Agreement? Plain-English explanation of IRS Installment Agreement — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/installment-agreement">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRS Installment Agreement Explained in Plain English – TaxPlain</title>
+<meta name="description" content="What is an IRS installment agreement? Plain-English guide to payment plans, monthly payments, penalties, approval rules, and what happens if you miss payments.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxplain.co/installment-agreement">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #1B4B8A;
+--accent-light: #EAF0FA;
+--accent-border: #B5CEFA;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.warn {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box.blue {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.warn .range-box-label {
+color: var(--warn);
+}
+
+.range-box.blue .range-box-label {
+color: var(--accent);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.timing-box {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 18px 20px;
+margin-top: 16px;
+}
+
+.timing-box h3 {
+font-size: 14px;
+color: var(--amber);
+font-family: 'DM Mono', monospace;
+letter-spacing: 0.5px;
+margin-bottom: 8px;
+}
+
+.timing-box p {
+font-size: 14px;
+color: #78350F;
+line-height: 1.65;
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
-      <a href="/" class="logo-text">tax<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; IRS Installment Agreement</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">IRS Installment Agreement</em>?</h1>
-    <span class="category-tag">IRS Program</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
-    <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>IRS Installment Agreement</strong> a payment plan with the IRS that lets you pay your tax debt in monthly installments over time.</p>
-    </div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
-      <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Taxpayers who owe money to the IRS and cannot pay the full amount at once but can make regular monthly payments.</p>
-        </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Assuming the monthly payment amount the IRS proposes is fixed. You can often negotiate a lower payment by demonstrating your actual financial situation.</p>
-        </div>
-      </div>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
+</svg>
+</div>
 
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Interest and penalties continue to accrue while you're on a payment plan, so you'll pay more than the original balance. However, an installment agreement stops enforced collection actions like levies.</p>
-    </div>
+<a href="/" class="logo-text">tax<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">Apply online at IRS.gov for balances under $50,000 — it's quick and easy. Make every payment on time; missing payments can default your agreement. A tax professional can help negotiate better terms for larger balances.</div>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/guides">Tax Guides</a> &rsaquo;
+IRS Installment Agreement
+</p>
 
-    <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
-      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
+<h1>What is an<br><em style="font-style:italic;color:var(--accent)">IRS Installment Agreement</em>?</h1>
 
-    <footer>
-      <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
-    </footer>
-  </div>
+<span class="category-tag">IRS Payment Plan</span>
+
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
+</div>
+
+<div class="card">
+<div class="section-label">What this means</div>
+
+<p>An IRS installment agreement is a payment plan that lets you pay your federal tax debt over time instead of all at once.</p>
+
+<p>Think of it like a monthly payment plan for back taxes. Instead of the IRS demanding immediate full payment, they agree to accept smaller monthly payments until the balance is paid off.</p>
+
+<p>The IRS offers installment agreements because most people simply cannot pay a large tax bill immediately. Setting up a payment plan is usually much better than ignoring the debt, because it reduces the risk of aggressive collection actions like bank levies or wage garnishments.</p>
+</div>
+
+<div class="card">
+<div class="section-label">Who qualifies</div>
+
+<div class="two-col">
+
+<div class="range-box blue">
+<div class="range-box-label">✓ Common Approval</div>
+<p>Most taxpayers who owe less than $50,000 can qualify for an online installment agreement if they filed all required tax returns.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">↑ Harder Cases</div>
+<p>Larger tax debts, missing returns, repeated nonpayment, or previous defaulted payment plans may require additional financial review by the IRS.</p>
+</div>
+
+</div>
+
+<div class="timing-box">
+<h3>📅 Important reality</h3>
+<p>Interest and penalties usually continue accumulating even after the IRS approves your installment agreement. The payment plan mainly stops the situation from escalating into more serious collection actions.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">How payment plans work</div>
+
+<h2>Breaking down the process</h2>
+
+<p>The IRS generally looks at four things when reviewing a payment plan request:</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+
+<li><strong>Total tax debt</strong> — Smaller balances are easier to approve automatically.</li>
+
+<li><strong>Filing compliance</strong> — You usually must file all missing tax returns before the IRS approves a plan.</li>
+
+<li><strong>Monthly payment amount</strong> — The IRS wants a realistic payment that eventually pays off the balance.</li>
+
+<li><strong>Collection timeline</strong> — The IRS generally has 10 years to collect unpaid taxes.</li>
+
+<li><strong>Financial condition</strong> — Larger debts may require proof of income, expenses, bank balances, and assets.</li>
+
+<li><strong>Direct debit setup</strong> — Automatic bank withdrawals can reduce fees and improve approval odds.</li>
+
+<li><strong>Current tax compliance</strong> — You must continue filing and paying future taxes on time while on the agreement.</li>
+
+</ul>
+</div>
+
+<div class="card">
+
+<div class="section-label">Types of IRS payment plans</div>
+
+<ul class="symptom-list">
+
+<li><strong>Short-term payment plan</strong> — Usually for balances payable within 180 days.</li>
+
+<li><strong>Long-term installment agreement</strong> — Monthly payments spread over several years.</li>
+
+<li><strong>Direct debit agreement</strong> — Automatic monthly withdrawals from your bank account.</li>
+
+<li><strong>Partial payment installment agreement</strong> — You pay less than the full balance if you cannot reasonably afford full repayment.</li>
+
+<li><strong>Guaranteed installment agreement</strong> — Available in certain smaller balance situations if you meet strict eligibility rules.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Common mistakes to avoid</div>
+
+<div class="two-col">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Ignoring IRS Notices</div>
+<p>The IRS becomes far more aggressive when taxpayers stop responding. Setting up a payment plan early is usually much safer than waiting for collections to escalate.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Missing Future Taxes</div>
+<p>If you fail to file or pay future taxes while on the agreement, the IRS can default the payment plan and restart collections.</p>
+</div>
+
+</div>
+
+<div class="two-col" style="margin-top:16px;">
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Unrealistic Payments</div>
+<p>Agreeing to payments you cannot actually afford often leads to default. A sustainable monthly amount matters more than an aggressive promise.</p>
+</div>
+
+<div class="range-box warn">
+<div class="range-box-label">⚠ Assuming Penalties Stop</div>
+<p>Interest and penalties usually continue until the balance is fully paid, even during the installment agreement.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What to do right now</div>
+
+<div class="next-steps">
+If you received an IRS notice and cannot afford to pay the full balance, do not ignore it. File all missing tax returns first, then review IRS payment plan options online. Most smaller balances can be resolved without hiring a professional. But if you owe a large amount, have years of unfiled returns, or face wage garnishment or bank levies, a CPA, enrolled agent, or tax attorney may be worth the cost.
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Questions to ask a tax professional</div>
+
+<ul class="questions-list">
+
+<li><span class="q-num">01</span>Do I qualify for a streamlined installment agreement?</li>
+
+<li><span class="q-num">02</span>Would the IRS accept a lower monthly payment based on my financial situation?</li>
+
+<li><span class="q-num">03</span>Should I request penalty relief in addition to a payment plan?</li>
+
+<li><span class="q-num">04</span>Would an Offer in Compromise be better than an installment agreement in my case?</li>
+
+<li><span class="q-num">05</span>Can the IRS place liens or levies while I am on this payment plan?</li>
+
+<li><span class="q-num">06</span>How much extra interest and penalties will accumulate before the balance is fully paid?</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Frequently asked questions</div>
+
+<div class="faq-item">
+<div class="faq-q">Does the IRS automatically approve payment plans?</div>
+<div class="faq-a">
+Not always, but many smaller balances qualify automatically if you filed all required returns and propose reasonable monthly payments.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Will the IRS stop collections once I enter a payment plan?</div>
+<div class="faq-a">
+Generally yes, as long as the agreement remains active and you continue making payments on time. However, federal tax liens may still apply in some situations.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can I pay off the balance early?</div>
+<div class="faq-a">
+Yes. You can usually make larger payments or fully pay off the balance early without penalty.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">What happens if I miss a payment?</div>
+<div class="faq-a">
+The IRS may default the agreement after missed payments or future filing problems. Once defaulted, collection actions can restart quickly.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Does setting up a payment plan hurt my credit?</div>
+<div class="faq-a">
+The IRS does not directly report installment agreements to credit bureaus. However, federal tax liens used to be public records that could affect credit indirectly.
+</div>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Related tax topics</div>
+
+<div class="related">
+
+<a href="/1040" class="related-chip">Form 1040 →</a>
+
+<a href="/1040-es" class="related-chip">Form 1040-ES →</a>
+
+<a href="/w4" class="related-chip">Form W-4 →</a>
+
+<a href="/1099" class="related-chip">Form 1099 →</a>
+
+<a href="/offer-in-compromise" class="related-chip">Offer in Compromise →</a>
+
+<a href="/irs-notice" class="related-chip">IRS Notices →</a>
+
+</div>
+
+</div>
+
+<div class="tool-cta">
+
+<h3>Decode any tax form instantly</h3>
+
+<p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+
+<a href="/">Open the Decoder →</a>
+
+</div>
+
+<footer>
+
+<span>taxplain.co</span>
+
+<span>Understand your taxes. No accountant required.</span>
+
+</footer>
+
+</div>
+
 </body>
 </html>
+```
