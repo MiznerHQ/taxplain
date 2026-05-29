@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Schedule E (Supplemental Income and Loss) Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Schedule E (Supplemental Income and Loss)? Plain-English explanation of Schedule E (Supplemental Income and Loss) — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
+  <title>Schedule E Explained in Plain English – TaxPlain</title>
+  <meta name="description" content="What is Schedule E? Plain-English guide to reporting rental property, partnership, and S-corp income — deductible expenses, depreciation, passive loss rules, K-1 income, common mistakes, and exactly what to do. No tax jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://taxplain.co/schedule-e">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
@@ -25,25 +28,46 @@
     .logo-text span { color: var(--accent); }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
@@ -54,49 +78,146 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Schedule E (Supplemental Income and Loss)</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">Schedule E (Supplemental Income and Loss)</em>?</h1>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Schedule E</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">Schedule E</em>?</h1>
     <span class="category-tag">Tax Form</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
-
     <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>Schedule E (Supplemental Income and Loss)</strong> the form used to report income and losses from rental properties, partnerships, S-corporations, trusts, and estates.</p>
+      <div class="section-label">What this form is</div>
+      <p>Schedule E (Supplemental Income and Loss) is the form you attach to your Form 1040 to report income and losses from rental properties, partnerships, S-corporations, estates, and trusts. If you collect rent from a tenant or receive a Schedule K-1 from a business you don't actively run, this is where it goes.</p>
+      <p>Unlike Schedule C — which is for active self-employment — Schedule E covers passive and supplemental income streams. The math is the same principle: income minus expenses equals net profit or loss. But the rules around what you can deduct, especially rental losses, are more restrictive due to passive activity loss limits.</p>
     </div>
-
     <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
+      <div class="section-label">Who must file</div>
       <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Landlords, real estate investors, business partners, S-corp shareholders, and trust or estate beneficiaries.</p>
+        <div class="range-box blue">
+          <div class="range-box-label">✓ You need Schedule E if...</div>
+          <p>You own rental property and collect rent, you're a partner in a partnership, you're a shareholder in an S-corporation, or you're a beneficiary of an estate or trust that issued you a Schedule K-1. Even a single rental unit or a small partnership interest triggers Schedule E.</p>
         </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Forgetting to claim depreciation on rental property. Depreciation is one of the most valuable deductions available to landlords and many miss it.</p>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Different form if...</div>
+          <p>You're actively self-employed as a sole proprietor or single-member LLC — that goes on Schedule C, not Schedule E. If you materially participate in a rental business (real estate professional status), different passive loss rules apply.</p>
+        </div>
+      </div>
+      <div class="timing-box" style="margin-top:16px;">
+        <h3>📅 Filing deadline</h3>
+        <p>Schedule E is filed with your Form 1040, due April 15 each year. Partnership and S-corp K-1s are typically due to shareholders by March 15 (or September 15 with an extension) — don't file your personal return until you have all K-1s in hand.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">What each section covers</div>
+      <h2>Breaking down Schedule E</h2>
+      <p>Schedule E has five parts, but most individual taxpayers only use Part I (rentals) and Part II (partnerships and S-corps).</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Part I — Rental real estate (Lines 1–26)</strong> — Report up to three properties per Schedule E (attach additional Schedule Es for more). Lines 3–19 list every deductible expense: advertising, auto/travel, cleaning, commissions, insurance, legal fees, management fees, mortgage interest, repairs, supplies, taxes, utilities, and depreciation.</li>
+        <li><strong>Line 20 — Total expenses</strong> — Sum of all rental expenses for each property.</li>
+        <li><strong>Line 21 — Net income or loss</strong> — Rent received minus total expenses. A loss here is common for landlords who claim depreciation — but passive loss rules may limit how much you can actually deduct.</li>
+        <li><strong>Line 26 — Total rental income/loss</strong> — Combined net from all properties. Flows to Schedule 1, Line 5, then to your 1040.</li>
+        <li><strong>Part II — Partnerships and S-corps (Lines 27–32)</strong> — Enter income or loss from each K-1 you received. You report your share of the entity's income — you don't list the entity's individual expenses here; those are handled on the business's own return.</li>
+        <li><strong>Part III — Estates and trusts</strong> — Income reported on Schedule K-1 (Form 1041) from estates or trusts you're a beneficiary of.</li>
+        <li><strong>Part IV — REMIC income</strong> — Rare for most taxpayers. Applies to residual interest in real estate mortgage investment conduits.</li>
+        <li><strong>Part V — Summary</strong> — Totals from all parts combined. Net supplemental income or loss flows to your 1040.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Rental property deductions</div>
+      <p>Every dollar of legitimate rental expense reduces your taxable rental income. These are the categories on Schedule E Part I that apply to most landlords:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Mortgage interest</strong> — Interest on the rental property loan (reported on Form 1098 if over $600). Principal payments are not deductible.</li>
+        <li><strong>Property taxes</strong> — Real estate taxes paid on the rental property.</li>
+        <li><strong>Depreciation</strong> — The building (not the land) is depreciated over 27.5 years for residential rental property. This is often the largest deduction and the one most new landlords miss entirely.</li>
+        <li><strong>Repairs vs. improvements</strong> — Fixing a broken faucet is a deductible repair. Replacing the entire roof is a capital improvement that must be depreciated over time, not deducted immediately.</li>
+        <li><strong>Property management fees</strong> — If you use a management company, their fees are fully deductible.</li>
+        <li><strong>Insurance</strong> — Landlord insurance, liability coverage, and flood insurance on the rental property.</li>
+        <li><strong>Travel and mileage</strong> — Driving to check on the property, meet tenants, or pick up supplies. Keep a mileage log.</li>
+      </ul>
+      <div class="timing-box" style="margin-top:16px;">
+        <h3>💡 Passive activity loss rules</h3>
+        <p>Rental losses are generally "passive" — meaning you can only deduct them against passive income, not your W-2 wages. However, if you actively participate in managing your rental (approving tenants, setting rents, making repair decisions), you may deduct up to $25,000 in rental losses against ordinary income. This allowance phases out if your modified AGI exceeds $100,000 and disappears above $150,000.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Skipping depreciation</div>
+          <p>Depreciation is a "use it or lose it" deduction — if you don't claim it each year, you can't go back and catch up easily. The IRS still recaptures depreciation when you sell, even if you never claimed it. Always depreciate your rental property from day one.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Repairs vs. improvements</div>
+          <p>Classifying a major renovation as a "repair" to deduct it immediately is an audit red flag. Capital improvements must be depreciated. When in doubt, ask a tax pro before filing.</p>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top: 16px;">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Mixing personal use</div>
+          <p>If you use a vacation rental personally for more than 14 days or 10% of rental days, it becomes a personal residence and you lose most rental deductions. Track personal-use days carefully.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Filing before K-1 arrives</div>
+          <p>Partnership and S-corp K-1s often arrive late — sometimes after April 15. Filing without them means amending later. Request an extension if you're still waiting on K-1s by mid-March.</p>
         </div>
       </div>
     </div>
-
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Rental income on Schedule E can be offset by expenses like mortgage interest, property taxes, insurance, repairs, and depreciation. Passive activity loss rules limit how much rental loss you can deduct against other income.</p>
-    </div>
-
     <div class="card">
       <div class="section-label">What to do right now</div>
-      <div class="action-box">Keep detailed records of all rental income and every expense related to your properties. Depreciation alone can significantly reduce your taxable rental income. A tax professional familiar with real estate can help you maximize deductions.</div>
+      <div class="next-steps">
+        If you own rental property, open a separate bank account for rent deposits and expense payments — it makes Schedule E preparation dramatically easier. Track every expense by category throughout the year using a spreadsheet or landlord software like Stessa or QuickBooks. Calculate depreciation on your building's structure (purchase price minus land value, divided by 27.5 years). When tax season arrives, gather all 1098 mortgage interest statements, property tax bills, and any K-1s from partnerships or S-corps. Tax software handles Schedule E for straightforward single-property landlords; multiple properties, K-1 income, or passive loss carryforwards warrant a CPA who specializes in real estate.
+      </div>
     </div>
-
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Am I claiming depreciation on my rental property, and is my cost basis calculated correctly?</li>
+        <li><span class="q-num">02</span>Do I qualify for the $25,000 active participation allowance, or are my losses limited by passive activity rules?</li>
+        <li><span class="q-num">03</span>Do I have suspended passive losses from prior years that I can release this year?</li>
+        <li><span class="q-num">04</span>Should this expense be classified as a repair (deduct now) or an improvement (depreciate over time)?</li>
+        <li><span class="q-num">05</span>Do I qualify as a real estate professional, which would remove passive loss limits entirely?</li>
+        <li><span class="q-num">06</span>When I sell the rental, how much depreciation recapture tax will I owe?</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between Schedule C and Schedule E?</div>
+        <div class="faq-a">Schedule C is for active self-employment — you run the business yourself (freelancing, consulting, sole proprietorship). Schedule E is for passive or supplemental income — rental property, partnership shares, S-corp dividends. If you're a real estate agent actively selling homes, that's Schedule C. If you own a rental and collect rent, that's Schedule E.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I deduct rental losses against my salary?</div>
+        <div class="faq-a">Only up to $25,000 per year, and only if you actively participate in managing the property and your modified AGI is under $150,000. Above that threshold, rental losses are suspended and carried forward to future years. Real estate professionals who spend 750+ hours per year in real estate activities can deduct unlimited rental losses regardless of income.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is a Schedule K-1 and how does it relate to Schedule E?</div>
+        <div class="faq-a">A Schedule K-1 is a tax document issued by a partnership, S-corp, estate, or trust showing your share of the entity's income, deductions, and credits. You don't fill out the K-1 — you receive it and transfer the income or loss amounts to Schedule E Part II. The entity itself files its own tax return; the K-1 tells you what portion is yours.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I report Airbnb or short-term rental income on Schedule E?</div>
+        <div class="faq-a">Yes, if you rent out property you own. Short-term rentals (Airbnb, VRBO) are reported on Schedule E Part I just like long-term rentals. However, if you provide substantial services (daily cleaning, meals, concierge), the IRS may classify it as Schedule C business income instead. Most standard Airbnb hosts use Schedule E.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What happens to suspended passive losses when I sell the property?</div>
+        <div class="faq-a">When you fully dispose of a rental property in a taxable transaction, all suspended passive losses from that property are released and become fully deductible in the year of sale. This can create a large tax deduction in the same year you may owe capital gains tax on the sale — a tax professional can help you plan for this.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/schedule-c" class="related-chip">Schedule C →</a>
+        <a href="/1098" class="related-chip">Form 1098 →</a>
+        <a href="/depreciation" class="related-chip">Depreciation →</a>
+        <a href="/1040" class="related-chip">Form 1040 →</a>
+        <a href="/schedule-d" class="related-chip">Schedule D →</a>
+        <a href="/qbi-deduction" class="related-chip">QBI Deduction →</a>
+      </div>
+    </div>
     <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
+      <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
-
     <footer>
       <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
+      <span>Understand your taxes. No accountant required.</span>
     </footer>
   </div>
 </body>
