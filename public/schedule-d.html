@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Schedule D (Capital Gains and Losses) Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Schedule D (Capital Gains and Losses)? Plain-English explanation of Schedule D (Capital Gains and Losses) — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
+  <title>Schedule D Explained in Plain English – TaxPlain</title>
+  <meta name="description" content="What is Schedule D? Plain-English guide to reporting capital gains and losses from stocks, crypto, and real estate — short-term vs long-term rates, cost basis, Form 8949, common mistakes, and exactly what to do. No tax jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://taxplain.co/schedule-d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
@@ -25,25 +28,46 @@
     .logo-text span { color: var(--accent); }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
@@ -54,49 +78,142 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Schedule D (Capital Gains and Losses)</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">Schedule D (Capital Gains and Losses)</em>?</h1>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Schedule D</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">Schedule D</em>?</h1>
     <span class="category-tag">Tax Form</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
-
     <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>Schedule D (Capital Gains and Losses)</strong> the form used to report capital gains and losses from selling stocks, bonds, real estate, and other investments.</p>
+      <div class="section-label">What this form is</div>
+      <p>Schedule D (Capital Gains and Losses) is the form you attach to your Form 1040 to report profit or loss from selling investments and other capital assets — stocks, bonds, mutual funds, cryptocurrency, real estate, collectibles, and more. If you sold anything for more (or less) than you paid for it, the IRS wants to know.</p>
+      <p>The core calculation is simple: sale price minus purchase price (cost basis) equals your gain or loss. But the tax rate on that gain depends entirely on how long you held the asset — and that's where Schedule D gets interesting.</p>
     </div>
-
     <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
+      <div class="section-label">Who must file</div>
       <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Anyone who sold stocks, mutual funds, cryptocurrency, real estate, or other capital assets during the tax year.</p>
+        <div class="range-box blue">
+          <div class="range-box-label">✓ You need Schedule D if...</div>
+          <p>You sold stocks, ETFs, mutual funds, cryptocurrency, investment property, or other capital assets during the tax year — even if the sale resulted in a loss. Your brokerage sends you a Form 1099-B with the details, and the IRS receives a copy too.</p>
         </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Not knowing your cost basis. If you don't know what you paid for an investment, you may overpay taxes. Always track your purchase price and date.</p>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ You may NOT need it if...</div>
+          <p>Your only investment sales were inside a tax-advantaged account like a 401(k) or Roth IRA — those trades don't trigger capital gains tax. You also skip Schedule D if your only capital gains came from a mutual fund reported on Form 1099-DIV and already handled elsewhere.</p>
+        </div>
+      </div>
+      <div class="timing-box" style="margin-top:16px;">
+        <h3>📅 Filing deadline</h3>
+        <p>Schedule D is filed with your Form 1040, due April 15 each year. Brokerages must send your 1099-B by February 15 (or mid-February). Don't file until you have all your 1099-B forms — amended returns are a headache you don't need.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">What each section covers</div>
+      <h2>Breaking down Schedule D</h2>
+      <p>Schedule D summarizes your gains and losses. The detailed transaction list lives on Form 8949 — Schedule D is the summary page.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Part I — Short-term gains and losses</strong> — Assets you held one year or less. Gains are taxed at your ordinary income rate (10%–37%). Losses offset short-term gains first.</li>
+        <li><strong>Part II — Long-term gains and losses</strong> — Assets held more than one year. Gains qualify for preferential rates: 0%, 15%, or 20% depending on your income. This is why "buy and hold" has a tax advantage.</li>
+        <li><strong>Line 7 / Line 15 — Net short-term and long-term</strong> — Totals from Form 8949 flow here. Short-term net gain or loss on Line 7; long-term on Line 15.</li>
+        <li><strong>Line 16 — Net capital gain or loss</strong> — Combines short-term and long-term results. A net loss can offset up to $3,000 of ordinary income per year, with excess carried forward to future years.</li>
+        <li><strong>Line 21 — Capital loss carryover</strong> — If your losses exceeded your gains by more than $3,000, the excess carries forward indefinitely to offset future gains or $3,000/year of ordinary income.</li>
+        <li><strong>Form 8949 (companion form)</strong> — Lists every individual sale: description, date acquired, date sold, proceeds, cost basis, and gain or loss. Schedule D totals the 8949 numbers.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Short-term vs. long-term rates</div>
+      <p>How long you held an asset before selling determines your tax rate. This single distinction can mean thousands of dollars in tax difference on the same profit.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Short-term (held ≤ 1 year)</strong> — Taxed as ordinary income at your regular tax bracket (10%–37% for 2024). A $10,000 gain in the 24% bracket costs $2,400 in tax.</li>
+        <li><strong>Long-term (held > 1 year)</strong> — Taxed at 0%, 15%, or 20%. For most middle-income filers, the rate is 15%. That same $10,000 gain costs $1,500 — a $900 savings just for holding longer.</li>
+        <li><strong>0% long-term rate</strong> — Available in 2024 if your taxable income is under $47,025 (single) or $94,050 (married filing jointly). Strategic timing can eliminate capital gains tax entirely.</li>
+        <li><strong>Net Investment Income Tax (NIIT)</strong> — An additional 3.8% surtax on investment income if your modified AGI exceeds $200,000 (single) or $250,000 (married filing jointly).</li>
+        <li><strong>Collectibles and real estate</strong> — Gains on collectibles (art, coins, precious metals) are taxed at a maximum 28% rate. Primary home sales have a $250,000/$500,000 exclusion if you meet ownership and use tests.</li>
+      </ul>
+      <div class="timing-box" style="margin-top:16px;">
+        <h3>💡 Tax-loss harvesting</h3>
+        <p>If you have losing investments, selling them before year-end can offset gains and reduce your tax bill. You can even harvest losses and immediately rebuy a similar (but not identical) investment — but watch the wash sale rule, which disallows the loss if you repurchase the same security within 30 days.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Wrong cost basis</div>
+          <p>If your brokerage reports an incorrect or missing cost basis on your 1099-B, you may overpay tax on the full sale amount. Always verify cost basis against your own records and correct it on Form 8949 if needed.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Forgetting crypto sales</div>
+          <p>Every cryptocurrency sale — including swapping one coin for another — is a taxable event. The IRS added a digital assets question to Form 1040 specifically to catch unreported crypto gains.</p>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top: 16px;">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Wash sale violations</div>
+          <p>Buying back the same stock within 30 days of selling it at a loss disallows that loss deduction. The disallowed loss gets added to the cost basis of the replacement shares instead — easy to miss across multiple accounts.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Not reporting all sales</div>
+          <p>Even if you sold at a loss, you must report it. Losses offset gains and can reduce your overall tax bill. Skipping a losing sale means leaving money on the table.</p>
         </div>
       </div>
     </div>
-
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Gains held longer than one year qualify for lower long-term capital gains rates. Gains held one year or less are taxed at your ordinary income rate, which is usually much higher. Losses can offset gains and reduce your tax bill.</p>
-    </div>
-
     <div class="card">
       <div class="section-label">What to do right now</div>
-      <div class="action-box">Gather all your brokerage statements showing cost basis and sale proceeds. Report every sale — brokerages also report these to the IRS. A tax professional can help you with tax-loss harvesting strategies that minimize your capital gains tax.</div>
+      <div class="next-steps">
+        Wait for all your 1099-B forms from brokerages — they arrive by mid-February. Download your full transaction history and verify cost basis before filing. Tax software like TurboTax, FreeTaxUSA, or H&amp;R Block imports 1099-B data automatically and builds Form 8949 and Schedule D for you. If you sold real estate, you'll need your closing statements (HUD-1) for purchase and sale prices. If you traded crypto across multiple platforms, consider crypto tax software like CoinTracker or Koinly. A tax professional is worth it if you have significant gains, complex cost basis issues, or carryover losses from prior years.
+      </div>
     </div>
-
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Are my 1099-B cost basis numbers correct, or do I need to adjust them on Form 8949?</li>
+        <li><span class="q-num">02</span>Do I have any capital loss carryforwards from prior years I should be using this year?</li>
+        <li><span class="q-num">03</span>Should I sell any losing positions before year-end to offset my gains (tax-loss harvesting)?</li>
+        <li><span class="q-num">04</span>Did any of my trades trigger wash sale rules that disallow losses I thought I had?</li>
+        <li><span class="q-num">05</span>Do I qualify for the 0% long-term capital gains rate, and should I realize gains strategically?</li>
+        <li><span class="q-num">06</span>If I sold my primary home, do I qualify for the $250,000/$500,000 capital gains exclusion?</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between Schedule D and Form 8949?</div>
+        <div class="faq-a">Form 8949 is the detail form — it lists every individual sale with dates, proceeds, and cost basis. Schedule D is the summary that totals your short-term and long-term net gains or losses from Form 8949. You fill out 8949 first, then transfer the totals to Schedule D, which flows to your 1040.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I pay tax on stocks if I didn't sell them?</div>
+        <div class="faq-a">No. Unrealized gains (stocks that went up but you still hold) are not taxable. You only owe capital gains tax when you sell. Dividends received while holding are taxed separately — reported on Form 1099-DIV, not Schedule D.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How much can capital losses reduce my taxes?</div>
+        <div class="faq-a">Capital losses first offset capital gains dollar for dollar. If your losses exceed your gains, you can deduct up to $3,000 of the excess against ordinary income (wages, etc.) each year. Any remaining loss carries forward indefinitely to future tax years.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is selling cryptocurrency a taxable event?</div>
+        <div class="faq-a">Yes. The IRS treats cryptocurrency as property, not currency. Selling crypto for dollars, swapping one coin for another, or using crypto to buy goods are all taxable events reported on Schedule D. Only buying and holding is not taxable until you sell.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if my brokerage didn't report cost basis on my 1099-B?</div>
+        <div class="faq-a">This happens with older stocks, gifted shares, or assets transferred between brokerages. Box 3 on your 1099-B will be blank or marked with code "B" (basis not reported to IRS). You're still responsible for providing the correct cost basis on Form 8949 — dig up your original purchase confirmations or use your brokerage's historical records.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/8949" class="related-chip">Form 8949 →</a>
+        <a href="/capital-gains" class="related-chip">Capital Gains →</a>
+        <a href="/1040" class="related-chip">Form 1040 →</a>
+        <a href="/1099-div" class="related-chip">Form 1099-DIV →</a>
+        <a href="/tax-bracket" class="related-chip">Tax Brackets →</a>
+        <a href="/roth-ira" class="related-chip">Roth IRA →</a>
+      </div>
+    </div>
     <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
+      <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
-
     <footer>
       <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
+      <span>Understand your taxes. No accountant required.</span>
     </footer>
   </div>
 </body>
