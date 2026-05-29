@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Self-Employment Tax Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Self-Employment Tax? Plain-English explanation of Self-Employment Tax — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
+  <meta name="description" content="What is self-employment tax? Plain-English guide to the 15.3% Social Security and Medicare tax for freelancers — who pays it, how it's calculated, Schedule SE, quarterly payments, deductions, common mistakes, and exactly what to do.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://taxplain.co/self-employment-tax">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
@@ -25,25 +28,46 @@
     .logo-text span { color: var(--accent); }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
@@ -55,48 +79,140 @@
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
     <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Self-Employment Tax</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">Self-Employment Tax</em>?</h1>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">Self-Employment Tax</em>?</h1>
     <span class="category-tag">Tax Term</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
-
     <div class="card">
       <div class="section-label">What it is</div>
-      <p>The <strong>Self-Employment Tax</strong> the Social Security and Medicare taxes paid by self-employed people — equivalent to what employees and employers pay combined.</p>
+      <p>Self-employment tax is how freelancers, gig workers, and sole proprietors pay into Social Security and Medicare. When you work for an employer, they withhold 7.65% from your paycheck and pay another 7.65% themselves — that's FICA. When you work for yourself, you pay both halves: 15.3% total on your net business earnings.</p>
+      <p>This is separate from income tax. Many new freelancers budget for income tax but forget self-employment tax entirely — then get hit with a surprise bill in April. Self-employment tax is calculated on Schedule SE and reported on your Form 1040 under "Other Taxes."</p>
     </div>
-
     <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
+      <div class="section-label">Who must pay</div>
       <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Freelancers, independent contractors, sole proprietors, and anyone with net self-employment income of $400 or more.</p>
+        <div class="range-box blue">
+          <div class="range-box-label">✓ You owe SE tax if...</div>
+          <p>Your net self-employment earnings are $400 or more in a year. That includes freelance income, gig economy work (Uber, DoorDash, Etsy), sole proprietorship profits, and single-member LLC income reported on Schedule C.</p>
         </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Forgetting about self-employment tax when pricing services or budgeting. Many new freelancers are shocked by the 15.3% rate on top of income tax.</p>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ You may not owe if...</div>
+          <p>Net self-employment earnings are under $400, or your only income is from W-2 employment (your employer already withheld FICA). Church employee income over $108.28 also triggers SE tax under special rules.</p>
+        </div>
+      </div>
+      <div class="timing-box" style="margin-top:16px;">
+        <h3>📅 When it's due</h3>
+        <p>Self-employment tax is due with your annual return by April 15 — but you should pay it throughout the year via quarterly estimated tax payments (Form 1040-ES). Waiting until April to pay the full year's SE tax plus income tax often triggers underpayment penalties.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">How it's calculated</div>
+      <h2>The 15.3% breakdown</h2>
+      <p>Schedule SE walks through the math. Here's what each piece means in plain English:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Net earnings from self-employment</strong> — Your Schedule C net profit (or 92.35% of it, to be precise — the IRS gives you a small adjustment so you're not taxed on the employer-equivalent portion twice).</li>
+        <li><strong>Social Security tax — 12.4%</strong> — Applies only up to the wage base ($168,600 in 2024). Earnings above that cap are not subject to the 12.4% Social Security portion.</li>
+        <li><strong>Medicare tax — 2.9%</strong> — Applies to all net self-employment earnings with no cap.</li>
+        <li><strong>Additional Medicare — 0.9%</strong> — Extra surtax on earnings over $200,000 (single) or $250,000 (married filing jointly). This stacks on top of the base 2.9%.</li>
+        <li><strong>Total: 15.3%</strong> — On net earnings up to the Social Security wage base. Above the cap, only the 2.9% (or 3.8%) Medicare portion applies.</li>
+        <li><strong>Deductible half</strong> — You can deduct 50% of your self-employment tax as an above-the-line adjustment on your 1040 (Schedule 1, Line 15). This partially offsets the employer-equivalent portion you paid.</li>
+      </ul>
+      <div class="timing-box" style="margin-top:16px;">
+        <h3>💡 Quick example</h3>
+        <p>If your Schedule C net profit is $60,000, your self-employment tax is roughly $8,478 (15.3% × $60,000 × 92.35%). You'd also owe federal income tax on the $60,000 at your regular bracket. Set aside roughly 25–30% of net self-employment income to cover both taxes combined.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Employees vs. self-employed</div>
+      <p>Understanding the difference explains why self-employment tax catches people off guard:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>W-2 employee</strong> — Pays 7.65% via paycheck withholding (Social Security + Medicare). Employer pays the other 7.65% behind the scenes. You never see the employer's half on your pay stub.</li>
+        <li><strong>Self-employed</strong> — Pays the full 15.3% yourself via Schedule SE. No employer to split the cost. This is on top of federal and state income tax.</li>
+        <li><strong>W-2 + side gig</strong> — If you have a day job and freelance on the side, your employer withholds FICA on wages up to the wage base. Your side income still triggers SE tax, but the Social Security portion may be reduced if you already hit the cap through W-2 wages.</li>
+        <li><strong>S-corp strategy</strong> — Some self-employed people form an S-corp and pay themselves a reasonable W-2 salary (subject to FICA) plus distributions (not subject to SE tax). This can reduce SE tax but adds payroll complexity and IRS scrutiny on "reasonable salary."</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ No quarterly payments</div>
+          <p>Self-employment tax isn't withheld automatically. If you wait until April 15 to pay the full year, you'll owe interest and possibly an underpayment penalty. Pay estimated taxes quarterly via Form 1040-ES.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Underpricing your work</div>
+          <p>Many freelancers quote rates based on take-home pay without accounting for the extra 15.3%. A $50/hour rate as an employee is not equivalent to $50/hour as a freelancer — you need roughly 15% more to break even on FICA alone.</p>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top: 16px;">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Ignoring business deductions</div>
+          <p>SE tax is calculated on net profit, not gross income. Every legitimate Schedule C deduction reduces both your income tax and your self-employment tax. Skipping deductions costs you twice.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Forgetting the deductible half</div>
+          <p>The deduction for 50% of your SE tax is easy to miss if you file manually. Tax software handles it automatically — make sure Line 15 of Schedule 1 is populated.</p>
         </div>
       </div>
     </div>
-
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Self-employed people pay 15.3% on net earnings — 12.4% for Social Security and 2.9% for Medicare. This is in addition to income tax. The good news: you can deduct half of self-employment tax on your return.</p>
-    </div>
-
     <div class="card">
       <div class="section-label">What to do right now</div>
-      <div class="action-box">Set aside at least 25-30% of self-employment income for taxes. Pay quarterly estimated taxes to avoid underpayment penalties. A tax professional can help you find business deductions that reduce your net earnings and therefore your self-employment tax.</div>
+      <div class="next-steps">
+        Open a separate savings account and transfer 25–30% of every self-employment payment you receive — that's your tax fund. Pay quarterly estimated taxes (April 15, June 15, September 15, January 15) using IRS Direct Pay or EFTPS. Track all business expenses on Schedule C to lower your net profit and therefore your SE tax. If your net self-employment income exceeds $60,000–$80,000, ask a tax professional whether an S-corp election makes sense — the SE tax savings can be substantial.
+      </div>
     </div>
-
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>How much should I set aside per payment for income tax plus self-employment tax combined?</li>
+        <li><span class="q-num">02</span>Am I paying enough in quarterly estimated taxes to avoid underpayment penalties?</li>
+        <li><span class="q-num">03</span>Did my W-2 job already max out the Social Security wage base, reducing SE tax on my side income?</li>
+        <li><span class="q-num">04</span>Would forming an S-corp save me enough in self-employment tax to justify the added cost and complexity?</li>
+        <li><span class="q-num">05</span>Am I missing Schedule C deductions that would lower my net earnings and SE tax?</li>
+        <li><span class="q-num">06</span>Do I need to pay SE tax on church or clergy income, and are there special rules that apply?</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Is self-employment tax the same as income tax?</div>
+        <div class="faq-a">No. They're completely separate. Income tax is based on your total taxable income across all sources and runs through the normal tax brackets (10%–37%). Self-employment tax is specifically for Social Security and Medicare funding, fixed at 15.3% on net self-employment earnings (up to the wage base). You pay both.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between FICA and self-employment tax?</div>
+        <div class="faq-a">They're the same taxes — Social Security and Medicare — just collected differently. FICA is withheld from employee paychecks (7.65% employee + 7.65% employer). Self-employment tax is the self-employed person's version of both halves combined (15.3%). The rates and wage bases are identical.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I pay self-employment tax on every dollar I earn?</div>
+        <div class="faq-a">You pay it on net self-employment earnings — profit after business expenses — not gross revenue. If you earned $80,000 in freelance income but had $20,000 in business expenses, your net is $60,000 and SE tax is calculated on that $60,000 (specifically, 92.35% of it per Schedule SE).</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What form do I use to calculate self-employment tax?</div>
+        <div class="faq-a">Schedule SE (Self-Employment Tax). It takes your net profit from Schedule C (or other self-employment income) and calculates the 15.3% tax. The result flows to Schedule 2 of your 1040 under "Other Taxes." Most tax software generates Schedule SE automatically when you enter Schedule C data.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I reduce or avoid self-employment tax?</div>
+        <div class="faq-a">You can reduce it by maximizing legitimate business deductions (lowering net profit), forming an S-corp and taking a reasonable salary plus distributions, or contributing to a SEP-IRA or Solo 401(k) which reduces net earnings. You cannot avoid it entirely on true self-employment income — it's the cost of funding your own Social Security and Medicare benefits in retirement.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Related tax topics</div>
+      <div class="related">
+        <a href="/schedule-c" class="related-chip">Schedule C →</a>
+        <a href="/fica" class="related-chip">FICA →</a>
+        <a href="/estimated-taxes" class="related-chip">Estimated Taxes →</a>
+        <a href="/1099-nec" class="related-chip">Form 1099-NEC →</a>
+        <a href="/1040" class="related-chip">Form 1040 →</a>
+        <a href="/qbi-deduction" class="related-chip">QBI Deduction →</a>
+      </div>
+    </div>
     <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
+      <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
-
     <footer>
       <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
+      <span>Understand your taxes. No accountant required.</span>
     </footer>
   </div>
 </body>
