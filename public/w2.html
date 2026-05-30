@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>W-2 Form (Wage and Tax Statement) Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is W-2 Form (Wage and Tax Statement)? Plain-English explanation of W-2 Form (Wage and Tax Statement) — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
+  <title>Form W-2 Explained in Plain English – TaxPlain</title>
+  <meta name="description" content="What is Form W-2? Plain-English guide to your Wage and Tax Statement — understanding boxes 1-20, deadlines, common mistakes, and how to file. No tax jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://taxplain.co/w2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
@@ -25,25 +28,46 @@
     .logo-text span { color: var(--accent); }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
@@ -54,49 +78,143 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; W-2 Form (Wage and Tax Statement)</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">W-2 Form (Wage and Tax Statement)</em>?</h1>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Form W-2</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">Form W-2</em>?</h1>
     <span class="category-tag">Tax Form</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
     <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>W-2 Form (Wage and Tax Statement)</strong> reports your annual wages and the taxes withheld by your employer — it's the foundation of your tax return.</p>
+      <div class="section-label">What this form is</div>
+      <p>Form W-2 is the Wage and Tax Statement. It is the official document your employer sends to both you and the IRS at the end of the year. It reports exactly how much money you earned from that job and the exact dollar amount of taxes that were withheld from your paychecks.</p>
+      <p>Unlike forms you fill out yourself, the W-2 is fully prepared by your employer's payroll department. You use the numbers printed in its numbered and lettered boxes to fill out your primary federal tax return (Form 1040) and your state/local tax returns.</p>
     </div>
 
     <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
+      <div class="section-label">Who gets a W-2</div>
       <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Every employee who received wages, salary, or other compensation from an employer during the tax year.</p>
+        <div class="range-box blue">
+          <div class="range-box-label">✓ Receives W-2</div>
+          <p>Traditional employees (W-2 workers) whose employers manage tax withholdings directly from each paycheck throughout the calendar year.</p>
         </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Losing a W-2 and guessing at the numbers. Always use the actual form — errors cause IRS mismatches.</p>
+        <div class="range-box warn">
+          <div class="range-box-label">✗ Does Not Receive</div>
+          <p>Independent contractors, freelancers, or gig workers. If you are self-employed, you will receive a Form 1099 instead of a W-2.</p>
+        </div>
+      </div>
+      <div class="timing-box" style="margin-top:16px;">
+        <h3>📅 Key deadline</h3>
+        <p>Employers are legally required to send out your Form W-2 by January 31 following the working tax year. If you have not received your W-2 online or via mail by mid-February, you should reach out to your company's HR or payroll department immediately.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What each box covers</div>
+      <h2>Breaking down the W-2</h2>
+      <p>The W-2 is filled with numbered boxes (1 to 20) and lettered boxes (A to F). Here is what the critical sections actually mean:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Boxes A–F</strong> — Basic identifying information, including your Social Security Number, your address, and your employer's Employer Identification Number (EIN).</li>
+        <li><strong>Box 1: Wages, tips, other compensation</strong> — Your total taxable income from this job. This is the main number you report on Form 1040.</li>
+        <li><strong>Box 2: Federal income tax withheld</strong> — The total amount of federal income tax your employer already sent to the IRS on your behalf.</li>
+        <li><strong>Box 3 & 4: Social Security wages and tax</strong> — Box 3 shows your income subject to Social Security tax, and Box 4 is the flat 6.2% withheld (up to the annual cap).</li>
+        <li><strong>Box 5 & 6: Medicare wages and tax</strong> — Box 5 shows income subject to Medicare tax, and Box 6 is the 1.45% withheld (there is no income cap for Medicare).</li>
+        <li><strong>Box 12: Deferred compensation & benefits</strong> — Codes and amounts showing items like 401(k) contributions (Code D) or health insurance costs (Code DD).</li>
+        <li><strong>Box 13: Checkboxes</strong> — Indicates if you were a statutory employee, participated in a retirement plan, or received third-party sick pay.</li>
+        <li><strong>Boxes 15–20: State and local tax info</strong> — Shows your employer's state tax ID number, your state-level taxable wages, and any state or local taxes withheld.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common forms attached to or paired with a W-2</div>
+      <p>Depending on your financial situation, your W-2 information feeds directly into other areas of your return:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Form 1040</strong> — Your primary tax return where your Box 1 income and Box 2 withholdings are summarized.</li>
+        <li><strong>Form W-4</strong> — The withholding certificate you hand to your HR department to adjust how much tax is taken out of future paychecks based on your W-2 results.</li>
+        <li><strong>State Income Tax Returns</strong> — Built directly from the details found in Boxes 15 through 20 of your W-2.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Copying Box 3 Instead of Box 1</div>
+          <p>Social Security wages (Box 3) are often different from your taxable wages (Box 1) due to pre-tax retirement contributions. Always use Box 1 for your total federal income entry.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Ignoring Mismatched SSNs</div>
+          <p>If the Social Security Number on your W-2 does not match your card exactly, the IRS will reject your return or delay your refund. Check this first when you receive the form.</p>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top: 16px;">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Missing Multiple W-2s</div>
+          <p>If you changed jobs mid-year, you must wait to file until you have gathered the W-2 forms from every single employer you worked for. Omitting a form triggers an automatic IRS flag.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Losing the Local Tax Boxes</div>
+          <p>Forgetting to enter local or city tax boxes (Boxes 19 and 20) in tax software can cause you to miss local tax credits or result in an unexpected city tax bill.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Your employer sends one copy to you and one to the IRS. The numbers on your W-2 must match what you report on your 1040. If you have multiple jobs, you'll have multiple W-2s.</p>
+      <div class="section-label">What to do right now</div>
+      <div class="next-steps">
+        Check your mail or employer's payroll portal to confirm your W-2 is ready. Once you have it, verify that your name, SSN, and address are entirely accurate. If you find a typo, ask your payroll manager for a corrected form (Form W-2c) immediately. If it is accurate, plug the values straight into your preferred tax filing software alongside Form 1040.
+      </div>
     </div>
 
     <div class="card">
-      <div class="section-label">What to do right now</div>
-      <div class="action-box">Use all your W-2s when filing your return. If you don't receive one by early February, contact your employer. If you still don't get it, the IRS can help you get a substitute. A tax professional can help if your W-2 has errors.</div>
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Why is my Box 1 income different from my final year-end paycheck stub?</li>
+        <li><span class="q-num">02</span>Based on Box 2, am I withholding enough money to avoid an underpayment penalty next year?</li>
+        <li><span class="q-num">03</span>What do the specific letters and codes listed inside Box 12 mean for my overall deductions?</li>
+        <li><span class="q-num">04</span>If I moved to a different state mid-year, are my multi-state W-2 boxes broken out correctly?</li>
+        <li><span class="q-num">05</span>Should I submit a new Form W-4 to my employer to adjust my paycheck withholding based on this W-2?</li>
+        <li><span class="q-num">06</span>Do my retirement plan checkboxes in Box 13 limit my ability to make fully deductible traditional IRA contributions?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">What should I do if my employer goes out of business and I don't get a W-2?</div>
+        <div class="faq-a">If it is past mid-February and you cannot get in touch with the company, call the IRS at 1-800-829-1040. They will contact the employer for you. If you still don't get it, you can file using Form 4852 (Substitute for Form W-2) by estimating your wages using your final pay stub.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why is Box 1 lower than Box 3 and Box 5?</div>
+        <div class="faq-a">This is incredibly common. Pre-tax contributions to things like a traditional 401(k) retirement account or a health insurance plan reduce your taxable income for federal income tax (Box 1), but they do not reduce your income for Social Security (Box 3) or Medicare (Box 5).</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is Form W-2c?</div>
+        <div class="faq-a">Form W-2c is simply a Corrected Wage and Tax Statement. If your employer makes an error on your original W-2 (such as a misspelled name or incorrect wage amount) and fixes it later, they will hand you a W-2c to file instead of the original.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I file my taxes using my final pay stub instead of a W-2?</div>
+        <div class="faq-a">Generally, no. The IRS matches your tax return with the exact electronic copy of the W-2 sent by your employer. Filing early with a pay stub can result in processing delays or math errors if the final calculations on the W-2 end up slightly different.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/1040" class="related-chip">Form 1040 →</a>
+        <a href="/1099" class="related-chip">Form 1099 →</a>
+        <a href="/1098" class="related-chip">Form 1098 →</a>
+        <a href="/w4" class="related-chip">Form W-4 →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
+      <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
 
     <footer>
       <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
+      <span>Understand your taxes. No accountant required.</span>
     </footer>
   </div>
 </body>
