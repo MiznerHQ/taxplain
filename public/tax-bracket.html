@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tax Bracket Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Tax Bracket? Plain-English explanation of Tax Bracket — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
+  <title>Tax Brackets Explained in Plain English – TaxPlain</title>
+  <meta name="description" content="What are tax brackets? Plain-English guide to 2024 federal income tax rates — marginal vs. effective rate, progressive taxation, filing status, common myths, and exactly what to do. No tax jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://taxplain.co/tax-bracket">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
@@ -25,25 +28,46 @@
     .logo-text span { color: var(--accent); }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
@@ -54,49 +78,141 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Tax Bracket</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">Tax Bracket</em>?</h1>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Tax Brackets</p>
+    <h1>What are<br><em style="font-style:italic;color:var(--accent)">Tax Brackets</em>?</h1>
     <span class="category-tag">Tax Term</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
-
     <div class="card">
       <div class="section-label">What it is</div>
-      <p>The <strong>Tax Bracket</strong> the range of income taxed at a specific rate — the U.S. uses a progressive system where higher income is taxed at higher rates.</p>
+      <p>A tax bracket is a range of income taxed at a specific rate. The U.S. uses a progressive tax system — the more taxable income you earn, the higher the rate on the dollars above each threshold. But crucially, only the income inside each bracket is taxed at that bracket's rate, not your entire paycheck.</p>
+      <p>Your "tax bracket" in casual conversation usually means your top (marginal) rate — the rate on your last dollar of taxable income. Your actual overall rate is almost always lower because the first dollars you earn are taxed at 10%, then 12%, then 22%, and so on as you move up the ladder.</p>
     </div>
-
     <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
+      <div class="section-label">2024 federal brackets (taxable income)</div>
+      <h2>Rates by filing status</h2>
+      <p>These apply to taxable income — that's after subtracting the standard deduction (or itemized deductions) from your adjusted gross income (AGI). Brackets are indexed for inflation and update each year.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>10%</strong> — $0 to $11,600 (single) · $0 to $23,200 (married filing jointly)</li>
+        <li><strong>12%</strong> — $11,601 to $47,150 (single) · $23,201 to $94,300 (MFJ)</li>
+        <li><strong>22%</strong> — $47,151 to $100,525 (single) · $94,301 to $201,050 (MFJ)</li>
+        <li><strong>24%</strong> — $100,526 to $191,950 (single) · $201,051 to $383,900 (MFJ)</li>
+        <li><strong>32%</strong> — $191,951 to $243,725 (single) · $383,901 to $487,450 (MFJ)</li>
+        <li><strong>35%</strong> — $243,726 to $609,350 (single) · $487,451 to $731,200 (MFJ)</li>
+        <li><strong>37%</strong> — Over $609,350 (single) · Over $731,200 (MFJ)</li>
+        <li><strong>Head of household</strong> — Uses its own bracket thresholds (wider than single, narrower than married joint for most rates).</li>
+      </ul>
+      <div class="timing-box" style="margin-top:16px;">
+        <h3>💡 Quick example</h3>
+        <p>If you're single with $60,000 of taxable income, you don't pay 22% on all $60,000. You pay 10% on the first $11,600, 12% on the next chunk, and 22% only on the portion above $47,150. Your effective rate might be around 14% even though your "bracket" is 22%.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Marginal vs. effective rate</div>
       <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Every taxpayer in the United States — understanding your bracket helps with financial planning and withholding decisions.</p>
+        <div class="range-box blue">
+          <div class="range-box-label">Marginal rate</div>
+          <p>Your highest bracket — the rate on the next dollar you earn. Used for planning: "If I contribute $1,000 to a traditional IRA, I save tax at my marginal rate." For many workers, that's 22% or 24%.</p>
         </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Believing that earning more money can put you in a worse position overall. Moving into a higher bracket never reduces your take-home pay — you always keep more by earning more.</p>
+        <div class="range-box blue">
+          <div class="range-box-label">Effective rate</div>
+          <p>Total federal income tax divided by total income — your real average rate. Almost always lower than your marginal rate. Found on your tax return: tax owed ÷ taxable income (or use an online calculator).</p>
+        </div>
+      </div>
+      <p style="margin-top:14px;">Federal income tax brackets are separate from FICA (Social Security and Medicare withheld from wages), self-employment tax, state income tax, and capital gains rates. Your paycheck withholding on a W-2 job uses federal brackets plus FICA — they're not the same thing.</p>
+    </div>
+    <div class="card">
+      <div class="section-label">What changes your bracket</div>
+      <p>Your bracket depends on taxable income and filing status — not gross salary alone:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Filing status</strong> — Married filing jointly has roughly double the bracket width of single. Married filing separately uses single-width brackets and often results in higher tax.</li>
+        <li><strong>Deductions</strong> — Standard deduction ($14,600 single / $29,200 married in 2024) or itemized deductions reduce taxable income and can keep you in a lower bracket.</li>
+        <li><strong>Above-the-line adjustments</strong> — IRA contributions, student loan interest, and self-employment tax deduction lower AGI before deductions apply.</li>
+        <li><strong>Capital gains</strong> — Long-term capital gains use a separate 0% / 15% / 20% rate schedule, not the ordinary income brackets (though they can push other income into higher brackets).</li>
+        <li><strong>Credits vs. brackets</strong> — Tax credits (Child Tax Credit, EITC) reduce tax owed directly but don't change which bracket your income falls into.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ "Bracket creep" panic</div>
+          <p>Earning $1 more that pushes you into the next bracket does not make you poorer. Only that extra dollar (and dollars above the threshold) are taxed at the higher rate. You always take home more net pay when you earn more.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Using gross pay as taxable income</div>
+          <p>Your salary on paper isn't your taxable income. Subtract 401(k) contributions, health insurance, standard deduction, and other adjustments before estimating your bracket.</p>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top: 16px;">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Ignoring W-4 withholding</div>
+          <p>Being "in the 22% bracket" doesn't mean your employer withholds 22% of every paycheck. Withholding tables spread tax across the year and account for deductions you claim on Form W-4.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Confusing state and federal</div>
+          <p>State tax brackets are completely separate. Living in California vs. Texas changes state tax dramatically but not your federal brackets.</p>
         </div>
       </div>
     </div>
-
-    <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>A common misconception is that all your income is taxed at your highest bracket rate. In reality, only the income within each bracket is taxed at that rate. Moving into a higher bracket only increases taxes on the income above the threshold.</p>
-    </div>
-
     <div class="card">
       <div class="section-label">What to do right now</div>
-      <div class="action-box">Knowing your marginal rate (highest bracket) helps you evaluate the value of deductions and retirement contributions. A tax professional can help you use this knowledge for strategic tax planning throughout the year.</div>
+      <div class="next-steps">
+        Look at last year's tax return: find your taxable income (Form 1040 Line 15) and total tax (Line 24) to calculate your effective rate. Use your marginal rate to evaluate whether traditional IRA or 401(k) contributions are worth it — you save tax at the marginal rate now and pay on withdrawal later, often in a lower bracket in retirement. Update your Form W-4 if you had a big refund or owed a large balance — that usually means withholding didn't match your bracket situation. A tax professional can model how a raise, side gig, or deduction change will shift your brackets before year-end.
+      </div>
     </div>
-
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>What's my marginal and effective federal tax rate this year, and how will they change next year?</li>
+        <li><span class="q-num">02</span>Will my side income push me into a higher bracket, and how much extra tax will that actually cost?</li>
+        <li><span class="q-num">03</span>Should I increase 401(k) or traditional IRA contributions to stay in a lower bracket?</li>
+        <li><span class="q-num">04</span>How do long-term capital gains interact with my ordinary income brackets?</li>
+        <li><span class="q-num">05</span>Is my W-4 withholding set correctly for my current bracket and filing status?</li>
+        <li><span class="q-num">06</span>Would filing married jointly vs. separately change our combined bracket outcome?</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">If I get a raise into a higher bracket, do I take home less money?</div>
+        <div class="faq-a">No. Only the income above the bracket threshold is taxed at the higher rate. Every dollar below that threshold is still taxed at the same lower rates as before. You never lose money overall by earning more because of bracket movement alone.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between tax brackets and the standard deduction?</div>
+        <div class="faq-a">The standard deduction reduces your taxable income before brackets apply — it's a flat subtraction ($14,600 single in 2024). Tax brackets then apply to what's left. A $14,600 deduction doesn't mean you're "in the zero bracket" on all income; it means $14,600 of income is never subject to bracket rates at all.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Are tax brackets the same as my paycheck withholding rate?</div>
+        <div class="faq-a">Not exactly. Withholding uses IRS tables that estimate your annual tax based on each paycheck, your W-4 settings, and pay frequency. Your actual bracket is determined only when you file your annual return with your true income and deductions.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do bonuses get taxed at a higher bracket?</div>
+        <div class="faq-a">Bonuses may be withheld at a flat 22% (or 37% for very large bonuses) for withholding purposes, but they're taxed as ordinary income on your annual return alongside wages. A large bonus can push more of your total income into higher brackets for the year, but the bonus itself isn't taxed at one flat rate on your final return.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">When do 2025 tax brackets take effect?</div>
+        <div class="faq-a">New bracket amounts apply to income earned in the 2025 calendar year, reported on the tax return filed in 2026. The IRS typically announces inflation-adjusted brackets each fall. Always use the brackets for the tax year you're filing, not the year you file.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Related tax topics</div>
+      <div class="related">
+        <a href="/1040" class="related-chip">Form 1040 →</a>
+        <a href="/w4" class="related-chip">Form W-4 →</a>
+        <a href="/standard-deduction" class="related-chip">Standard Deduction →</a>
+        <a href="/agi" class="related-chip">AGI →</a>
+        <a href="/capital-gains" class="related-chip">Capital Gains →</a>
+        <a href="/fica" class="related-chip">FICA →</a>
+      </div>
+    </div>
     <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
+      <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
-
     <footer>
       <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
+      <span>Understand your taxes. No accountant required.</span>
     </footer>
   </div>
 </body>
