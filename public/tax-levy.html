@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IRS Tax Levy Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is IRS Tax Levy? Plain-English explanation of IRS Tax Levy — what it means, who it affects, and exactly what to do. No confusing tax jargon.">
+  <title>What Is a Tax Levy? Explained in Plain English – TaxPlain</title>
+  <meta name="description" content="What is a tax levy? Plain-English guide to IRS tax levies — what they are, how they work, what gets seized, how to stop one, and exactly what to do. No tax jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://taxplain.co/tax-levy">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #1B4B8A; --accent-light: #EAF0FA; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
@@ -25,25 +28,46 @@
     .logo-text span { color: var(--accent); }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
-    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
-    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .box.blue .box-label { color: var(--accent); }
-    .box.orange .box-label { color: var(--warn); }
-    .box p { font-size: 14px; line-height: 1.65; }
-    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
@@ -54,49 +78,176 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; IRS Tax Levy</p>
-    <h1>What is <em style="font-style:italic;color:var(--accent)">IRS Tax Levy</em>?</h1>
-    <span class="category-tag">IRS Action</span>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Tax Levy</p>
+
+    <h1>What is a<br><em style="font-style:italic;color:var(--accent)">Tax Levy</em>?</h1>
+    <span class="category-tag">IRS Collections</span>
+
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
     <div class="card">
-      <div class="section-label">What it is</div>
-      <p>The <strong>IRS Tax Levy</strong> the actual seizure of your property or income by the IRS to satisfy an unpaid tax debt — the most serious IRS collection action.</p>
+      <div class="section-label">What a tax levy is</div>
+      <p>A tax levy is the IRS's legal seizure of your property to satisfy an unpaid tax debt. Unlike a tax lien — which is just a legal claim against your assets — a levy means the IRS actually takes your money or property. Your bank account gets frozen and drained. Your paycheck gets garnished. Your car, home, or other assets can be seized and sold.</p>
+      <p>A levy is the IRS's most powerful collection tool, and it only happens after they've tried everything else first. If you've received a levy notice, the situation is serious — but it's also not too late to act.</p>
     </div>
 
     <div class="card">
-      <div class="section-label">Who it affects & common mistakes</div>
+      <div class="section-label">Levy vs. lien — what's the difference</div>
       <div class="two-col">
-        <div class="box blue">
-          <div class="box-label">👤 Who it affects</div>
-          <p>Taxpayers who have ignored all IRS collection notices including the final CP90 notice and have not made arrangements to pay.</p>
+        <div class="range-box blue">
+          <div class="range-box-label">Tax Lien</div>
+          <p>A legal claim against your property. It doesn't take anything — it just establishes the IRS's priority right to your assets if you sell them or go through bankruptcy. Think of it as a flag on your credit report and property records.</p>
         </div>
-        <div class="box orange">
-          <div class="box-label">⚠️ Common mistake</div>
-          <p>Emptying your bank account before the IRS levies it. The IRS can trace these transactions and may view them as obstruction.</p>
+        <div class="range-box warn">
+          <div class="range-box-label">Tax Levy</div>
+          <p>Actual seizure of your property or income. Money leaves your bank account. Your employer sends part of your paycheck directly to the IRS. Your assets are physically taken. This is the enforcement step after a lien.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
-      <div class="section-label">What it means for you</div>
-      <p>Unlike a lien, a levy is direct seizure. The IRS can garnish your wages, empty your bank account, or seize and sell your property. Bank levies happen in one action; wage garnishment continues until the debt is paid.</p>
+      <div class="section-label">How a levy happens — the IRS process</div>
+      <h2>The steps before seizure</h2>
+      <p>The IRS is required by law to follow a specific sequence before levying. They can't just take your money out of nowhere:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Assessment</strong> — The IRS assesses (officially records) the tax you owe after you file or they audit you.</li>
+        <li><strong>Demand for payment</strong> — They send you a bill. Usually a CP14 notice — your first notice of balance due.</li>
+        <li><strong>Failure to pay</strong> — You don't pay, set up a payment plan, or respond.</li>
+        <li><strong>Final Notice of Intent to Levy (LT11 or Letter 1058)</strong> — This is the critical one. You have 30 days from this notice to appeal or resolve before the IRS can legally levy.</li>
+        <li><strong>Collection Due Process (CDP) hearing</strong> — If you request one within 30 days of the final notice, it temporarily stops the levy while your case is reviewed.</li>
+        <li><strong>Levy issued</strong> — If nothing is resolved, the IRS issues the levy to your bank, employer, or whoever holds your assets.</li>
+      </ul>
+      <div class="timing-box">
+        <h3>⏱️ The 30-day window</h3>
+        <p>When you receive a Final Notice of Intent to Levy (LT11 or Letter 1058), you have exactly 30 days to request a Collection Due Process hearing with the IRS Office of Appeals. This is your most important protection. Missing this deadline severely limits your options.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What the IRS can levy</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Financial accounts</div>
+          <p>Bank accounts, savings accounts, investment accounts, and retirement accounts (with some exceptions). A bank levy freezes your account for 21 days before the funds are sent to the IRS — that window is your last chance to act.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Wages &amp; income</div>
+          <p>Your employer is required to withhold a portion of every paycheck and send it to the IRS. Unlike a one-time bank levy, a wage levy is continuous — it keeps happening every pay period until the debt is resolved.</p>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top: 16px;">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Federal payments</div>
+          <p>Social Security benefits, federal contractor payments, and tax refunds can all be seized via the Federal Payment Levy Program. Up to 15% of Social Security benefits (or 100% of federal contractor payments) can be levied.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Physical property</div>
+          <p>Vehicles, real estate, boats, and business assets can be seized and sold at public auction. The IRS must give you notice before selling seized property and apply the proceeds to your debt.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What the IRS cannot levy</div>
+      <p>Federal law protects certain assets from levy. These exemptions are limited, but they exist:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Unemployment benefits</strong> — Exempt from IRS levy.</li>
+        <li><strong>Workers' compensation</strong> — Fully protected.</li>
+        <li><strong>Certain pension and annuity payments</strong> — Some public pensions are exempt; others are not.</li>
+        <li><strong>Child support payments</strong> — Money designated for child support is protected.</li>
+        <li><strong>Minimum wage exemption on wages</strong> — The IRS must leave you a minimum amount per week based on standard deduction and exemptions; you won't be left with zero take-home pay.</li>
+        <li><strong>Certain business assets needed for work</strong> — Tools, books, and equipment worth up to $4,640 (2024) needed for your trade are exempt.</li>
+        <li><strong>Personal effects and furniture</strong> — Up to $9,280 in household goods and clothing is exempt.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">How to stop or release a levy</div>
+      <p>A levy isn't necessarily the end. There are several ways to get it released:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Pay the debt in full</strong> — The levy releases immediately once the IRS receives full payment.</li>
+        <li><strong>Set up an installment agreement</strong> — The IRS will typically release a levy once you enter a formal payment plan.</li>
+        <li><strong>Offer in Compromise (OIC)</strong> — Apply to settle your debt for less than you owe. The IRS generally won't levy while an OIC is pending.</li>
+        <li><strong>Currently Not Collectible (CNC) status</strong> — If you can demonstrate you can't pay anything right now, the IRS may temporarily suspend collection activity.</li>
+        <li><strong>Request a Collection Due Process hearing</strong> — If you haven't missed the 30-day window, this is your fastest lever to pull. It stops the levy while your appeal is reviewed.</li>
+        <li><strong>Prove economic hardship</strong> — If the levy is preventing you from meeting basic living expenses, the IRS is required to release it. You'll need to document your financial situation.</li>
+        <li><strong>Innocent spouse relief</strong> — If the tax debt belongs to your spouse and not you, you may be able to get the levy released on your separate assets.</li>
+      </ul>
+      <div class="timing-box">
+        <h3>🏦 Bank levy: the 21-day hold</h3>
+        <p>When the IRS levies a bank account, the bank is required to hold the funds for 21 days before sending them to the IRS. This gives you a narrow window to resolve the situation — set up a payment plan, prove hardship, or pay the balance — and request a release before the money is gone.</p>
+      </div>
     </div>
 
     <div class="card">
       <div class="section-label">What to do right now</div>
-      <div class="action-box">If you receive a levy notice, contact the IRS or a tax professional immediately. You may be able to get a levy released by entering a payment plan, proving hardship, or showing the levy is creating economic hardship. A tax professional can help negotiate on your behalf.</div>
+      <div class="next-steps">
+        If you received a Final Notice of Intent to Levy (LT11 or Letter 1058), don't wait. Request a Collection Due Process hearing within 30 days — this temporarily stops the levy and gives you time to work out a resolution. If a levy is already in effect on your bank account, you have 21 days before the bank sends funds to the IRS. Call the IRS directly at 1-800-829-1040 or get a tax professional (CPA, enrolled agent, or tax attorney) involved immediately. The IRS is generally willing to work with taxpayers who reach out proactively — the worst thing you can do is ignore it.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Have I missed the 30-day CDP hearing window, and what are my options if I have?</li>
+        <li><span class="q-num">02</span>Can we get this levy released while we negotiate a payment plan or Offer in Compromise?</li>
+        <li><span class="q-num">03</span>Do I qualify for Currently Not Collectible status given my current income and expenses?</li>
+        <li><span class="q-num">04</span>Is the tax debt valid — are there any errors in the IRS's assessment I should challenge?</li>
+        <li><span class="q-num">05</span>Are any of my assets exempt from levy, and has the IRS respected those exemptions?</li>
+        <li><span class="q-num">06</span>If this is a wage levy, how much of my paycheck is the IRS allowed to take?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can the IRS levy my account without warning?</div>
+        <div class="faq-a">No. Federal law requires the IRS to send you a Final Notice of Intent to Levy and give you 30 days to respond before issuing a levy. The one exception is if the IRS believes collection is at risk (you're hiding assets or about to leave the country), in which case they can levy immediately.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How much of my paycheck can the IRS take?</div>
+        <div class="faq-a">The IRS uses a formula based on your standard deduction and personal exemptions to calculate the exempt amount — the minimum you're allowed to keep. Everything above that can be levied. For most people, this means the IRS can take a large portion of each paycheck. The exact amount depends on your filing status and number of dependents.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Will a tax levy affect my credit score?</div>
+        <div class="faq-a">A levy itself doesn't appear on your credit report. However, the underlying tax lien that typically precedes a levy used to be reported — the major credit bureaus stopped including tax liens in 2017, so most people won't see a direct credit score impact. That said, the financial disruption from a levy (overdrafts, missed payments) can damage your credit indirectly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can the IRS take my house?</div>
+        <div class="faq-a">Yes, but it's rare and requires IRS supervisory approval. The IRS generally prefers to levy liquid assets (bank accounts, wages) rather than real property. Seizing a home requires additional steps and is typically a last resort for large, long-standing debts when other collection efforts have failed.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between a levy and a garnishment?</div>
+        <div class="faq-a">In IRS terminology, wage garnishment and wage levy mean the same thing — the IRS ordering your employer to withhold part of your paycheck. "Garnishment" is more commonly used in state tax and civil court contexts; the IRS officially calls it a wage levy. Both result in your employer sending money directly to the creditor.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does an Offer in Compromise stop a levy?</div>
+        <div class="faq-a">Generally yes — the IRS suspends most collection activity, including levies, while an Offer in Compromise application is pending and during any appeal period. However, levies already in place may not be immediately released, and the IRS can still take your tax refunds during this time.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related tax topics</div>
+      <div class="related">
+        <a href="/tax-lien" class="related-chip">Tax Lien →</a>
+        <a href="/cp14" class="related-chip">CP14 Notice →</a>
+        <a href="/offer-in-compromise" class="related-chip">Offer in Compromise →</a>
+        <a href="/installment-agreement" class="related-chip">Installment Agreement →</a>
+        <a href="/currently-not-collectible" class="related-chip">Currently Not Collectible →</a>
+        <a href="/1040" class="related-chip">Form 1040 →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
-      <h3>Decode any tax code instantly</h3>
+      <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
 
     <footer>
       <span>taxplain.co</span>
-      <span>Not a substitute for professional tax advice.</span>
+      <span>Understand your taxes. No accountant required.</span>
     </footer>
   </div>
 </body>
