@@ -174,7 +174,7 @@ export default function TaxPlain() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key": "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",
+          "x-api-key": "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",
           "anthropic-version": "2023-06-01",
           "anthropic-dangerous-direct-browser-access": "true",
         },
