@@ -172,7 +172,12 @@ export default function TaxPlain() {
     try {
       const response = await fetch("https://api.anthropic.com/v1/messages", {
         method: "POST",
-        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
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": "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",
+          "anthropic-version": "2023-06-01",
+          "anthropic-dangerous-direct-browser-access": "true",
+        },
         body: JSON.stringify({
           model: "claude-sonnet-4-20250514",
           max_tokens: 1000,
