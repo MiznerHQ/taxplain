@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- FAQ SCHEMA — must match visible FAQ card exactly -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,8 +37,8 @@
       },
       {
         "@type": "Question",
-        "name": "Do HSA contributions include my employer's match?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The annual contribution limit applies to the combined total of your contributions and any employer contributions or matching funds. If your employer contributes $1,000 toward your individual limit, you can personally contribute up to the remainder of the $4,400 cap." }
+        "name": "Can self-employed people contribute to an HSA?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Unlike an FSA, an HSA is not tied to employer sponsorship. Self-employed individuals can open and contribute to an HSA as long as they're enrolled in a qualifying high-deductible health plan, and can typically deduct contributions directly on their tax return." }
       }
     ]
   }
@@ -91,6 +90,8 @@
     .faq-item:last-child { border-bottom: none; }
     .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
     .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .example-box { background: var(--accent-light); border: 1px solid #C5D5EA; border-radius: 10px; padding: 18px 20px; margin-top: 14px; }
+    .example-box p { font-size: 14px; line-height: 1.65; }
     .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
     .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; color: white; }
     .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; color: white; }
@@ -113,14 +114,12 @@
     <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated July 2026</p>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
-    <!-- CARD 1: What it is -->
     <div class="card">
       <div class="section-label">What it is</div>
       <p>An <strong>HSA (Health Savings Account)</strong> is a triple-tax-advantaged account for people enrolled in a high-deductible health plan (HDHP). Contributions go in tax-free, the balance grows tax-free, and withdrawals for qualified medical expenses come out tax-free — no other account type offers all three.</p>
-      <p>Unlike an <a href="/fsa" class="inline-link">FSA</a>, HSA funds never expire and the account belongs to you even if you change jobs or health plans.</p>
+      <p>Unlike an <a href="/fsa" class="inline-link">FSA</a>, HSA funds never expire and the account belongs to you even if you change jobs or health plans. It's also different from a 401(k) or IRA: those only give you one or two of the three tax benefits, not all three at once, which is why financial advisors often call the HSA the most efficient account available for eligible individuals.</p>
     </div>
 
-    <!-- CARD 2: 2026 contribution limits -->
     <div class="card">
       <div class="section-label">2026 HSA contribution limits</div>
       <div class="two-col">
@@ -136,13 +135,12 @@
       <p style="margin-top:14px;">If you're 55 or older, you can add a <strong>$1,000 catch-up contribution</strong> on top of either limit. One detail people frequently overlook: these limits include <strong>employer contributions and any employer match</strong> — not just what you personally deposit. If your employer puts in $1,000, your own contribution room drops by that same amount.</p>
     </div>
 
-    <!-- CARD 3: Who it affects & common mistakes -->
     <div class="card">
       <div class="section-label">Who it affects & common mistakes</div>
       <div class="two-col">
         <div class="box blue">
           <div class="box-label">👤 Who it affects</div>
-          <p>People enrolled in a qualifying High-Deductible Health Plan (HDHP) — for 2026, that means a minimum deductible of $1,700 for individual coverage or $3,400 for family coverage.</p>
+          <p>People enrolled in a qualifying High-Deductible Health Plan (HDHP) — for 2026, that means a minimum deductible of $1,700 for individual coverage or $3,400 for family coverage. Self-employed individuals qualify too, as long as they carry a qualifying HDHP; the account isn't tied to employer sponsorship the way an FSA is.</p>
         </div>
         <div class="box orange">
           <div class="box-label">⚠️ Common mistake</div>
@@ -151,14 +149,12 @@
       </div>
     </div>
 
-    <!-- CARD 4: HSA vs FSA -->
     <div class="card">
       <div class="section-label">HSA vs FSA — can you have both?</div>
       <p>The two accounts get confused constantly, and for good reason: both let you set aside pre-tax money for medical costs. The difference is portability. An <a href="/fsa" class="inline-link">FSA</a> is tied to your employer and typically has a "use it or lose it" rule each year, while an HSA rolls over indefinitely and stays with you.</p>
       <p>Generally, you can't contribute to both a standard health FSA and an HSA in the same year — enrolling in one usually disqualifies you from the other. The one exception is a <strong>limited-purpose FSA</strong>, which only covers dental and vision costs and can be paired with an HSA.</p>
     </div>
 
-    <!-- CARD 5: Eligible expenses -->
     <div class="card">
       <div class="section-label">HSA eligible expenses</div>
       <p>Per <strong>IRS Publication 502</strong>, qualified expenses cover a wide range of medical, dental, and vision costs:</p>
@@ -172,20 +168,20 @@
       <p style="margin-top:14px;">A common point of confusion: <strong>gym memberships</strong> generally do <em>not</em> qualify on their own. They can only be reimbursed if a doctor prescribes the membership to treat a specific diagnosed condition, with documentation on file — a general wellness membership doesn't count.</p>
     </div>
 
-    <!-- CARD 6: What happens after 65 -->
     <div class="card">
       <div class="section-label">HSA rules after age 65</div>
       <p>Turning 65 changes what you can do with HSA funds. The 20% penalty for non-medical withdrawals disappears entirely — after 65, you can withdraw for any purpose. Withdrawals for qualified medical expenses stay completely tax-free, exactly as before.</p>
       <p>Withdrawals for non-medical reasons after 65 are taxed as ordinary income, similar to how a traditional IRA works. This makes an HSA function as a backup retirement account once you no longer need to worry about medical-only withdrawal rules.</p>
+      <div class="example-box">
+        <p><strong>Example:</strong> Say you withdraw $5,000 after turning 65. If it goes toward a qualified medical expense, you owe nothing. If you use that same $5,000 for something unrelated — like a home repair — you'll owe ordinary income tax on it, but you avoid the 20% penalty that would have applied before age 65.</p>
+      </div>
     </div>
 
-    <!-- CARD 7: What to do right now -->
     <div class="card">
       <div class="section-label">What to do right now</div>
       <div class="action-box">Max out your HSA contributions every year if you can afford to — it's the only truly triple-tax-advantaged account available. Consider investing the funds rather than leaving them in cash, since the account is designed for long-term, tax-free growth. If you also itemize, review your <a href="/itemized-deductions" class="inline-link">itemized deductions</a> alongside your HSA strategy, and confirm with a tax professional that you're within the current-year contribution limit.</div>
     </div>
 
-    <!-- CARD 8: FAQ -->
     <div class="card">
       <div class="section-label">Frequently asked questions</div>
       <div class="faq-item">
@@ -205,8 +201,8 @@
         <div class="faq-a">After age 65, you can withdraw HSA funds for any purpose, not just medical expenses, without the usual 20% penalty. Withdrawals for qualified medical expenses remain completely tax-free. Withdrawals for non-medical purposes are taxed as ordinary income, similar to a traditional IRA.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Do HSA contributions include my employer's match?</div>
-        <div class="faq-a">Yes. The annual contribution limit applies to the combined total of your contributions and any employer contributions or matching funds. If your employer contributes $1,000 toward your individual limit, you can personally contribute up to the remainder of the $4,400 cap.</div>
+        <div class="faq-q">Can self-employed people contribute to an HSA?</div>
+        <div class="faq-a">Yes. Unlike an FSA, an HSA is not tied to employer sponsorship. Self-employed individuals can open and contribute to an HSA as long as they're enrolled in a qualifying high-deductible health plan, and can typically deduct contributions directly on their tax return.</div>
       </div>
     </div>
 
