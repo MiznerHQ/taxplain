@@ -1,699 +1,225 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HSA Explained in Plain English – TaxPlain</title>
-<meta name="description" content="What is an HSA? Plain-English guide to Health Savings Accounts — contribution limits, tax benefits, withdrawals, common mistakes, and how HSAs actually work.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://taxplain.co/hsa">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSA (Health Savings Account) Explained in Plain English – TaxPlain</title>
+  <meta name="description" content="What is an HSA? Plain-English guide to 2026 contribution limits, eligible expenses, HSA vs FSA, and the rules after age 65. No confusing tax jargon.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://taxplain.co/hsa">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<style>
-*, *::before, *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
+  <!-- FAQ SCHEMA — must match visible FAQ card exactly -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the HSA contribution limits for 2026?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For 2026, the IRS HSA contribution limit is $4,400 for individual coverage and $8,750 for family coverage. If you're 55 or older, you can contribute an additional $1,000 catch-up amount. These limits include any contributions your employer makes on your behalf, so add employer contributions to your own before checking you haven't gone over." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I have both an HSA and an FSA?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Generally no, not at the same time, if the FSA is a standard health FSA — having one usually disqualifies you from contributing to an HSA. The exception is a limited-purpose FSA (covering only dental and vision expenses), which can be paired with an HSA." }
+      },
+      {
+        "@type": "Question",
+        "name": "What counts as an HSA eligible expense?",
+        "acceptedAnswer": { "@type": "Answer", "text": "IRS Publication 502 lists qualified medical expenses, which include doctor visits, prescriptions, dental and vision care, and certain over-the-counter items. Some gym memberships and fitness programs can qualify only if prescribed by a doctor to treat a specific medical condition — a general gym membership for wellness typically does not qualify." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to my HSA after I turn 65?",
+        "acceptedAnswer": { "@type": "Answer", "text": "After age 65, you can withdraw HSA funds for any purpose, not just medical expenses, without the usual 20% penalty. Withdrawals for qualified medical expenses remain completely tax-free. Withdrawals for non-medical purposes are taxed as ordinary income, similar to a traditional IRA." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do HSA contributions include my employer's match?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The annual contribution limit applies to the combined total of your contributions and any employer contributions or matching funds. If your employer contributes $1,000 toward your individual limit, you can personally contribute up to the remainder of the $4,400 cap." }
+      }
+    ]
+  }
+  </script>
 
-:root {
---bg: #FFFFFF;
---ink: #0D1B2A;
---muted: #6B7A8D;
---accent: #1B4B8A;
---accent-light: #EAF0FA;
---accent-border: #B5CEFA;
---warn: #993C1D;
---warn-light: #FAECE7;
---warn-border: #F5C4B3;
---success-light: #EAF3DE;
---success-border: #C0DD97;
---success-text: #27500A;
---amber: #92400E;
---amber-light: #FEF3C7;
---amber-border: #F59E0B;
---border: #DDE3EC;
---white: #FFFFFF;
-}
-
-body {
-background: var(--bg);
-color: var(--ink);
-font-family: 'DM Sans', sans-serif;
-min-height: 100vh;
-}
-
-.wrap {
-max-width: 720px;
-margin: 0 auto;
-padding: 40px 24px 80px;
-}
-
-nav {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 40px;
-}
-
-.logo-mark {
-width: 32px;
-height: 32px;
-background: var(--accent);
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.logo-mark svg {
-width: 18px;
-height: 18px;
-fill: white;
-}
-
-.logo-text {
-font-family: 'DM Mono', monospace;
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-text-decoration: none;
-}
-
-.logo-text span {
-color: var(--accent);
-}
-
-.breadcrumb {
-font-size: 13px;
-color: var(--muted);
-margin-bottom: 20px;
-font-family: 'DM Mono', monospace;
-}
-
-.breadcrumb a {
-color: var(--accent);
-text-decoration: none;
-}
-
-h1 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(28px, 5vw, 42px);
-line-height: 1.15;
-letter-spacing: -0.5px;
-margin-bottom: 8px;
-}
-
-h2 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(20px, 3vw, 26px);
-line-height: 1.2;
-letter-spacing: -0.3px;
-margin-bottom: 12px;
-color: var(--ink);
-}
-
-h3 {
-font-family: 'DM Sans', sans-serif;
-font-size: 16px;
-font-weight: 500;
-margin-bottom: 8px;
-color: var(--ink);
-}
-
-.category-tag {
-display: inline-block;
-background: var(--accent-light);
-color: var(--accent);
-font-family: 'DM Mono', monospace;
-font-size: 11px;
-letter-spacing: 1px;
-text-transform: uppercase;
-padding: 4px 12px;
-border-radius: 20px;
-margin-bottom: 24px;
-}
-
-.disclaimer {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 14px 18px;
-margin-bottom: 36px;
-font-size: 13px;
-color: var(--amber);
-line-height: 1.5;
-}
-
-.card {
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 14px;
-padding: 28px;
-margin-bottom: 20px;
-}
-
-.section-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-font-weight: 500;
-letter-spacing: 1.8px;
-text-transform: uppercase;
-color: var(--muted);
-margin-bottom: 10px;
-}
-
-p {
-font-size: 16px;
-line-height: 1.75;
-color: var(--ink);
-}
-
-p + p {
-margin-top: 14px;
-}
-
-.two-col {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-}
-
-.range-box {
-padding: 16px;
-border-radius: 10px;
-}
-
-.range-box.warn {
-background: var(--warn-light);
-border: 1px solid var(--warn-border);
-}
-
-.range-box.blue {
-background: var(--accent-light);
-border: 1px solid var(--accent-border);
-}
-
-.range-box-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-letter-spacing: 1px;
-text-transform: uppercase;
-margin-bottom: 8px;
-}
-
-.range-box.warn .range-box-label {
-color: var(--warn);
-}
-
-.range-box.blue .range-box-label {
-color: var(--accent);
-}
-
-.range-box p {
-font-size: 14px;
-line-height: 1.65;
-}
-
-.symptom-list {
-list-style: none;
-padding: 0;
-}
-
-.symptom-list li {
-font-size: 14px;
-color: var(--ink);
-line-height: 1.6;
-padding: 4px 0;
-border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.symptom-list li:last-child {
-border-bottom: none;
-}
-
-.symptom-list li::before {
-content: "→ ";
-color: var(--muted);
-}
-
-.timing-box {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 18px 20px;
-margin-top: 16px;
-}
-
-.timing-box h3 {
-font-size: 14px;
-color: var(--amber);
-font-family: 'DM Mono', monospace;
-letter-spacing: 0.5px;
-margin-bottom: 8px;
-}
-
-.timing-box p {
-font-size: 14px;
-color: #78350F;
-line-height: 1.65;
-}
-
-.next-steps {
-background: var(--success-light);
-border: 1px solid var(--success-border);
-border-radius: 10px;
-padding: 20px;
-font-size: 15px;
-line-height: 1.7;
-color: var(--success-text);
-}
-
-.questions-list {
-list-style: none;
-padding: 0;
-margin-top: 8px;
-}
-
-.questions-list li {
-font-size: 15px;
-color: var(--ink);
-line-height: 1.65;
-padding: 10px 0;
-border-bottom: 1px solid var(--border);
-display: flex;
-gap: 10px;
-}
-
-.questions-list li:last-child {
-border-bottom: none;
-}
-
-.q-num {
-font-family: 'DM Mono', monospace;
-font-size: 12px;
-color: var(--accent);
-font-weight: 500;
-flex-shrink: 0;
-margin-top: 2px;
-}
-
-.faq-item {
-padding: 18px 0;
-border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-border-bottom: none;
-}
-
-.faq-q {
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-margin-bottom: 8px;
-}
-
-.faq-a {
-font-size: 15px;
-color: var(--muted);
-line-height: 1.7;
-}
-
-.tool-cta {
-background: var(--accent);
-color: white;
-border-radius: 12px;
-padding: 28px;
-margin-top: 32px;
-text-align: center;
-}
-
-.tool-cta h3 {
-font-family: 'DM Serif Display', serif;
-font-size: 24px;
-margin-bottom: 8px;
-color: white;
-}
-
-.tool-cta p {
-font-size: 14px;
-opacity: 0.85;
-margin-bottom: 18px;
-color: white;
-}
-
-.tool-cta a {
-display: inline-block;
-background: white;
-color: var(--accent);
-font-weight: 500;
-text-decoration: none;
-padding: 12px 28px;
-border-radius: 8px;
-font-family: 'DM Mono', monospace;
-font-size: 14px;
-}
-
-.related {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-gap: 12px;
-margin-top: 4px;
-}
-
-.related-chip {
-display: block;
-padding: 12px 16px;
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 10px;
-text-decoration: none;
-font-size: 14px;
-color: var(--ink);
-font-family: 'DM Mono', monospace;
-transition: border-color 0.15s;
-}
-
-.related-chip:hover {
-border-color: var(--accent);
-color: var(--accent);
-}
-
-footer {
-margin-top: 60px;
-padding-top: 20px;
-border-top: 1px solid var(--border);
-font-size: 12px;
-color: var(--muted);
-font-family: 'DM Mono', monospace;
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 8px;
-}
-
-@media (max-width: 480px) {
-.two-col {
-grid-template-columns: 1fr;
-}
-}
-</style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F5F3EF; --ink: #1A1A18; --muted: #7A7A72;
+      --accent: #185FA5; --accent-light: #EAF1FA; --warn: #B85C2A;
+      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 24px); line-height: 1.2; margin-bottom: 12px; }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: #B9CFE6; text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
+    .box.blue { background: var(--accent-light); border-color: #C5D5EA; }
+    .box.orange { background: var(--warn-light); border-color: #E8C9B0; }
+    .box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .box.blue .box-label { color: var(--accent); }
+    .box.orange .box-label { color: var(--warn); }
+    .box p { font-size: 14px; line-height: 1.65; }
+    .limit-figure { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C5D5EA; margin-bottom: 12px; }
+    .expense-list { list-style: none; padding: 0; margin-top: 8px; }
+    .expense-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 6px 0; border-bottom: 1px solid var(--border); }
+    .expense-list li:last-child { border-bottom: none; }
+    .expense-list li::before { content: "✓ "; color: var(--accent); font-weight: 500; }
+    .action-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
 </head>
-
 <body>
-
-<div class="wrap">
-
-<nav>
-<div class="logo-mark">
-<svg viewBox="0 0 24 24">
-<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
-</svg>
-</div>
-
-<a href="/" class="logo-text">tax<span>plain</span></a>
-</nav>
-
-<p class="breadcrumb">
-<a href="/">Home</a> &rsaquo;
-<a href="/guides">Tax Guides</a> &rsaquo;
-HSA
-</p>
-
-<h1>What is an<br><em style="font-style:italic;color:var(--accent)">HSA</em>?</h1>
-
-<span class="category-tag">Health Savings Account</span>
-
-<div class="disclaimer">
-⚠ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
-</div>
-
-<div class="card">
-<div class="section-label">What this account is</div>
-
-<p>An HSA — short for Health Savings Account — is a special savings account designed to help people pay medical expenses with major tax advantages. It's available only to people enrolled in a qualifying high-deductible health plan (HDHP).</p>
-
-<p>HSAs are one of the few accounts in the U.S. tax system with a “triple tax advantage”: contributions are tax-deductible, investment growth is tax-free, and withdrawals for qualified medical expenses are also tax-free.</p>
-
-<p>In plain English: the government lets you save and spend money on healthcare without taxing it along the way.</p>
-</div>
-
-<div class="card">
-<div class="section-label">Who qualifies</div>
-
-<div class="two-col">
-
-<div class="range-box blue">
-<div class="range-box-label">✓ Eligible</div>
-
-<p>You generally qualify if you're covered by an IRS-qualified high-deductible health plan and are not enrolled in Medicare or claimed as someone else's dependent.</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">↑ Not Eligible</div>
-
-<p>You usually cannot contribute to an HSA if you're enrolled in Medicare, covered by certain non-HDHP plans, or claimed as a dependent on another person's tax return.</p>
-</div>
-
-</div>
-
-<div class="timing-box" style="margin-top:16px;">
-<h3>📅 Contribution deadline</h3>
-
-<p>You can typically contribute to an HSA for a tax year until the federal tax filing deadline the following year — usually April 15. That means you can still reduce last year's taxable income even after December 31.</p>
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">How HSAs actually work</div>
-
-<h2>Breaking down the HSA</h2>
-
-<p>An HSA combines features of a checking account, retirement account, and tax deduction all in one. Here's what each part actually means:</p>
-
-<ul class="symptom-list" style="margin-top: 12px;">
-
-<li><strong>Contributions</strong> — Money added to the account by you or your employer. Contributions lower your taxable income.</li>
-
-<li><strong>Employer contributions</strong> — Many employers contribute money to employees' HSAs as part of benefits packages. These contributions count toward the annual IRS contribution limit.</li>
-
-<li><strong>Qualified medical expenses</strong> — Doctor visits, prescriptions, dental care, vision care, therapy, and many other healthcare costs can be paid tax-free.</li>
-
-<li><strong>Investment growth</strong> — Many HSAs allow you to invest unused funds into mutual funds or ETFs. Growth is tax-free.</li>
-
-<li><strong>Rollovers</strong> — Unlike FSAs, unused HSA money does not expire at the end of the year. The balance rolls over forever.</li>
-
-<li><strong>Portability</strong> — The account belongs to you, not your employer. You keep it even if you switch jobs.</li>
-
-<li><strong>Withdrawals before age 65</strong> — Non-medical withdrawals are taxable and usually subject to a 20% penalty.</li>
-
-<li><strong>Withdrawals after age 65</strong> — Non-medical withdrawals are still taxable, but the 20% penalty disappears. At that point, the HSA starts functioning similarly to a traditional retirement account.</li>
-
-<li><strong>Receipts matter</strong> — You should keep proof of medical expenses in case the IRS ever asks you to verify tax-free withdrawals.</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">2024 contribution limits</div>
-
-<div class="two-col">
-
-<div class="range-box blue">
-<div class="range-box-label">Individual Coverage</div>
-
-<p>The 2024 HSA contribution limit for self-only coverage is $4,150. If you're age 55 or older, you can contribute an additional $1,000 catch-up contribution.</p>
-</div>
-
-<div class="range-box blue">
-<div class="range-box-label">Family Coverage</div>
-
-<p>The 2024 HSA contribution limit for family coverage is $8,300, plus the same $1,000 catch-up contribution if you're age 55 or older.</p>
-</div>
-
-</div>
-
-<div class="timing-box">
-<h3>⚠ Important limit rule</h3>
-
-<p>Employer contributions count toward your annual limit. If you contribute too much, excess contributions may trigger taxes and penalties unless corrected before the filing deadline.</p>
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Common mistakes to avoid</div>
-
-<div class="two-col">
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Using HSA Money Incorrectly</div>
-
-<p>Using HSA funds for non-qualified expenses before age 65 usually creates both ordinary income taxes and a 20% penalty.</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Losing Receipts</div>
-
-<p>If the IRS audits your HSA withdrawals, you may need proof the expense qualified. Save receipts digitally for years.</p>
-</div>
-
-</div>
-
-<div class="two-col" style="margin-top:16px;">
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Confusing HSA vs FSA</div>
-
-<p>An HSA rolls over forever and belongs to you. An FSA is usually employer-owned and often has “use-it-or-lose-it” rules.</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Overcontributing</div>
-
-<p>Contributing above the IRS annual limit can create a 6% excise tax every year the excess remains in the account.</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Why people love HSAs</div>
-
-<div class="next-steps">
-Financial advisors often consider HSAs one of the best tax-advantaged accounts available. If you can afford to pay smaller medical expenses out of pocket and leave the HSA invested long-term, the account can compound tax-free for decades. Some people even treat HSAs as an extra retirement account specifically reserved for future healthcare costs.
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Questions to ask your tax professional</div>
-
-<ul class="questions-list">
-
-<li><span class="q-num">01</span>Am I actually eligible to contribute to an HSA this year?</li>
-
-<li><span class="q-num">02</span>Did my employer already contribute part of my annual limit?</li>
-
-<li><span class="q-num">03</span>Should I invest my HSA balance instead of leaving it entirely in cash?</li>
-
-<li><span class="q-num">04</span>What medical expenses qualify for tax-free withdrawals?</li>
-
-<li><span class="q-num">05</span>Did I accidentally overcontribute to my HSA?</li>
-
-<li><span class="q-num">06</span>Should I reimburse myself immediately or let receipts accumulate for future tax-free withdrawals?</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Frequently asked questions</div>
-
-<div class="faq-item">
-<div class="faq-q">What happens to my HSA if I leave my job?</div>
-
-<div class="faq-a">
-Nothing — the account is yours permanently. You keep the balance, investments, and future access even if you change employers or health insurance plans.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">Can I invest money inside an HSA?</div>
-
-<div class="faq-a">
-Yes. Many HSA providers allow investing in mutual funds, ETFs, or other investments after reaching a minimum cash balance threshold.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">What counts as a qualified medical expense?</div>
-
-<div class="faq-a">
-Qualified expenses generally include doctor visits, prescriptions, dental care, vision care, mental health treatment, certain medical equipment, and many other healthcare costs approved by the IRS.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">Can I use HSA money for my spouse or children?</div>
-
-<div class="faq-a">
-Usually yes. You can generally use HSA funds tax-free for qualified medical expenses for yourself, your spouse, and dependents.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">What happens if I use HSA money for non-medical expenses?</div>
-
-<div class="faq-a">
-Before age 65, non-qualified withdrawals are typically taxed as ordinary income and hit with an additional 20% penalty. After age 65, the penalty disappears but regular income taxes still apply.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">Is an HSA better than an FSA?</div>
-
-<div class="faq-a">
-They serve different purposes, but HSAs are generally more flexible because balances roll over forever, the account stays with you permanently, and funds can be invested for long-term growth.
-</div>
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Related tax forms</div>
-
-<div class="related">
-
-<a href="/fsa" class="related-chip">FSA →</a>
-
-<a href="/w2" class="related-chip">Form W-2 →</a>
-
-<a href="/1099" class="related-chip">Form 1099 →</a>
-
-<a href="/1040" class="related-chip">Form 1040 →</a>
-
-<a href="/1040-es" class="related-chip">Form 1040-ES →</a>
-
-<a href="/schedule-c" class="related-chip">Schedule C →</a>
-
-</div>
-
-</div>
-
-<div class="tool-cta">
-
-<h3>Decode any tax form instantly</h3>
-
-<p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
-
-<a href="/">Open the Decoder →</a>
-
-</div>
-
-<footer>
-
-<span>taxplain.co</span>
-
-<span>Understand your taxes. No accountant required.</span>
-
-</footer>
-
-</div>
-
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
+      <a href="/" class="logo-text">tax<span>plain</span></a>
+    </nav>
+    <p class="tagline">Plain-English tax help. No CPA required.</p>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; HSA (Health Savings Account)</p>
+    <h1>What is <em style="font-style:italic;color:var(--accent)">HSA (Health Savings Account)</em>?</h1>
+    <span class="category-tag">Tax-Advantaged Account</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated July 2026</p>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+
+    <!-- CARD 1: What it is -->
+    <div class="card">
+      <div class="section-label">What it is</div>
+      <p>An <strong>HSA (Health Savings Account)</strong> is a triple-tax-advantaged account for people enrolled in a high-deductible health plan (HDHP). Contributions go in tax-free, the balance grows tax-free, and withdrawals for qualified medical expenses come out tax-free — no other account type offers all three.</p>
+      <p>Unlike an <a href="/fsa" class="inline-link">FSA</a>, HSA funds never expire and the account belongs to you even if you change jobs or health plans.</p>
+    </div>
+
+    <!-- CARD 2: 2026 contribution limits -->
+    <div class="card">
+      <div class="section-label">2026 HSA contribution limits</div>
+      <div class="two-col">
+        <div class="box blue">
+          <div class="box-label">Individual coverage</div>
+          <div class="limit-figure">$4,400</div>
+        </div>
+        <div class="box blue">
+          <div class="box-label">Family coverage</div>
+          <div class="limit-figure">$8,750</div>
+        </div>
+      </div>
+      <p style="margin-top:14px;">If you're 55 or older, you can add a <strong>$1,000 catch-up contribution</strong> on top of either limit. One detail people frequently overlook: these limits include <strong>employer contributions and any employer match</strong> — not just what you personally deposit. If your employer puts in $1,000, your own contribution room drops by that same amount.</p>
+    </div>
+
+    <!-- CARD 3: Who it affects & common mistakes -->
+    <div class="card">
+      <div class="section-label">Who it affects & common mistakes</div>
+      <div class="two-col">
+        <div class="box blue">
+          <div class="box-label">👤 Who it affects</div>
+          <p>People enrolled in a qualifying High-Deductible Health Plan (HDHP) — for 2026, that means a minimum deductible of $1,700 for individual coverage or $3,400 for family coverage.</p>
+        </div>
+        <div class="box orange">
+          <div class="box-label">⚠️ Common mistake</div>
+          <p>Using HSA funds for non-medical expenses before age 65. Early non-qualified withdrawals trigger both ordinary income tax and a 20% penalty.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4: HSA vs FSA -->
+    <div class="card">
+      <div class="section-label">HSA vs FSA — can you have both?</div>
+      <p>The two accounts get confused constantly, and for good reason: both let you set aside pre-tax money for medical costs. The difference is portability. An <a href="/fsa" class="inline-link">FSA</a> is tied to your employer and typically has a "use it or lose it" rule each year, while an HSA rolls over indefinitely and stays with you.</p>
+      <p>Generally, you can't contribute to both a standard health FSA and an HSA in the same year — enrolling in one usually disqualifies you from the other. The one exception is a <strong>limited-purpose FSA</strong>, which only covers dental and vision costs and can be paired with an HSA.</p>
+    </div>
+
+    <!-- CARD 5: Eligible expenses -->
+    <div class="card">
+      <div class="section-label">HSA eligible expenses</div>
+      <p>Per <strong>IRS Publication 502</strong>, qualified expenses cover a wide range of medical, dental, and vision costs:</p>
+      <ul class="expense-list">
+        <li>Doctor, dentist, and specialist visits</li>
+        <li>Prescription medications</li>
+        <li>Vision care, including glasses and contacts</li>
+        <li>Certain over-the-counter medications and supplies</li>
+        <li>Physical therapy and chiropractic care</li>
+      </ul>
+      <p style="margin-top:14px;">A common point of confusion: <strong>gym memberships</strong> generally do <em>not</em> qualify on their own. They can only be reimbursed if a doctor prescribes the membership to treat a specific diagnosed condition, with documentation on file — a general wellness membership doesn't count.</p>
+    </div>
+
+    <!-- CARD 6: What happens after 65 -->
+    <div class="card">
+      <div class="section-label">HSA rules after age 65</div>
+      <p>Turning 65 changes what you can do with HSA funds. The 20% penalty for non-medical withdrawals disappears entirely — after 65, you can withdraw for any purpose. Withdrawals for qualified medical expenses stay completely tax-free, exactly as before.</p>
+      <p>Withdrawals for non-medical reasons after 65 are taxed as ordinary income, similar to how a traditional IRA works. This makes an HSA function as a backup retirement account once you no longer need to worry about medical-only withdrawal rules.</p>
+    </div>
+
+    <!-- CARD 7: What to do right now -->
+    <div class="card">
+      <div class="section-label">What to do right now</div>
+      <div class="action-box">Max out your HSA contributions every year if you can afford to — it's the only truly triple-tax-advantaged account available. Consider investing the funds rather than leaving them in cash, since the account is designed for long-term, tax-free growth. If you also itemize, review your <a href="/itemized-deductions" class="inline-link">itemized deductions</a> alongside your HSA strategy, and confirm with a tax professional that you're within the current-year contribution limit.</div>
+    </div>
+
+    <!-- CARD 8: FAQ -->
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">What are the HSA contribution limits for 2026?</div>
+        <div class="faq-a">For 2026, the IRS HSA contribution limit is $4,400 for individual coverage and $8,750 for family coverage. If you're 55 or older, you can contribute an additional $1,000 catch-up amount. These limits include any contributions your employer makes on your behalf, so add employer contributions to your own before checking you haven't gone over.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I have both an HSA and an FSA?</div>
+        <div class="faq-a">Generally no, not at the same time, if the FSA is a standard health FSA — having one usually disqualifies you from contributing to an HSA. The exception is a limited-purpose FSA (covering only dental and vision expenses), which can be paired with an HSA.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What counts as an HSA eligible expense?</div>
+        <div class="faq-a">IRS Publication 502 lists qualified medical expenses, which include doctor visits, prescriptions, dental and vision care, and certain over-the-counter items. Some gym memberships and fitness programs can qualify only if prescribed by a doctor to treat a specific medical condition — a general gym membership for wellness typically does not qualify.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What happens to my HSA after I turn 65?</div>
+        <div class="faq-a">After age 65, you can withdraw HSA funds for any purpose, not just medical expenses, without the usual 20% penalty. Withdrawals for qualified medical expenses remain completely tax-free. Withdrawals for non-medical purposes are taxed as ordinary income, similar to a traditional IRA.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do HSA contributions include my employer's match?</div>
+        <div class="faq-a">Yes. The annual contribution limit applies to the combined total of your contributions and any employer contributions or matching funds. If your employer contributes $1,000 toward your individual limit, you can personally contribute up to the remainder of the $4,400 cap.</div>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any tax term instantly</h3>
+      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>taxplain.co</span>
+      <span>Not a substitute for professional tax advice.</span>
+    </footer>
+  </div>
 </body>
-</html>
 </html>
