@@ -9,6 +9,41 @@
   <link rel="canonical" href="https://taxplain.co/1040">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I have to file a 1040 if I didn't earn much?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Not always — but you might want to even if you're below the threshold. If your employer withheld federal taxes from your paycheck, filing is the only way to get that money back as a refund. You may also qualify for the Earned Income Credit, which is refundable even if you owe no tax." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between a tax deduction and a tax credit?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A deduction reduces your taxable income — so a $1,000 deduction saves you $220 if you're in the 22% bracket. A credit reduces your actual tax bill dollar for dollar — a $1,000 credit saves you exactly $1,000. Credits are almost always more valuable than deductions of the same size." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I file late?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If you owe taxes, the IRS charges a failure-to-file penalty of 5% of unpaid taxes per month (up to 25%), plus a failure-to-pay penalty of 0.5% per month, plus interest. If you're owed a refund, there's no penalty for filing late — but you have 3 years to claim a refund before it's forfeited to the government." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I file the 1040 for free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The IRS Free File program offers free federal filing for taxpayers earning under $79,000 through partner software. If your income is above that, the IRS Free File Fillable Forms let anyone file for free directly — though with less guidance. Many states also offer free state filing." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between Form 1040 and 1040-SR?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Form 1040-SR is identical to the regular 1040 in every way — same lines, same rules — but it uses a larger font and is designed specifically for taxpayers age 65 and older. Either form is acceptable; choose whichever is easier to read." }
+      }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -21,17 +56,19 @@
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
     .logo-mark svg { width: 18px; height: 18px; fill: white; }
     .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
     .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
     h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
     h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
     .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
@@ -78,9 +115,12 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
+    <p class="tagline">Plain-English tax help. No CPA required.</p>
+
     <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Form 1040</p>
     <h1>What is<br><em style="font-style:italic;color:var(--accent)">Form 1040</em>?</h1>
     <span class="category-tag">Tax Form</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated July 2026</p>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
     <div class="card">
@@ -94,7 +134,7 @@
       <div class="two-col">
         <div class="range-box blue">
           <div class="range-box-label">✓ Must File</div>
-          <p>Most U.S. citizens and resident aliens who earned income above the IRS filing threshold for their filing status. For 2024, that's roughly $14,600 for single filers under 65.</p>
+          <p>Most U.S. citizens and resident aliens who earned income above the IRS filing threshold for their filing status. For 2026, that's $16,100 for single filers under 65.</p>
         </div>
         <div class="range-box warn">
           <div class="range-box-label">↑ Also Must File</div>
@@ -114,7 +154,7 @@
       <ul class="symptom-list" style="margin-top: 12px;">
         <li><strong>Filing information</strong> — Your name, SSN, address, and filing status (single, married filing jointly, head of household, etc.)</li>
         <li><strong>Digital assets</strong> — Did you receive, sell, or exchange cryptocurrency or other digital assets? A yes/no question the IRS added in 2019.</li>
-        <li><strong>Standard vs. itemized deduction</strong> — You choose one. Most people take the standard deduction ($14,600 single / $29,200 married for 2024).</li>
+        <li><strong>Standard vs. itemized deduction</strong> — You choose one. Most people take the standard deduction ($16,100 single / $32,200 married filing jointly for 2026).</li>
         <li><strong>Income (Lines 1–8)</strong> — Wages, salaries, tips, interest, dividends, business income, capital gains, retirement distributions, Social Security, and other income.</li>
         <li><strong>Adjustments to income</strong> — Above-the-line deductions like student loan interest, IRA contributions, and self-employment tax you can subtract before calculating your AGI.</li>
         <li><strong>Adjusted Gross Income (AGI)</strong> — Your total income minus those adjustments. This number drives eligibility for many credits and deductions.</li>
@@ -209,11 +249,11 @@
       <div class="section-label">Related tax forms</div>
       <div class="related">
         <a href="/w2" class="related-chip">Form W-2 →</a>
-        <a href="/1099" class="related-chip">Form 1099 →</a>
-        <a href="/schedule-c" class="related-chip">Schedule C →</a>
-        <a href="/schedule-a" class="related-chip">Schedule A →</a>
         <a href="/w4" class="related-chip">Form W-4 →</a>
-        <a href="/1040-es" class="related-chip">Form 1040-ES →</a>
+        <a href="/schedule-c" class="related-chip">Schedule C →</a>
+        <a href="/standard-deduction" class="related-chip">Standard Deduction →</a>
+        <a href="/itemized-deductions" class="related-chip">Itemized Deductions →</a>
+        <a href="/self-employment-tax" class="related-chip">Self-Employment Tax →</a>
       </div>
     </div>
 
