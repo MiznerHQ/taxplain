@@ -22,6 +22,11 @@
       },
       {
         "@type": "Question",
+        "name": "Do I need to file a 1040 if I only have a W-2?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Usually yes, if your W-2 income is above the filing threshold for your status ($16,100 for single filers under 65 in 2026). Even below that threshold, filing is worthwhile if federal tax was withheld from your paycheck, since it's the only way to get that withholding back as a refund." }
+      },
+      {
+        "@type": "Question",
         "name": "What's the difference between a tax deduction and a tax credit?",
         "acceptedAnswer": { "@type": "Answer", "text": "A deduction reduces your taxable income — so a $1,000 deduction saves you $220 if you're in the 22% bracket. A credit reduces your actual tax bill dollar for dollar — a $1,000 credit saves you exactly $1,000. Credits are almost always more valuable than deductions of the same size." }
       },
@@ -32,13 +37,13 @@
       },
       {
         "@type": "Question",
-        "name": "Can I file the 1040 for free?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The IRS Free File program offers free federal filing for taxpayers earning under $79,000 through partner software. If your income is above that, the IRS Free File Fillable Forms let anyone file for free directly — though with less guidance. Many states also offer free state filing." }
+        "name": "What's the difference between Form 1040, 1040-SR, and 1040-NR?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Form 1040-SR is identical to the regular 1040 in every way — same lines, same rules — but uses a larger font and is designed for taxpayers age 65 and older. Form 1040-NR is a separate form entirely, used by nonresident aliens who have U.S. income but don't meet the residency tests for a standard 1040. Most U.S. citizens and resident aliens use either the standard 1040 or 1040-SR." }
       },
       {
         "@type": "Question",
-        "name": "What's the difference between Form 1040 and 1040-SR?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Form 1040-SR is identical to the regular 1040 in every way — same lines, same rules — but it uses a larger font and is designed specifically for taxpayers age 65 and older. Either form is acceptable; choose whichever is easier to read." }
+        "name": "What is Form 1040-X and when do I need it?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Form 1040-X is used to amend a return you've already filed — for example, if you forgot to report income, missed a deduction, or need to correct your filing status. You generally have 3 years from the original filing date to file an amended return and claim any additional refund you're owed." }
       }
     ]
   }
@@ -74,6 +79,8 @@
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
     p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .range-box { padding: 16px; border-radius: 10px; }
     .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
@@ -134,7 +141,7 @@
       <div class="two-col">
         <div class="range-box blue">
           <div class="range-box-label">✓ Must File</div>
-          <p>Most U.S. citizens and resident aliens who earned income above the IRS filing threshold for their filing status. For 2026, that's $16,100 for single filers under 65.</p>
+          <p>Most U.S. citizens and resident aliens who earned income above the IRS filing threshold for their filing status. For 2026, that's $16,100 for single filers under 65 — including most people whose only income is from a W-2 job.</p>
         </div>
         <div class="range-box warn">
           <div class="range-box-label">↑ Also Must File</div>
@@ -149,7 +156,7 @@
 
     <div class="card">
       <div class="section-label">What each section covers</div>
-      <h2>Breaking down the 1040</h2>
+      <h2>Breaking down the 1040, step by step</h2>
       <p>The form is organized into sections that build on each other. Here's what each part is actually asking:</p>
       <ul class="symptom-list" style="margin-top: 12px;">
         <li><strong>Filing information</strong> — Your name, SSN, address, and filing status (single, married filing jointly, head of household, etc.)</li>
@@ -205,7 +212,7 @@
     <div class="card">
       <div class="section-label">What to do right now</div>
       <div class="next-steps">
-        The 1040 is due April 15. If your situation is straightforward (W-2 income, standard deduction, no major life changes), tax software like TurboTax or FreeTaxUSA can walk you through it in under an hour. If you're self-employed, sold investments, own rental property, or had a major life event (marriage, divorce, new baby, inheritance), a CPA or enrolled agent is worth the cost — they'll likely save you more than their fee.
+        The 1040 is due April 15. If your situation is straightforward (W-2 income, standard deduction, no major life changes), tax software like TurboTax or FreeTaxUSA can walk you through it step by step in under an hour. If you're self-employed, sold investments, own rental property, or had a major life event (marriage, divorce, new baby, inheritance), a CPA or enrolled agent is worth the cost — they'll likely save you more than their fee. If you make estimated quarterly payments during the year, see our <a href="/estimated-taxes" style="color:inherit;text-decoration:underline;">guide to estimated taxes</a> for how those tie into your 1040.
       </div>
     </div>
 
@@ -228,6 +235,10 @@
         <div class="faq-a">Not always — but you might want to even if you're below the threshold. If your employer withheld federal taxes from your paycheck, filing is the only way to get that money back as a refund. You may also qualify for the Earned Income Credit, which is refundable even if you owe no tax.</div>
       </div>
       <div class="faq-item">
+        <div class="faq-q">Do I need to file a 1040 if I only have a W-2?</div>
+        <div class="faq-a">Usually yes, if your W-2 income is above the filing threshold for your status ($16,100 for single filers under 65 in 2026). Even below that threshold, filing is worthwhile if federal tax was withheld from your paycheck, since it's the only way to get that withholding back as a refund.</div>
+      </div>
+      <div class="faq-item">
         <div class="faq-q">What's the difference between a tax deduction and a tax credit?</div>
         <div class="faq-a">A deduction reduces your taxable income — so a $1,000 deduction saves you $220 if you're in the 22% bracket. A credit reduces your actual tax bill dollar for dollar — a $1,000 credit saves you exactly $1,000. Credits are almost always more valuable than deductions of the same size.</div>
       </div>
@@ -236,12 +247,12 @@
         <div class="faq-a">If you owe taxes, the IRS charges a failure-to-file penalty of 5% of unpaid taxes per month (up to 25%), plus a failure-to-pay penalty of 0.5% per month, plus interest. If you're owed a refund, there's no penalty for filing late — but you have 3 years to claim a refund before it's forfeited to the government.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Can I file the 1040 for free?</div>
-        <div class="faq-a">Yes. The IRS Free File program offers free federal filing for taxpayers earning under $79,000 through partner software. If your income is above that, the IRS Free File Fillable Forms let anyone file for free directly — though with less guidance. Many states also offer free state filing.</div>
+        <div class="faq-q">What's the difference between Form 1040, 1040-SR, and 1040-NR?</div>
+        <div class="faq-a">Form 1040-SR is identical to the regular 1040 in every way — same lines, same rules — but uses a larger font and is designed for taxpayers age 65 and older. Form 1040-NR is a separate form entirely, used by nonresident aliens who have U.S. income but don't meet the residency tests for a standard 1040. Most U.S. citizens and resident aliens use either the standard 1040 or 1040-SR.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What's the difference between Form 1040 and 1040-SR?</div>
-        <div class="faq-a">Form 1040-SR is identical to the regular 1040 in every way — same lines, same rules — but it uses a larger font and is designed specifically for taxpayers age 65 and older. Either form is acceptable; choose whichever is easier to read.</div>
+        <div class="faq-q">What is Form 1040-X and when do I need it?</div>
+        <div class="faq-a">Form 1040-X is used to amend a return you've already filed — for example, if you forgot to report income, missed a deduction, or need to correct your filing status. You generally have 3 years from the original filing date to file an amended return and claim any additional refund you're owed.</div>
       </div>
     </div>
 
@@ -251,9 +262,9 @@
         <a href="/w2" class="related-chip">Form W-2 →</a>
         <a href="/w4" class="related-chip">Form W-4 →</a>
         <a href="/schedule-c" class="related-chip">Schedule C →</a>
+        <a href="/estimated-taxes" class="related-chip">Estimated Taxes →</a>
         <a href="/standard-deduction" class="related-chip">Standard Deduction →</a>
         <a href="/itemized-deductions" class="related-chip">Itemized Deductions →</a>
-        <a href="/self-employment-tax" class="related-chip">Self-Employment Tax →</a>
       </div>
     </div>
 
