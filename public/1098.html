@@ -3,12 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form 1098 Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Form 1098? Plain-English guide to the Mortgage Interest Statement — who gets it, what every box means, how to use it on your taxes, and common mistakes to avoid. No tax jargon.">
+  <title>What is Form 1098? Mortgage Interest Statement Explained – TaxPlain</title>
+  <meta name="description" content="Form 1098 reports the mortgage interest you paid last year. Here's what each box means, who sends it, and how it affects your tax return.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/1098">
+  <link rel="canonical" href="https://taxplain.co/1098.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is Form 1098 used for?", "acceptedAnswer": { "@type": "Answer", "text": "Form 1098 (Mortgage Interest Statement) reports how much mortgage interest, points, and mortgage insurance premiums you paid to a lender during the year. Lenders send one copy to you and one to the IRS, and the numbers on it are used to fill out the mortgage interest deduction on Schedule A if you itemize." } },
+      { "@type": "Question", "name": "Who sends me a Form 1098?", "acceptedAnswer": { "@type": "Answer", "text": "Any mortgage lender, bank, or loan servicer who received $600 or more in mortgage interest from you during the year is generally required to send you a Form 1098. If you have more than one mortgage or your loan was sold or transferred mid-year, you may receive more than one." } },
+      { "@type": "Question", "name": "Is Form 1098 the same as Form 1098-T?", "acceptedAnswer": { "@type": "Answer", "text": "No. Form 1098 reports mortgage interest paid on a home loan. Form 1098-T reports tuition payments for education credits, and Form 1098-E reports student loan interest. All three share the 1098 numbering but cover completely different situations." } },
+      { "@type": "Question", "name": "Do I need Form 1098 to file my taxes?", "acceptedAnswer": { "@type": "Answer", "text": "You only need the numbers from Form 1098 if you plan to itemize deductions on Schedule A and claim the mortgage interest deduction. If you take the standard deduction instead, you don't need to enter anything from the form, though it's still worth keeping for your records." } },
+      { "@type": "Question", "name": "What if I didn't receive a Form 1098?", "acceptedAnswer": { "@type": "Answer", "text": "If you paid less than $600 in mortgage interest to a lender, they aren't required to send a Form 1098, but you may still be able to claim the interest if you itemize. If you believe you should have received one and didn't, contact your loan servicer directly." } }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -21,22 +36,26 @@
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
     .logo-mark svg { width: 18px; height: 18px; fill: white; }
     .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
     .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
     h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
     h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
     .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
     p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .range-box { padding: 16px; border-radius: 10px; }
     .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
@@ -46,7 +65,7 @@
     .range-box.blue .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
     .symptom-list { list-style: none; padding: 0; }
-    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
     .symptom-list li:last-child { border-bottom: none; }
     .symptom-list li::before { content: "→ "; color: var(--muted); }
     .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
@@ -78,137 +97,137 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
+
     <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Form 1098</p>
     <h1>What is<br><em style="font-style:italic;color:var(--accent)">Form 1098</em>?</h1>
-    <span class="category-tag">Tax Form</span>
+    <span class="category-tag">IRS Forms</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated July 2026</p>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
+    <!-- CARD 1: What this is -->
     <div class="card">
-      <div class="section-label">What this form is</div>
-      <p>Form 1098 is the Mortgage Interest Statement — a tax document your lender sends you every January showing how much mortgage interest you paid during the previous year. It's not a form you fill out or file yourself. Your lender files it with the IRS and sends you a copy for your records.</p>
-      <p>Why does it matter? Mortgage interest is one of the most valuable itemized deductions available to homeowners. If you paid significant mortgage interest in the past year and you itemize deductions on your 1040, Form 1098 is the document that unlocks that deduction.</p>
+      <div class="section-label">What this is</div>
+      <p>Form 1098, officially called the Mortgage Interest Statement, is a document your mortgage lender sends you (and the IRS) after a year in which you paid interest on a home loan. It's not something you fill out yourself — it arrives already completed, listing exactly how much interest, and in some cases points and mortgage insurance premiums, you paid over the previous year.</p>
+      <p>The IRS uses Form 1098 as a matching tool. Your lender reports the same numbers to the IRS that they send to you, so if you claim a mortgage interest deduction on your return, the figures need to line up with what your lender reported. That's the whole purpose of the form: giving both you and the IRS a shared, verified starting point.</p>
+      <p>Form 1098 typically covers the tax year that just ended, meaning the one you receive in early 2026 reports interest paid during 2025. Lenders are required to prepare and send it for that prior calendar year, not the current one.</p>
     </div>
 
+    <!-- CARD 2: Who it affects -->
     <div class="card">
-      <div class="section-label">Who receives this form</div>
+      <div class="section-label">Who it affects</div>
       <div class="two-col">
         <div class="range-box blue">
-          <div class="range-box-label">✓ You'll receive a 1098 if...</div>
-          <p>You paid $600 or more in mortgage interest during the year on a loan secured by your primary home or a second home. Your lender is required by law to send it.</p>
+          <div class="range-box-label">✓ Applies to</div>
+          <p>Homeowners who paid $600 or more in mortgage interest to a single lender during the year, including primary residences and second homes.</p>
         </div>
         <div class="range-box warn">
-          <div class="range-box-label">↑ You may not receive one if...</div>
-          <p>You paid less than $600 in interest, your loan is from a private individual (not a bank), or your mortgage is on a property that doesn't qualify as a home. You may still be able to deduct the interest — just without the form.</p>
+          <div class="range-box-label">↑ Also applies to</div>
+          <p>Anyone with a second mortgage, home equity loan, or a mortgage that was sold or transferred to a new servicer mid-year — you may get more than one Form 1098.</p>
         </div>
       </div>
       <div class="timing-box">
-        <h3>📅 When to expect it</h3>
-        <p>Lenders must send Form 1098 by January 31 each year for the prior tax year. Check your mail and your lender's online portal. If you have multiple mortgages or a home equity loan, you may receive multiple 1098s.</p>
+        <h3>📅 WHEN IT ARRIVES</h3>
+        <p>Lenders are required to send Form 1098 by January 31 following the tax year it covers, so it should reach you by early-to-mid February. If your mortgage was transferred between servicers during the year, expect a separate form from each one, covering the portion of the year they held your loan.</p>
       </div>
     </div>
 
+    <!-- CARD 3: What each box means -->
     <div class="card">
-      <div class="section-label">What each box means</div>
-      <h2>Breaking down Form 1098</h2>
-      <p>The form has several boxes — here's what each one actually means in plain English:</p>
+      <div class="section-label">Reading the form</div>
+      <h2>What's in each box</h2>
+      <p style="margin-top: 12px;">Form 1098 is short, but the boxes aren't always self-explanatory. Here's what the main ones report, since these are the numbers you'll actually transfer to <a href="/itemized-deductions.html" class="inline-link">Schedule A</a> if you itemize.</p>
       <ul class="symptom-list" style="margin-top: 12px;">
-        <li><strong>Box 1 — Mortgage interest received</strong> — The total interest you paid on your mortgage during the year. This is the main number you'll use on your tax return.</li>
-        <li><strong>Box 2 — Outstanding mortgage principal</strong> — Your loan balance as of January 1 of the tax year (or the origination date if it's a new loan). Used to determine if your loan qualifies for the full deduction.</li>
-        <li><strong>Box 3 — Mortgage origination date</strong> — When your loan began. Affects which tax rules apply to your deduction.</li>
-        <li><strong>Box 4 — Refund of overpaid interest</strong> — If your lender refunded any interest you previously overpaid, it shows here. This amount may need to be added back to your income.</li>
-        <li><strong>Box 5 — Mortgage insurance premiums</strong> — Private mortgage insurance (PMI) you paid. May be deductible depending on your income and current tax law.</li>
-        <li><strong>Box 6 — Points paid on purchase</strong> — Mortgage points you paid when taking out the loan. Points on a home purchase are typically fully deductible in the year paid.</li>
-        <li><strong>Box 7 — Address of property securing the mortgage</strong> — Confirms which property the mortgage is for.</li>
-        <li><strong>Box 8 — Lender's information</strong> — Your lender's name, address, and tax ID number.</li>
+        <li><strong>Box 1</strong> — total mortgage interest received by your lender during the year. This is usually the number you'll actually use.</li>
+        <li><strong>Box 2</strong> — the outstanding principal balance on your mortgage as of January 1 of the reporting year. This is informational, not something you deduct.</li>
+        <li><strong>Box 3</strong> — the date your mortgage originated, useful for confirming which loan the form applies to if you have multiple.</li>
+        <li><strong>Box 5</strong> — mortgage insurance premiums paid, if applicable, though deductibility of this amount depends on current-year rules.</li>
+        <li><strong>Box 6</strong> — points paid when you purchased the home, which may be deductible in the year paid or spread over the life of the loan depending on your situation.</li>
+        <li><strong>Box 10</strong> — an "other" field some lenders use to report real estate taxes paid from an escrow account, though not every lender fills this in the same way.</li>
       </ul>
     </div>
 
+    <!-- CARD 4: Related forms -->
     <div class="card">
-      <div class="section-label">How to use Form 1098 on your taxes</div>
-      <p>You only benefit from Form 1098 if you itemize deductions on Schedule A of your 1040 — meaning your total itemized deductions (mortgage interest + state taxes + charitable donations + medical expenses) exceed the standard deduction ($14,600 single / $29,200 married for 2024).</p>
-      <p>If you itemize, enter the Box 1 amount on Schedule A, Line 8a. If you also paid points (Box 6), those go on Line 8a as well. Your tax software will walk you through this automatically if you enter the 1098 information when prompted.</p>
-      <div class="timing-box">
-        <h3>💡 Standard vs. itemized deduction</h3>
-        <p>Most homeowners assume they should itemize because of mortgage interest — but run the numbers first. If your mortgage interest plus other deductions doesn't exceed the standard deduction, you're better off taking the standard deduction and ignoring the 1098 for deduction purposes. Your tax software will compare both and pick the better option.</p>
-      </div>
+      <div class="section-label">Related forms often involved</div>
+      <p>Because mortgage interest only matters on your return if you itemize, Form 1098 tends to show up alongside a small cluster of other forms and schedules.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Schedule A</strong> — where the mortgage interest deduction actually gets claimed if you're <a href="/itemized-deductions.html" class="inline-link">itemizing deductions</a> instead of taking the standard deduction.</li>
+        <li><strong>Form 1040</strong> — your main <a href="/1040.html" class="inline-link">individual tax return</a>, which Schedule A attaches to.</li>
+        <li><strong>Schedule E</strong> — used instead of Schedule A if the mortgage is on a <a href="/schedule-e.html" class="inline-link">rental property</a> rather than your personal residence.</li>
+        <li><strong>Form 1098-T</strong> — a completely different form covering tuition payments for education credits, not mortgage interest.</li>
+        <li><strong>Form 1098-E</strong> — another separate form, this one for student loan interest.</li>
+      </ul>
     </div>
 
+    <!-- CARD 5: Common mistakes -->
     <div class="card">
       <div class="section-label">Common mistakes to avoid</div>
       <div class="two-col">
         <div class="range-box warn">
-          <div class="range-box-label">⚠️ Deducting on the wrong loan</div>
-          <p>The mortgage interest deduction only applies to loans secured by a qualified home — your primary residence and one second home. Interest on a third property or investment property follows different rules.</p>
+          <div class="range-box-label">⚠️ Mixing up the 1098 family</div>
+          <p>Form 1098, 1098-T, and 1098-E all share the same base number but report entirely different things — mortgage interest, tuition, and student loan interest, respectively. Grabbing the wrong one when preparing a return is a common and avoidable error.</p>
         </div>
         <div class="range-box warn">
-          <div class="range-box-label">⚠️ Ignoring the loan limit</div>
-          <p>For mortgages taken out after December 15, 2017, you can only deduct interest on up to $750,000 of mortgage debt ($375,000 if married filing separately). Older loans have a $1 million limit.</p>
-        </div>
-      </div>
-      <div class="two-col" style="margin-top: 16px;">
-        <div class="range-box warn">
-          <div class="range-box-label">⚠️ Missing multiple 1098s</div>
-          <p>If you refinanced during the year, you'll get a 1098 from your old lender and your new lender. Both amounts of interest are deductible — don't forget to include both.</p>
-        </div>
-        <div class="range-box warn">
-          <div class="range-box-label">⚠️ Skipping Box 4</div>
-          <p>If Box 4 shows a refund of overpaid interest, that amount may need to be reported as income if you deducted it in a prior year. Easy to miss and easy to get wrong.</p>
+          <div class="range-box-label">⚠️ Itemizing when it doesn't help</div>
+          <p>Plenty of people receive a Form 1098 every year but would actually come out ahead taking the <a href="/standard-deduction.html" class="inline-link">standard deduction</a> instead. Having the form doesn't automatically mean itemizing is the better move.</p>
         </div>
       </div>
     </div>
 
+    <!-- CARD 6: What to do right now -->
     <div class="card">
       <div class="section-label">What to do right now</div>
       <div class="next-steps">
-        Check your mail and your lender's online portal for your 1098 — it should arrive by January 31. When you sit down to file, enter the Box 1 amount into your tax software when it asks about mortgage interest. The software will determine whether itemizing beats your standard deduction. If you refinanced, have both 1098s ready. If you're unsure whether your loan qualifies or whether itemizing makes sense, a tax professional can run the comparison for you in minutes.
+        Compare the interest amount in Box 1 against your own mortgage statements to make sure it looks right, then figure out whether itemizing on <a href="/itemized-deductions.html" class="inline-link">Schedule A</a> actually beats your standard deduction this year before entering anything. If you refinanced or switched servicers, hold onto every Form 1098 you receive — you'll likely need to combine figures from more than one.
       </div>
     </div>
 
+    <!-- CARD 7: Questions to ask your tax professional -->
     <div class="card">
       <div class="section-label">Questions to ask your tax professional</div>
       <ul class="questions-list">
-        <li><span class="q-num">01</span>Should I itemize this year, or is the standard deduction still better even with my mortgage interest?</li>
-        <li><span class="q-num">02</span>I refinanced this year — do I have two 1098s to deal with, and how do I handle both?</li>
-        <li><span class="q-num">03</span>My mortgage balance is over $750,000 — how does the loan limit affect my deduction?</li>
-        <li><span class="q-num">04</span>Can I deduct the mortgage interest on my second home or vacation property?</li>
-        <li><span class="q-num">05</span>I paid PMI this year — is that deductible, and does my income affect eligibility?</li>
-        <li><span class="q-num">06</span>I have a home equity loan — is that interest still deductible after the 2017 tax law changes?</li>
+        <li><span class="q-num">01</span>Based on my numbers, does itemizing with this mortgage interest actually beat the standard deduction?</li>
+        <li><span class="q-num">02</span>I received Form 1098 from two different servicers this year — how do I combine them?</li>
+        <li><span class="q-num">03</span>Are the points I paid when I bought my home fully deductible this year, or spread out?</li>
+        <li><span class="q-num">04</span>Is my mortgage insurance premium in Box 5 deductible under current rules?</li>
+        <li><span class="q-num">05</span>Does the loan amount reported affect how much interest I'm allowed to deduct?</li>
       </ul>
     </div>
 
+    <!-- CARD 8: FAQ -->
     <div class="card">
       <div class="section-label">Frequently asked questions</div>
       <div class="faq-item">
-        <div class="faq-q">Do I have to file Form 1098 with my tax return?</div>
-        <div class="faq-a">No. Form 1098 is sent to you for your records — you don't attach it to your return. Your lender already sent a copy to the IRS. You simply use the numbers from the form when filling out Schedule A if you itemize.</div>
+        <div class="faq-q">What is Form 1098 used for?</div>
+        <div class="faq-a">Form 1098 (Mortgage Interest Statement) reports how much mortgage interest, points, and mortgage insurance premiums you paid to a lender during the year. Lenders send one copy to you and one to the IRS, and the numbers on it are used to fill out the mortgage interest deduction on Schedule A if you itemize.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What if I never received my Form 1098?</div>
-        <div class="faq-a">Contact your lender directly — they're required to send it by January 31. Most lenders also make it available in your online account. If your lender isn't required to send one (loans under $600 in interest), check your monthly statements to calculate the total interest paid.</div>
+        <div class="faq-q">Who sends me a Form 1098?</div>
+        <div class="faq-a">Any mortgage lender, bank, or loan servicer who received $600 or more in mortgage interest from you during the year is generally required to send you a Form 1098. If you have more than one mortgage or your loan was sold or transferred mid-year, you may receive more than one.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Is home equity loan interest still deductible?</div>
-        <div class="faq-a">Only if the loan was used to buy, build, or substantially improve the home that secures the loan. Since the 2017 Tax Cuts and Jobs Act, you can no longer deduct home equity interest used for other purposes like paying off credit cards or buying a car.</div>
+        <div class="faq-q">Is Form 1098 the same as Form 1098-T?</div>
+        <div class="faq-a">No. Form 1098 reports mortgage interest paid on a home loan. Form 1098-T reports tuition payments for education credits, and Form 1098-E reports student loan interest. All three share the 1098 numbering but cover completely different situations.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Can I deduct mortgage interest if I'm not on the loan but I made the payments?</div>
-        <div class="faq-a">Generally no — you must be legally obligated on the loan and actually make the payments to claim the deduction. There are limited exceptions, such as when a co-owner pays more than their share, so consult a tax professional if your situation is complicated.</div>
+        <div class="faq-q">Do I need Form 1098 to file my taxes?</div>
+        <div class="faq-a">You only need the numbers from Form 1098 if you plan to itemize deductions on Schedule A and claim the mortgage interest deduction. If you take the standard deduction instead, you don't need to enter anything from the form, though it's still worth keeping for your records.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What's the difference between Form 1098 and Form 1098-E?</div>
-        <div class="faq-a">Form 1098 covers mortgage interest on a home loan. Form 1098-E is a completely separate form that reports student loan interest paid during the year. They look similar but serve very different purposes — make sure you're using the right one.</div>
+        <div class="faq-q">What if I didn't receive a Form 1098?</div>
+        <div class="faq-a">If you paid less than $600 in mortgage interest to a lender, they aren't required to send a Form 1098, but you may still be able to claim the interest if you itemize. If you believe you should have received one and didn't, contact your loan servicer directly.</div>
       </div>
     </div>
 
+    <!-- CARD 9: Related tax forms -->
     <div class="card">
       <div class="section-label">Related tax forms</div>
       <div class="related">
-        <a href="/1040" class="related-chip">Form 1040 →</a>
-        <a href="/schedule-a" class="related-chip">Schedule A →</a>
-        <a href="/1098-e" class="related-chip">Form 1098-E →</a>
-        <a href="/1099-int" class="related-chip">Form 1099-INT →</a>
-        <a href="/w2" class="related-chip">Form W-2 →</a>
-        <a href="/1040-es" class="related-chip">Form 1040-ES →</a>
+        <a href="/1040.html" class="related-chip">Form 1040 →</a>
+        <a href="/itemized-deductions.html" class="related-chip">Itemized Deductions →</a>
+        <a href="/standard-deduction.html" class="related-chip">Standard Deduction →</a>
+        <a href="/schedule-e.html" class="related-chip">Schedule E →</a>
       </div>
     </div>
 
@@ -220,7 +239,7 @@
 
     <footer>
       <span>taxplain.co</span>
-      <span>Understand your taxes. No accountant required.</span>
+      <span>Not a substitute for professional tax advice.</span>
     </footer>
   </div>
 </body>
