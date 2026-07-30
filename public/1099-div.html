@@ -1,788 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Form 1099-DIV Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Form 1099-DIV? Plain-English guide to dividend income, qualified dividends, capital gain distributions, taxes owed, deadlines, and common mistakes. No tax jargon." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://taxplain.co/1099-div" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Form 1099-DIV? – TaxPlain</title>
+  <meta name="description" content="Form 1099-DIV reports dividends and distributions you received. Learn what each box means, how it affects your taxes, and common mistakes to avoid.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://taxplain.co/1099-div.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What's the difference between 1099-DIV, 1099-INT, and 1099-B?", "acceptedAnswer": { "@type": "Answer", "text": "1099-DIV reports dividends and distributions from stocks or mutual funds. 1099-INT reports interest income, like from a savings account or bond. 1099-B reports proceeds from selling investments, such as stocks or funds. You can receive all three from the same brokerage in the same year, often bundled into one composite statement." } },
+      { "@type": "Question", "name": "What's the difference between ordinary and qualified dividends on Form 1099-DIV?", "acceptedAnswer": { "@type": "Answer", "text": "Box 1a shows total ordinary dividends, taxed at your regular income tax rate. Box 1b shows the portion of those dividends that qualify for lower long-term capital gains tax rates, usually because you held the underlying stock for a required minimum period. Box 1b is always a subset of Box 1a, never a separate amount." } },
+      { "@type": "Question", "name": "Do I need to file Form 1099-DIV with my tax return?", "acceptedAnswer": { "@type": "Answer", "text": "No. You don't attach Form 1099-DIV to your tax return. You use the figures on it to report dividend income on your Form 1040. The IRS already receives a copy directly from the payer, so the numbers need to match what you report." } },
+      { "@type": "Question", "name": "What is Section 199A dividends in Box 5 of Form 1099-DIV?", "acceptedAnswer": { "@type": "Answer", "text": "Box 5 reports dividends from real estate investment trusts (REITs) that may qualify for the Section 199A qualified business income deduction. This can allow you to deduct up to 20% of that income, but the rules are specific and often require professional guidance to apply correctly." } },
+      { "@type": "Question", "name": "Why did I get a 1099-DIV if I didn't sell any investments?", "acceptedAnswer": { "@type": "Answer", "text": "Form 1099-DIV reports dividends and distributions paid to you, not sales. If you own dividend-paying stocks or mutual funds, you can owe tax on those payouts even if you never sold a share and reinvested every dividend automatically." } }
+    ]
+  }
+  </script>
 
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #FFFFFF;
-      --ink: #0D1B2A;
-      --muted: #6B7A8D;
-      --accent: #1B4B8A;
-      --accent-light: #EAF0FA;
-      --accent-border: #B5CEFA;
-
-      --warn: #993C1D;
-      --warn-light: #FAECE7;
-      --warn-border: #F5C4B3;
-
-      --success-light: #EAF3DE;
-      --success-border: #C0DD97;
-      --success-text: #27500A;
-
-      --amber: #92400E;
-      --amber-light: #FEF3C7;
-      --amber-border: #F59E0B;
-
-      --border: #DDE3EC;
-      --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: 'DM Sans', sans-serif;
-      min-height: 100vh;
-    }
-
-    .wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 40px;
-    }
-
-    .logo-mark {
-      width: 32px;
-      height: 32px;
-      background: var(--accent);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .logo-mark svg {
-      width: 18px;
-      height: 18px;
-      fill: white;
-    }
-
-    .logo-text {
-      font-family: 'DM Mono', monospace;
-      font-size: 16px;
-      font-weight: 500;
-      color: var(--ink);
-      text-decoration: none;
-    }
-
-    .logo-text span {
-      color: var(--accent);
-    }
-
-    .breadcrumb {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 20px;
-      font-family: 'DM Mono', monospace;
-    }
-
-    .breadcrumb a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(28px, 5vw, 42px);
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-    }
-
-    h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(20px, 3vw, 26px);
-      line-height: 1.2;
-      letter-spacing: -0.3px;
-      margin-bottom: 12px;
-      color: var(--ink);
-    }
-
-    h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 8px;
-      color: var(--ink);
-    }
-
-    .category-tag {
-      display: inline-block;
-      background: var(--accent-light);
-      color: var(--accent);
-      font-family: 'DM Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 24px;
-    }
-
-    .disclaimer {
-      background: var(--amber-light);
-      border: 1px solid var(--amber-border);
-      border-radius: 10px;
-      padding: 14px 18px;
-      margin-bottom: 36px;
-      font-size: 13px;
-      color: var(--amber);
-      line-height: 1.5;
-    }
-
-    .card {
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: 14px;
-      padding: 28px;
-      margin-bottom: 20px;
-    }
-
-    .section-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.75;
-      color: var(--ink);
-    }
-
-    p + p {
-      margin-top: 14px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .range-box {
-      padding: 16px;
-      border-radius: 10px;
-    }
-
-    .range-box.warn {
-      background: var(--warn-light);
-      border: 1px solid var(--warn-border);
-    }
-
-    .range-box.blue {
-      background: var(--accent-light);
-      border: 1px solid var(--accent-border);
-    }
-
-    .range-box-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .range-box.warn .range-box-label {
-      color: var(--warn);
-    }
-
-    .range-box.blue .range-box-label {
-      color: var(--accent);
-    }
-
-    .range-box p {
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .symptom-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .symptom-list li {
-      font-size: 14px;
-      color: var(--ink);
-      line-height: 1.6;
-      padding: 4px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-    }
-
-    .symptom-list li:last-child {
-      border-bottom: none;
-    }
-
-    .symptom-list li::before {
-      content: "→ ";
-      color: var(--muted);
-    }
-
-    .timing-box {
-      background: var(--amber-light);
-      border: 1px solid var(--amber-border);
-      border-radius: 10px;
-      padding: 18px 20px;
-      margin-top: 16px;
-    }
-
-    .timing-box h3 {
-      font-size: 14px;
-      color: var(--amber);
-      font-family: 'DM Mono', monospace;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-    }
-
-    .timing-box p {
-      font-size: 14px;
-      color: #78350F;
-      line-height: 1.65;
-    }
-
-    .next-steps {
-      background: var(--success-light);
-      border: 1px solid var(--success-border);
-      border-radius: 10px;
-      padding: 20px;
-      font-size: 15px;
-      line-height: 1.7;
-      color: var(--success-text);
-    }
-
-    .questions-list {
-      list-style: none;
-      padding: 0;
-      margin-top: 8px;
-    }
-
-    .questions-list li {
-      font-size: 15px;
-      color: var(--ink);
-      line-height: 1.65;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      gap: 10px;
-    }
-
-    .questions-list li:last-child {
-      border-bottom: none;
-    }
-
-    .q-num {
-      font-family: 'DM Mono', monospace;
-      font-size: 12px;
-      color: var(--accent);
-      font-weight: 500;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .faq-item {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .faq-item:last-child {
-      border-bottom: none;
-    }
-
-    .faq-q {
-      font-size: 16px;
-      font-weight: 500;
-      color: var(--ink);
-      margin-bottom: 8px;
-    }
-
-    .faq-a {
-      font-size: 15px;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .tool-cta {
-      background: var(--accent);
-      color: white;
-      border-radius: 12px;
-      padding: 28px;
-      margin-top: 32px;
-      text-align: center;
-    }
-
-    .tool-cta h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 24px;
-      margin-bottom: 8px;
-      color: white;
-    }
-
-    .tool-cta p {
-      font-size: 14px;
-      opacity: 0.85;
-      margin-bottom: 18px;
-      color: white;
-    }
-
-    .tool-cta a {
-      display: inline-block;
-      background: white;
-      color: var(--accent);
-      font-weight: 500;
-      text-decoration: none;
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-family: 'DM Mono', monospace;
-      font-size: 14px;
-    }
-
-    .related {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 12px;
-      margin-top: 4px;
-    }
-
-    .related-chip {
-      display: block;
-      padding: 12px 16px;
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 14px;
-      color: var(--ink);
-      font-family: 'DM Mono', monospace;
-      transition: border-color 0.15s;
-    }
-
-    .related-chip:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    footer {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-      font-size: 12px;
-      color: var(--muted);
-      font-family: 'DM Mono', monospace;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    @media (max-width: 480px) {
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
 </head>
-
 <body>
   <div class="wrap">
-
     <nav>
-      <div class="logo-mark">
-        <svg viewBox="0 0 24 24">
-          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
-        </svg>
-      </div>
-
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
 
-    <p class="breadcrumb">
-      <a href="/">Home</a> &rsaquo;
-      <a href="/guides">Tax Guides</a> &rsaquo;
-      Form 1099-DIV
-    </p>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Form 1099-DIV</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">Form 1099-DIV</em>?</h1>
+    <span class="category-tag">Investment Income</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated July 2026</p>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
 
-    <h1>
-      What is<br />
-      <em style="font-style:italic;color:var(--accent)">Form 1099-DIV</em>?
-    </h1>
-
-    <span class="category-tag">Tax Form</span>
-
-    <div class="disclaimer">
-      ⚠️ <strong>Educational only.</strong>
-      TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
+    <!-- CARD 1: What this form is -->
+    <div class="card">
+      <div class="section-label">What this is</div>
+      <p>Form 1099-DIV is an IRS tax form that reports dividends and distributions paid to you during the year — typically from stocks, mutual funds, or real estate investment trusts (REITs) you own. If a brokerage, fund company, or corporation paid you $10 or more in dividends, they're required to send you this form and file a matching copy with the IRS.</p>
+      <p>The form breaks that income into several categories, because not all dividends are taxed the same way. Some are taxed at your regular income tax rate, others qualify for lower long-term capital gains rates, and some represent a return of your original investment rather than income at all. Getting these categories right is what makes 1099-DIV genuinely useful, not just a form to skim past.</p>
+      <p>You'll typically receive Form 1099-DIV by early-to-mid February. If you hold investments through a brokerage, it's often combined with your <a href="/1099-int.html" class="inline-link">1099-INT</a> and <a href="/1099-b.html" class="inline-link">1099-B</a> into a single "composite" tax statement rather than arriving as separate documents.</p>
     </div>
 
+    <!-- CARD 2: Who it affects -->
     <div class="card">
-      <div class="section-label">What this form is</div>
-
-      <p>
-        Form 1099-DIV reports dividend income and other investment distributions you received during the year. Banks, brokerages, mutual funds, and companies send this form to both you and the IRS whenever you earn dividends or certain capital gain distributions.
-      </p>
-
-      <p>
-        In plain English: if you own stocks, ETFs, mutual funds, or certain investment accounts, the 1099-DIV tells you how much investment income you made and how much of it is taxable.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">Who receives this form</div>
-
+      <div class="section-label">Who it affects</div>
       <div class="two-col">
-
         <div class="range-box blue">
-          <div class="range-box-label">✓ Usually Sent To</div>
-
-          <p>
-            Investors who received more than $10 in dividends or capital gain distributions during the year from stocks, mutual funds, ETFs, or brokerage accounts.
-          </p>
+          <div class="range-box-label">✓ Applies to</div>
+          <p>Anyone who owns dividend-paying stocks, index funds, or mutual funds in a taxable brokerage account and received $10 or more in dividends during the year.</p>
         </div>
-
         <div class="range-box warn">
-          <div class="range-box-label">↑ Also Common</div>
-
-          <p>
-            People with reinvested dividends, money market funds, REITs, or foreign investments may also receive multiple 1099-DIV forms from different brokers or funds.
-          </p>
+          <div class="range-box-label">↑ Also applies to</div>
+          <p>Investors who automatically reinvest dividends. Reinvested dividends are still taxable income, even though you never touched the cash.</p>
         </div>
-
       </div>
-
-      <div class="timing-box" style="margin-top:16px;">
-        <h3>📅 When it arrives</h3>
-
-        <p>
-          Most brokers and financial institutions send Form 1099-DIV by January 31 each year. Some corrected forms arrive later if investment companies reclassify distributions, so filing too early can sometimes create amendment headaches.
-        </p>
+      <div class="timing-box">
+        <h3>📅 WHEN YOU'LL RECEIVE IT</h3>
+        <p>Payers must send Form 1099-DIV by January 31, though many brokerages issue it in mid-February to allow time for corrected data. If your form arrives with a "corrected" label after you've already filed, you may need to amend your return.</p>
       </div>
     </div>
 
+    <!-- CARD 3: Box-by-box breakdown -->
     <div class="card">
-
-      <div class="section-label">What each box means</div>
-
-      <h2>Breaking down the 1099-DIV</h2>
-
-      <p>
-        The form looks technical, but most taxpayers only need to understand a few important boxes:
-      </p>
-
+      <div class="section-label">Box breakdown</div>
+      <h2>What each box on Form 1099-DIV means</h2>
+      <p style="margin-top: 12px;">The most common source of confusion with this form is the difference between <strong>ordinary dividends (Box 1a)</strong> and <strong>qualified dividends (Box 1b)</strong>. Box 1b is always a portion of Box 1a — it's never a separate, additional amount. Here's what each major box reports:</p>
       <ul class="symptom-list" style="margin-top: 12px;">
-
-        <li>
-          <strong>Box 1a — Total ordinary dividends</strong>
-          — Total dividends paid to you during the year before special tax treatment.
-        </li>
-
-        <li>
-          <strong>Box 1b — Qualified dividends</strong>
-          — Dividends eligible for lower long-term capital gains tax rates instead of ordinary income rates.
-        </li>
-
-        <li>
-          <strong>Box 2a — Total capital gain distributions</strong>
-          — Profits distributed from mutual funds or ETFs after investments were sold inside the fund.
-        </li>
-
-        <li>
-          <strong>Box 4 — Federal income tax withheld</strong>
-          — Taxes already withheld and sent to the IRS on your behalf.
-        </li>
-
-        <li>
-          <strong>Box 5 — Section 199A dividends</strong>
-          — Certain REIT dividends that may qualify for a special 20% deduction.
-        </li>
-
-        <li>
-          <strong>Box 7 — Foreign tax paid</strong>
-          — Taxes paid to foreign governments that may qualify for a foreign tax credit.
-        </li>
-
-        <li>
-          <strong>FATCA filing requirement box</strong>
-          — Indicates certain foreign account reporting requirements under federal law.
-        </li>
-
+        <li><strong>Box 1a — Total ordinary dividends</strong> — the full amount of dividends you received, taxed at your regular income tax rate, same as your <a href="/w2.html" class="inline-link">W-2 wages</a>.</li>
+        <li><strong>Box 1b — Qualified dividends</strong> — the portion of Box 1a that qualifies for lower long-term capital gains rates, usually because you held the stock for a minimum required period.</li>
+        <li><strong>Box 2a — Total capital gain distributions</strong> — payouts from a mutual fund selling investments inside the fund, distinct from gains you realize by selling shares yourself.</li>
+        <li><strong>Box 3 — Nondividend distributions</strong> — a return of your original investment, generally not taxable until it exceeds your cost basis.</li>
+        <li><strong>Box 4 — Federal income tax withheld</strong> — usually $0 unless you're subject to backup withholding.</li>
+        <li><strong>Box 5 — Section 199A dividends</strong> — REIT dividends that may qualify for the qualified business income deduction, worth up to 20% of that income.</li>
       </ul>
-
     </div>
 
+    <!-- CARD 4: Related forms -->
     <div class="card">
-
-      <div class="section-label">Qualified vs ordinary dividends</div>
-
-      <div class="two-col">
-
-        <div class="range-box blue">
-          <div class="range-box-label">✓ Qualified Dividends</div>
-
-          <p>
-            Usually taxed at lower long-term capital gains rates (0%, 15%, or 20%). Most dividends from large U.S. companies fall into this category if you held the investment long enough.
-          </p>
-        </div>
-
-        <div class="range-box warn">
-          <div class="range-box-label">⚠️ Ordinary Dividends</div>
-
-          <p>
-            Taxed like normal income at your regular tax bracket. Common with certain REITs, money market funds, and short-term holdings.
-          </p>
-        </div>
-
-      </div>
-
-      <p style="margin-top:18px;">
-        This distinction matters because qualified dividends can save investors thousands in taxes compared to ordinary dividend treatment.
-      </p>
-
+      <div class="section-label">Related forms often involved</div>
+      <p>Investment income rarely shows up alone. If you have a brokerage account, these forms often arrive alongside your 1099-DIV, and mixing them up is one of the most common filing mistakes.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>1099-INT</strong> — reports interest income, such as from savings accounts, money market funds, or bonds, separate from dividend income entirely.</li>
+        <li><strong>1099-B</strong> — reports proceeds when you actually sell an investment, including your cost basis and gain or loss, not the dividends the investment paid out.</li>
+        <li><strong>Schedule B</strong> — the IRS form used to itemize dividend and interest income when the total exceeds $1,500, feeding into your <a href="/1040.html" class="inline-link">Form 1040</a>.</li>
+      </ul>
     </div>
 
+    <!-- CARD 5: Common mistakes -->
     <div class="card">
-
       <div class="section-label">Common mistakes to avoid</div>
-
       <div class="two-col">
-
         <div class="range-box warn">
-          <div class="range-box-label">⚠️ Forgetting Reinvested Dividends</div>
-
-          <p>
-            Even if dividends were automatically reinvested instead of paid in cash, they are still taxable and must be reported.
-          </p>
+          <div class="range-box-label">⚠️ Reporting all dividends as ordinary</div>
+          <p>Overlooking Box 1b means you could pay tax at your full ordinary rate on income that actually qualifies for the lower capital gains rate.</p>
         </div>
-
         <div class="range-box warn">
-          <div class="range-box-label">⚠️ Filing Too Early</div>
-
-          <p>
-            Brokerages sometimes issue corrected 1099-DIV forms in February or March. Filing before all corrected forms arrive can force you to amend your return later.
-          </p>
+          <div class="range-box-label">⚠️ Ignoring reinvested dividends</div>
+          <p>Dividends automatically reinvested into more shares are still taxable in the year received, even without a cash withdrawal.</p>
         </div>
-
       </div>
-
-      <div class="two-col" style="margin-top:16px;">
-
-        <div class="range-box warn">
-          <div class="range-box-label">⚠️ Missing Small Forms</div>
-
-          <p>
-            Multiple brokerages mean multiple 1099-DIV forms. Even small forgotten dividend amounts can trigger IRS mismatch notices.
-          </p>
-        </div>
-
-        <div class="range-box warn">
-          <div class="range-box-label">⚠️ Confusing Dividends With Capital Gains</div>
-
-          <p>
-            Dividends are investment income paid out regularly. Capital gains come from selling investments at a profit. They may be taxed differently.
-          </p>
-        </div>
-
-      </div>
-
     </div>
 
+    <!-- CARD 6: What to do right now -->
     <div class="card">
-
-      <div class="section-label">How this affects your tax return</div>
-
-      <p>
-        Most dividend income flows directly onto your Form 1040. Larger amounts may require Schedule B, and capital gain distributions can also affect Schedule D calculations.
-      </p>
-
-      <p>
-        If your investments are inside retirement accounts like IRAs or 401(k)s, you usually will NOT receive a 1099-DIV because investment income inside retirement accounts is generally tax-deferred.
-      </p>
-
-    </div>
-
-    <div class="card">
-
       <div class="section-label">What to do right now</div>
-
       <div class="next-steps">
-
-        Gather every 1099-DIV before filing your taxes — especially if you use multiple brokerages or investment apps. Double-check whether your dividends are qualified or ordinary, and wait for any corrected forms before submitting your return. If you have foreign investments, REIT income, or large capital gain distributions, tax software or a CPA can help prevent expensive reporting mistakes.
-
+        Locate your 1099-DIV (often bundled into a composite brokerage statement) and confirm the figures in Box 1a and 1b match what your broker's online summary shows. If you use tax software, most brokerages support direct import, which helps avoid transcription errors. If anything looks off, or you're unsure how <a href="/capital-gains.html" class="inline-link">capital gains treatment</a> applies to your situation, loop in a tax professional before filing.
       </div>
-
     </div>
 
+    <!-- CARD 7: Questions to ask your tax professional -->
     <div class="card">
-
       <div class="section-label">Questions to ask your tax professional</div>
-
       <ul class="questions-list">
-
-        <li>
-          <span class="q-num">01</span>
-          Are my dividends qualified or ordinary — and how does that affect my tax rate?
-        </li>
-
-        <li>
-          <span class="q-num">02</span>
-          Do I need Schedule B or Schedule D with this return?
-        </li>
-
-        <li>
-          <span class="q-num">03</span>
-          Can I claim a foreign tax credit for taxes paid overseas?
-        </li>
-
-        <li>
-          <span class="q-num">04</span>
-          Did any corrected 1099-DIV forms get issued after my original statement?
-        </li>
-
-        <li>
-          <span class="q-num">05</span>
-          Are my dividend reinvestments affecting my investment cost basis?
-        </li>
-
-        <li>
-          <span class="q-num">06</span>
-          Would holding investments longer qualify more dividends for lower tax rates?
-        </li>
-
+        <li><span class="q-num">01</span>How much of my Box 1a total actually qualifies for the lower Box 1b rate?</li>
+        <li><span class="q-num">02</span>Do my REIT dividends in Box 5 qualify for the Section 199A deduction?</li>
+        <li><span class="q-num">03</span>Should I file Schedule B given the total dividend and interest income I received?</li>
+        <li><span class="q-num">04</span>How does dividend income affect my eligibility for other credits or deductions?</li>
+        <li><span class="q-num">05</span>Is it worth adjusting my investment strategy to favor qualified dividends going forward?</li>
       </ul>
-
     </div>
 
+    <!-- CARD 8: FAQ -->
     <div class="card">
-
       <div class="section-label">Frequently asked questions</div>
-
       <div class="faq-item">
-
-        <div class="faq-q">
-          Do I pay taxes on reinvested dividends?
-        </div>
-
-        <div class="faq-a">
-          Yes. Reinvested dividends are still taxable even if you never received cash directly because the money was automatically used to buy more shares.
-        </div>
-
+        <div class="faq-q">What's the difference between 1099-DIV, 1099-INT, and 1099-B?</div>
+        <div class="faq-a">1099-DIV reports dividends and distributions from stocks or mutual funds. 1099-INT reports interest income, like from a savings account or bond. 1099-B reports proceeds from selling investments, such as stocks or funds. You can receive all three from the same brokerage in the same year, often bundled into one composite statement.</div>
       </div>
-
       <div class="faq-item">
-
-        <div class="faq-q">
-          Why did I receive a 1099-DIV for only a few dollars?
-        </div>
-
-        <div class="faq-a">
-          Financial institutions generally issue the form once dividends exceed $10, though some brokers send forms for smaller amounts anyway. The IRS still expects the income to be reported.
-        </div>
-
+        <div class="faq-q">What's the difference between ordinary and qualified dividends on Form 1099-DIV?</div>
+        <div class="faq-a">Box 1a shows total ordinary dividends, taxed at your regular income tax rate. Box 1b shows the portion of those dividends that qualify for lower long-term capital gains tax rates, usually because you held the underlying stock for a required minimum period. Box 1b is always a subset of Box 1a, never a separate amount.</div>
       </div>
-
       <div class="faq-item">
-
-        <div class="faq-q">
-          What's the difference between a 1099-DIV and a 1099-INT?
-        </div>
-
-        <div class="faq-a">
-          Form 1099-DIV reports dividend income from investments, while Form 1099-INT reports interest income from savings accounts, CDs, bonds, and similar accounts.
-        </div>
-
+        <div class="faq-q">Do I need to file Form 1099-DIV with my tax return?</div>
+        <div class="faq-a">No. You don't attach Form 1099-DIV to your tax return. You use the figures on it to report dividend income on your Form 1040. The IRS already receives a copy directly from the payer, so the numbers need to match what you report.</div>
       </div>
-
       <div class="faq-item">
-
-        <div class="faq-q">
-          Can dividend income push me into a higher tax bracket?
-        </div>
-
-        <div class="faq-a">
-          Yes. Ordinary dividends count as regular taxable income and can increase your total taxable income. Qualified dividends usually receive more favorable tax treatment.
-        </div>
-
+        <div class="faq-q">What is Section 199A dividends in Box 5 of Form 1099-DIV?</div>
+        <div class="faq-a">Box 5 reports dividends from real estate investment trusts (REITs) that may qualify for the Section 199A qualified business income deduction. This can allow you to deduct up to 20% of that income, but the rules are specific and often require professional guidance to apply correctly.</div>
       </div>
-
       <div class="faq-item">
-
-        <div class="faq-q">
-          Do retirement accounts generate 1099-DIV forms?
-        </div>
-
-        <div class="faq-a">
-          Usually no. Investments inside IRAs and 401(k)s generally grow tax-deferred, so dividends inside the account are not reported annually on Form 1099-DIV.
-        </div>
-
+        <div class="faq-q">Why did I get a 1099-DIV if I didn't sell any investments?</div>
+        <div class="faq-a">Form 1099-DIV reports dividends and distributions paid to you, not sales. If you own dividend-paying stocks or mutual funds, you can owe tax on those payouts even if you never sold a share and reinvested every dividend automatically.</div>
       </div>
-
     </div>
 
+    <!-- CARD 9: Related tax forms -->
     <div class="card">
-
       <div class="section-label">Related tax forms</div>
-
       <div class="related">
-
-        <a href="/1099-int" class="related-chip">Form 1099-INT →</a>
-
-        <a href="/1099-b" class="related-chip">Form 1099-B →</a>
-
-        <a href="/1040" class="related-chip">Form 1040 →</a>
-
-        <a href="/schedule-b" class="related-chip">Schedule B →</a>
-
-        <a href="/schedule-d" class="related-chip">Schedule D →</a>
-
-        <a href="/1099-nec" class="related-chip">Form 1099-NEC →</a>
-
+        <a href="/1099-int.html" class="related-chip">Form 1099-INT →</a>
+        <a href="/1099-b.html" class="related-chip">Form 1099-B →</a>
+        <a href="/capital-gains.html" class="related-chip">Capital Gains →</a>
+        <a href="/1040.html" class="related-chip">Form 1040 →</a>
       </div>
-
     </div>
 
     <div class="tool-cta">
-
       <h3>Decode any tax form instantly</h3>
-
-      <p>
-        Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
-      </p>
-
+      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
-
     </div>
 
     <footer>
-
       <span>taxplain.co</span>
-
-      <span>Understand your taxes. No accountant required.</span>
-
+      <span>Not a substitute for professional tax advice.</span>
     </footer>
-
   </div>
 </body>
 </html>
