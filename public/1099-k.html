@@ -1,719 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form 1099-K Explained in Plain English – TaxPlain</title>
-<meta name="description" content="What is Form 1099-K? Plain-English guide to payment app and card income reporting — PayPal, Venmo, Stripe, Etsy, Shopify, eBay, taxes owed, mistakes, and exactly what to do. No tax jargon.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://taxplain.co/1099-k">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is a 1099-K? Threshold, PayPal/Stripe Payments & Filing – TaxPlain</title>
+  <meta name="description" content="A 1099-K reports payments from apps like PayPal, Venmo, and Stripe. Here's the current reporting threshold, what to do with it, and common mistakes.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://taxplain.co/1099-k.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the 1099-K threshold for this year?", "acceptedAnswer": { "@type": "Answer", "text": "The federal reporting threshold has changed several times in recent years, so it's important to check the current-year IRS figure rather than assume last year's number still applies. Payment platforms are required to send a 1099-K once you cross that dollar amount in gross payments, regardless of how many individual transactions were involved." } },
+      { "@type": "Question", "name": "Is a 1099-K the same as a 1099-NEC or 1099-MISC?", "acceptedAnswer": { "@type": "Answer", "text": "No. A 1099-K reports gross payment volume from a third-party platform like PayPal or Stripe, while a 1099-NEC reports payments a client made directly to you for services. You can receive both for the same income if a client paid you through a payment app, so check for double-counting before you file." } },
+      { "@type": "Question", "name": "Why did I get a 1099-K from PayPal, Venmo, or Stripe?", "acceptedAnswer": { "@type": "Answer", "text": "Any third-party payment platform that processed enough money on your behalf during the year is required to send you a 1099-K, regardless of whether the payments were for business, casual selling, or reimbursements from friends and family that were mistakenly tagged as goods and services." } },
+      { "@type": "Question", "name": "Do I owe tax on everything shown on my 1099-K?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. The form reports gross payment volume, which can include non-taxable amounts like refunds, reimbursements, or money received from friends and family. You're only taxed on amounts that represent actual income, so keep records that let you explain any difference between the form and your tax return." } },
+      { "@type": "Question", "name": "What if my 1099-K amount is wrong?", "acceptedAnswer": { "@type": "Answer", "text": "Contact the platform that issued the form first, since only they can issue a corrected 1099-K. If they won't correct it in time, you can still file accurately and use your own records to explain the discrepancy to the IRS if asked." } }
+    ]
+  }
+  </script>
 
-<style>
-*, *::before, *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-
-:root {
---bg: #FFFFFF;
---ink: #0D1B2A;
---muted: #6B7A8D;
---accent: #1B4B8A;
---accent-light: #EAF0FA;
---accent-border: #B5CEFA;
---warn: #993C1D;
---warn-light: #FAECE7;
---warn-border: #F5C4B3;
---success-light: #EAF3DE;
---success-border: #C0DD97;
---success-text: #27500A;
---amber: #92400E;
---amber-light: #FEF3C7;
---amber-border: #F59E0B;
---border: #DDE3EC;
---white: #FFFFFF;
-}
-
-body {
-background: var(--bg);
-color: var(--ink);
-font-family: 'DM Sans', sans-serif;
-min-height: 100vh;
-}
-
-.wrap {
-max-width: 720px;
-margin: 0 auto;
-padding: 40px 24px 80px;
-}
-
-nav {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 40px;
-}
-
-.logo-mark {
-width: 32px;
-height: 32px;
-background: var(--accent);
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.logo-mark svg {
-width: 18px;
-height: 18px;
-fill: white;
-}
-
-.logo-text {
-font-family: 'DM Mono', monospace;
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-text-decoration: none;
-}
-
-.logo-text span {
-color: var(--accent);
-}
-
-.breadcrumb {
-font-size: 13px;
-color: var(--muted);
-margin-bottom: 20px;
-font-family: 'DM Mono', monospace;
-}
-
-.breadcrumb a {
-color: var(--accent);
-text-decoration: none;
-}
-
-h1 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(28px, 5vw, 42px);
-line-height: 1.15;
-letter-spacing: -0.5px;
-margin-bottom: 8px;
-}
-
-h2 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(20px, 3vw, 26px);
-line-height: 1.2;
-letter-spacing: -0.3px;
-margin-bottom: 12px;
-color: var(--ink);
-}
-
-h3 {
-font-family: 'DM Sans', sans-serif;
-font-size: 16px;
-font-weight: 500;
-margin-bottom: 8px;
-color: var(--ink);
-}
-
-.category-tag {
-display: inline-block;
-background: var(--accent-light);
-color: var(--accent);
-font-family: 'DM Mono', monospace;
-font-size: 11px;
-letter-spacing: 1px;
-text-transform: uppercase;
-padding: 4px 12px;
-border-radius: 20px;
-margin-bottom: 24px;
-}
-
-.disclaimer {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 14px 18px;
-margin-bottom: 36px;
-font-size: 13px;
-color: var(--amber);
-line-height: 1.5;
-}
-
-.card {
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 14px;
-padding: 28px;
-margin-bottom: 20px;
-}
-
-.section-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-font-weight: 500;
-letter-spacing: 1.8px;
-text-transform: uppercase;
-color: var(--muted);
-margin-bottom: 10px;
-}
-
-p {
-font-size: 16px;
-line-height: 1.75;
-color: var(--ink);
-}
-
-p + p {
-margin-top: 14px;
-}
-
-.two-col {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-}
-
-.range-box {
-padding: 16px;
-border-radius: 10px;
-}
-
-.range-box.warn {
-background: var(--warn-light);
-border: 1px solid var(--warn-border);
-}
-
-.range-box.blue {
-background: var(--accent-light);
-border: 1px solid var(--accent-border);
-}
-
-.range-box-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-letter-spacing: 1px;
-text-transform: uppercase;
-margin-bottom: 8px;
-}
-
-.range-box.warn .range-box-label {
-color: var(--warn);
-}
-
-.range-box.blue .range-box-label {
-color: var(--accent);
-}
-
-.range-box p {
-font-size: 14px;
-line-height: 1.65;
-}
-
-.symptom-list {
-list-style: none;
-padding: 0;
-}
-
-.symptom-list li {
-font-size: 14px;
-color: var(--ink);
-line-height: 1.6;
-padding: 4px 0;
-border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.symptom-list li:last-child {
-border-bottom: none;
-}
-
-.symptom-list li::before {
-content: "→ ";
-color: var(--muted);
-}
-
-.timing-box {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 18px 20px;
-margin-top: 16px;
-}
-
-.timing-box h3 {
-font-size: 14px;
-color: var(--amber);
-font-family: 'DM Mono', monospace;
-letter-spacing: 0.5px;
-margin-bottom: 8px;
-}
-
-.timing-box p {
-font-size: 14px;
-color: #78350F;
-line-height: 1.65;
-}
-
-.next-steps {
-background: var(--success-light);
-border: 1px solid var(--success-border);
-border-radius: 10px;
-padding: 20px;
-font-size: 15px;
-line-height: 1.7;
-color: var(--success-text);
-}
-
-.questions-list {
-list-style: none;
-padding: 0;
-margin-top: 8px;
-}
-
-.questions-list li {
-font-size: 15px;
-color: var(--ink);
-line-height: 1.65;
-padding: 10px 0;
-border-bottom: 1px solid var(--border);
-display: flex;
-gap: 10px;
-}
-
-.questions-list li:last-child {
-border-bottom: none;
-}
-
-.q-num {
-font-family: 'DM Mono', monospace;
-font-size: 12px;
-color: var(--accent);
-font-weight: 500;
-flex-shrink: 0;
-margin-top: 2px;
-}
-
-.faq-item {
-padding: 18px 0;
-border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-border-bottom: none;
-}
-
-.faq-q {
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-margin-bottom: 8px;
-}
-
-.faq-a {
-font-size: 15px;
-color: var(--muted);
-line-height: 1.7;
-}
-
-.tool-cta {
-background: var(--accent);
-color: white;
-border-radius: 12px;
-padding: 28px;
-margin-top: 32px;
-text-align: center;
-}
-
-.tool-cta h3 {
-font-family: 'DM Serif Display', serif;
-font-size: 24px;
-margin-bottom: 8px;
-color: white;
-}
-
-.tool-cta p {
-font-size: 14px;
-opacity: 0.85;
-margin-bottom: 18px;
-color: white;
-}
-
-.tool-cta a {
-display: inline-block;
-background: white;
-color: var(--accent);
-font-weight: 500;
-text-decoration: none;
-padding: 12px 28px;
-border-radius: 8px;
-font-family: 'DM Mono', monospace;
-font-size: 14px;
-}
-
-.related {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-gap: 12px;
-margin-top: 4px;
-}
-
-.related-chip {
-display: block;
-padding: 12px 16px;
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 10px;
-text-decoration: none;
-font-size: 14px;
-color: var(--ink);
-font-family: 'DM Mono', monospace;
-transition: border-color 0.15s;
-}
-
-.related-chip:hover {
-border-color: var(--accent);
-color: var(--accent);
-}
-
-footer {
-margin-top: 60px;
-padding-top: 20px;
-border-top: 1px solid var(--border);
-font-size: 12px;
-color: var(--muted);
-font-family: 'DM Mono', monospace;
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 8px;
-}
-
-@media (max-width: 480px) {
-.two-col {
-grid-template-columns: 1fr;
-}
-}
-</style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
 </head>
-
 <body>
-<div class="wrap">
-
-<nav>
-<div class="logo-mark">
-<svg viewBox="0 0 24 24">
-<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
-</svg>
-</div>
-<a href="/" class="logo-text">tax<span>plain</span></a>
-</nav>
-
-<p class="breadcrumb">
-<a href="/">Home</a> &rsaquo;
-<a href="/guides">Tax Guides</a> &rsaquo;
-Form 1099-K
-</p>
-
-<h1>
-What is<br>
-<em style="font-style:italic;color:var(--accent)">Form 1099-K</em>?
-</h1>
-
-<span class="category-tag">Tax Form</span>
-
-<div class="disclaimer">
-⚠ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
-</div>
-
-<div class="card">
-<div class="section-label">What this form is</div>
-
-<p>
-Form 1099-K reports payments processed through payment cards and third-party payment networks like PayPal, Venmo, Stripe, Square, Shopify, Etsy, Cash App, and eBay. The IRS uses it to track business income and make sure people report money received through payment apps and online platforms.
-</p>
-
-<p>
-A 1099-K does <strong>not</strong> automatically mean all the money listed is taxable profit. The form reports gross payment volume before refunds, fees, shipping costs, or business expenses are removed. Your actual taxable income may be much lower after deductions and adjustments.
-</p>
-</div>
-
-<div class="card">
-<div class="section-label">Who receives a 1099-K</div>
-
-<div class="two-col">
-<div class="range-box blue">
-<div class="range-box-label">✓ Usually Receives One</div>
-<p>
-Freelancers, online sellers, gig workers, creators, rideshare drivers, and businesses that accepted payments through apps or card processors during the year.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">↑ Important</div>
-<p>
-Personal payments between friends and family generally are not taxable. Sending your roommate money for rent or reimbursing a friend for dinner usually should not create taxable income.
-</p>
-</div>
-</div>
-
-<div class="timing-box" style="margin-top:16px;">
-<h3>📅 Key deadline</h3>
-<p>
-Companies typically send Form 1099-K by January 31 for the previous tax year. You'll use the information when filing your Form 1040 by April 15.
-</p>
-</div>
-</div>
-
-<div class="card">
-<div class="section-label">What the form actually reports</div>
-
-<h2>Breaking down the 1099-K</h2>
-
-<p>
-The form focuses on payment processing activity — not your actual profit. Here's what each part means:
-</p>
-
-<ul class="symptom-list" style="margin-top: 12px;">
-<li><strong>Gross payment amount</strong> — Total money processed before fees, refunds, chargebacks, or expenses.</li>
-
-<li><strong>Monthly totals</strong> — Breakdown showing how much was processed each month.</li>
-
-<li><strong>Payment processor</strong> — The company that handled the transactions, like Stripe, PayPal, Square, or Shopify Payments.</li>
-
-<li><strong>Merchant category code</strong> — IRS classification describing your type of business or activity.</li>
-
-<li><strong>Federal tax withheld</strong> — Backup withholding if the processor withheld taxes because of missing or incorrect taxpayer information.</li>
-
-<li><strong>State reporting information</strong> — Some states require separate state-level reporting and lower thresholds.</li>
-</ul>
-</div>
-
-<div class="card">
-<div class="section-label">What counts as taxable income</div>
-
-<p>
-The IRS generally taxes income earned from selling goods or services for profit. But many people panic because 1099-K forms can include non-taxable transactions mixed into the totals.
-</p>
-
-<div class="two-col" style="margin-top:16px;">
-
-<div class="range-box blue">
-<div class="range-box-label">✓ Usually Taxable</div>
-<p>
-Freelance payments, Etsy sales, Shopify revenue, Uber income, consulting work, online business revenue, ticket resale profits, and side hustle income.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">✕ Usually Not Taxable</div>
-<p>
-Personal reimbursements, gifts, splitting dinner bills, paying rent to roommates, selling personal items at a loss, or transfers between your own accounts.
-</p>
-</div>
-
-</div>
-</div>
-
-<div class="card">
-<div class="section-label">Common mistakes to avoid</div>
-
-<div class="two-col">
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Reporting Gross Amounts As Profit</div>
-<p>
-The 1099-K reports total processed payments — not your actual earnings after fees, refunds, shipping, inventory costs, or expenses. Many people accidentally overpay taxes by reporting the entire number as profit.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Ignoring The Form</div>
-<p>
-The IRS receives a copy directly from the payment processor. If you leave it off your return entirely, automated IRS matching systems may flag your return for underreported income.
-</p>
-</div>
-
-</div>
-
-<div class="two-col" style="margin-top:16px;">
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Mixing Personal & Business Payments</div>
-<p>
-Using the same Venmo or PayPal account for both business and personal payments can create reporting confusion and inaccurate totals.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Forgetting Expenses</div>
-<p>
-Self-employed taxpayers can usually deduct ordinary business expenses like supplies, software, advertising, platform fees, mileage, and home office costs.
-</p>
-</div>
-
-</div>
-</div>
-
-<div class="card">
-<div class="section-label">Where this income goes on your tax return</div>
-
-<p>
-How you report 1099-K income depends on why you received the money:
-</p>
-
-<ul class="symptom-list" style="margin-top: 12px;">
-<li><strong>Freelance or business income</strong> — Usually reported on Schedule C.</li>
-
-<li><strong>Occasional hobby income</strong> — May be reported directly on Form 1040 depending on the situation.</li>
-
-<li><strong>Selling personal items</strong> — Often not taxable if sold at a loss, but records matter.</li>
-
-<li><strong>Business partnerships or corporations</strong> — May report the income on separate business returns instead of a personal 1040.</li>
-</ul>
-
-<div class="timing-box">
-<h3>📌 Important reality</h3>
-<p>
-A 1099-K alone does not tell the IRS whether payments were taxable, profitable, or business-related. Your records and reporting explain the actual tax treatment.
-</p>
-</div>
-</div>
-
-<div class="card">
-<div class="section-label">What to do right now</div>
-
-<div class="next-steps">
-If you received a 1099-K, first compare it against your own records. Separate personal transfers from actual business income, then calculate your true profit after expenses and fees. If your situation is simple, tax software can usually handle it. If the form includes incorrect amounts, mixed personal payments, cryptocurrency activity, or high-volume business transactions, talk to a CPA or enrolled agent before filing.
-</div>
-</div>
-
-<div class="card">
-<div class="section-label">Questions to ask your tax professional</div>
-
-<ul class="questions-list">
-
-<li>
-<span class="q-num">01</span>
-Does my 1099-K include non-taxable personal payments or reimbursements?
-</li>
-
-<li>
-<span class="q-num">02</span>
-What business expenses can I legally deduct against this income?
-</li>
-
-<li>
-<span class="q-num">03</span>
-Should this income go on Schedule C, Schedule D, or somewhere else?
-</li>
-
-<li>
-<span class="q-num">04</span>
-How should I handle inventory, refunds, or marketplace fees?
-</li>
-
-<li>
-<span class="q-num">05</span>
-Do I need to make estimated quarterly tax payments going forward?
-</li>
-
-<li>
-<span class="q-num">06</span>
-How should I separate personal and business payment accounts in the future?
-</li>
-
-</ul>
-</div>
-
-<div class="card">
-<div class="section-label">Frequently asked questions</div>
-
-<div class="faq-item">
-<div class="faq-q">
-Do I owe taxes just because I got a 1099-K?
-</div>
-
-<div class="faq-a">
-Not necessarily. The form only reports payment volume processed through payment networks. Some transactions may be non-taxable, and business expenses may reduce your actual taxable profit substantially.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">
-Why did I get a 1099-K from PayPal or Venmo?
-</div>
-
-<div class="faq-a">
-Payment platforms are required to report certain business-related transactions to the IRS. If you used goods-and-services payment settings or processed business activity through the platform, you may receive a 1099-K.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">
-What if the amount on the form is wrong?
-</div>
-
-<div class="faq-a">
-Contact the payment processor immediately and request a corrected 1099-K. Keep documentation showing which payments were personal, refunded, duplicated, or otherwise inaccurate.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">
-Do I still report income if I never received the form?
-</div>
-
-<div class="faq-a">
-Yes. Taxable income must be reported whether or not you received a 1099-K. The reporting form is only an informational document — it doesn't determine whether income is taxable.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">
-What happens if I ignore a 1099-K?
-</div>
-
-<div class="faq-a">
-The IRS receives a copy directly from the payment processor. Leaving it off your return entirely can trigger automated notices, penalties, interest, or an audit request asking you to explain the missing income.
-</div>
-</div>
-
-</div>
-
-<div class="card">
-<div class="section-label">Related tax forms</div>
-
-<div class="related">
-<a href="/1040" class="related-chip">Form 1040 →</a>
-<a href="/1099-nec" class="related-chip">Form 1099-NEC →</a>
-<a href="/1099-misc" class="related-chip">Form 1099-MISC →</a>
-<a href="/1099-div" class="related-chip">Form 1099-DIV →</a>
-<a href="/schedule-c" class="related-chip">Schedule C →</a>
-<a href="/1040-es" class="related-chip">Form 1040-ES →</a>
-</div>
-</div>
-
-<div class="tool-cta">
-<h3>Decode any tax form instantly</h3>
-<p>
-Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
-</p>
-
-<a href="/">Open the Decoder →</a>
-</div>
-
-<footer>
-<span>taxplain.co</span>
-<span>Understand your taxes. No accountant required.</span>
-</footer>
-
-</div>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
+      <a href="/" class="logo-text">tax<span>plain</span></a>
+    </nav>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; 1099-K</p>
+    <h1>What is a<br><em style="font-style:italic;color:var(--accent)">1099-K</em>?</h1>
+    <span class="category-tag">Information Returns</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated August 2026</p>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+
+    <div class="card">
+      <div class="section-label">What this is</div>
+      <p>A 1099-K is an information return that reports how much money moved through a third-party payment network to you during the year. Platforms like PayPal, Venmo, Stripe, Square, and Cash App are required to send one if your total gross payments cross the reporting threshold — even if none of that money was taxable income.</p>
+      <p>The key word is "gross." A 1099-K shows the total dollar amount processed on your behalf, not your profit and not your taxable income. If you sold an item for less than you paid for it, refunded a customer, or got reimbursed by a roommate through Venmo, some or all of that number on your 1099-K may not belong on your tax return at all.</p>
+      <p>This form doesn't create new tax liability by itself — it's a reporting mechanism. The IRS uses it to cross-check that income reported elsewhere (like on <a href="/schedule-c.html" class="inline-link">Schedule C</a> for self-employment) lines up with what payment platforms report. Getting a 1099-K doesn't automatically mean you owe more tax; it means you need to account for that number when you file.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Who it affects</div>
+      <div class="two-col">
+        <div class="range-box blue">
+          <div class="range-box-label">✓ Applies to</div>
+          <p>Freelancers, gig workers, and small sellers who accept payment through apps like PayPal, Venmo, Stripe, Square, or Cash App for goods or services.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Also applies to</div>
+          <p>People who occasionally sell personal items online, or who receive money from friends and family that got mistakenly tagged as a "goods and services" payment.</p>
+        </div>
+      </div>
+      <div class="timing-box">
+        <h3>📅 THE THRESHOLD KEEPS CHANGING</h3>
+        <p>The federal reporting threshold for 1099-K has shifted multiple times over the past few years as the IRS phases in a lower dollar amount. Don't assume last year's threshold still applies — check the current-year figure before deciding whether you should have received one, and note that some states set a lower threshold than the federal rule.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common confusion</div>
+      <h2>1099-K vs. 1099-NEC vs. 1099-MISC</h2>
+      <p style="margin-top: 12px;">These three forms get mixed up constantly because they can all show up in the same tax year for the same person. The difference is about who is reporting the payment and how it moved.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>1099-K</strong> — sent by a payment platform (PayPal, Stripe, Venmo) reporting gross payment volume processed on your behalf, regardless of how many clients or buyers were involved.</li>
+        <li><strong>1099-NEC</strong> — sent directly by a client or business reporting what they paid you for services. Learn more on our <a href="/1099-nec.html" class="inline-link">1099-NEC page</a>.</li>
+        <li><strong>1099-MISC</strong> — sent for other types of income, like rent or royalties, that don't fit the 1099-NEC or 1099-K categories. See our <a href="/1099-misc.html" class="inline-link">1099-MISC page</a> for details.</li>
+        <li><strong>Overlap risk</strong> — if a client paid you through PayPal for services, that same income could theoretically appear on both a 1099-K and a 1099-NEC. Only report it once on your return.</li>
+        <li><strong>Platform-specific letters</strong> — Uber, DoorDash, Ticketmaster, and similar platforms may issue a 1099-K rather than a 1099-NEC because they function as payment processors, not direct employers.</li>
+        <li><strong>Bottom line</strong> — the form you receive tells you who's reporting the payment, not necessarily whether it's taxable. That determination is yours to make using your own records.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related forms often involved</div>
+      <p>A 1099-K rarely shows up alone. These forms and schedules commonly come into play alongside it.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Schedule C</strong> — used to report self-employment income and expenses if the 1099-K reflects business activity. See our <a href="/schedule-c.html" class="inline-link">Schedule C guide</a>.</li>
+        <li><strong>1099-NEC</strong> — may report the same underlying payment from a direct client relationship.</li>
+        <li><strong>Form 1040</strong> — your 1099-K income (net of any non-taxable amounts) ultimately flows into your <a href="/1040.html" class="inline-link">Form 1040</a>.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Reporting the full gross amount as income</div>
+          <p>The 1099-K total often includes refunds, reimbursements, and non-taxable transfers. Reporting the whole number as income can overstate your actual earnings.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Double-counting with a 1099-NEC</div>
+          <p>If the same payment shows up on both a 1099-K and a 1099-NEC from a client, reporting it twice inflates your income and can trigger unnecessary tax owed.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What to do right now</div>
+      <div class="next-steps">
+        Pull your transaction history from the payment platform and separate taxable business income from personal transfers, refunds, and reimbursements. If you're self-employed, this net figure feeds into your <a href="/schedule-c.html" class="inline-link">Schedule C</a>. Keep the backup documentation in case the IRS asks you to explain a difference between the 1099-K total and what you reported.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>How much of my 1099-K total is actually taxable income?</li>
+        <li><span class="q-num">02</span>Do I need to file a Schedule C because of this form?</li>
+        <li><span class="q-num">03</span>Could any of this income also appear on a 1099-NEC I received?</li>
+        <li><span class="q-num">04</span>What records should I keep to back up my reported amount?</li>
+        <li><span class="q-num">05</span>Should I ask the platform to correct my 1099-K if it looks wrong?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">What is the 1099-K threshold for this year?</div>
+        <div class="faq-a">The federal reporting threshold has changed several times in recent years, so it's important to check the current-year IRS figure rather than assume last year's number still applies. Payment platforms are required to send a 1099-K once you cross that dollar amount in gross payments, regardless of how many individual transactions were involved.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is a 1099-K the same as a 1099-NEC or 1099-MISC?</div>
+        <div class="faq-a">No. A 1099-K reports gross payment volume from a third-party platform like PayPal or Stripe, while a 1099-NEC reports payments a client made directly to you for services. You can receive both for the same income if a client paid you through a payment app, so check for double-counting before you file.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why did I get a 1099-K from PayPal, Venmo, or Stripe?</div>
+        <div class="faq-a">Any third-party payment platform that processed enough money on your behalf during the year is required to send you a 1099-K, regardless of whether the payments were for business, casual selling, or reimbursements from friends and family that were mistakenly tagged as goods and services.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I owe tax on everything shown on my 1099-K?</div>
+        <div class="faq-a">Not necessarily. The form reports gross payment volume, which can include non-taxable amounts like refunds, reimbursements, or money received from friends and family. You're only taxed on amounts that represent actual income, so keep records that let you explain any difference between the form and your tax return.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if my 1099-K amount is wrong?</div>
+        <div class="faq-a">Contact the platform that issued the form first, since only they can issue a corrected 1099-K. If they won't correct it in time, you can still file accurately and use your own records to explain the discrepancy to the IRS if asked.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/1099-nec.html" class="related-chip">1099-NEC →</a>
+        <a href="/1099-misc.html" class="related-chip">1099-MISC →</a>
+        <a href="/schedule-c.html" class="related-chip">Schedule C →</a>
+        <a href="/1040.html" class="related-chip">Form 1040 →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any tax form instantly</h3>
+      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>taxplain.co</span>
+      <span>Not a substitute for professional tax advice.</span>
+    </footer>
+  </div>
 </body>
 </html>
