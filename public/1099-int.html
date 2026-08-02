@@ -1,782 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form 1099-INT Explained in Plain English – TaxPlain</title>
-<meta name="description" content="What is Form 1099-INT? Plain-English guide to interest income, bank accounts, CDs, savings bonds, taxes owed, common mistakes, and exactly what to do. No tax jargon.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://taxplain.co/1099-int">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1099-INT: What It Is, Who Sends It & Do You Have to Report It? – TaxPlain</title>
+  <meta name="description" content="1099-INT explained in plain English: what it reports, who sends it, the $10 reporting threshold, and what each box means for your tax return.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://taxplain.co/1099-int.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<style>
-*, *::before, *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
+  <!-- FAQ SCHEMA — 5 Q&As, must match visible FAQ card exactly -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is a 1099-INT?", "acceptedAnswer": { "@type": "Answer", "text": "A 1099-INT is a tax form that banks and other financial institutions send you when they've paid you $10 or more in interest during the year, so you can report it as income and the IRS can verify it." } },
+      { "@type": "Question", "name": "Do I have to report interest under $10?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Financial institutions aren't required to send a 1099-INT for amounts under $10, but you're still legally required to report all interest income, no matter how small." } },
+      { "@type": "Question", "name": "What does Box 1 on a 1099-INT mean?", "acceptedAnswer": { "@type": "Answer", "text": "Box 1 reports your total taxable interest income for the year from that payer. It's the figure most filers use when entering interest income on their tax return." } },
+      { "@type": "Question", "name": "What's the difference between a 1099-INT and a 1099-DIV?", "acceptedAnswer": { "@type": "Answer", "text": "A 1099-INT reports interest income, typically from savings accounts and CDs, while a 1099-DIV reports dividends and capital gain distributions from stocks or funds. They're separate forms even when issued by the same brokerage." } },
+      { "@type": "Question", "name": "What happens if I don't report a 1099-INT?", "acceptedAnswer": { "@type": "Answer", "text": "If the IRS has a copy of your 1099-INT and it's missing from your return, the mismatch can trigger an automated notice, such as a CP2000, proposing additional tax owed." } }
+    ]
+  }
+  </script>
 
-:root {
---bg: #FFFFFF;
---ink: #0D1B2A;
---muted: #6B7A8D;
---accent: #1B4B8A;
---accent-light: #EAF0FA;
---accent-border: #B5CEFA;
---warn: #993C1D;
---warn-light: #FAECE7;
---warn-border: #F5C4B3;
---success-light: #EAF3DE;
---success-border: #C0DD97;
---success-text: #27500A;
---amber: #92400E;
---amber-light: #FEF3C7;
---amber-border: #F59E0B;
---border: #DDE3EC;
---white: #FFFFFF;
-}
-
-body {
-background: var(--bg);
-color: var(--ink);
-font-family: 'DM Sans', sans-serif;
-min-height: 100vh;
-}
-
-.wrap {
-max-width: 720px;
-margin: 0 auto;
-padding: 40px 24px 80px;
-}
-
-nav {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 40px;
-}
-
-.logo-mark {
-width: 32px;
-height: 32px;
-background: var(--accent);
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.logo-mark svg {
-width: 18px;
-height: 18px;
-fill: white;
-}
-
-.logo-text {
-font-family: 'DM Mono', monospace;
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-text-decoration: none;
-}
-
-.logo-text span {
-color: var(--accent);
-}
-
-.breadcrumb {
-font-size: 13px;
-color: var(--muted);
-margin-bottom: 20px;
-font-family: 'DM Mono', monospace;
-}
-
-.breadcrumb a {
-color: var(--accent);
-text-decoration: none;
-}
-
-h1 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(28px, 5vw, 42px);
-line-height: 1.15;
-letter-spacing: -0.5px;
-margin-bottom: 8px;
-}
-
-h2 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(20px, 3vw, 26px);
-line-height: 1.2;
-letter-spacing: -0.3px;
-margin-bottom: 12px;
-color: var(--ink);
-}
-
-h3 {
-font-family: 'DM Sans', sans-serif;
-font-size: 16px;
-font-weight: 500;
-margin-bottom: 8px;
-color: var(--ink);
-}
-
-.category-tag {
-display: inline-block;
-background: var(--accent-light);
-color: var(--accent);
-font-family: 'DM Mono', monospace;
-font-size: 11px;
-letter-spacing: 1px;
-text-transform: uppercase;
-padding: 4px 12px;
-border-radius: 20px;
-margin-bottom: 24px;
-}
-
-.disclaimer {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 14px 18px;
-margin-bottom: 36px;
-font-size: 13px;
-color: var(--amber);
-line-height: 1.5;
-}
-
-.card {
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 14px;
-padding: 28px;
-margin-bottom: 20px;
-}
-
-.section-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-font-weight: 500;
-letter-spacing: 1.8px;
-text-transform: uppercase;
-color: var(--muted);
-margin-bottom: 10px;
-}
-
-p {
-font-size: 16px;
-line-height: 1.75;
-color: var(--ink);
-}
-
-p + p {
-margin-top: 14px;
-}
-
-.two-col {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-}
-
-.range-box {
-padding: 16px;
-border-radius: 10px;
-}
-
-.range-box.warn {
-background: var(--warn-light);
-border: 1px solid var(--warn-border);
-}
-
-.range-box.blue {
-background: var(--accent-light);
-border: 1px solid var(--accent-border);
-}
-
-.range-box-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-letter-spacing: 1px;
-text-transform: uppercase;
-margin-bottom: 8px;
-}
-
-.range-box.warn .range-box-label {
-color: var(--warn);
-}
-
-.range-box.blue .range-box-label {
-color: var(--accent);
-}
-
-.range-box p {
-font-size: 14px;
-line-height: 1.65;
-}
-
-.symptom-list {
-list-style: none;
-padding: 0;
-}
-
-.symptom-list li {
-font-size: 14px;
-color: var(--ink);
-line-height: 1.6;
-padding: 4px 0;
-border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.symptom-list li:last-child {
-border-bottom: none;
-}
-
-.symptom-list li::before {
-content: "→ ";
-color: var(--muted);
-}
-
-.timing-box {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 18px 20px;
-margin-top: 16px;
-}
-
-.timing-box h3 {
-font-size: 14px;
-color: var(--amber);
-font-family: 'DM Mono', monospace;
-letter-spacing: 0.5px;
-margin-bottom: 8px;
-}
-
-.timing-box p {
-font-size: 14px;
-color: #78350F;
-line-height: 1.65;
-}
-
-.next-steps {
-background: var(--success-light);
-border: 1px solid var(--success-border);
-border-radius: 10px;
-padding: 20px;
-font-size: 15px;
-line-height: 1.7;
-color: var(--success-text);
-}
-
-.questions-list {
-list-style: none;
-padding: 0;
-margin-top: 8px;
-}
-
-.questions-list li {
-font-size: 15px;
-color: var(--ink);
-line-height: 1.65;
-padding: 10px 0;
-border-bottom: 1px solid var(--border);
-display: flex;
-gap: 10px;
-}
-
-.questions-list li:last-child {
-border-bottom: none;
-}
-
-.q-num {
-font-family: 'DM Mono', monospace;
-font-size: 12px;
-color: var(--accent);
-font-weight: 500;
-flex-shrink: 0;
-margin-top: 2px;
-}
-
-.faq-item {
-padding: 18px 0;
-border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-border-bottom: none;
-}
-
-.faq-q {
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-margin-bottom: 8px;
-}
-
-.faq-a {
-font-size: 15px;
-color: var(--muted);
-line-height: 1.7;
-}
-
-.tool-cta {
-background: var(--accent);
-color: white;
-border-radius: 12px;
-padding: 28px;
-margin-top: 32px;
-text-align: center;
-}
-
-.tool-cta h3 {
-font-family: 'DM Serif Display', serif;
-font-size: 24px;
-margin-bottom: 8px;
-color: white;
-}
-
-.tool-cta p {
-font-size: 14px;
-opacity: 0.85;
-margin-bottom: 18px;
-color: white;
-}
-
-.tool-cta a {
-display: inline-block;
-background: white;
-color: var(--accent);
-font-weight: 500;
-text-decoration: none;
-padding: 12px 28px;
-border-radius: 8px;
-font-family: 'DM Mono', monospace;
-font-size: 14px;
-}
-
-.related {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-gap: 12px;
-margin-top: 4px;
-}
-
-.related-chip {
-display: block;
-padding: 12px 16px;
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 10px;
-text-decoration: none;
-font-size: 14px;
-color: var(--ink);
-font-family: 'DM Mono', monospace;
-transition: border-color 0.15s;
-}
-
-.related-chip:hover {
-border-color: var(--accent);
-color: var(--accent);
-}
-
-footer {
-margin-top: 60px;
-padding-top: 20px;
-border-top: 1px solid var(--border);
-font-size: 12px;
-color: var(--muted);
-font-family: 'DM Mono', monospace;
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 8px;
-}
-
-@media (max-width: 480px) {
-.two-col {
-grid-template-columns: 1fr;
-}
-}
-</style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
 </head>
-
 <body>
-
-<div class="wrap">
-
-<nav>
-<div class="logo-mark">
-<svg viewBox="0 0 24 24">
-<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
-</svg>
-</div>
-
-<a href="/" class="logo-text">tax<span>plain</span></a>
-</nav>
-
-<p class="breadcrumb">
-<a href="/">Home</a> &rsaquo;
-<a href="/guides">Tax Guides</a> &rsaquo;
-Form 1099-INT
-</p>
-
-<h1>
-What is<br>
-<em style="font-style:italic;color:var(--accent)">Form 1099-INT</em>?
-</h1>
-
-<span class="category-tag">Tax Form</span>
-
-<div class="disclaimer">
-⚠ <strong>Educational only.</strong>
-TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
-</div>
-
-<div class="card">
-<div class="section-label">What this form is</div>
-
-<p>
-Form 1099-INT reports interest income you earned during the year. Banks, credit unions, brokerages, and other financial institutions send it when they paid you at least $10 in taxable interest.
-</p>
-
-<p>
-Think of it as the IRS getting a copy of your savings account earnings. If your bank paid you interest, they report it to both you and the IRS — and the IRS expects to see that income on your tax return.
-</p>
-
-<p>
-The most common sources are savings accounts, CDs, money market accounts, Treasury bonds, corporate bonds, and certain tax refunds that earned interest.
-</p>
-</div>
-
-<div class="card">
-<div class="section-label">Who receives this form</div>
-
-<div class="two-col">
-
-<div class="range-box blue">
-<div class="range-box-label">✓ Common Situations</div>
-
-<p>
-People with savings accounts, high-yield cash accounts, certificates of deposit (CDs), bonds, or brokerage cash balances often receive a 1099-INT each January.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">↑ Important</div>
-
-<p>
-Even if you don't receive a 1099-INT, interest income is still taxable. Small amounts under $10 may not trigger a form, but they still legally must be reported.
-</p>
-</div>
-
-</div>
-
-<div class="timing-box" style="margin-top:16px;">
-<h3>📅 When it arrives</h3>
-
-<p>
-Financial institutions usually mail or upload Form 1099-INT by January 31 for the previous tax year. Many banks now provide it electronically through online banking portals.
-</p>
-</div>
-</div>
-
-<div class="card">
-
-<div class="section-label">What each box means</div>
-
-<h2>Breaking down the 1099-INT</h2>
-
-<p>
-Most people only need to understand a few boxes. Here's what the main sections actually mean:
-</p>
-
-<ul class="symptom-list" style="margin-top: 12px;">
-
-<li>
-<strong>Box 1 — Interest income</strong> — Regular taxable interest earned from bank accounts, CDs, and similar accounts.
-</li>
-
-<li>
-<strong>Box 2 — Early withdrawal penalty</strong> — Penalties paid for cashing out CDs early. This amount may be deductible.
-</li>
-
-<li>
-<strong>Box 3 — Interest on U.S. Savings Bonds and Treasuries</strong> — Federal taxable interest that is usually exempt from state income tax.
-</li>
-
-<li>
-<strong>Box 4 — Federal income tax withheld</strong> — Backup withholding or taxes already withheld from your interest payments.
-</li>
-
-<li>
-<strong>Box 8 — Tax-exempt interest</strong> — Interest from municipal bonds that is usually exempt from federal income tax.
-</li>
-
-<li>
-<strong>Box 13 — Bond premium on tax-exempt bond</strong> — Adjustments related to municipal bond investments.
-</li>
-
-<li>
-<strong>State information</strong> — Any state taxes withheld from your interest income.
-</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Where this income comes from</div>
-
-<p>
-1099-INT income is usually passive income earned simply by holding money or fixed-income investments.
-</p>
-
-<ul class="symptom-list" style="margin-top: 12px;">
-
-<li><strong>Savings accounts</strong> — Traditional or high-yield bank savings</li>
-
-<li><strong>Certificates of deposit (CDs)</strong> — Fixed-term bank deposits</li>
-
-<li><strong>Money market accounts</strong> — Interest-bearing cash accounts</li>
-
-<li><strong>Treasury securities</strong> — Treasury bills, notes, and bonds</li>
-
-<li><strong>Corporate or municipal bonds</strong> — Bond interest paid to investors</li>
-
-<li><strong>Brokerage sweep accounts</strong> — Cash sitting uninvested in brokerage accounts</li>
-
-<li><strong>IRS or state refunds</strong> — Some delayed refunds earn taxable interest</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Common mistakes to avoid</div>
-
-<div class="two-col">
-
-<div class="range-box warn">
-
-<div class="range-box-label">
-⚠ Forgetting Small Accounts
-</div>
-
-<p>
-People often forget old savings accounts or online banks. The IRS receives every 1099-INT copy and automatically compares them to your tax return.
-</p>
-
-</div>
-
-<div class="range-box warn">
-
-<div class="range-box-label">
-⚠ Confusing Tax-Exempt Interest
-</div>
-
-<p>
-Municipal bond interest may be exempt from federal tax, but it still usually must be reported on your return even if no tax is owed.
-</p>
-
-</div>
-
-</div>
-
-<div class="two-col" style="margin-top:16px;">
-
-<div class="range-box warn">
-
-<div class="range-box-label">
-⚠ Missing Treasury Tax Rules
-</div>
-
-<p>
-Interest from U.S. Treasury securities is taxable federally but usually exempt from state income taxes. Many people accidentally overpay state taxes.
-</p>
-
-</div>
-
-<div class="range-box warn">
-
-<div class="range-box-label">
-⚠ Ignoring Backup Withholding
-</div>
-
-<p>
-If federal taxes were withheld in Box 4, make sure that amount gets entered into your return or you'll lose credit for taxes already paid.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">What to do right now</div>
-
-<div class="next-steps">
-
-Gather every 1099-INT from all banks, brokerages, and financial institutions before filing. Compare the forms against your actual accounts so nothing gets missed. If your return is simple, most tax software automatically imports 1099-INT data from major banks. If you own municipal bonds, Treasury securities, or large investment portfolios, consider having a tax professional review the return to avoid state-tax mistakes and missed deductions.
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Questions to ask your tax professional</div>
-
-<ul class="questions-list">
-
-<li>
-<span class="q-num">01</span>
-Is any of my interest income exempt from state or federal taxes?
-</li>
-
-<li>
-<span class="q-num">02</span>
-Did I correctly report tax-exempt municipal bond interest?
-</li>
-
-<li>
-<span class="q-num">03</span>
-Can I deduct penalties from early CD withdrawals?
-</li>
-
-<li>
-<span class="q-num">04</span>
-Did any backup withholding occur that should reduce my tax bill?
-</li>
-
-<li>
-<span class="q-num">05</span>
-Do I need Schedule B because my total interest income exceeds IRS limits?
-</li>
-
-<li>
-<span class="q-num">06</span>
-Should I change how my savings or investments are structured for better tax treatment?
-</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Frequently asked questions</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-Do I pay taxes on all interest income?
-</div>
-
-<div class="faq-a">
-Usually yes. Most bank interest is fully taxable federally and often by states too. The main exception is municipal bond interest, which is generally exempt from federal income taxes.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-What if I never received my 1099-INT?
-</div>
-
-<div class="faq-a">
-You still must report the income. Check your online banking portal or contact the financial institution for a replacement copy. The IRS already received its copy.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-Do I need Schedule B with Form 1099-INT?
-</div>
-
-<div class="faq-a">
-Usually only if your total taxable interest and ordinary dividends exceed $1,500, or if you have certain foreign accounts or unusual situations.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-Is interest from Treasury bonds taxable?
-</div>
-
-<div class="faq-a">
-Yes federally, but usually not at the state level. Treasury interest often receives favorable state tax treatment compared to normal bank interest.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-Can the IRS catch missing interest income?
-</div>
-
-<div class="faq-a">
-Very easily. Financial institutions send the IRS a matching copy of every 1099-INT issued. Missing forms commonly trigger automated IRS notices.
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Related tax forms</div>
-
-<div class="related">
-
-<a href="/1040" class="related-chip">Form 1040 →</a>
-
-<a href="/1099-div" class="related-chip">Form 1099-DIV →</a>
-
-<a href="/1099-nec" class="related-chip">Form 1099-NEC →</a>
-
-<a href="/1099-misc" class="related-chip">Form 1099-MISC →</a>
-
-<a href="/schedule-b" class="related-chip">Schedule B →</a>
-
-<a href="/w9" class="related-chip">Form W-9 →</a>
-
-</div>
-
-</div>
-
-<div class="tool-cta">
-
-<h3>Decode any tax form instantly</h3>
-
-<p>
-Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
-</p>
-
-<a href="/">Open the Decoder →</a>
-
-</div>
-
-<footer>
-
-<span>taxplain.co</span>
-
-<span>Understand your taxes. No accountant required.</span>
-
-</footer>
-
-</div>
-
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
+      <a href="/" class="logo-text">tax<span>plain</span></a>
+    </nav>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; 1099-INT</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">Form 1099-INT</em>?</h1>
+    <span class="category-tag">TAX FORMS</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated July 2026</p>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+
+    <!-- CARD 1: What this form is -->
+    <div class="card">
+      <div class="section-label">What this is</div>
+      <p>A 1099-INT is an information return that banks, credit unions, brokerages, and other financial institutions send you when they've paid you $10 or more in interest during the year. It's not a bill and it's not something you fill out yourself — the payer fills it out and sends copies to both you and the IRS.</p>
+      <p>The form exists so the IRS can cross-check what you report as interest income against what financial institutions say they paid you. If the numbers don't match, that mismatch is one of the most common triggers for an IRS notice like a CP2000.</p>
+      <p>You'll typically receive a 1099-INT for savings accounts, CDs, money market accounts, and sometimes bonds — anywhere your money earned interest, rather than dividends, which are reported separately on <a href="/1099-div.html" class="inline-link">Form 1099-DIV</a>.</p>
+    </div>
+
+    <!-- CARD 2: Who it affects -->
+    <div class="card">
+      <div class="section-label">Who it affects</div>
+      <div class="two-col">
+        <div class="range-box blue">
+          <div class="range-box-label">✓ Applies to</div>
+          <p>Anyone who earned $10 or more in interest from a single payer during the tax year — savings accounts, CDs, high-yield accounts, and similar.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Also applies to</div>
+          <p>Some payers send a 1099-INT even below $10 if backup withholding applied. You're required to report interest income either way, form or no form.</p>
+        </div>
+      </div>
+      <div class="timing-box">
+        <h3>📅 WHEN IT ARRIVES</h3>
+        <p>Financial institutions must mail or make 1099-INT forms available by January 31. If you haven't received one by mid-February despite earning interest, check your online account or contact the institution directly before filing.</p>
+      </div>
+    </div>
+
+    <!-- CARD 3: Box-by-box breakdown -->
+    <div class="card">
+      <div class="section-label">Box-by-box breakdown</div>
+      <h2>What each box on Form 1099-INT means</h2>
+      <p style="margin-top: 12px;">The 1099-INT has more boxes than most people expect, but most filers only need to worry about a handful. If you're also selling investments, note that gains are reported differently — see <a href="/capital-gains.html" class="inline-link">how capital gains work</a>.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Box 1 — Interest income</strong> — The total taxable interest paid to you during the year. This is the figure most people are looking for.</li>
+        <li><strong>Box 2 — Early withdrawal penalty</strong> — Any penalty you paid for cashing out a CD or time deposit early. This amount is deductible even if you don't itemize.</li>
+        <li><strong>Box 3 — Interest on U.S. Savings Bonds and Treasury obligations</strong> — Reported separately because it may be exempt from state and local tax.</li>
+        <li><strong>Box 4 — Federal income tax withheld</strong> — Only filled in if backup withholding applied, often because a W-9 wasn't on file with the payer.</li>
+        <li><strong>Box 8 — Tax-exempt interest</strong> — Interest from municipal bonds. It isn't taxed federally, but it still has to be reported on your return.</li>
+        <li><strong>Box 11 — Bond premium</strong> — Relevant if you paid more than face value for a taxable bond, since it can reduce your reportable interest.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 4: Related forms often involved -->
+    <div class="card">
+      <div class="section-label">Related forms often involved</div>
+      <p>A 1099-INT rarely shows up alone. If you hold interest-bearing accounts, there's a good chance the same institution is also sending other 1099s, and the totals feed into different parts of your return.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Schedule B</strong> — required if your combined interest and dividend income exceeds $1,500 for the year</li>
+        <li><strong><a href="/1099-div.html" class="inline-link">1099-DIV</a></strong> — shows dividends and capital gain distributions, often from the same brokerage</li>
+        <li><strong><a href="/1099-misc.html" class="inline-link">1099-MISC</a></strong> — covers other types of miscellaneous income you might receive alongside interest</li>
+        <li><strong>1099-OID</strong> — used instead of a 1099-INT for bonds issued at a discount, a common point of confusion</li>
+      </ul>
+    </div>
+
+    <!-- CARD 5: Common mistakes -->
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ IGNORING INTEREST UNDER $10</div>
+          <p>Just because a bank doesn't send you a form doesn't mean the income isn't taxable. All interest income is reportable, regardless of whether you receive a 1099-INT.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ FORGETTING SCHEDULE B</div>
+          <p>Filers who cross the $1,500 combined interest-and-dividend threshold often forget to attach Schedule B to their <a href="/1040.html" class="inline-link">Form 1040</a>, even after correctly listing the income.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 6: What to do right now -->
+    <div class="card">
+      <div class="section-label">What to do right now</div>
+      <div class="next-steps">
+        Gather every 1099-INT you receive by mid-February and match the totals against your own account records. If you earned interest but never got a form, don't skip reporting it — log into your <a href="/estimated-taxes.html" class="inline-link">online banking or brokerage account</a> to pull the exact figure before you file.
+      </div>
+    </div>
+
+    <!-- CARD 7: Questions to ask your tax professional -->
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Do I need to attach Schedule B given my combined interest and dividend total?</li>
+        <li><span class="q-num">02</span>Is any of my reported interest actually tax-exempt and mislabeled?</li>
+        <li><span class="q-num">03</span>Should I adjust my withholding if I'm consistently earning taxable interest?</li>
+        <li><span class="q-num">04</span>How does bond premium in Box 11 affect what I actually owe?</li>
+        <li><span class="q-num">05</span>If I didn't receive a 1099-INT but earned interest, how do I report it accurately?</li>
+      </ul>
+    </div>
+
+    <!-- CARD 8: FAQ -->
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">What is a 1099-INT?</div>
+        <div class="faq-a">A 1099-INT is a tax form that banks and other financial institutions send you when they've paid you $10 or more in interest during the year, so you can report it as income and the IRS can verify it.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I have to report interest under $10?</div>
+        <div class="faq-a">Yes. Financial institutions aren't required to send a 1099-INT for amounts under $10, but you're still legally required to report all interest income, no matter how small.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does Box 1 on a 1099-INT mean?</div>
+        <div class="faq-a">Box 1 reports your total taxable interest income for the year from that payer. It's the figure most filers use when entering interest income on their tax return.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between a 1099-INT and a 1099-DIV?</div>
+        <div class="faq-a">A 1099-INT reports interest income, typically from savings accounts and CDs, while a 1099-DIV reports dividends and capital gain distributions from stocks or funds. They're separate forms even when issued by the same brokerage.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What happens if I don't report a 1099-INT?</div>
+        <div class="faq-a">If the IRS has a copy of your 1099-INT and it's missing from your return, the mismatch can trigger an automated notice, such as a CP2000, proposing additional tax owed.</div>
+      </div>
+    </div>
+
+    <!-- CARD 9: Related tax forms -->
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/1099-div.html" class="related-chip">1099-DIV →</a>
+        <a href="/1099-misc.html" class="related-chip">1099-MISC →</a>
+        <a href="/capital-gains.html" class="related-chip">Capital Gains →</a>
+        <a href="/1040.html" class="related-chip">Form 1040 →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any tax form instantly</h3>
+      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>taxplain.co</span>
+      <span>Not a substitute for professional tax advice.</span>
+    </footer>
+  </div>
 </body>
 </html>
