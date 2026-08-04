@@ -1,776 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form 1099-MISC Explained in Plain English – TaxPlain</title>
-<meta name="description" content="What is Form 1099-MISC? Plain-English guide to miscellaneous income reporting — rents, prizes, royalties, attorney payments, and more. Understand what it means, who gets one, and what to do next.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://taxplain.co/1099-misc">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Form 1099-MISC? Box 3 & 'Other Income' Explained – TaxPlain</title>
+  <meta name="description" content="Form 1099-MISC reports miscellaneous income like rent, prizes, and Box 3 'other income.' Learn what it means and whether you owe self-employment tax.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://taxplain.co/1099-misc.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<style>
-*, *::before, *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is Box 3 'Other Income' on a 1099-MISC?", "acceptedAnswer": { "@type": "Answer", "text": "Box 3 reports income that doesn't fit neatly into other categories, such as prizes, awards, legal settlements, or one-time payments that aren't for services performed. It's generally not subject to self-employment tax because it isn't payment for work you did as a trade or business." } },
+      { "@type": "Question", "name": "Is 1099-MISC income the same as self-employment income?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. Since 2020, most nonemployee compensation for services (freelance work, contractor pay) is reported on Form 1099-NEC instead. Income on a 1099-MISC, especially in Box 3, is often not self-employment income, though it may still be taxable." } },
+      { "@type": "Question", "name": "What's the difference between 1099-MISC and 1099-NEC?", "acceptedAnswer": { "@type": "Answer", "text": "1099-NEC reports nonemployee compensation, meaning payment for services you performed as an independent contractor. 1099-MISC reports other types of payments, like rent, royalties, prizes, awards, and legal settlements, that aren't compensation for services." } },
+      { "@type": "Question", "name": "Do I owe self-employment tax on a 1099-MISC?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the box the income appears in and whether the payment relates to a trade or business you actively run. Box 3 income is usually not subject to self-employment tax, while some other categories may be. A tax professional can review your specific 1099-MISC to confirm." } },
+      { "@type": "Question", "name": "What if I received a 1099-MISC but didn't expect one?", "acceptedAnswer": { "@type": "Answer", "text": "This is common with legal settlements, rental income, or prize winnings. Even unexpected income reported on a 1099-MISC is generally taxable and should be included on your return, though how it's reported depends on the type of income." } }
+    ]
+  }
+  </script>
 
-:root {
---bg: #FFFFFF;
---ink: #0D1B2A;
---muted: #6B7A8D;
---accent: #1B4B8A;
---accent-light: #EAF0FA;
---accent-border: #B5CEFA;
---warn: #993C1D;
---warn-light: #FAECE7;
---warn-border: #F5C4B3;
---success-light: #EAF3DE;
---success-border: #C0DD97;
---success-text: #27500A;
---amber: #92400E;
---amber-light: #FEF3C7;
---amber-border: #F59E0B;
---border: #DDE3EC;
---white: #FFFFFF;
-}
-
-body {
-background: var(--bg);
-color: var(--ink);
-font-family: 'DM Sans', sans-serif;
-min-height: 100vh;
-}
-
-.wrap {
-max-width: 720px;
-margin: 0 auto;
-padding: 40px 24px 80px;
-}
-
-nav {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 40px;
-}
-
-.logo-mark {
-width: 32px;
-height: 32px;
-background: var(--accent);
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.logo-mark svg {
-width: 18px;
-height: 18px;
-fill: white;
-}
-
-.logo-text {
-font-family: 'DM Mono', monospace;
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-text-decoration: none;
-}
-
-.logo-text span {
-color: var(--accent);
-}
-
-.breadcrumb {
-font-size: 13px;
-color: var(--muted);
-margin-bottom: 20px;
-font-family: 'DM Mono', monospace;
-}
-
-.breadcrumb a {
-color: var(--accent);
-text-decoration: none;
-}
-
-h1 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(28px, 5vw, 42px);
-line-height: 1.15;
-letter-spacing: -0.5px;
-margin-bottom: 8px;
-}
-
-h2 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(20px, 3vw, 26px);
-line-height: 1.2;
-letter-spacing: -0.3px;
-margin-bottom: 12px;
-color: var(--ink);
-}
-
-h3 {
-font-family: 'DM Sans', sans-serif;
-font-size: 16px;
-font-weight: 500;
-margin-bottom: 8px;
-color: var(--ink);
-}
-
-.category-tag {
-display: inline-block;
-background: var(--accent-light);
-color: var(--accent);
-font-family: 'DM Mono', monospace;
-font-size: 11px;
-letter-spacing: 1px;
-text-transform: uppercase;
-padding: 4px 12px;
-border-radius: 20px;
-margin-bottom: 24px;
-}
-
-.disclaimer {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 14px 18px;
-margin-bottom: 36px;
-font-size: 13px;
-color: var(--amber);
-line-height: 1.5;
-}
-
-.card {
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 14px;
-padding: 28px;
-margin-bottom: 20px;
-}
-
-.section-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-font-weight: 500;
-letter-spacing: 1.8px;
-text-transform: uppercase;
-color: var(--muted);
-margin-bottom: 10px;
-}
-
-p {
-font-size: 16px;
-line-height: 1.75;
-color: var(--ink);
-}
-
-p + p {
-margin-top: 14px;
-}
-
-.two-col {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-}
-
-.range-box {
-padding: 16px;
-border-radius: 10px;
-}
-
-.range-box.warn {
-background: var(--warn-light);
-border: 1px solid var(--warn-border);
-}
-
-.range-box.blue {
-background: var(--accent-light);
-border: 1px solid var(--accent-border);
-}
-
-.range-box-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-letter-spacing: 1px;
-text-transform: uppercase;
-margin-bottom: 8px;
-}
-
-.range-box.warn .range-box-label {
-color: var(--warn);
-}
-
-.range-box.blue .range-box-label {
-color: var(--accent);
-}
-
-.range-box p {
-font-size: 14px;
-line-height: 1.65;
-}
-
-.symptom-list {
-list-style: none;
-padding: 0;
-}
-
-.symptom-list li {
-font-size: 14px;
-color: var(--ink);
-line-height: 1.6;
-padding: 4px 0;
-border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.symptom-list li:last-child {
-border-bottom: none;
-}
-
-.symptom-list li::before {
-content: "→ ";
-color: var(--muted);
-}
-
-.timing-box {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 18px 20px;
-margin-top: 16px;
-}
-
-.timing-box h3 {
-font-size: 14px;
-color: var(--amber);
-font-family: 'DM Mono', monospace;
-letter-spacing: 0.5px;
-margin-bottom: 8px;
-}
-
-.timing-box p {
-font-size: 14px;
-color: #78350F;
-line-height: 1.65;
-}
-
-.next-steps {
-background: var(--success-light);
-border: 1px solid var(--success-border);
-border-radius: 10px;
-padding: 20px;
-font-size: 15px;
-line-height: 1.7;
-color: var(--success-text);
-}
-
-.questions-list {
-list-style: none;
-padding: 0;
-margin-top: 8px;
-}
-
-.questions-list li {
-font-size: 15px;
-color: var(--ink);
-line-height: 1.65;
-padding: 10px 0;
-border-bottom: 1px solid var(--border);
-display: flex;
-gap: 10px;
-}
-
-.questions-list li:last-child {
-border-bottom: none;
-}
-
-.q-num {
-font-family: 'DM Mono', monospace;
-font-size: 12px;
-color: var(--accent);
-font-weight: 500;
-flex-shrink: 0;
-margin-top: 2px;
-}
-
-.faq-item {
-padding: 18px 0;
-border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-border-bottom: none;
-}
-
-.faq-q {
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-margin-bottom: 8px;
-}
-
-.faq-a {
-font-size: 15px;
-color: var(--muted);
-line-height: 1.7;
-}
-
-.tool-cta {
-background: var(--accent);
-color: white;
-border-radius: 12px;
-padding: 28px;
-margin-top: 32px;
-text-align: center;
-}
-
-.tool-cta h3 {
-font-family: 'DM Serif Display', serif;
-font-size: 24px;
-margin-bottom: 8px;
-color: white;
-}
-
-.tool-cta p {
-font-size: 14px;
-opacity: 0.85;
-margin-bottom: 18px;
-color: white;
-}
-
-.tool-cta a {
-display: inline-block;
-background: white;
-color: var(--accent);
-font-weight: 500;
-text-decoration: none;
-padding: 12px 28px;
-border-radius: 8px;
-font-family: 'DM Mono', monospace;
-font-size: 14px;
-}
-
-.related {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-gap: 12px;
-margin-top: 4px;
-}
-
-.related-chip {
-display: block;
-padding: 12px 16px;
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 10px;
-text-decoration: none;
-font-size: 14px;
-color: var(--ink);
-font-family: 'DM Mono', monospace;
-transition: border-color 0.15s;
-}
-
-.related-chip:hover {
-border-color: var(--accent);
-color: var(--accent);
-}
-
-footer {
-margin-top: 60px;
-padding-top: 20px;
-border-top: 1px solid var(--border);
-font-size: 12px;
-color: var(--muted);
-font-family: 'DM Mono', monospace;
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 8px;
-}
-
-@media (max-width: 480px) {
-.two-col {
-grid-template-columns: 1fr;
-}
-}
-</style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
 </head>
-
 <body>
-
-<div class="wrap">
-
-<nav>
-<div class="logo-mark">
-<svg viewBox="0 0 24 24">
-<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
-</svg>
-</div>
-
-<a href="/" class="logo-text">tax<span>plain</span></a>
-</nav>
-
-<p class="breadcrumb">
-<a href="/">Home</a> &rsaquo;
-<a href="/guides">Tax Guides</a> &rsaquo;
-Form 1099-MISC
-</p>
-
-<h1>
-What is<br>
-<em style="font-style:italic;color:var(--accent)">Form 1099-MISC</em>?
-</h1>
-
-<span class="category-tag">Tax Form</span>
-
-<div class="disclaimer">
-⚠ <strong>Educational only.</strong>
-TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
-</div>
-
-<div class="card">
-<div class="section-label">What this form is</div>
-
-<p>
-Form 1099-MISC is an IRS information return used to report miscellaneous types of income that don't fit into normal wage reporting. Businesses send it to individuals or companies who received certain payments during the year — and they also send a copy to the IRS.
-</p>
-
-<p>
-Think of the 1099-MISC as the government's way of tracking unusual or non-payroll income. If money changed hands outside a regular paycheck, there's a decent chance a 1099 form was involved somewhere.
-</p>
-</div>
-
-<div class="card">
-<div class="section-label">Who receives a 1099-MISC</div>
-
-<div class="two-col">
-
-<div class="range-box blue">
-<div class="range-box-label">✓ Common Recipients</div>
-
-<p>
-Landlords receiving rent payments, attorneys receiving settlement payments, people winning prizes or awards, royalty recipients, and anyone receiving certain miscellaneous taxable payments.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">↑ Important Distinction</div>
-
-<p>
-Independent contractor payments usually go on Form 1099-NEC now — not 1099-MISC. The IRS separated nonemployee compensation into its own form beginning in tax year 2020.
-</p>
-</div>
-
-</div>
-
-<div class="timing-box" style="margin-top:16px;">
-<h3>📅 Filing timeline</h3>
-
-<p>
-Most Form 1099-MISC copies must be sent to recipients by January 31 following the tax year. Businesses also file copies with the IRS. If you receive one, the IRS expects that income to appear somewhere on your tax return.
-</p>
-</div>
-</div>
-
-<div class="card">
-<div class="section-label">What payments get reported</div>
-
-<h2>Common boxes on Form 1099-MISC</h2>
-
-<p>
-Different boxes on the form represent different categories of income. Here are the most common ones:
-</p>
-
-<ul class="symptom-list" style="margin-top: 12px;">
-
-<li>
-<strong>Box 1 — Rents</strong> — Payments for office space, equipment rentals, farmland, or other rental arrangements
-</li>
-
-<li>
-<strong>Box 2 — Royalties</strong> — Royalty income from books, music, patents, mineral rights, or intellectual property
-</li>
-
-<li>
-<strong>Box 3 — Other income</strong> — Prize winnings, awards, taxable settlements, incentives, or miscellaneous taxable payments
-</li>
-
-<li>
-<strong>Box 4 — Federal income tax withheld</strong> — Backup withholding if taxes were withheld from your payment
-</li>
-
-<li>
-<strong>Box 10 — Gross proceeds paid to an attorney</strong> — Certain legal settlement payments sent to attorneys
-</li>
-
-<li>
-<strong>Box 18+</strong> — State filing information if state taxes were withheld or reported
-</li>
-
-</ul>
-</div>
-
-<div class="card">
-
-<div class="section-label">1099-MISC vs 1099-NEC</div>
-
-<div class="two-col">
-
-<div class="range-box blue">
-
-<div class="range-box-label">1099-MISC</div>
-
-<p>
-Used for miscellaneous income like rents, royalties, prizes, awards, attorney proceeds, and other non-standard payments.
-</p>
-
-</div>
-
-<div class="range-box blue">
-
-<div class="range-box-label">1099-NEC</div>
-
-<p>
-Used specifically for independent contractor and freelance payments of $600 or more for services performed during the year.
-</p>
-
-</div>
-
-</div>
-
-<div class="timing-box">
-
-<h3>💡 Why the IRS split them</h3>
-
-<p>
-The IRS created Form 1099-NEC to separate contractor income from other miscellaneous payments and reduce confusion around filing deadlines. Before 2020, contractor payments were reported in Box 7 of the 1099-MISC.
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Common mistakes to avoid</div>
-
-<div class="two-col">
-
-<div class="range-box warn">
-
-<div class="range-box-label">⚠ Ignoring The Form</div>
-
-<p>
-Even if you think the amount is wrong, don't ignore a 1099-MISC. The IRS receives a copy too, and missing income notices are automatically generated when numbers don't match.
-</p>
-
-</div>
-
-<div class="range-box warn">
-
-<div class="range-box-label">⚠ Confusing It With W-2 Income</div>
-
-<p>
-1099 income usually does not include tax withholding. That means you may owe taxes at filing time even if the payment felt similar to normal income.
-</p>
-
-</div>
-
-</div>
-
-<div class="two-col" style="margin-top:16px;">
-
-<div class="range-box warn">
-
-<div class="range-box-label">⚠ Wrong Tax Treatment</div>
-
-<p>
-Not all 1099-MISC income is self-employment income. Rent, royalties, legal settlements, and prizes may be taxed differently depending on the situation.
-</p>
-
-</div>
-
-<div class="range-box warn">
-
-<div class="range-box-label">⚠ Missing State Reporting</div>
-
-<p>
-Some states require separate reporting or withholding. If state tax was withheld, make sure it appears correctly on your state return too.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">What to do right now</div>
-
-<div class="next-steps">
-
-If you received a 1099-MISC, compare it against your own records immediately. Make sure the payer name, amount, and tax ID information are correct. Then determine what type of income it actually represents — rental income, royalty income, prize money, settlement proceeds, or something else — because the tax treatment can vary significantly. If the form is incorrect, contact the payer before filing your return so they can issue a corrected version.
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Questions to ask your tax professional</div>
-
-<ul class="questions-list">
-
-<li>
-<span class="q-num">01</span>
-Is this income considered self-employment income or another category entirely?
-</li>
-
-<li>
-<span class="q-num">02</span>
-Do I owe self-employment tax on this payment?
-</li>
-
-<li>
-<span class="q-num">03</span>
-Can I deduct any expenses related to earning this income?
-</li>
-
-<li>
-<span class="q-num">04</span>
-Should I make estimated quarterly tax payments going forward?
-</li>
-
-<li>
-<span class="q-num">05</span>
-Was this form reported correctly, or should I request a correction?
-</li>
-
-<li>
-<span class="q-num">06</span>
-Does this affect my state tax return differently than my federal return?
-</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Frequently asked questions</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-What happens if I don't report a 1099-MISC?
-</div>
-
-<div class="faq-a">
-The IRS computer systems automatically compare information returns against filed tax returns. If income from a 1099-MISC is missing, the IRS will likely send a notice proposing additional taxes, penalties, and interest.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-Do I have to pay taxes on all 1099-MISC income?
-</div>
-
-<div class="faq-a">
-Usually yes, but the exact tax treatment depends on the type of payment. Some settlements may be partially non-taxable, while other income may qualify for deductions or expense offsets.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-What if the amount on the form is wrong?
-</div>
-
-<div class="faq-a">
-Contact the payer immediately and request a corrected Form 1099-MISC. Keep records showing why you believe the amount is incorrect. Don't simply omit the income without documentation.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-Can I receive both a 1099-MISC and a 1099-NEC?
-</div>
-
-<div class="faq-a">
-Yes. For example, a freelancer who also receives royalty payments or settlement proceeds could receive both forms from different payers during the same year.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-Is a 1099-MISC the same as being self-employed?
-</div>
-
-<div class="faq-a">
-Not necessarily. Some 1099-MISC income is business income, but other payments — like prizes, rent, or royalties — may not count as self-employment income.
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Related tax forms</div>
-
-<div class="related">
-
-<a href="/1040" class="related-chip">Form 1040 →</a>
-
-<a href="/1099-nec" class="related-chip">Form 1099-NEC →</a>
-
-<a href="/1099-k" class="related-chip">Form 1099-K →</a>
-
-<a href="/1099-div" class="related-chip">Form 1099-DIV →</a>
-
-<a href="/schedule-c" class="related-chip">Schedule C →</a>
-
-<a href="/w2" class="related-chip">Form W-2 →</a>
-
-</div>
-
-</div>
-
-<div class="tool-cta">
-
-<h3>Decode any tax form instantly</h3>
-
-<p>
-Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
-</p>
-
-<a href="/">Open the Decoder →</a>
-
-</div>
-
-<footer>
-
-<span>taxplain.co</span>
-
-<span>Understand your taxes. No accountant required.</span>
-
-</footer>
-
-</div>
-
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
+      <a href="/" class="logo-text">tax<span>plain</span></a>
+    </nav>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Form 1099-MISC</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">Form 1099-MISC</em>?</h1>
+    <span class="category-tag">Income Reporting</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated August 2026</p>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+
+    <div class="card">
+      <div class="section-label">What this is</div>
+      <p>Form 1099-MISC reports "miscellaneous" income you received during the year that doesn't fit into more specific categories, like rent, royalties, prizes and awards, legal settlements, or certain other payments. The business or individual who paid you sends a copy to you and to the IRS, so the IRS already knows this income exists before you file.</p>
+      <p>1099-MISC used to be the catch-all form for independent contractor pay too, but that changed starting with the 2020 tax year. The IRS split contractor and freelance payments off onto a separate form, <a href="/1099-nec.html" class="inline-link">Form 1099-NEC</a>, which is why so many people now get confused about which form applies to them.</p>
+      <p>If you received a 1099-MISC, the most important thing is figuring out which box the income is reported in, since that determines how it gets taxed and whether it counts as self-employment income at all.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Who it affects</div>
+      <div class="two-col">
+        <div class="range-box blue">
+          <div class="range-box-label">✓ Applies to</div>
+          <p>Landlords, royalty recipients, prize/award winners, and people who received legal settlement payments of $600 or more.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Also applies to</div>
+          <p>Anyone who received a payment that doesn't fit standard wage, contractor, or investment categories.</p>
+        </div>
+      </div>
+      <div class="timing-box">
+        <h3>📅 WHEN IT ARRIVES</h3>
+        <p>Payers must send 1099-MISC forms by January 31 for most boxes, though Box 8 and Box 10 (substitute payments and gross proceeds to attorneys) have a February 15 deadline. If you haven't received one you were expecting by mid-February, contact the payer directly.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Box-by-box</div>
+      <h2>What each box on the 1099-MISC means</h2>
+      <p style="margin-top: 12px;">The form has numbered boxes, and the box number tells you what kind of income you're dealing with. This matters because different boxes are taxed differently — some may involve self-employment tax, most don't.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Box 1 — Rents</strong> — payments you received for renting out property, equipment, or land.</li>
+        <li><strong>Box 2 — Royalties</strong> — payments for use of intellectual property, oil/gas/mineral rights, or copyrights.</li>
+        <li><strong>Box 3 — Other income</strong> — the most confusing box. Covers prizes, awards, jury duty pay, and other income that isn't payment for services. Generally not self-employment income.</li>
+        <li><strong>Box 4 — Federal income tax withheld</strong> — usually $0 unless backup withholding applied to your account.</li>
+        <li><strong>Box 6 — Medical and health care payments</strong> — mainly relevant to healthcare providers and facilities.</li>
+        <li><strong>Box 10 — Gross proceeds paid to an attorney</strong> — used when a business pays a lawyer as part of a legal settlement, even if the money ultimately goes to you.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">1099-MISC vs. 1099-NEC</div>
+      <h2>Why these two forms get confused</h2>
+      <p style="margin-top: 12px;">Before 2020, 1099-MISC Box 7 was used to report nonemployee compensation, meaning payment for freelance or contract work. The IRS pulled that reporting out into its own form, <a href="/1099-nec.html" class="inline-link">Form 1099-NEC</a>, so many people who used to get a 1099-MISC for contract work now get a 1099-NEC instead.</p>
+      <p style="margin-top: 12px;">Here's the practical distinction: if you were paid for performing a service as an independent contractor or freelancer, that's 1099-NEC territory. If you were paid for something else entirely, like renting out a property, licensing your work, or receiving a legal settlement, that's what 1099-MISC still covers.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Got a 1099-NEC</strong> — you were paid for work or services you performed. This is typically self-employment income, reported on <a href="/schedule-c.html" class="inline-link">Schedule C</a>.</li>
+        <li><strong>Got a 1099-MISC Box 1 or 2</strong> — rental or royalty income, generally reported on Schedule E, not Schedule C.</li>
+        <li><strong>Got a 1099-MISC Box 3</strong> — "other income," usually not self-employment income and not subject to self-employment tax.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related forms often involved</div>
+      <p>Depending on what triggered your 1099-MISC, you may also encounter these forms when you file.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>1099-NEC</strong> — if you also did contract work for the same or a different payer this year</li>
+        <li><strong>Schedule C</strong> — if any of your 1099-MISC income is tied to a trade or business you actively run</li>
+        <li><strong>Schedule E</strong> — used for rental and royalty income reported in Box 1 or Box 2</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Assuming it's self-employment income</div>
+          <p>Not all 1099-MISC income is subject to self-employment tax. Box 3 "other income" usually isn't, but people often report it on Schedule C anyway and overpay.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Ignoring a form because it's "small"</div>
+          <p>1099-MISC is generally required for payments of $600 or more, but any 1099-MISC income you receive is still taxable and should be reported, even if the amount seems minor.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What to do right now</div>
+      <div class="next-steps">
+        Check which box your income appears in — that's the key to knowing how it's taxed. If it's Box 1 or 2, it likely belongs on Schedule E. If it's Box 3, it's probably not self-employment income at all. When in doubt, especially with a <a href="/schedule-c.html" class="inline-link">Schedule C</a> question, a tax professional can confirm in a few minutes what could otherwise cost you in overpaid self-employment tax.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Is the income in my 1099-MISC subject to self-employment tax?</li>
+        <li><span class="q-num">02</span>Should this go on Schedule C or Schedule E?</li>
+        <li><span class="q-num">03</span>Do I need to make estimated tax payments because of this income?</li>
+        <li><span class="q-num">04</span>Why did I get a 1099-MISC instead of a 1099-NEC this year?</li>
+        <li><span class="q-num">05</span>Can I deduct any expenses connected to this income?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">What is Box 3 "Other Income" on a 1099-MISC?</div>
+        <div class="faq-a">Box 3 reports income that doesn't fit neatly into other categories, such as prizes, awards, legal settlements, or one-time payments that aren't for services performed. It's generally not subject to self-employment tax because it isn't payment for work you did as a trade or business.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is 1099-MISC income the same as self-employment income?</div>
+        <div class="faq-a">Not necessarily. Since 2020, most nonemployee compensation for services (freelance work, contractor pay) is reported on Form 1099-NEC instead. Income on a 1099-MISC, especially in Box 3, is often not self-employment income, though it may still be taxable.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between 1099-MISC and 1099-NEC?</div>
+        <div class="faq-a">1099-NEC reports nonemployee compensation, meaning payment for services you performed as an independent contractor. 1099-MISC reports other types of payments, like rent, royalties, prizes, awards, and legal settlements, that aren't compensation for services.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I owe self-employment tax on a 1099-MISC?</div>
+        <div class="faq-a">It depends on the box the income appears in and whether the payment relates to a trade or business you actively run. Box 3 income is usually not subject to self-employment tax, while some other categories may be. A tax professional can review your specific 1099-MISC to confirm.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if I received a 1099-MISC but didn't expect one?</div>
+        <div class="faq-a">This is common with legal settlements, rental income, or prize winnings. Even unexpected income reported on a 1099-MISC is generally taxable and should be included on your return, though how it's reported depends on the type of income.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/1099-nec.html" class="related-chip">1099-NEC →</a>
+        <a href="/1099-k.html" class="related-chip">1099-K →</a>
+        <a href="/1099-int.html" class="related-chip">1099-INT →</a>
+        <a href="/schedule-c.html" class="related-chip">Schedule C →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any tax form instantly</h3>
+      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>taxplain.co</span>
+      <span>Not a substitute for professional tax advice.</span>
+    </footer>
+  </div>
 </body>
 </html>
