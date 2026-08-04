@@ -1,780 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form 1099-NEC Explained in Plain English – TaxPlain</title>
-<meta name="description" content="What is Form 1099-NEC? Plain-English guide to nonemployee compensation, freelance income, self-employment taxes, deadlines, and exactly what to do. No tax jargon.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://taxplain.co/1099-nec">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1099-NEC Instructions: Threshold, Deadlines & Filing Guide – TaxPlain</title>
+  <meta name="description" content="What Form 1099-NEC is, the new $2,000 threshold for 2026, box-by-box instructions, and how it differs from 1099-MISC — explained in plain English.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://taxplain.co/1099-nec.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- FAQ SCHEMA — 5 Q&As, must match visible FAQ card exactly -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the 1099-NEC threshold for 2026?", "acceptedAnswer": { "@type": "Answer", "text": "For payments made in 2025, the threshold is $600. Starting with payments made on or after January 1, 2026, the threshold rises to $2,000 per contractor per year under the One Big Beautiful Bill Act. Beginning in 2027, that amount adjusts annually for inflation." } },
+      { "@type": "Question", "name": "If I don't get a 1099-NEC, do I still owe tax on that income?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The IRS requires you to report all self-employment income regardless of whether you receive a 1099-NEC. The form is a reporting requirement for the payer, not a trigger for your own tax obligation." } },
+      { "@type": "Question", "name": "What's the difference between Form 1099-NEC and Form 1099-MISC?", "acceptedAnswer": { "@type": "Answer", "text": "Form 1099-NEC reports nonemployee compensation, meaning payment for services performed by a contractor or freelancer. Form 1099-MISC reports other types of payments, like rent, prizes, or attorney gross proceeds. If you did work and got paid for it, that's typically 1099-NEC territory." } },
+      { "@type": "Question", "name": "When is Form 1099-NEC due?", "acceptedAnswer": { "@type": "Answer", "text": "Form 1099-NEC must be furnished to the recipient and filed with the IRS by January 31 each year, regardless of whether you file on paper or electronically. There's no extended deadline like some other 1099 forms have." } },
+      { "@type": "Question", "name": "Do I need a 1099-NEC to file my taxes as a contractor?", "acceptedAnswer": { "@type": "Answer", "text": "No. You can and should report self-employment income on Schedule C using your own records, such as invoices and bank deposits, even if a client never sends you a 1099-NEC." } }
+    ]
+  }
+  </script>
 
-<style>
-*, *::before, *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-
-:root {
---bg: #FFFFFF;
---ink: #0D1B2A;
---muted: #6B7A8D;
---accent: #1B4B8A;
---accent-light: #EAF0FA;
---accent-border: #B5CEFA;
---warn: #993C1D;
---warn-light: #FAECE7;
---warn-border: #F5C4B3;
---success-light: #EAF3DE;
---success-border: #C0DD97;
---success-text: #27500A;
---amber: #92400E;
---amber-light: #FEF3C7;
---amber-border: #F59E0B;
---border: #DDE3EC;
---white: #FFFFFF;
-}
-
-body {
-background: var(--bg);
-color: var(--ink);
-font-family: 'DM Sans', sans-serif;
-min-height: 100vh;
-}
-
-.wrap {
-max-width: 720px;
-margin: 0 auto;
-padding: 40px 24px 80px;
-}
-
-nav {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 40px;
-}
-
-.logo-mark {
-width: 32px;
-height: 32px;
-background: var(--accent);
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.logo-mark svg {
-width: 18px;
-height: 18px;
-fill: white;
-}
-
-.logo-text {
-font-family: 'DM Mono', monospace;
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-text-decoration: none;
-}
-
-.logo-text span {
-color: var(--accent);
-}
-
-.breadcrumb {
-font-size: 13px;
-color: var(--muted);
-margin-bottom: 20px;
-font-family: 'DM Mono', monospace;
-}
-
-.breadcrumb a {
-color: var(--accent);
-text-decoration: none;
-}
-
-h1 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(28px, 5vw, 42px);
-line-height: 1.15;
-letter-spacing: -0.5px;
-margin-bottom: 8px;
-}
-
-h2 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(20px, 3vw, 26px);
-line-height: 1.2;
-letter-spacing: -0.3px;
-margin-bottom: 12px;
-color: var(--ink);
-}
-
-h3 {
-font-family: 'DM Sans', sans-serif;
-font-size: 16px;
-font-weight: 500;
-margin-bottom: 8px;
-color: var(--ink);
-}
-
-.category-tag {
-display: inline-block;
-background: var(--accent-light);
-color: var(--accent);
-font-family: 'DM Mono', monospace;
-font-size: 11px;
-letter-spacing: 1px;
-text-transform: uppercase;
-padding: 4px 12px;
-border-radius: 20px;
-margin-bottom: 24px;
-}
-
-.disclaimer {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 14px 18px;
-margin-bottom: 36px;
-font-size: 13px;
-color: var(--amber);
-line-height: 1.5;
-}
-
-.card {
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 14px;
-padding: 28px;
-margin-bottom: 20px;
-}
-
-.section-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-font-weight: 500;
-letter-spacing: 1.8px;
-text-transform: uppercase;
-color: var(--muted);
-margin-bottom: 10px;
-}
-
-p {
-font-size: 16px;
-line-height: 1.75;
-color: var(--ink);
-}
-
-p + p {
-margin-top: 14px;
-}
-
-.two-col {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-}
-
-.range-box {
-padding: 16px;
-border-radius: 10px;
-}
-
-.range-box.warn {
-background: var(--warn-light);
-border: 1px solid var(--warn-border);
-}
-
-.range-box.blue {
-background: var(--accent-light);
-border: 1px solid var(--accent-border);
-}
-
-.range-box-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-letter-spacing: 1px;
-text-transform: uppercase;
-margin-bottom: 8px;
-}
-
-.range-box.warn .range-box-label {
-color: var(--warn);
-}
-
-.range-box.blue .range-box-label {
-color: var(--accent);
-}
-
-.range-box p {
-font-size: 14px;
-line-height: 1.65;
-}
-
-.symptom-list {
-list-style: none;
-padding: 0;
-}
-
-.symptom-list li {
-font-size: 14px;
-color: var(--ink);
-line-height: 1.6;
-padding: 4px 0;
-border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.symptom-list li:last-child {
-border-bottom: none;
-}
-
-.symptom-list li::before {
-content: "→ ";
-color: var(--muted);
-}
-
-.timing-box {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 18px 20px;
-margin-top: 16px;
-}
-
-.timing-box h3 {
-font-size: 14px;
-color: var(--amber);
-font-family: 'DM Mono', monospace;
-letter-spacing: 0.5px;
-margin-bottom: 8px;
-}
-
-.timing-box p {
-font-size: 14px;
-color: #78350F;
-line-height: 1.65;
-}
-
-.next-steps {
-background: var(--success-light);
-border: 1px solid var(--success-border);
-border-radius: 10px;
-padding: 20px;
-font-size: 15px;
-line-height: 1.7;
-color: var(--success-text);
-}
-
-.questions-list {
-list-style: none;
-padding: 0;
-margin-top: 8px;
-}
-
-.questions-list li {
-font-size: 15px;
-color: var(--ink);
-line-height: 1.65;
-padding: 10px 0;
-border-bottom: 1px solid var(--border);
-display: flex;
-gap: 10px;
-}
-
-.questions-list li:last-child {
-border-bottom: none;
-}
-
-.q-num {
-font-family: 'DM Mono', monospace;
-font-size: 12px;
-color: var(--accent);
-font-weight: 500;
-flex-shrink: 0;
-margin-top: 2px;
-}
-
-.faq-item {
-padding: 18px 0;
-border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-border-bottom: none;
-}
-
-.faq-q {
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-margin-bottom: 8px;
-}
-
-.faq-a {
-font-size: 15px;
-color: var(--muted);
-line-height: 1.7;
-}
-
-.tool-cta {
-background: var(--accent);
-color: white;
-border-radius: 12px;
-padding: 28px;
-margin-top: 32px;
-text-align: center;
-}
-
-.tool-cta h3 {
-font-family: 'DM Serif Display', serif;
-font-size: 24px;
-margin-bottom: 8px;
-color: white;
-}
-
-.tool-cta p {
-font-size: 14px;
-opacity: 0.85;
-margin-bottom: 18px;
-color: white;
-}
-
-.tool-cta a {
-display: inline-block;
-background: white;
-color: var(--accent);
-font-weight: 500;
-text-decoration: none;
-padding: 12px 28px;
-border-radius: 8px;
-font-family: 'DM Mono', monospace;
-font-size: 14px;
-}
-
-.related {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-gap: 12px;
-margin-top: 4px;
-}
-
-.related-chip {
-display: block;
-padding: 12px 16px;
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 10px;
-text-decoration: none;
-font-size: 14px;
-color: var(--ink);
-font-family: 'DM Mono', monospace;
-transition: border-color 0.15s;
-}
-
-.related-chip:hover {
-border-color: var(--accent);
-color: var(--accent);
-}
-
-footer {
-margin-top: 60px;
-padding-top: 20px;
-border-top: 1px solid var(--border);
-font-size: 12px;
-color: var(--muted);
-font-family: 'DM Mono', monospace;
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 8px;
-}
-
-@media (max-width: 480px) {
-.two-col {
-grid-template-columns: 1fr;
-}
-}
-</style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
 </head>
-
 <body>
-
-<div class="wrap">
-
-<nav>
-<div class="logo-mark">
-<svg viewBox="0 0 24 24">
-<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
-</svg>
-</div>
-<a href="/" class="logo-text">tax<span>plain</span></a>
-</nav>
-
-<p class="breadcrumb">
-<a href="/">Home</a> &rsaquo;
-<a href="/guides">Tax Guides</a> &rsaquo;
-Form 1099-NEC
-</p>
-
-<h1>
-What is<br>
-<em style="font-style:italic;color:var(--accent)">Form 1099-NEC</em>?
-</h1>
-
-<span class="category-tag">Tax Form</span>
-
-<div class="disclaimer">
-⚠ <strong>Educational only.</strong>
-TaxPlain does not provide tax, legal, or financial advice.
-Always consult a qualified tax professional about your specific situation.
-</div>
-
-<div class="card">
-<div class="section-label">What this form is</div>
-
-<p>
-Form 1099-NEC reports nonemployee compensation — money paid to freelancers, contractors, gig workers, consultants, and other self-employed people. NEC stands for "Nonemployee Compensation."
-</p>
-
-<p>
-Think of it as the freelance version of a W-2. Instead of reporting wages paid to employees, businesses use the 1099-NEC to tell both you and the IRS how much they paid you as an independent contractor during the year.
-</p>
-
-<p>
-If you receive a 1099-NEC, the IRS already knows you earned that income. The form itself does not calculate taxes — it simply reports the amount you were paid so you can include it on your tax return.
-</p>
-</div>
-
-<div class="card">
-<div class="section-label">Who receives this form</div>
-
-<div class="two-col">
-
-<div class="range-box blue">
-<div class="range-box-label">✓ Usually Gets One</div>
-
-<p>
-Freelancers, gig workers, independent contractors, consultants, designers, writers, rideshare drivers, and other self-employed workers paid at least $600 by a business during the year.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">↑ Important</div>
-
-<p>
-Even if you do not receive a 1099-NEC, you still must report all self-employment income. Businesses sometimes fail to send forms, but the income is still taxable.
-</p>
-</div>
-
-</div>
-
-<div class="timing-box" style="margin-top:16px;">
-<h3>📅 Key deadline</h3>
-
-<p>
-Businesses must send Form 1099-NEC to workers and file it with the IRS by January 31 each year. If you receive one, include the income on your Form 1040, usually using Schedule C and Schedule SE.
-</p>
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">What each box means</div>
-
-<h2>Breaking down the 1099-NEC</h2>
-
-<p>
-Most people only need to focus on a few key boxes:
-</p>
-
-<ul class="symptom-list" style="margin-top:12px;">
-
-<li>
-<strong>Box 1 — Nonemployee compensation</strong> — The total amount paid to you for freelance or contractor work during the year.
-</li>
-
-<li>
-<strong>Box 4 — Federal income tax withheld</strong> — Usually blank. If filled in, the payer withheld backup withholding taxes from your payments.
-</li>
-
-<li>
-<strong>Box 5 — State tax withheld</strong> — State income taxes withheld from your payments, if applicable.
-</li>
-
-<li>
-<strong>Payer information</strong> — The business or company that paid you.
-</li>
-
-<li>
-<strong>Recipient information</strong> — Your name, address, and taxpayer identification number.
-</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">How this income is taxed</div>
-
-<p>
-1099-NEC income is generally considered self-employment income. That means you may owe:
-</p>
-
-<ul class="symptom-list" style="margin-top:12px;">
-
-<li>
-<strong>Federal income tax</strong> — Based on your total taxable income and tax bracket.
-</li>
-
-<li>
-<strong>Self-employment tax</strong> — Covers Social Security and Medicare taxes normally split between employers and employees.
-</li>
-
-<li>
-<strong>State income tax</strong> — Depending on where you live.
-</li>
-
-</ul>
-
-<p>
-Unlike W-2 jobs, taxes usually are not automatically withheld from 1099-NEC payments. That's why many freelancers make quarterly estimated tax payments during the year.
-</p>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Common forms filed with it</div>
-
-<p>
-A 1099-NEC usually connects to several other tax forms:
-</p>
-
-<ul class="symptom-list" style="margin-top:12px;">
-
-<li>
-<strong>Form 1040</strong> — Your main personal tax return.
-</li>
-
-<li>
-<strong>Schedule C</strong> — Reports freelance business income and expenses.
-</li>
-
-<li>
-<strong>Schedule SE</strong> — Calculates self-employment tax.
-</li>
-
-<li>
-<strong>Form 1040-ES</strong> — Used for quarterly estimated tax payments.
-</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Common mistakes to avoid</div>
-
-<div class="two-col">
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Ignoring Expenses</div>
-
-<p>
-Many freelancers overpay taxes because they forget to deduct legitimate business expenses like software, mileage, office supplies, internet costs, or professional services.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Missing Quarterly Taxes</div>
-
-<p>
-If you owe enough tax and do not make estimated quarterly payments, the IRS may charge underpayment penalties even if you pay everything at filing time.
-</p>
-</div>
-
-</div>
-
-<div class="two-col" style="margin-top:16px;">
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Wrong Worker Classification</div>
-
-<p>
-Some workers are incorrectly treated as contractors instead of employees. Contractors receive 1099-NECs while employees receive W-2s.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Forgetting Small Jobs</div>
-
-<p>
-All freelance income is taxable — even if you earned under $600 and never received a 1099-NEC from the client.
-</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">What to do right now</div>
-
-<div class="next-steps">
-If you received a 1099-NEC, gather records of your business expenses before filing your taxes. Expenses directly reduce your taxable profit. If freelancing is your primary income source, consider setting aside 25–30% of payments for taxes and making quarterly estimated payments to avoid surprises at tax time.
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Questions to ask your tax professional</div>
-
-<ul class="questions-list">
-
-<li>
-<span class="q-num">01</span>
-Am I deducting every legitimate business expense I'm allowed to claim?
-</li>
-
-<li>
-<span class="q-num">02</span>
-Should I make quarterly estimated tax payments going forward?
-</li>
-
-<li>
-<span class="q-num">03</span>
-Do I qualify for the home office deduction?
-</li>
-
-<li>
-<span class="q-num">04</span>
-Would forming an LLC or S-corp reduce my taxes?
-</li>
-
-<li>
-<span class="q-num">05</span>
-Can I deduct health insurance premiums as a self-employed person?
-</li>
-
-<li>
-<span class="q-num">06</span>
-Should I open a SEP IRA or Solo 401(k) to reduce taxable income?
-</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Frequently asked questions</div>
-
-<div class="faq-item">
-<div class="faq-q">
-Do I have to pay taxes if I made less than $600?
-</div>
-
-<div class="faq-a">
-Yes. The $600 threshold only determines whether the payer must send a 1099-NEC. All self-employment income is still taxable even below that amount.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">
-What if my 1099-NEC is wrong?
-</div>
-
-<div class="faq-a">
-Contact the payer immediately and request a corrected form. If they refuse to fix it, you may still need to report the correct income amount and keep documentation supporting your records.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">
-Can I deduct expenses even without receipts?
-</div>
-
-<div class="faq-a">
-You should always keep receipts and records whenever possible. Without documentation, deductions may be denied during an audit. Bank statements and mileage logs can sometimes help support expenses.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">
-What's the difference between a 1099-NEC and 1099-MISC?
-</div>
-
-<div class="faq-a">
-The 1099-NEC specifically reports nonemployee compensation — freelance or contractor payments. Form 1099-MISC now mainly reports other miscellaneous payments like rent, royalties, prizes, or attorney payments.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">
-Do I need an LLC to receive a 1099-NEC?
-</div>
-
-<div class="faq-a">
-No. Sole proprietors commonly receive 1099-NECs using their Social Security number or EIN. An LLC is optional and mainly affects legal structure and sometimes tax treatment.
-</div>
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Related tax forms</div>
-
-<div class="related">
-
-<a href="/1040" class="related-chip">Form 1040 →</a>
-
-<a href="/schedule-c" class="related-chip">Schedule C →</a>
-
-<a href="/1099-misc" class="related-chip">Form 1099-MISC →</a>
-
-<a href="/1099-k" class="related-chip">Form 1099-K →</a>
-
-<a href="/1040-es" class="related-chip">Form 1040-ES →</a>
-
-<a href="/w9" class="related-chip">Form W-9 →</a>
-
-</div>
-
-</div>
-
-<div class="tool-cta">
-
-<h3>Decode any tax form instantly</h3>
-
-<p>
-Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
-</p>
-
-<a href="/">Open the Decoder →</a>
-
-</div>
-
-<footer>
-
-<span>taxplain.co</span>
-
-<span>Understand your taxes. No accountant required.</span>
-
-</footer>
-
-</div>
-
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
+      <a href="/" class="logo-text">tax<span>plain</span></a>
+    </nav>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; 1099-NEC</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">Form 1099-NEC</em>?</h1>
+    <span class="category-tag">Information Returns</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated August 2026</p>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+
+    <!-- CARD 1: What this form/term is -->
+    <div class="card">
+      <div class="section-label">What this is</div>
+      <p>Form 1099-NEC, Nonemployee Compensation, is the form businesses use to report payments made to independent contractors, freelancers, and other self-employed workers who aren't on their payroll. "NEC" stands for Nonemployee Compensation, which is exactly what Box 1 of the form reports: money paid for services, not wages.</p>
+      <p>If you freelance, consult, drive for a rideshare app, or do any kind of contract work, a business that pays you enough in a calendar year is required to send you a copy of this form and file a matching copy with the IRS. That's how the IRS cross-checks that self-employment income actually gets reported on your tax return.</p>
+      <p>The rules around this form changed significantly for the 2026 tax year, so if you've been treating 1099-NEC the same way for years, it's worth a closer look.</p>
+    </div>
+
+    <!-- CARD 2: Who it affects -->
+    <div class="card">
+      <div class="section-label">Who it affects</div>
+      <div class="two-col">
+        <div class="range-box blue">
+          <div class="range-box-label">✓ Applies to</div>
+          <p>Freelancers, independent contractors, consultants, and small businesses that pay them $600 or more (2025) or $2,000 or more (2026 and later) for services during the year.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Also applies to</div>
+          <p>Attorneys paid for legal services, and any nonemployee paid in cash, check, or direct deposit for work performed for a trade or business.</p>
+        </div>
+      </div>
+      <div class="timing-box">
+        <h3>📅 THE THRESHOLD JUST CHANGED</h3>
+        <p>For payments made in 2025, the reporting threshold is $600. For payments made on or after January 1, 2026, it jumps to $2,000 per contractor per year under the One Big Beautiful Bill Act, with inflation adjustments starting in 2027. The form itself is still due January 31 of the following year — that deadline hasn't moved.</p>
+      </div>
+    </div>
+
+    <!-- CARD 3: Breakdown / what each section covers -->
+    <div class="card">
+      <div class="section-label">Box-by-box breakdown</div>
+      <h2>What each box on Form 1099-NEC means</h2>
+      <p style="margin-top: 12px;">The form itself is short, but each box carries specific meaning. Here's what a payer reports, and what you should check for accuracy when you receive your copy.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Box 1: Nonemployee compensation</strong> — the total amount paid to you for services during the year. This is the number that flows to <a href="/schedule-c.html" class="inline-link">Schedule C</a> on your return.</li>
+        <li><strong>Box 2: Direct sales indicator</strong> — checked if the payer sold you $5,000 or more of consumer products for resale. This $5,000 sales rule is separate from the main reporting threshold and hasn't changed.</li>
+        <li><strong>Box 4: Federal income tax withheld</strong> — usually blank unless backup withholding applied, which happens if you failed to provide a correct taxpayer ID number.</li>
+        <li><strong>Boxes 5–7: State information</strong> — state tax withheld, payer's state ID number, and state income, if the payer also reports to a state tax agency.</li>
+        <li><strong>Payer and recipient TIN</strong> — pulled from the Form W-9 the business should have collected from you before paying you. Errors here are one of the most common reasons a 1099-NEC needs correcting.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 4: Related forms/schedules -->
+    <div class="card">
+      <div class="section-label">Related forms often involved</div>
+      <p>Because 1099-NEC only reports income, it rarely stands alone. These forms typically show up in the same filing:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Schedule C</strong> — where you report your total self-employment income and expenses, including amounts from every 1099-NEC you received.</li>
+        <li><strong>Schedule SE</strong> — calculates self-employment tax owed on your net Schedule C profit.</li>
+        <li><strong>1099-MISC</strong> — used for other payment types like rent or attorney gross proceeds, not for compensation for services. See our <a href="/1099-misc.html" class="inline-link">1099-MISC guide</a> for the full distinction.</li>
+        <li><strong>Form W-9</strong> — the form you fill out for a client before they pay you, so they have your correct name and taxpayer ID on file.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 5: Common mistakes -->
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ ASSUMING NO 1099 MEANS NO TAX</div>
+          <p>Under the new $2,000 threshold, a client that paid you $1,800 in 2026 has no obligation to send you a 1099-NEC — but you still owe tax on that $1,800. The reporting threshold isn't a tax-free threshold.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ CONFUSING NEC WITH MISC</div>
+          <p>If you performed a service and got paid for it, that's 1099-NEC. If you received rent, a prize, or gross legal proceeds, that's 1099-MISC. Mixing them up on either end can trigger IRS mismatch notices.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 6: What to do right now -->
+    <div class="card">
+      <div class="section-label">What to do right now</div>
+      <div class="next-steps">
+        Keep your own records of every payment you receive for contract work, regardless of whether the payer sends you a 1099-NEC — invoices and bank deposits are enough to report accurately on <a href="/schedule-c.html" class="inline-link">Schedule C</a>. If you expect to owe more than a small amount in tax, check whether you should be making <a href="/estimated-taxes.html" class="inline-link">quarterly estimated tax payments</a> rather than waiting until April.
+      </div>
+    </div>
+
+    <!-- CARD 7: Questions to ask your tax professional -->
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Based on my 2026 income, will any of my clients fall under the new $2,000 threshold and stop sending me a 1099-NEC?</li>
+        <li><span class="q-num">02</span>Am I tracking enough documentation to report income accurately even without a 1099-NEC?</li>
+        <li><span class="q-num">03</span>Should I be making quarterly estimated tax payments based on my contract income?</li>
+        <li><span class="q-num">04</span>Do any of my state's 1099 reporting thresholds differ from the new federal $2,000 amount?</li>
+        <li><span class="q-num">05</span>What self-employment deductions am I missing that would offset my 1099-NEC income?</li>
+      </ul>
+    </div>
+
+    <!-- CARD 8: FAQ -->
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">What is the 1099-NEC threshold for 2026?</div>
+        <div class="faq-a">For payments made in 2025, the threshold is $600. Starting with payments made on or after January 1, 2026, the threshold rises to $2,000 per contractor per year under the One Big Beautiful Bill Act. Beginning in 2027, that amount adjusts annually for inflation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">If I don't get a 1099-NEC, do I still owe tax on that income?</div>
+        <div class="faq-a">Yes. The IRS requires you to report all self-employment income regardless of whether you receive a 1099-NEC. The form is a reporting requirement for the payer, not a trigger for your own tax obligation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between Form 1099-NEC and Form 1099-MISC?</div>
+        <div class="faq-a">Form 1099-NEC reports nonemployee compensation, meaning payment for services performed by a contractor or freelancer. Form 1099-MISC reports other types of payments, like rent, prizes, or attorney gross proceeds. If you did work and got paid for it, that's typically 1099-NEC territory.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">When is Form 1099-NEC due?</div>
+        <div class="faq-a">Form 1099-NEC must be furnished to the recipient and filed with the IRS by January 31 each year, regardless of whether you file on paper or electronically. There's no extended deadline like some other 1099 forms have.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need a 1099-NEC to file my taxes as a contractor?</div>
+        <div class="faq-a">No. You can and should report self-employment income on Schedule C using your own records, such as invoices and bank deposits, even if a client never sends you a 1099-NEC.</div>
+      </div>
+    </div>
+
+    <!-- CARD 9: Related tax forms -->
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/1099-misc.html" class="related-chip">1099-MISC →</a>
+        <a href="/1099-k.html" class="related-chip">1099-K →</a>
+        <a href="/schedule-c.html" class="related-chip">Schedule C →</a>
+        <a href="/estimated-taxes.html" class="related-chip">Estimated Taxes →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any tax form instantly</h3>
+      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>taxplain.co</span>
+      <span>Not a substitute for professional tax advice.</span>
+    </footer>
+  </div>
 </body>
 </html>
