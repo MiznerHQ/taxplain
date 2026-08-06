@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form 1099-B Explained: What Your Broker Reports vs. Form 8949 – TaxPlain</title>
+  <meta name="description" content="Form 1099-B is your broker's record of what you sold. See what's on it, when cost basis goes missing, and how it feeds into Form 8949.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.taxplain.co/1099-b.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- FAQ SCHEMA — 5 Q&As, must match visible FAQ card exactly -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is Form 1099-B used for?", "acceptedAnswer": { "@type": "Answer", "text": "Form 1099-B is issued by your broker to report the proceeds from sales of stocks, bonds, mutual funds, and other securities during the year. It often also reports your cost basis, which you need to calculate gain or loss." } },
+      { "@type": "Question", "name": "What is the difference between Form 1099-B and Form 8949?", "acceptedAnswer": { "@type": "Answer", "text": "Form 1099-B is the document your broker sends you summarizing each sale. Form 8949 is the form you file with the IRS listing those same sales in detail, especially when an adjustment is needed or the basis wasn't reported. Totals from Form 8949 then flow to Schedule D." } },
+      { "@type": "Question", "name": "What does it mean if my 1099-B cost basis is missing or listed as zero?", "acceptedAnswer": { "@type": "Answer", "text": "A missing or zero cost basis usually means your broker doesn't have a reliable record of what you originally paid, often because the asset was transferred in from another broker or account. You'll need to track down your own purchase records and report the correct basis on Form 8949." } },
+      { "@type": "Question", "name": "Do I still need Form 1099-B if I only had a small amount of investment activity?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Brokers are required to send Form 1099-B for any reportable sale regardless of the dollar amount, and the IRS receives a matching copy, so even small transactions should be reported on your return." } },
+      { "@type": "Question", "name": "Where do I get my Form 1099-B?", "acceptedAnswer": { "@type": "Answer", "text": "Your brokerage or investment platform issues Form 1099-B directly, usually available for download in your account by mid-February. It is not published as a blank form on IRS.gov since it's generated specifically for you." } }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
+      <a href="/" class="logo-text">tax<span>plain</span></a>
+    </nav>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Form 1099-B</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">Form 1099-B</em>?</h1>
+    <span class="category-tag">Capital Gains</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated August 2026</p>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+
+    <!-- CARD 1: What this form is -->
+    <div class="card">
+      <div class="section-label">What this is</div>
+      <p>Form 1099-B, "Proceeds from Broker and Barter Exchange Transactions," is the statement your brokerage sends you and the IRS summarizing what you sold during the year. Every sale of a stock, bond, mutual fund, or other security you made through that broker shows up here, along with the date, the proceeds, and — when available — your cost basis.</p>
+      <p>It's important to understand that Form 1099-B is a report, not a form you fill out yourself. Your broker generates it. What you're responsible for is using the numbers on it to correctly complete <a href="/8949.html" class="inline-link">Form 8949</a>, which then flows to <a href="/schedule-d.html" class="inline-link">Schedule D</a> and ultimately your <a href="/1040.html" class="inline-link">Form 1040</a>.</p>
+      <p>Because the IRS receives a copy of every 1099-B directly from your broker, any mismatch between what's on the form and what you report on your return is one of the most common triggers for an automated notice.</p>
+      <p>If your broker also paid you dividends or interest during the year, those show up on separate forms — <a href="/1099-div.html" class="inline-link">1099-DIV</a> and <a href="/1099-int.html" class="inline-link">1099-INT</a> — not on the 1099-B, since those are income, not capital gains.</p>
+    </div>
+
+    <!-- CARD 2: Who it affects -->
+    <div class="card">
+      <div class="section-label">Who it affects</div>
+      <div class="two-col">
+        <div class="range-box blue">
+          <div class="range-box-label">✓ Applies to</div>
+          <p>Anyone who sold stocks, bonds, mutual funds, or other securities through a brokerage account during the year, regardless of the dollar amount involved.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Also applies to</div>
+          <p>People who transferred assets between brokers, since cost basis often doesn't transfer cleanly and shows up missing or incorrect on the new 1099-B.</p>
+        </div>
+      </div>
+      <div class="timing-box">
+        <h3>📅 WHEN IT ARRIVES</h3>
+        <p>Brokers are generally required to send Form 1099-B by mid-February, later than most other 1099s, because they need extra time to finalize cost basis reporting. If you file before it arrives, you risk missing corrected figures that come in a follow-up "corrected 1099-B."</p>
+      </div>
+    </div>
+
+    <!-- CARD 3: Breakdown -->
+    <div class="card">
+      <div class="section-label">Form breakdown</div>
+      <h2>Form 1099-B vs. Form 8949</h2>
+      <p style="margin-top: 12px;">These two forms get confused constantly because they cover the same sales — but they serve different purposes. Form 1099-B is what your broker tells the IRS. Form 8949 is what you tell the IRS, using the 1099-B as your source data.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Form 1099-B</strong> — generated by your broker, sent to you and the IRS, one per brokerage account.</li>
+        <li><strong>Form 8949</strong> — filled out by you (or your software) using the 1099-B numbers, with room to correct or adjust them.</li>
+        <li><strong>Box 1e (cost basis)</strong> — the figure your broker has on file for what you paid, if it's a covered security.</li>
+        <li><strong>Box 12</strong> — indicates whether basis was reported to the IRS, which determines which Form 8949 box (A, B, or C) your sale belongs in.</li>
+        <li><strong>Corrected 1099-B</strong> — a revised version your broker may issue if figures change after the original was sent, common with mutual funds and complex securities.</li>
+      </ul>
+      <p style="margin-top: 12px;">One more wrinkle worth knowing: crypto exchanges are increasingly issuing Form 1099-DA instead of, or alongside, a 1099-B, since digital assets are reported under a newer set of broker rules.</p>
+    </div>
+
+    <!-- CARD 4: Cost basis problems -->
+    <div class="card">
+      <div class="section-label">When cost basis goes wrong</div>
+      <h2>Missing, blank, or incorrect basis</h2>
+      <p style="margin-top: 12px;">This is the single most common source of 1099-B confusion. If your broker doesn't have a reliable record of what you paid for an asset, the cost basis box may show as blank, zero, or "not reported." That doesn't mean you owe tax on the full sale price — it means the IRS is waiting for you to supply the correct number.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Assets transferred from another broker</strong> — basis often doesn't transfer with the shares, especially for older accounts.</li>
+        <li><strong>Inherited or gifted securities</strong> — basis usually needs to be calculated separately using date-of-death value or the original owner's basis, not whatever your broker has on file.</li>
+        <li><strong>Employer stock plans (RSUs, ESPPs)</strong> — brokers frequently report only the amount you paid out of pocket, missing the portion already taxed as compensation, which inflates your reported gain.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 5: Common mistakes -->
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ TRUSTING A ZERO BASIS</div>
+          <p>Reporting a $0 cost basis when the box is simply blank overstates your gain and inflates your tax bill — track down the real purchase records instead.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ FILING BEFORE A CORRECTION ARRIVES</div>
+          <p>Brokers sometimes issue corrected 1099-Bs into March. Filing too early risks needing an amended return if the numbers change.</p>
+        </div>
+      </div>
+      <p style="margin-top: 16px;">A less common but costly mistake: reporting a wash sale gain or loss straight off the 1099-B without checking whether your broker already applied the adjustment. Some brokers flag wash sales automatically in Box 1g, others don't — and double-counting or missing that adjustment throws off your final numbers either way.</p>
+    </div>
+
+    <!-- CARD 6: What to do right now -->
+    <div class="card">
+      <div class="section-label">What to do right now</div>
+      <div class="next-steps">
+        Log into each brokerage account you used this year and download every 1099-B, including any corrected versions. Flag any sale where cost basis is missing or looks wrong so you can track down the real purchase records before building <a href="/8949.html" class="inline-link">Form 8949</a>.
+      </div>
+    </div>
+
+    <!-- CARD 7: Questions to ask your tax professional -->
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Is there a corrected 1099-B I should be waiting for?</li>
+        <li><span class="q-num">02</span>How do I calculate cost basis for inherited or gifted shares?</li>
+        <li><span class="q-num">03</span>Does my RSU or ESPP 1099-B correctly reflect compensation already taxed?</li>
+        <li><span class="q-num">04</span>Which Form 8949 box do my transactions belong in?</li>
+        <li><span class="q-num">05</span>What records should I keep in case my broker's basis is ever questioned?</li>
+      </ul>
+    </div>
+
+    <!-- CARD 8: FAQ -->
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">What is Form 1099-B used for?</div>
+        <div class="faq-a">Form 1099-B is issued by your broker to report the proceeds from sales of stocks, bonds, mutual funds, and other securities during the year. It often also reports your cost basis, which you need to calculate gain or loss.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the difference between Form 1099-B and Form 8949?</div>
+        <div class="faq-a">Form 1099-B is the document your broker sends you summarizing each sale. Form 8949 is the form you file with the IRS listing those same sales in detail, especially when an adjustment is needed or the basis wasn't reported. Totals from Form 8949 then flow to Schedule D.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does it mean if my 1099-B cost basis is missing or listed as zero?</div>
+        <div class="faq-a">A missing or zero cost basis usually means your broker doesn't have a reliable record of what you originally paid, often because the asset was transferred in from another broker or account. You'll need to track down your own purchase records and report the correct basis on Form 8949.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I still need Form 1099-B if I only had a small amount of investment activity?</div>
+        <div class="faq-a">Yes. Brokers are required to send Form 1099-B for any reportable sale regardless of the dollar amount, and the IRS receives a matching copy, so even small transactions should be reported on your return.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Where do I get my Form 1099-B?</div>
+        <div class="faq-a">Your brokerage or investment platform issues Form 1099-B directly, usually available for download in your account by mid-February. It is not published as a blank form on IRS.gov since it's generated specifically for you.</div>
+      </div>
+    </div>
+
+    <!-- CARD 9: Related tax forms -->
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/8949.html" class="related-chip">Form 8949 →</a>
+        <a href="/schedule-d.html" class="related-chip">Schedule D →</a>
+        <a href="/capital-gains.html" class="related-chip">Capital Gains →</a>
+        <a href="/1040.html" class="related-chip">Form 1040 →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any tax form instantly</h3>
+      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>taxplain.co</span>
+      <span>Not a substitute for professional tax advice.</span>
+    </footer>
+  </div>
+</body>
+</html>
