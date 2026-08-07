@@ -3,12 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MAGI (Modified Adjusted Gross Income) Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is MAGI? Plain-English guide to Modified Adjusted Gross Income — how it differs from AGI, what it's used for, 2024 income limits, and exactly how to calculate yours. No tax jargon.">
+  <title>MAGI vs AGI: What's the Difference? – TaxPlain</title>
+  <meta name="description" content="MAGI vs AGI explained in plain English — what gets added back, why it controls Roth IRA and IRMAA eligibility, and how to calculate it.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/magi">
+  <link rel="canonical" href="https://www.taxplain.co/magi.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What's the difference between MAGI and AGI?", "acceptedAnswer": { "@type": "Answer", "text": "AGI is your gross income minus above-the-line deductions, shown directly on your Form 1040. MAGI starts with that AGI figure and adds back certain deductions and exclusions, like student loan interest, IRA contributions, or foreign earned income. For many taxpayers with simple returns, MAGI and AGI end up being the same number — but the add-backs matter once you're near an eligibility threshold." } },
+      { "@type": "Question", "name": "Why does MAGI matter more than AGI for some things?", "acceptedAnswer": { "@type": "Answer", "text": "The IRS uses MAGI, not AGI, to test eligibility for specific benefits: Roth IRA contribution limits, traditional IRA deduction limits, the Premium Tax Credit, and Medicare's IRMAA surcharge. AGI alone isn't the number that determines whether you qualify for these — MAGI is." } },
+      { "@type": "Question", "name": "How do I calculate my MAGI?", "acceptedAnswer": { "@type": "Answer", "text": "Start with your AGI from Form 1040, line 11. Then add back specific items depending on which MAGI test applies — common add-backs include student loan interest deduction, traditional IRA deduction, foreign earned income exclusion, and tax-exempt interest. The exact add-back list varies slightly by which credit or limit you're calculating MAGI for." } },
+      { "@type": "Question", "name": "Is MAGI the same for Roth IRA limits and IRMAA?", "acceptedAnswer": { "@type": "Answer", "text": "No. Each program defines MAGI with a slightly different set of add-backs. Roth IRA MAGI and Premium Tax Credit MAGI are calculated differently from the MAGI used for Medicare IRMAA brackets, even though they all start from the same AGI base. Always check which specific MAGI definition applies to the benefit you're checking." } },
+      { "@type": "Question", "name": "Can lowering my MAGI help me qualify for a Roth IRA?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, in some cases. Contributing to a traditional 401(k) or a pre-tax HSA lowers your AGI, which flows through to a lower MAGI. If you're close to the Roth IRA income phase-out range, increasing pre-tax retirement or HSA contributions can bring your MAGI back under the limit." } }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -21,22 +36,26 @@
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
     .logo-mark svg { width: 18px; height: 18px; fill: white; }
     .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
     .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
     h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
     h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
     .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
     p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .range-box { padding: 16px; border-radius: 10px; }
     .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
@@ -46,7 +65,7 @@
     .range-box.blue .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
     .symptom-list { list-style: none; padding: 0; }
-    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
     .symptom-list li:last-child { border-bottom: none; }
     .symptom-list li::before { content: "→ "; color: var(--muted); }
     .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
@@ -78,155 +97,154 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; MAGI</p>
-    <h1>What is<br><em style="font-style:italic;color:var(--accent)">MAGI</em>?</h1>
-    <span class="category-tag">Tax Term</span>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; MAGI (Modified Adjusted Gross Income)</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">MAGI (Modified Adjusted Gross Income)</em>?</h1>
+    <span class="category-tag">Income &amp; Eligibility</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated August 2026</p>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+
     <div class="card">
-      <div class="section-label">What this term is</div>
-      <p>MAGI stands for Modified Adjusted Gross Income — a tweaked version of your AGI (Adjusted Gross Income) that the IRS uses to decide whether you qualify for certain tax benefits. It's not a line on your tax return. It's a number you calculate behind the scenes when checking eligibility for Roth IRAs, ACA health insurance subsidies, student loan interest deductions, and more.</p>
-      <p>Think of AGI as your baseline income score. MAGI takes that score and adds back specific deductions you already subtracted — which usually makes MAGI equal to or higher than AGI. That higher number is what the IRS uses to phase out benefits as your income rises.</p>
+      <div class="section-label">What this is</div>
+      <p>MAGI (Modified Adjusted Gross Income) is your <a href="/agi.html" class="inline-link">AGI</a> with certain deductions and exclusions added back. It isn't a number you see printed on your Form 1040 — you have to calculate it yourself, starting from your AGI on line 11 and adding specific items back on top.</p>
+      <p>The reason MAGI exists is eligibility testing. The IRS uses it as the gatekeeper number for things like Roth IRA contribution limits, traditional IRA deduction phase-outs, the Premium Tax Credit for marketplace health insurance, and Medicare's IRMAA surcharge for high earners. AGI tells you your taxable income; MAGI tells you whether you qualify for something.</p>
+      <p>For a lot of taxpayers with straightforward returns, MAGI and AGI come out to the exact same number — if you don't have any of the specific add-back items, there's nothing to modify. The gap only opens up once deductions like student loan interest or IRA contributions enter the picture.</p>
     </div>
+
     <div class="card">
-      <div class="section-label">AGI vs. MAGI</div>
+      <div class="section-label">Who it affects</div>
       <div class="two-col">
         <div class="range-box blue">
-          <div class="range-box-label">✓ AGI (Adjusted Gross Income)</div>
-          <p>Your total income minus "above-the-line" adjustments like IRA contributions, student loan interest, and half of self-employment tax. AGI appears on Line 11 of Form 1040. It determines your tax bracket and many standard deductions.</p>
+          <div class="range-box-label">✓ Applies to</div>
+          <p>Anyone contributing to a <a href="/roth-ira.html" class="inline-link">Roth IRA</a>, claiming the Premium Tax Credit, or deducting traditional IRA contributions.</p>
         </div>
-        <div class="range-box blue">
-          <div class="range-box-label">↑ MAGI (Modified AGI)</div>
-          <p>Your AGI plus certain deductions added back in. MAGI is almost always the same as or higher than AGI. Different programs add back different items — so your "MAGI for Roth IRA" and your "MAGI for ACA subsidies" may not be the same number.</p>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Also applies to</div>
+          <p>Medicare beneficiaries checking IRMAA brackets, and anyone claiming education credits or the student loan interest deduction.</p>
         </div>
       </div>
       <div class="timing-box">
-        <h3>💡 The key insight</h3>
-        <p>There is no single MAGI formula. The IRS defines MAGI differently depending on what you're applying for. Before contributing to a Roth IRA or claiming a subsidy, always calculate MAGI using the rules for that specific program — not a generic online calculator.</p>
+        <h3>📅 CHECK MAGI BEFORE YOU CONTRIBUTE</h3>
+        <p>Unlike AGI, which you calculate once your return is done, MAGI is worth estimating before year-end — especially for Roth IRA contributions. Contributing when your MAGI ends up over the limit creates an excess contribution you'll need to correct.</p>
       </div>
     </div>
+
     <div class="card">
-      <div class="section-label">What MAGI is used for</div>
-      <h2>Programs that depend on your MAGI</h2>
-      <p>MAGI is the gatekeeper for income-limited tax benefits. Here are the most common ones:</p>
+      <div class="section-label">The core confusion</div>
+      <h2>MAGI vs. AGI — what actually changes</h2>
+      <p style="margin-top: 12px;">These two numbers get used interchangeably in casual conversation, but they're not the same calculation, and mixing them up is the single most common mistake people make when checking eligibility for something. Here's the plain breakdown:</p>
       <ul class="symptom-list" style="margin-top: 12px;">
-        <li><strong>Roth IRA contributions</strong> — Direct Roth contributions are limited or blocked above certain MAGI thresholds. Excess contributions trigger a 6% penalty every year until removed.</li>
-        <li><strong>Traditional IRA deductibility</strong> — If you or your spouse has a workplace retirement plan, MAGI determines whether your traditional IRA contribution is fully deductible, partially deductible, or not deductible at all.</li>
-        <li><strong>ACA premium tax credits</strong> — Marketplace health insurance subsidies are based on household MAGI. Earn too much and subsidies shrink or disappear — sometimes creating a surprise tax bill at filing time.</li>
-        <li><strong>Student loan interest deduction</strong> — You can deduct up to $2,500 in student loan interest, but the deduction phases out above MAGI limits ($75,000–$90,000 single / $155,000–$185,000 married filing jointly for 2024).</li>
-        <li><strong>Child Tax Credit phase-out</strong> — While the base credit uses AGI, some related calculations and state programs reference MAGI-style income measures.</li>
-        <li><strong>Medicare premiums (IRMAA)</strong> — Higher-income retirees pay surcharges on Medicare Part B and Part D premiums based on MAGI from two years prior.</li>
-        <li><strong>Net Investment Income Tax (NIIT)</strong> — The 3.8% surtax on investment income applies when MAGI exceeds $200,000 (single) or $250,000 (married filing jointly).</li>
+        <li><strong>AGI</strong> — your gross income minus above-the-line deductions (retirement contributions, HSA contributions, student loan interest, etc.). It's printed directly on <a href="/1040.html" class="inline-link">Form 1040</a>, line 11.</li>
+        <li><strong>MAGI</strong> — AGI with certain of those same deductions added back. You calculate it yourself; it never appears on the form.</li>
+        <li><strong>Common add-backs</strong> — student loan interest deduction, traditional IRA deduction, foreign earned income exclusion, and tax-exempt interest income.</li>
+        <li><strong>Not one formula</strong> — the IRS defines MAGI slightly differently depending on which benefit you're testing. Roth IRA MAGI isn't calculated identically to Premium Tax Credit MAGI or IRMAA MAGI.</li>
+        <li><strong>Usually close, not always equal</strong> — if you don't claim any of the common add-back deductions, your MAGI and AGI will match exactly.</li>
+        <li><strong>Higher, never lower</strong> — because MAGI adds items back to AGI, it's always equal to or greater than your AGI, never less.</li>
       </ul>
     </div>
+
     <div class="card">
-      <div class="section-label">2024 income limits</div>
-      <h2>Key MAGI thresholds to know</h2>
-      <p>These limits change annually. Here are the 2024 numbers for the most searched programs:</p>
+      <div class="section-label">How to calculate it</div>
+      <h2>Calculating your MAGI from your W-2 and 1040</h2>
+      <p style="margin-top: 12px;">Start with your AGI, which you'll find on <a href="/1040.html" class="inline-link">Form 1040</a>, line 11. That figure already accounts for your wages from your <a href="/w2.html" class="inline-link">W-2</a> plus any other income, minus above-the-line deductions.</p>
+      <p>From there, add back whichever of the following apply to your return:</p>
       <ul class="symptom-list" style="margin-top: 12px;">
-        <li><strong>Roth IRA (single)</strong> — Full contribution if MAGI under $146,000. Partial contribution $146,000–$161,000. No direct Roth above $161,000 (backdoor Roth may still be an option).</li>
-        <li><strong>Roth IRA (married filing jointly)</strong> — Full contribution if MAGI under $230,000. Partial $230,000–$240,000. No direct Roth above $240,000.</li>
-        <li><strong>Traditional IRA deductibility (single, covered by workplace plan)</strong> — Full deduction if MAGI under $77,000. Partial $77,000–$87,000. No deduction above $87,000.</li>
-        <li><strong>Traditional IRA deductibility (MFJ, contributor covered)</strong> — Full deduction if MAGI under $123,000. Partial $123,000–$143,000. No deduction above $143,000.</li>
-        <li><strong>ACA subsidies</strong> — Based on household MAGI as a percentage of the federal poverty level. For 2024 coverage, subsidies generally apply up to 400% of FPL (~$58,320 for an individual), with enhanced credits extending further under current law.</li>
-        <li><strong>Student loan interest</strong> — Deduction phases out: single $75,000–$90,000 MAGI; MFJ $155,000–$185,000 MAGI.</li>
+        <li><strong>Student loan interest deduction</strong> — add back the amount you deducted.</li>
+        <li><strong>Traditional IRA deduction</strong> — add back any deductible IRA contribution.</li>
+        <li><strong>Foreign earned income exclusion</strong> — add back excluded foreign wages, if applicable.</li>
+        <li><strong>Tax-exempt interest</strong> — add back interest from municipal bonds, even though it's not taxed.</li>
+        <li><strong>Excluded foreign housing costs</strong> — relevant only for taxpayers living abroad.</li>
+      </ul>
+      <p style="margin-top: 12px;">For most people without these specific items, the math is simple: MAGI equals AGI. It's worth running the calculation anyway before assuming you're under a threshold, since even a small add-back can push you over a limit you were close to.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Where MAGI controls eligibility</div>
+      <p>MAGI shows up as the deciding number across several unrelated parts of the tax code, which is part of why it causes so much confusion.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Roth IRA contribution limits</strong> — your MAGI determines whether you can contribute the full amount, a reduced amount, or nothing at all.</li>
+        <li><strong>Traditional IRA deduction phase-out</strong> — if you or a spouse is covered by a workplace retirement plan, MAGI determines how much of your IRA contribution is deductible.</li>
+        <li><strong>Medicare IRMAA brackets</strong> — a higher MAGI from two years prior can trigger an income-related surcharge on Medicare Part B and Part D premiums.</li>
+        <li><strong>Premium Tax Credit</strong> — MAGI determines eligibility for subsidies on marketplace health insurance plans.</li>
       </ul>
     </div>
-    <div class="card">
-      <div class="section-label">How to calculate MAGI</div>
-      <h2>Step-by-step for Roth IRA MAGI</h2>
-      <p>This is the most common MAGI calculation. Start with your AGI from Line 11 of Form 1040, then add back:</p>
-      <ul class="symptom-list" style="margin-top: 12px;">
-        <li><strong>Traditional IRA deduction</strong> — If you deducted a traditional IRA contribution, add it back</li>
-        <li><strong>Student loan interest deduction</strong> — Add back whatever you deducted on Schedule 1</li>
-        <li><strong>Foreign earned income exclusion</strong> — Add back excluded foreign wages (Form 2555)</li>
-        <li><strong>Foreign housing exclusion or deduction</strong> — Add back excluded housing amounts</li>
-        <li><strong>Excluded adoption benefits</strong> — Add back employer-provided adoption assistance you excluded from income</li>
-        <li><strong>Excluded income from U.S. territories</strong> — Add back Puerto Rico or American Samoa source income you excluded</li>
-      </ul>
-      <p style="margin-top: 14px;">For ACA subsidy MAGI, the formula is different: start with AGI, then add tax-exempt interest, non-taxable Social Security benefits, and excluded foreign income. Tax software and the Healthcare.gov calculator handle this, but verify the inputs match your actual return.</p>
-    </div>
+
     <div class="card">
       <div class="section-label">Common mistakes to avoid</div>
       <div class="two-col">
         <div class="range-box warn">
-          <div class="range-box-label">⚠️ Assuming AGI = MAGI</div>
-          <p>If you took a student loan interest deduction or traditional IRA deduction, your MAGI is higher than your AGI. Using AGI alone can make you think you're eligible when you're not — leading to excess Roth contributions and a 6% annual penalty.</p>
+          <div class="range-box-label">⚠️ USING AGI WHEN MAGI IS REQUIRED</div>
+          <p>Checking a Roth IRA or IRMAA threshold against your AGI instead of your MAGI can make you think you qualify when you don't, since MAGI is always equal to or higher than AGI.</p>
         </div>
         <div class="range-box warn">
-          <div class="range-box-label">⚠️ One MAGI for everything</div>
-          <p>Your Roth IRA MAGI and your ACA MAGI use different add-back rules. Calculating one and applying it to both programs is a common error that causes surprise disqualifications or subsidy repayments at tax time.</p>
-        </div>
-      </div>
-      <div class="two-col" style="margin-top: 16px;">
-        <div class="range-box warn">
-          <div class="range-box-label">⚠️ Ignoring year-end income spikes</div>
-          <p>A bonus, stock sale, or Roth conversion late in the year can push your MAGI over a threshold you weren't planning for. Estimate MAGI before making large financial moves — especially Roth conversions, which themselves increase MAGI.</p>
-        </div>
-        <div class="range-box warn">
-          <div class="range-box-label">⚠️ Forgetting spouse's income</div>
-          <p>MAGI limits for married filing jointly combine both spouses' income. A stay-at-home spouse can't contribute to a Roth at the single-filer limit if the working spouse's income pushes household MAGI over the joint threshold.</p>
+          <div class="range-box-label">⚠️ APPLYING ONE MAGI FORMULA EVERYWHERE</div>
+          <p>Assuming the MAGI you calculated for Roth IRA purposes is the same figure used for IRMAA or the Premium Tax Credit — the add-back list isn't identical across programs.</p>
         </div>
       </div>
     </div>
+
     <div class="card">
       <div class="section-label">What to do right now</div>
       <div class="next-steps">
-        Pull up last year's Form 1040 and find Line 11 (AGI). Before contributing to a Roth IRA, making a traditional IRA contribution you plan to deduct, or estimating ACA subsidies, run the MAGI calculation for that specific program. If you're near a threshold, a tax professional can model how a bonus, capital gain, or Roth conversion would affect your eligibility — sometimes shifting a contribution to January or using a backdoor Roth saves thousands in penalties or lost subsidies.
+        Pull your AGI from Form 1040, line 11, then add back student loan interest and IRA deductions if they apply to you. Compare that MAGI figure against the specific threshold you're checking — Roth IRA limits, IRMAA brackets, or Premium Tax Credit eligibility — since each uses its own MAGI definition. If your <a href="/hsa.html" class="inline-link">HSA</a> or pre-tax retirement contributions could bring your MAGI under a limit, confirm the math with a tax professional before year-end.
       </div>
     </div>
+
     <div class="card">
       <div class="section-label">Questions to ask your tax professional</div>
       <ul class="questions-list">
-        <li><span class="q-num">01</span>What is my MAGI for Roth IRA purposes this year, and am I inside the contribution limit?</li>
-        <li><span class="q-num">02</span>Should I use a backdoor Roth conversion given my MAGI — and how do I avoid the pro-rata rule trap?</li>
-        <li><span class="q-num">03</span>How will a Roth conversion or capital gain affect my MAGI and ACA subsidy eligibility?</li>
-        <li><span class="q-num">04</span>Is my traditional IRA contribution deductible based on my MAGI and workplace plan coverage?</li>
-        <li><span class="q-num">05</span>Am I still eligible for the student loan interest deduction at my current MAGI?</li>
-        <li><span class="q-num">06</span>What income-reduction strategies (HSA, 401k deferrals, timing deductions) can keep my MAGI below key thresholds?</li>
+        <li><span class="q-num">01</span>What's my MAGI specifically for Roth IRA contribution purposes this year?</li>
+        <li><span class="q-num">02</span>Am I close enough to an IRMAA bracket that I should plan around it?</li>
+        <li><span class="q-num">03</span>Would increasing pre-tax retirement contributions lower my MAGI enough to matter?</li>
+        <li><span class="q-num">04</span>Does my foreign income or tax-exempt interest change my MAGI calculation?</li>
+        <li><span class="q-num">05</span>If I'm over the Roth IRA limit, does a backdoor Roth strategy make sense for me?</li>
       </ul>
     </div>
+
     <div class="card">
       <div class="section-label">Frequently asked questions</div>
       <div class="faq-item">
-        <div class="faq-q">Is MAGI the same as taxable income?</div>
-        <div class="faq-a">No. Taxable income is what you actually pay tax on — AGI minus either the standard or itemized deduction. MAGI starts from AGI and adds certain items back in. Taxable income is usually lower than both AGI and MAGI because it includes the standard deduction ($14,600 single for 2024).</div>
+        <div class="faq-q">What's the difference between MAGI and AGI?</div>
+        <div class="faq-a">AGI is your gross income minus above-the-line deductions, shown directly on your Form 1040. MAGI starts with that AGI figure and adds back certain deductions and exclusions, like student loan interest, IRA contributions, or foreign earned income. For many taxpayers with simple returns, MAGI and AGI end up being the same number — but the add-backs matter once you're near an eligibility threshold.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Where do I find MAGI on my tax return?</div>
-        <div class="faq-a">You won't — MAGI isn't a line on Form 1040. You calculate it separately based on which program you're checking eligibility for. Your AGI is on Line 11. From there, you add back the specific items that program requires.</div>
+        <div class="faq-q">Why does MAGI matter more than AGI for some things?</div>
+        <div class="faq-a">The IRS uses MAGI, not AGI, to test eligibility for specific benefits: Roth IRA contribution limits, traditional IRA deduction limits, the Premium Tax Credit, and Medicare's IRMAA surcharge. AGI alone isn't the number that determines whether you qualify for these — MAGI is.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Does a 401(k) contribution reduce MAGI?</div>
-        <div class="faq-a">Traditional 401(k) contributions reduce your AGI (they're pre-tax), which also reduces MAGI since MAGI starts from AGI. Roth 401(k) contributions do not reduce AGI or MAGI — they're made with after-tax dollars. This is why maxing out a traditional 401(k) can help keep MAGI below Roth IRA or ACA thresholds.</div>
+        <div class="faq-q">How do I calculate my MAGI?</div>
+        <div class="faq-a">Start with your AGI from Form 1040, line 11. Then add back specific items depending on which MAGI test applies — common add-backs include student loan interest deduction, traditional IRA deduction, foreign earned income exclusion, and tax-exempt interest. The exact add-back list varies slightly by which credit or limit you're calculating MAGI for.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What happens if I over-contribute to a Roth IRA because of MAGI?</div>
-        <div class="faq-a">The IRS charges a 6% excise tax on excess contributions for every year they remain in the account. Fix it by withdrawing the excess plus earnings before your tax filing deadline (including extensions). You can also recharacterize the contribution as traditional, though recharacterization rules have tightened since 2018.</div>
+        <div class="faq-q">Is MAGI the same for Roth IRA limits and IRMAA?</div>
+        <div class="faq-a">No. Each program defines MAGI with a slightly different set of add-backs. Roth IRA MAGI and Premium Tax Credit MAGI are calculated differently from the MAGI used for Medicare IRMAA brackets, even though they all start from the same AGI base. Always check which specific MAGI definition applies to the benefit you're checking.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Can MAGI be lower than AGI?</div>
-        <div class="faq-a">Generally no — MAGI equals AGI plus add-backs, so it's the same or higher. The one exception: for certain Medicaid and CHIP eligibility calculations, MAGI may exclude specific income types that AGI includes, making it lower in those narrow contexts. For tax purposes (Roth IRA, ACA, student loans), MAGI is always ≥ AGI.</div>
+        <div class="faq-q">Can lowering my MAGI help me qualify for a Roth IRA?</div>
+        <div class="faq-a">Yes, in some cases. Contributing to a traditional 401(k) or a pre-tax HSA lowers your AGI, which flows through to a lower MAGI. If you're close to the Roth IRA income phase-out range, increasing pre-tax retirement or HSA contributions can bring your MAGI back under the limit.</div>
       </div>
     </div>
+
     <div class="card">
-      <div class="section-label">Related tax forms and terms</div>
+      <div class="section-label">Related tax forms</div>
       <div class="related">
-        <a href="/1040" class="related-chip">Form 1040 →</a>
-        <a href="/w2" class="related-chip">Form W-2 →</a>
-        <a href="/1099-div" class="related-chip">Form 1099-DIV →</a>
-        <a href="/schedule-c" class="related-chip">Schedule C →</a>
-        <a href="/w4" class="related-chip">Form W-4 →</a>
-        <a href="/1040-es" class="related-chip">Form 1040-ES →</a>
+        <a href="/agi.html" class="related-chip">AGI →</a>
+        <a href="/roth-ira.html" class="related-chip">Roth IRA →</a>
+        <a href="/1040.html" class="related-chip">Form 1040 →</a>
+        <a href="/hsa.html" class="related-chip">HSA →</a>
       </div>
     </div>
+
     <div class="tool-cta">
       <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
+
     <footer>
       <span>taxplain.co</span>
-      <span>Understand your taxes. No accountant required.</span>
+      <span>Not a substitute for professional tax advice.</span>
     </footer>
   </div>
 </body>
