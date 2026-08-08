@@ -1,710 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alternative Minimum Tax (AMT) Explained in Plain English – TaxPlain</title>
-<meta name="description" content="What is the Alternative Minimum Tax (AMT)? Plain-English guide to how AMT works, who pays it, common triggers, exemptions, and how to avoid surprises.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://taxplain.co/amt">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMT (Alternative Minimum Tax) Exemption & Thresholds Explained – TaxPlain</title>
+  <meta name="description" content="What the AMT is, the 2026 exemption amounts and phase-out thresholds, and who actually ends up owing it. Plain English, no jargon.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.taxplain.co/amt.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<style>
-*, *::before, *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
+  <!-- FAQ SCHEMA — 5 Q&As, must match visible FAQ card exactly -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the AMT exemption amount for 2026?", "acceptedAnswer": { "@type": "Answer", "text": "For the 2026 tax year, the AMT exemption is $90,100 for single and head of household filers, $140,200 for married couples filing jointly, and $70,100 for married filing separately. If your alternative minimum taxable income is at or below your exemption amount, you owe no AMT." } },
+      { "@type": "Question", "name": "What income triggers the AMT?", "acceptedAnswer": { "@type": "Answer", "text": "AMT is most often triggered by exercising incentive stock options, claiming large state and local tax deductions, having significant long-term capital gains, or certain depreciation add-backs. These items get added back into your income under the AMT's alternative calculation, which can push your AMTI above the exemption amount." } },
+      { "@type": "Question", "name": "How do I know if I owe AMT?", "acceptedAnswer": { "@type": "Answer", "text": "You calculate your AMT liability on IRS Form 6251, which recalculates your income under AMT rules and compares the result to your regular tax. Most tax software runs this calculation automatically. You only owe the difference if your AMT liability is higher than your regular tax." } },
+      { "@type": "Question", "name": "What's the difference between AMT and regular tax?", "acceptedAnswer": { "@type": "Answer", "text": "Regular tax uses your normal deductions and a graduated bracket system. AMT uses a separate calculation called alternative minimum taxable income, which adds back certain deductions and preference items, then applies a flat 26% or 28% rate after subtracting your exemption. You pay whichever amount is higher." } },
+      { "@type": "Question", "name": "Can I get back AMT I paid in a prior year?", "acceptedAnswer": { "@type": "Answer", "text": "In some cases, yes. If you paid AMT in a prior year due to timing differences like ISO exercises, you may be able to claim a minimum tax credit in a later year using Form 8801. This doesn't apply to all AMT triggers, so it's worth reviewing with a tax professional." } }
+    ]
+  }
+  </script>
 
-:root {
---bg: #FFFFFF;
---ink: #0D1B2A;
---muted: #6B7A8D;
---accent: #1B4B8A;
---accent-light: #EAF0FA;
---accent-border: #B5CEFA;
---warn: #993C1D;
---warn-light: #FAECE7;
---warn-border: #F5C4B3;
---success-light: #EAF3DE;
---success-border: #C0DD97;
---success-text: #27500A;
---amber: #92400E;
---amber-light: #FEF3C7;
---amber-border: #F59E0B;
---border: #DDE3EC;
---white: #FFFFFF;
-}
-
-body {
-background: var(--bg);
-color: var(--ink);
-font-family: 'DM Sans', sans-serif;
-min-height: 100vh;
-}
-
-.wrap {
-max-width: 720px;
-margin: 0 auto;
-padding: 40px 24px 80px;
-}
-
-nav {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 40px;
-}
-
-.logo-mark {
-width: 32px;
-height: 32px;
-background: var(--accent);
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.logo-mark svg {
-width: 18px;
-height: 18px;
-fill: white;
-}
-
-.logo-text {
-font-family: 'DM Mono', monospace;
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-text-decoration: none;
-}
-
-.logo-text span {
-color: var(--accent);
-}
-
-.breadcrumb {
-font-size: 13px;
-color: var(--muted);
-margin-bottom: 20px;
-font-family: 'DM Mono', monospace;
-}
-
-.breadcrumb a {
-color: var(--accent);
-text-decoration: none;
-}
-
-h1 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(28px, 5vw, 42px);
-line-height: 1.15;
-letter-spacing: -0.5px;
-margin-bottom: 8px;
-}
-
-h2 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(20px, 3vw, 26px);
-line-height: 1.2;
-letter-spacing: -0.3px;
-margin-bottom: 12px;
-color: var(--ink);
-}
-
-h3 {
-font-family: 'DM Sans', sans-serif;
-font-size: 16px;
-font-weight: 500;
-margin-bottom: 8px;
-color: var(--ink);
-}
-
-.category-tag {
-display: inline-block;
-background: var(--accent-light);
-color: var(--accent);
-font-family: 'DM Mono', monospace;
-font-size: 11px;
-letter-spacing: 1px;
-text-transform: uppercase;
-padding: 4px 12px;
-border-radius: 20px;
-margin-bottom: 24px;
-}
-
-.disclaimer {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 14px 18px;
-margin-bottom: 36px;
-font-size: 13px;
-color: var(--amber);
-line-height: 1.5;
-}
-
-.card {
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 14px;
-padding: 28px;
-margin-bottom: 20px;
-}
-
-.section-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-font-weight: 500;
-letter-spacing: 1.8px;
-text-transform: uppercase;
-color: var(--muted);
-margin-bottom: 10px;
-}
-
-p {
-font-size: 16px;
-line-height: 1.75;
-color: var(--ink);
-}
-
-p + p {
-margin-top: 14px;
-}
-
-.two-col {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-}
-
-.range-box {
-padding: 16px;
-border-radius: 10px;
-}
-
-.range-box.warn {
-background: var(--warn-light);
-border: 1px solid var(--warn-border);
-}
-
-.range-box.blue {
-background: var(--accent-light);
-border: 1px solid var(--accent-border);
-}
-
-.range-box-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-letter-spacing: 1px;
-text-transform: uppercase;
-margin-bottom: 8px;
-}
-
-.range-box.warn .range-box-label {
-color: var(--warn);
-}
-
-.range-box.blue .range-box-label {
-color: var(--accent);
-}
-
-.range-box p {
-font-size: 14px;
-line-height: 1.65;
-}
-
-.symptom-list {
-list-style: none;
-padding: 0;
-}
-
-.symptom-list li {
-font-size: 14px;
-color: var(--ink);
-line-height: 1.6;
-padding: 4px 0;
-border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.symptom-list li:last-child {
-border-bottom: none;
-}
-
-.symptom-list li::before {
-content: "→ ";
-color: var(--muted);
-}
-
-.timing-box {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 18px 20px;
-margin-top: 16px;
-}
-
-.timing-box h3 {
-font-size: 14px;
-color: var(--amber);
-font-family: 'DM Mono', monospace;
-letter-spacing: 0.5px;
-margin-bottom: 8px;
-}
-
-.timing-box p {
-font-size: 14px;
-color: #78350F;
-line-height: 1.65;
-}
-
-.next-steps {
-background: var(--success-light);
-border: 1px solid var(--success-border);
-border-radius: 10px;
-padding: 20px;
-font-size: 15px;
-line-height: 1.7;
-color: var(--success-text);
-}
-
-.questions-list {
-list-style: none;
-padding: 0;
-margin-top: 8px;
-}
-
-.questions-list li {
-font-size: 15px;
-color: var(--ink);
-line-height: 1.65;
-padding: 10px 0;
-border-bottom: 1px solid var(--border);
-display: flex;
-gap: 10px;
-}
-
-.questions-list li:last-child {
-border-bottom: none;
-}
-
-.q-num {
-font-family: 'DM Mono', monospace;
-font-size: 12px;
-color: var(--accent);
-font-weight: 500;
-flex-shrink: 0;
-margin-top: 2px;
-}
-
-.faq-item {
-padding: 18px 0;
-border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-border-bottom: none;
-}
-
-.faq-q {
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-margin-bottom: 8px;
-}
-
-.faq-a {
-font-size: 15px;
-color: var(--muted);
-line-height: 1.7;
-}
-
-.tool-cta {
-background: var(--accent);
-color: white;
-border-radius: 12px;
-padding: 28px;
-margin-top: 32px;
-text-align: center;
-}
-
-.tool-cta h3 {
-font-family: 'DM Serif Display', serif;
-font-size: 24px;
-margin-bottom: 8px;
-color: white;
-}
-
-.tool-cta p {
-font-size: 14px;
-opacity: 0.85;
-margin-bottom: 18px;
-color: white;
-}
-
-.tool-cta a {
-display: inline-block;
-background: white;
-color: var(--accent);
-font-weight: 500;
-text-decoration: none;
-padding: 12px 28px;
-border-radius: 8px;
-font-family: 'DM Mono', monospace;
-font-size: 14px;
-}
-
-.related {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-gap: 12px;
-margin-top: 4px;
-}
-
-.related-chip {
-display: block;
-padding: 12px 16px;
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 10px;
-text-decoration: none;
-font-size: 14px;
-color: var(--ink);
-font-family: 'DM Mono', monospace;
-transition: border-color 0.15s;
-}
-
-.related-chip:hover {
-border-color: var(--accent);
-color: var(--accent);
-}
-
-footer {
-margin-top: 60px;
-padding-top: 20px;
-border-top: 1px solid var(--border);
-font-size: 12px;
-color: var(--muted);
-font-family: 'DM Mono', monospace;
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 8px;
-}
-
-@media (max-width: 480px) {
-.two-col {
-grid-template-columns: 1fr;
-}
-}
-</style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
 </head>
-
 <body>
-
-<div class="wrap">
-
-<nav>
-<div class="logo-mark">
-<svg viewBox="0 0 24 24">
-<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
-</svg>
-</div>
-
-<a href="/" class="logo-text">tax<span>plain</span></a>
-</nav>
-
-<p class="breadcrumb">
-<a href="/">Home</a> &rsaquo;
-<a href="/guides">Tax Guides</a> &rsaquo;
-Alternative Minimum Tax (AMT)
-</p>
-
-<h1>
-What is the<br>
-<em style="font-style:italic;color:var(--accent)">Alternative Minimum Tax (AMT)</em>?
-</h1>
-
-<span class="category-tag">Tax Rule</span>
-
-<div class="disclaimer">
-⚠ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
-</div>
-
-<div class="card">
-<div class="section-label">What this tax is</div>
-
-<p>
-The Alternative Minimum Tax (AMT) is a parallel tax system created to ensure high-income taxpayers pay at least some federal income tax — even if they use large deductions, credits, or special tax benefits to reduce their regular tax bill.
-</p>
-
-<p>
-Think of it as the IRS running your taxes twice: once under the normal tax rules, and again under the AMT rules. If the AMT calculation comes out higher, you pay the difference.
-</p>
-
-<p>
-For most taxpayers today, AMT is less common than it used to be because Congress increased exemption amounts. But certain situations — especially large stock option exercises, high state taxes, or significant investment activity — can still trigger it.
-</p>
-</div>
-
-<div class="card">
-<div class="section-label">Who usually gets hit by AMT</div>
-
-<div class="two-col">
-
-<div class="range-box blue">
-<div class="range-box-label">✓ Higher Risk</div>
-
-<p>
-People with high income, large capital gains, incentive stock options (ISOs), significant state and local tax deductions, or complex investment activity are more likely to owe AMT.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">↑ Common Surprise</div>
-
-<p>
-Many taxpayers discover AMT after exercising startup stock options or having a one-time income spike. You can owe AMT even if you didn't actually sell the stock yet.
-</p>
-</div>
-
-</div>
-
-<div class="timing-box" style="margin-top:16px;">
-<h3>📅 Important reality</h3>
-
-<p>
-AMT is calculated automatically when you file your Form 1040. You usually don't file a separate return, but you may need Form 6251 to calculate whether AMT applies.
-</p>
-</div>
-</div>
-
-<div class="card">
-
-<div class="section-label">How AMT works</div>
-
-<h2>The simplified version</h2>
-
-<p>
-The IRS starts with your regular taxable income, then adds back certain deductions and tax preferences that are allowed under normal tax rules but limited under AMT rules.
-</p>
-
-<ul class="symptom-list" style="margin-top:12px;">
-
-<li><strong>Step 1:</strong> Calculate your normal federal income tax</li>
-
-<li><strong>Step 2:</strong> Recalculate income using AMT rules</li>
-
-<li><strong>Step 3:</strong> Add back certain deductions or exclusions</li>
-
-<li><strong>Step 4:</strong> Apply the AMT exemption amount</li>
-
-<li><strong>Step 5:</strong> Calculate AMT using AMT tax rates (26% or 28%)</li>
-
-<li><strong>Step 6:</strong> Compare the AMT result to your regular tax bill</li>
-
-<li><strong>If AMT is higher:</strong> You pay the difference as additional tax</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Common AMT triggers</div>
-
-<p>
-Certain tax situations increase the odds of owing AMT. These are some of the biggest triggers:
-</p>
-
-<ul class="symptom-list" style="margin-top:12px;">
-
-<li><strong>Incentive stock options (ISOs)</strong> — Exercising startup or tech company stock options can create large paper income for AMT purposes</li>
-
-<li><strong>Large capital gains</strong> — Selling appreciated investments or property can push income high enough to phase out the AMT exemption</li>
-
-<li><strong>High state and local taxes</strong> — SALT deductions are not deductible under AMT rules</li>
-
-<li><strong>Private activity bond interest</strong> — Some municipal bond income becomes taxable under AMT</li>
-
-<li><strong>Depreciation differences</strong> — Business owners and real estate investors sometimes face different AMT depreciation calculations</li>
-
-<li><strong>High overall income</strong> — The AMT exemption phases out as income rises</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Common misunderstandings</div>
-
-<div class="two-col">
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ AMT Is Not Just for Millionaires</div>
-
-<p>
-While AMT mainly affects higher earners, upper-middle-income taxpayers in high-tax states or with stock compensation can still get caught by it.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Refunds Don't Prevent AMT</div>
-
-<p>
-You can still owe AMT even if you're receiving a tax refund overall. AMT simply increases your total tax liability.
-</p>
-</div>
-
-</div>
-
-<div class="two-col" style="margin-top:16px;">
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Tax Software Doesn't Eliminate It</div>
-
-<p>
-Software calculates AMT automatically, but it can't always help you avoid it proactively. Planning before year-end matters.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ ISO Exercises Can Be Dangerous</div>
-
-<p>
-Employees sometimes exercise stock options expecting little tax impact — then discover a massive AMT bill despite not selling shares for cash.
-</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">What to do right now</div>
-
-<div class="next-steps">
-
-If you have simple W-2 income and take the standard deduction, AMT probably won't affect you. But if you exercised stock options, sold investments with large gains, own a business, or live in a high-tax state, it's worth checking proactively before filing. AMT surprises are most dangerous when they create taxes on income you haven't actually received in cash yet — especially startup equity compensation.
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Questions to ask your tax professional</div>
-
-<ul class="questions-list">
-
-<li><span class="q-num">01</span>Will exercising my stock options trigger AMT this year?</li>
-
-<li><span class="q-num">02</span>Can we estimate my AMT exposure before year-end?</li>
-
-<li><span class="q-num">03</span>Would spreading income across multiple years reduce AMT?</li>
-
-<li><span class="q-num">04</span>Should I delay or accelerate certain deductions because of AMT rules?</li>
-
-<li><span class="q-num">05</span>Do my state taxes or investment gains increase my AMT risk?</li>
-
-<li><span class="q-num">06</span>Am I eligible for an AMT credit in future years?</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Frequently asked questions</div>
-
-<div class="faq-item">
-<div class="faq-q">How do I know if I owe AMT?</div>
-
-<div class="faq-a">
-Most tax software automatically checks for AMT using Form 6251. Generally, higher income, stock options, and large deductions increase the odds.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">What is the AMT exemption?</div>
-
-<div class="faq-a">
-The AMT exemption shields part of your income from AMT calculations. However, the exemption gradually phases out at higher income levels.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">Does everyone calculate AMT?</div>
-
-<div class="faq-a">
-Tax software typically runs the calculation automatically behind the scenes, but most taxpayers ultimately do not owe AMT.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">Can AMT be avoided legally?</div>
-
-<div class="faq-a">
-Sometimes. Timing income, stock option exercises, deductions, and investment sales can reduce AMT exposure. This is usually a year-end tax planning issue rather than a filing-season issue.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">What's the difference between regular tax and AMT?</div>
-
-<div class="faq-a">
-The regular tax system allows more deductions and preferences. AMT removes or limits some of them, then applies its own tax calculation to ensure a minimum level of tax is paid.
-</div>
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Related tax forms</div>
-
-<div class="related">
-
-<a href="/1040" class="related-chip">Form 1040 →</a>
-
-<a href="/6251" class="related-chip">Form 6251 →</a>
-
-<a href="/schedule-d" class="related-chip">Schedule D →</a>
-
-<a href="/1099-div" class="related-chip">Form 1099-DIV →</a>
-
-<a href="/1099-int" class="related-chip">Form 1099-INT →</a>
-
-<a href="/1040-es" class="related-chip">Form 1040-ES →</a>
-
-</div>
-
-</div>
-
-<div class="tool-cta">
-
-<h3>Decode any tax form instantly</h3>
-
-<p>
-Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
-</p>
-
-<a href="/">Open the Decoder →</a>
-
-</div>
-
-<footer>
-
-<span>taxplain.co</span>
-
-<span>Understand your taxes. No accountant required.</span>
-
-</footer>
-
-</div>
-
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
+      <a href="/" class="logo-text">tax<span>plain</span></a>
+    </nav>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; AMT</p>
+    <h1>What is the<br><em style="font-style:italic;color:var(--accent)">AMT (Alternative Minimum Tax)</em>?</h1>
+    <span class="category-tag">Tax Concepts</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated August 2026</p>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+
+    <!-- CARD 1: What this is -->
+    <div class="card">
+      <div class="section-label">What this is</div>
+      <p>The Alternative Minimum Tax (AMT) is a separate tax calculation that runs alongside your regular tax return. It exists to make sure high earners who claim a lot of deductions and preference items still pay a minimum amount of tax, even after those write-offs.</p>
+      <p>Here's how it works: the IRS recalculates your income under a stricter set of rules, adding back certain deductions that reduce your regular taxable income. This recalculated figure is called alternative minimum taxable income, or AMTI. You then subtract an AMT exemption amount and apply a flat rate — 26% or 28% — to what's left.</p>
+      <p>You compare that result to your regular tax bill and pay whichever number is higher. For most taxpayers, regular tax wins and AMT never comes into play. But for people with large capital gains, high state and local tax deductions, or incentive stock option exercises, AMT can quietly become the bigger bill.</p>
+    </div>
+
+    <!-- CARD 2: Who it affects -->
+    <div class="card">
+      <div class="section-label">Who it affects</div>
+      <div class="two-col">
+        <div class="range-box blue">
+          <div class="range-box-label">✓ Most likely to owe AMT</div>
+          <p>Taxpayers who exercised incentive stock options (ISOs) and held the shares, or who claim very large state and local tax deductions relative to their income.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Also worth checking</div>
+          <p>Households with significant long-term capital gains, certain depreciation deductions, or private-activity bond interest.</p>
+        </div>
+      </div>
+      <div class="timing-box">
+        <h3>📅 2026 EXEMPTION AND PHASE-OUT AMOUNTS</h3>
+        <p>For the 2026 tax year, the AMT exemption is $90,100 for single/head of household filers, $140,200 for married couples filing jointly, and $70,100 for married filing separately. The exemption starts phasing out once your AMTI passes $500,000 (single) or $1,000,000 (joint) — and under the One Big Beautiful Bill Act, that phase-out now happens twice as fast as it did in 2025, at 50 cents lost for every dollar of income above the threshold.</p>
+      </div>
+    </div>
+
+    <!-- CARD 3: How AMT is calculated -->
+    <div class="card">
+      <div class="section-label">How it's calculated</div>
+      <h2>From taxable income to AMT liability</h2>
+      <p style="margin-top: 12px;">You calculate AMT on <strong>Form 6251</strong>, which walks through a specific sequence. Start with your <a href="/agi.html" class="inline-link">AGI</a>, add back the preference items and adjustments listed below, subtract your exemption amount, then apply the AMT rate.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Standard deduction</strong> — not allowed under AMT; it gets added back to your income.</li>
+        <li><strong>State and local tax (SALT) deduction</strong> — added back in full, which is why high-SALT states see more AMT exposure.</li>
+        <li><strong>ISO exercise spread</strong> — the difference between the exercise price and fair market value on incentive stock options counts as AMT income the year you exercise, even if you haven't sold the shares.</li>
+        <li><strong>Certain depreciation</strong> — some accelerated depreciation methods get recalculated more conservatively under AMT rules.</li>
+        <li><strong>Private-activity bond interest</strong> — normally tax-exempt, but it's added back for AMT purposes.</li>
+        <li><strong>Exemption amount</strong> — subtracted after add-backs, using the 2026 figures above.</li>
+      </ul>
+      <p style="margin-top: 12px;">After the exemption, a 26% rate applies to the first $244,500 of remaining AMTI, and 28% applies above that. Whatever this comes out to gets compared against your regular tax — you pay the higher of the two.</p>
+    </div>
+
+    <!-- CARD 4: Related forms -->
+    <div class="card">
+      <div class="section-label">Related forms often involved</div>
+      <p>AMT rarely shows up alone — it's usually triggered by, or interacts with, one of these forms.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Form 6251</strong> — the form used to calculate whether you owe AMT and how much.</li>
+        <li><strong>Form 8801</strong> — used in a later year to claim back some AMT you paid due to timing differences, like an ISO exercise.</li>
+        <li><strong><a href="/8949.html" class="inline-link">Form 8949</a> and <a href="/schedule-d.html" class="inline-link">Schedule D</a></strong> — capital gains reported here can also affect your AMTI, especially large gains in a single year.</li>
+        <li><strong><a href="/1099-b.html" class="inline-link">Form 1099-B</a></strong> — reports the stock sale proceeds that often accompany an ISO exercise, which is one of the most common AMT triggers.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 5: Common mistakes -->
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Exercising ISOs without checking AMT first</div>
+          <p>Exercising and holding incentive stock options can trigger a large AMT bill in the year of exercise, even though you haven't sold anything or received cash. Model the AMT impact before you exercise, not after.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Assuming AMT no longer applies to you</div>
+          <p>Because far fewer people owe AMT since the exemption amounts were raised, some taxpayers stop checking altogether. The 2026 phase-out changes bring more high earners back into range than in recent years.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 6: What to do right now -->
+    <div class="card">
+      <div class="section-label">What to do right now</div>
+      <div class="next-steps">
+        If you exercised ISOs this year, have significant capital gains, or claim a large SALT deduction, run Form 6251 before you file — most tax software does this automatically, but it's worth confirming. If you're close to the phase-out thresholds, compare your <a href="/agi.html" class="inline-link">AGI</a> and <a href="/magi.html" class="inline-link">MAGI</a> figures against the 2026 numbers above to see how close you actually are.
+      </div>
+    </div>
+
+    <!-- CARD 7: Questions to ask your tax professional -->
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Based on my income and deductions, am I likely to owe AMT this year?</li>
+        <li><span class="q-num">02</span>If I exercise incentive stock options, how much AMT exposure would that create?</li>
+        <li><span class="q-num">03</span>Do I have a minimum tax credit from a prior year that I can claim on Form 8801?</li>
+        <li><span class="q-num">04</span>Would spreading a large capital gain or ISO exercise across two tax years reduce my AMT risk?</li>
+        <li><span class="q-num">05</span>How do the 2026 phase-out changes affect my specific situation compared to last year?</li>
+      </ul>
+    </div>
+
+    <!-- CARD 8: FAQ -->
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">What is the AMT exemption amount for 2026?</div>
+        <div class="faq-a">For the 2026 tax year, the AMT exemption is $90,100 for single and head of household filers, $140,200 for married couples filing jointly, and $70,100 for married filing separately. If your alternative minimum taxable income is at or below your exemption amount, you owe no AMT.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What income triggers the AMT?</div>
+        <div class="faq-a">AMT is most often triggered by exercising incentive stock options, claiming large state and local tax deductions, having significant long-term capital gains, or certain depreciation add-backs. These items get added back into your income under the AMT's alternative calculation, which can push your AMTI above the exemption amount.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I know if I owe AMT?</div>
+        <div class="faq-a">You calculate your AMT liability on IRS Form 6251, which recalculates your income under AMT rules and compares the result to your regular tax. Most tax software runs this calculation automatically. You only owe the difference if your AMT liability is higher than your regular tax.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between AMT and regular tax?</div>
+        <div class="faq-a">Regular tax uses your normal deductions and a graduated bracket system. AMT uses a separate calculation called alternative minimum taxable income, which adds back certain deductions and preference items, then applies a flat 26% or 28% rate after subtracting your exemption. You pay whichever amount is higher.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I get back AMT I paid in a prior year?</div>
+        <div class="faq-a">In some cases, yes. If you paid AMT in a prior year due to timing differences like ISO exercises, you may be able to claim a minimum tax credit in a later year using Form 8801. This doesn't apply to all AMT triggers, so it's worth reviewing with a tax professional.</div>
+      </div>
+    </div>
+
+    <!-- CARD 9: Related tax forms -->
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/agi.html" class="related-chip">AGI →</a>
+        <a href="/magi.html" class="related-chip">MAGI →</a>
+        <a href="/8949.html" class="related-chip">Form 8949 →</a>
+        <a href="/1099-b.html" class="related-chip">Form 1099-B →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any tax form instantly</h3>
+      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>taxplain.co</span>
+      <span>Not a substitute for professional tax advice.</span>
+    </footer>
+  </div>
 </body>
 </html>
