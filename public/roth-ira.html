@@ -3,12 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roth IRA Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is a Roth IRA? Plain-English guide to tax-free retirement savings — who qualifies, contribution limits, withdrawal rules, Roth vs. Traditional, backdoor Roth, and exactly what to do. No tax jargon.">
+  <title>What is a Roth IRA? Contribution Limits, Income Limits & Rules Explained – TaxPlain</title>
+  <meta name="description" content="Roth IRA explained in plain English: 2026 contribution limits, income phase-outs, Roth vs. Traditional, and how the backdoor Roth works.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/roth-ira">
+  <link rel="canonical" href="https://www.taxplain.co/roth-ira.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- FAQ SCHEMA — 5 Q&As, must match visible FAQ card exactly -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What's the difference between a Roth IRA and a Traditional IRA?", "acceptedAnswer": { "@type": "Answer", "text": "A Roth IRA is funded with after-tax dollars, so qualified withdrawals in retirement are tax-free. A Traditional IRA is funded with pre-tax (often deductible) dollars, so withdrawals in retirement are taxed as ordinary income. The core trade-off is paying tax now (Roth) versus paying tax later (Traditional)." } },
+      { "@type": "Question", "name": "What is the Roth IRA income limit for 2026?", "acceptedAnswer": { "@type": "Answer", "text": "For 2026, your ability to contribute directly to a Roth IRA phases out between $153,000 and $168,000 of MAGI for single filers and heads of household, and between $242,000 and $252,000 for married couples filing jointly, per IRS Rev. Proc. 2025-32." } },
+      { "@type": "Question", "name": "What is the Roth IRA contribution limit for 2026?", "acceptedAnswer": { "@type": "Answer", "text": "For 2026, the Roth IRA contribution limit is $7,500, or $8,600 if you're age 50 or older. This limit is shared across all your IRAs — Roth and Traditional combined, not $7,500 for each." } },
+      { "@type": "Question", "name": "What is a backdoor Roth IRA?", "acceptedAnswer": { "@type": "Answer", "text": "A backdoor Roth is a two-step workaround for high earners who are phased out of direct Roth contributions: you contribute to a nondeductible Traditional IRA, then convert that balance to a Roth IRA. It's legal, but the pro-rata rule can create an unexpected tax bill if you hold other pre-tax IRA money." } },
+      { "@type": "Question", "name": "Does my income for Roth IRA limits mean my gross income?", "acceptedAnswer": { "@type": "Answer", "text": "No. Roth IRA eligibility is based on your Modified Adjusted Gross Income (MAGI), not your gross pay or your Adjusted Gross Income (AGI) alone. MAGI adds back certain deductions to AGI, so it's usually a little higher than the AGI on your Form 1040." } }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -21,22 +37,26 @@
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
     .logo-mark svg { width: 18px; height: 18px; fill: white; }
     .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
     .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
     h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
     h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
     .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
     p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .range-box { padding: 16px; border-radius: 10px; }
     .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
@@ -46,7 +66,7 @@
     .range-box.blue .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
     .symptom-list { list-style: none; padding: 0; }
-    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
     .symptom-list li:last-child { border-bottom: none; }
     .symptom-list li::before { content: "→ "; color: var(--muted); }
     .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
@@ -78,140 +98,173 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
+
     <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Roth IRA</p>
     <h1>What is a<br><em style="font-style:italic;color:var(--accent)">Roth IRA</em>?</h1>
-    <span class="category-tag">Retirement</span>
+    <span class="category-tag">Retirement Accounts</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated August 2026</p>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+
+    <!-- CARD 1: What this is -->
     <div class="card">
-      <div class="section-label">What it is</div>
-      <p>A Roth IRA is a retirement savings account where you contribute money you've already paid taxes on — and in return, all future growth and qualified withdrawals are completely tax-free. It's not a tax form you file. It's an account you open at a brokerage (Fidelity, Vanguard, Schwab, etc.) and fund each year.</p>
-      <p>The core trade-off is simple: you pay taxes now so you never pay taxes on that money again — not on the gains, not on the withdrawals in retirement. For many people, especially younger workers or anyone who expects to be in a higher tax bracket later, that's a powerful deal.</p>
+      <div class="section-label">What this is</div>
+      <p>A Roth IRA is a retirement account you fund with money you've already paid tax on. Because the government has already taken its cut, your contributions grow tax-free, and qualified withdrawals in retirement — both the money you put in and everything it earned — come out tax-free too.</p>
+      <p>That's the opposite setup from a <a href="/401k.html" class="inline-link">401(k)</a> or a Traditional IRA, where contributions are often tax-deductible now, but every withdrawal in retirement gets taxed as ordinary income. Neither structure is universally "better" — it depends on whether you expect to pay a higher or lower tax rate later than you do today.</p>
+      <p>Roth IRAs also come with a feature most retirement accounts don't have: no required minimum distributions during your lifetime. You can leave the money growing tax-free for as long as you want.</p>
     </div>
+
+    <!-- CARD 2: Who it affects -->
     <div class="card">
-      <div class="section-label">Who can contribute</div>
+      <div class="section-label">Who it affects</div>
       <div class="two-col">
         <div class="range-box blue">
-          <div class="range-box-label">✓ You can contribute if...</div>
-          <p>You have earned income (wages, self-employment, etc.) and your modified adjusted gross income (MAGI) is below the IRS limit for your filing status. For 2024, full contributions are allowed up to $146,000 (single) or $230,000 (married filing jointly).</p>
+          <div class="range-box-label">✓ Applies to</div>
+          <p>Anyone with earned income who wants tax-free retirement withdrawals and is under the 2026 income phase-out thresholds.</p>
         </div>
         <div class="range-box warn">
-          <div class="range-box-label">↑ Income too high?</div>
-          <p>Above those thresholds, your ability to contribute phases out and eventually disappears. High earners sometimes use a "backdoor Roth" strategy — contributing to a Traditional IRA and converting it — but this has its own rules and potential tax traps.</p>
+          <div class="range-box-label">↑ Also applies to</div>
+          <p>High earners over the direct-contribution limit who use a backdoor Roth conversion instead.</p>
         </div>
       </div>
-      <div class="timing-box" style="margin-top:16px;">
-        <h3>📅 Contribution deadline</h3>
-        <p>You can contribute to a Roth IRA for the prior tax year until the federal filing deadline — typically April 15. For example, a 2024 Roth IRA contribution can be made anytime from January 1, 2024 through April 15, 2025. You don't need to wait until you've filed your taxes.</p>
+      <div class="timing-box">
+        <h3>📅 2026 CONTRIBUTION DEADLINE</h3>
+        <p>You can contribute to a Roth IRA for a given tax year up until the regular filing deadline the following spring — not December 31st. For 2026 contributions, that means you generally have until mid-April 2027 to fund the account.</p>
       </div>
     </div>
-    <div class="card">
-      <div class="section-label">Key numbers to know</div>
-      <h2>2024 contribution limits</h2>
-      <p>These are the main rules that apply to most people. Limits are indexed for inflation and typically update each year.</p>
-      <ul class="symptom-list" style="margin-top: 12px;">
-        <li><strong>Annual contribution limit</strong> — $7,000 per year ($8,000 if you're age 50 or older). This is the combined limit across all your IRAs — Roth and Traditional together.</li>
-        <li><strong>Earned income requirement</strong> — You can only contribute up to the amount you earned. If you made $4,000 in wages, your max contribution is $4,000, not $7,000.</li>
-        <li><strong>No age limit</strong> — As long as you have earned income, you can contribute at any age. (The old rule blocking contributions after 70½ was removed in 2020.)</li>
-        <li><strong>No tax deduction</strong> — Roth contributions are made with after-tax dollars. You won't see them reduce your taxable income on your 1040 the way Traditional IRA contributions can.</li>
-        <li><strong>Tax-free qualified withdrawals</strong> — Withdraw contributions anytime, tax-free. Withdraw earnings tax-free once the account has been open 5+ years and you're 59½ or older (or meet another qualifying exception).</li>
-        <li><strong>No required minimum distributions</strong> — Unlike Traditional IRAs and 401(k)s, Roth IRAs have no RMDs during your lifetime. The money can keep growing tax-free as long as you live.</li>
-      </ul>
-    </div>
+
+    <!-- CARD 3: Roth vs. Traditional -->
     <div class="card">
       <div class="section-label">Roth vs. Traditional IRA</div>
-      <p>Both are individual retirement accounts, but the tax treatment is opposite. Choosing between them comes down to when you want to pay taxes — now or later.</p>
+      <h2>Which type of IRA is this?</h2>
+      <p style="margin-top: 12px;">This is the single most-searched question around Roth IRAs, and the answer comes down to when you pay tax.</p>
       <ul class="symptom-list" style="margin-top: 12px;">
-        <li><strong>Roth IRA</strong> — Pay taxes now. Withdrawals in retirement are tax-free. Best when you expect your tax rate to be higher in retirement than it is today.</li>
-        <li><strong>Traditional IRA</strong> — Get a tax deduction now (if eligible). Pay taxes on every dollar you withdraw in retirement. Best when you're in a high bracket now and expect to be in a lower one later.</li>
-        <li><strong>Employer 401(k)</strong> — If your employer offers a match, contribute enough to get the full match first — that's free money. Then consider maxing a Roth IRA for tax diversification before going back to the 401(k).</li>
+        <li><strong>Roth IRA</strong> — contributions are after-tax (no deduction now), qualified withdrawals in retirement are 100% tax-free.</li>
+        <li><strong>Traditional IRA</strong> — contributions may be tax-deductible now, but withdrawals in retirement are taxed as ordinary income.</li>
+        <li><strong>Roth</strong> tends to favor people who expect to be in a higher tax bracket in retirement than they are today — often younger workers early in their careers.</li>
+        <li><strong>Traditional</strong> tends to favor people who want the deduction now and expect a lower tax bracket later.</li>
+        <li>Both share the same combined annual contribution limit — you don't get a separate limit for each account.</li>
+        <li>Only Roth IRAs have income limits on direct contributions. Traditional IRA contributions are open to anyone with earned income, though the deduction itself can phase out if you're covered by a workplace plan.</li>
       </ul>
-      <div class="timing-box" style="margin-top:16px;">
-        <h3>💡 Tax diversification</h3>
-        <p>Many financial planners recommend having both Roth and Traditional accounts. In retirement, you can pull from Traditional accounts in low-income years (paying lower tax rates) and from Roth accounts in high-income years — giving you control over your tax bill year by year.</p>
-      </div>
     </div>
+
+    <!-- CARD 3b: 2026 income limits -->
+    <div class="card">
+      <div class="section-label">2026 income limits</div>
+      <h2>Roth IRA income phase-out ranges</h2>
+      <p style="margin-top: 12px;">Your eligibility to contribute directly to a Roth IRA is based on your <a href="/magi.html" class="inline-link">Modified Adjusted Gross Income (MAGI)</a> — not your gross pay, and not your AGI alone. Per IRS Rev. Proc. 2025-32, the 2026 phase-out ranges are:</p>
+      <div class="two-col" style="margin-top: 12px;">
+        <div class="range-box blue">
+          <div class="range-box-label">Single / Head of Household</div>
+          <p>Full contribution below $153,000 MAGI. Phases out between $153,000 and $168,000. No direct contribution above $168,000.</p>
+        </div>
+        <div class="range-box blue">
+          <div class="range-box-label">Married Filing Jointly</div>
+          <p>Full contribution below $242,000 MAGI. Phases out between $242,000 and $252,000. No direct contribution above $252,000.</p>
+        </div>
+      </div>
+      <p style="margin-top: 12px;">Married filing separately is treated differently: if you lived with your spouse at any point in the year, the phase-out range is a narrow $0 to $10,000 and is not adjusted for inflation. If you're over these thresholds, you're not shut out of a Roth entirely — that's where the <a href="#backdoor-roth" class="inline-link">backdoor Roth</a> comes in.</p>
+    </div>
+
+    <!-- CARD 3c: 2026 contribution limits -->
+    <div class="card">
+      <div class="section-label">2026 contribution limits</div>
+      <h2>How much can you contribute?</h2>
+      <p style="margin-top: 12px;">For 2026, the Roth IRA contribution limit is <strong>$7,500</strong>, or <strong>$8,600</strong> if you're age 50 or older (a $1,100 catch-up contribution). This limit is shared across all your IRAs combined — Roth and Traditional together, not $7,500 for each account separately.</p>
+      <p>You also can't contribute more than you actually earned in wages, self-employment income, or other qualifying compensation for the year. If your earned income was only $4,000, that's your ceiling regardless of the IRS limit. Investment income, rental income, and pension income don't count as earned income for this purpose.</p>
+    </div>
+
+    <!-- CARD 4: Related forms -->
+    <div class="card">
+      <div class="section-label">Related forms often involved</div>
+      <p>Roth IRAs are relatively simple accounts, but a few forms tend to come up around contributions, conversions, and reporting.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Form 5498</strong> — issued by your IRA custodian showing contributions made for the year.</li>
+        <li><strong>Form 8606</strong> — required if you make a nondeductible Traditional IRA contribution as part of a backdoor Roth, so the IRS knows that portion isn't taxed again on conversion.</li>
+        <li><strong>Form 1099-R</strong> — issued if you take a distribution or complete a Roth conversion, even if none of it ends up taxable.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 5: Common mistakes -->
     <div class="card">
       <div class="section-label">Common mistakes to avoid</div>
       <div class="two-col">
-        <div class="range-box warn">
-          <div class="range-box-label">⚠️ Early earnings withdrawal</div>
-          <p>Withdrawing investment earnings before age 59½ (without a qualifying exception) triggers income tax plus a 10% penalty. Your original contributions can always be withdrawn tax-free — but the growth cannot.</p>
+        <div class="range-box warn" id="backdoor-roth">
+          <div class="range-box-label">⚠️ MISSING THE PRO-RATA RULE</div>
+          <p>A backdoor Roth (contributing to a nondeductible Traditional IRA, then converting it to Roth) is legal, but if you hold other pre-tax IRA money anywhere, the pro-rata rule can make part of the conversion taxable — a surprise many people don't see coming.</p>
         </div>
         <div class="range-box warn">
-          <div class="range-box-label">⚠️ Exceeding the limit</div>
-          <p>Contributing more than $7,000 ($8,000 if 50+) across all IRAs triggers a 6% excess contribution penalty every year until you fix it. Track contributions across all accounts — including spousal IRAs.</p>
-        </div>
-      </div>
-      <div class="two-col" style="margin-top: 16px;">
-        <div class="range-box warn">
-          <div class="range-box-label">⚠️ Backdoor Roth pro-rata rule</div>
-          <p>If you have existing Traditional IRA balances, a backdoor Roth conversion may be partially taxable due to the IRS pro-rata rule. Many high earners miss this and get surprised with a tax bill.</p>
-        </div>
-        <div class="range-box warn">
-          <div class="range-box-label">⚠️ Missing the deadline</div>
-          <p>Unlike a 401(k) where contributions come from each paycheck, Roth IRA contributions are manual. Forgetting to contribute by April 15 means losing that year's slot forever — you can't go back and fill it later.</p>
+          <div class="range-box-label">⚠️ CONFUSING MAGI WITH GROSS INCOME</div>
+          <p>Roth eligibility is based on MAGI, not your salary or your AGI alone. Someone can be well under a headline salary threshold in conversation but still phase out once MAGI addbacks are applied.</p>
         </div>
       </div>
     </div>
+
+    <!-- CARD 6: What to do right now -->
     <div class="card">
       <div class="section-label">What to do right now</div>
       <div class="next-steps">
-        If you haven't opened a Roth IRA yet, pick a low-cost brokerage and open one today — it takes about 10 minutes. Set up automatic monthly contributions ($583/month hits the $7,000 annual limit). If you're unsure whether Roth or Traditional is better for your situation, or your income is near the phase-out limits, a tax professional can run the comparison in one session. The earlier you start, the more years of tax-free compounding you get.
+        Check your 2026 MAGI against the phase-out range for your filing status before assuming you can — or can't — contribute directly. If you're over the limit, ask a tax professional whether a backdoor Roth makes sense given any other pre-tax IRA balances you hold, since the <a href="/magi.html" class="inline-link">MAGI calculation</a> and the pro-rata rule both affect the outcome.
       </div>
     </div>
+
+    <!-- CARD 7: Questions to ask your tax professional -->
     <div class="card">
       <div class="section-label">Questions to ask your tax professional</div>
       <ul class="questions-list">
-        <li><span class="q-num">01</span>Given my current income and expected retirement income, is a Roth or Traditional IRA better for me?</li>
-        <li><span class="q-num">02</span>Am I under the income limit to contribute directly to a Roth IRA, or do I need a backdoor Roth strategy?</li>
-        <li><span class="q-num">03</span>If I do a backdoor Roth, do I have existing Traditional IRA balances that trigger the pro-rata rule?</li>
-        <li><span class="q-num">04</span>Should I contribute to a Roth IRA, my employer's 401(k), or both — and in what order?</li>
-        <li><span class="q-num">05</span>Can I still make a contribution for last tax year before the April 15 deadline?</li>
-        <li><span class="q-num">06</span>Does my spouse qualify for a spousal Roth IRA even if they don't have earned income?</li>
+        <li><span class="q-num">01</span>Based on my MAGI, am I eligible for a full, partial, or no direct Roth contribution this year?</li>
+        <li><span class="q-num">02</span>Do I have other pre-tax IRA balances that would trigger the pro-rata rule on a backdoor Roth?</li>
+        <li><span class="q-num">03</span>Given my expected tax bracket in retirement, does Roth or Traditional make more sense for me?</li>
+        <li><span class="q-num">04</span>Should I split my contribution between Roth and Traditional instead of choosing one?</li>
+        <li><span class="q-num">05</span>Do I need to file Form 8606 for any contributions or conversions this year?</li>
       </ul>
     </div>
+
+    <!-- CARD 8: FAQ -->
     <div class="card">
       <div class="section-label">Frequently asked questions</div>
       <div class="faq-item">
-        <div class="faq-q">Can I withdraw my Roth IRA contributions anytime?</div>
-        <div class="faq-a">Yes. Because you already paid taxes on contributions, you can withdraw them at any time for any reason — no taxes, no penalties. Only the investment earnings are restricted before age 59½.</div>
+        <div class="faq-q">What's the difference between a Roth IRA and a Traditional IRA?</div>
+        <div class="faq-a">A Roth IRA is funded with after-tax dollars, so qualified withdrawals in retirement are tax-free. A Traditional IRA is funded with pre-tax (often deductible) dollars, so withdrawals in retirement are taxed as ordinary income. The core trade-off is paying tax now (Roth) versus paying tax later (Traditional).</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What's the difference between a Roth IRA and a Roth 401(k)?</div>
-        <div class="faq-a">Both use after-tax contributions and offer tax-free withdrawals in retirement. A Roth IRA is an individual account you open yourself with higher investment flexibility and no RMDs. A Roth 401(k) is through your employer, has higher contribution limits ($23,000 in 2024), but is subject to RMDs unless rolled into a Roth IRA at retirement.</div>
+        <div class="faq-q">What is the Roth IRA income limit for 2026?</div>
+        <div class="faq-a">For 2026, your ability to contribute directly to a Roth IRA phases out between $153,000 and $168,000 of MAGI for single filers and heads of household, and between $242,000 and $252,000 for married couples filing jointly, per IRS Rev. Proc. 2025-32.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the Roth IRA contribution limit for 2026?</div>
+        <div class="faq-a">For 2026, the Roth IRA contribution limit is $7,500, or $8,600 if you're age 50 or older. This limit is shared across all your IRAs — Roth and Traditional combined, not $7,500 for each.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">What is a backdoor Roth IRA?</div>
-        <div class="faq-a">It's a legal strategy for high earners above the income limit: contribute to a Traditional IRA (which has no income limit for non-deductible contributions), then convert it to a Roth IRA. The conversion itself is not restricted by income. However, if you have other Traditional IRA money, the IRS applies the pro-rata rule and part of the conversion may be taxable.</div>
+        <div class="faq-a">A backdoor Roth is a two-step workaround for high earners who are phased out of direct Roth contributions: you contribute to a nondeductible Traditional IRA, then convert that balance to a Roth IRA. It's legal, but the pro-rata rule can create an unexpected tax bill if you hold other pre-tax IRA money.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Can I have both a Roth IRA and a Traditional IRA?</div>
-        <div class="faq-a">Yes, but the $7,000 annual contribution limit ($8,000 if 50+) applies to the combined total across all your IRAs. You can't put $7,000 in each — it's $7,000 total split however you want between Roth and Traditional.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Do I report Roth IRA contributions on my tax return?</div>
-        <div class="faq-a">Roth contributions themselves don't appear on your 1040 because they're not deductible. Your brokerage sends you Form 5498 by May 31 showing your contributions — keep it for your records, but you don't file it with your return. If you do a Roth conversion from a Traditional IRA, that conversion amount is reported and may be taxable.</div>
+        <div class="faq-q">Does my income for Roth IRA limits mean my gross income?</div>
+        <div class="faq-a">No. Roth IRA eligibility is based on your Modified Adjusted Gross Income (MAGI), not your gross pay or your Adjusted Gross Income (AGI) alone. MAGI adds back certain deductions to AGI, so it's usually a little higher than the AGI on your Form 1040.</div>
       </div>
     </div>
+
+    <!-- CARD 9: Related tax forms -->
     <div class="card">
-      <div class="section-label">Related tax topics</div>
+      <div class="section-label">Related tax forms</div>
       <div class="related">
-        <a href="/ira" class="related-chip">Traditional IRA →</a>
-        <a href="/401k" class="related-chip">401(k) →</a>
-        <a href="/magi" class="related-chip">MAGI →</a>
-        <a href="/1040" class="related-chip">Form 1040 →</a>
-        <a href="/w2" class="related-chip">Form W-2 →</a>
-        <a href="/tax-bracket" class="related-chip">Tax Brackets →</a>
+        <a href="/magi.html" class="related-chip">MAGI →</a>
+        <a href="/agi.html" class="related-chip">AGI →</a>
+        <a href="/401k.html" class="related-chip">401(k) →</a>
+        <a href="/hsa.html" class="related-chip">HSA →</a>
       </div>
     </div>
+
     <div class="tool-cta">
       <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
+
     <footer>
       <span>taxplain.co</span>
-      <span>Understand your taxes. No accountant required.</span>
+      <span>Not a substitute for professional tax advice.</span>
     </footer>
   </div>
 </body>
