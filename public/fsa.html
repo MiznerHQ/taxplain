@@ -1,682 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What is an FSA? – TaxPlain</title>
-<meta name="description" content="What is an FSA? Plain-English guide to Flexible Spending Accounts — how they work, contribution limits, eligible expenses, deadlines, and common mistakes.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://taxplain.co/fsa">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is an FSA? Flexible Spending Account Explained – TaxPlain</title>
+  <meta name="description" content="An FSA lets you set aside pre-tax money for medical or dependent care costs. Learn 2026 limits, FSA vs. HSA, and the use-it-or-lose-it rules.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.taxplain.co/fsa.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<style>
-*, *::before, *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the FSA contribution limit for 2026?", "acceptedAnswer": { "@type": "Answer", "text": "For 2026, the health FSA contribution limit is $3,400 per employee, up $100 from 2025's $3,300, per IRS Rev. Proc. 2025-32. This limit applies per employee, so a married couple who each have access to their own FSA can each contribute up to $3,400." } },
+      { "@type": "Question", "name": "What's the difference between an FSA and an HSA?", "acceptedAnswer": { "@type": "Answer", "text": "An FSA is offered through your employer and generally follows a use-it-or-lose-it rule each plan year, while an HSA requires a high-deductible health plan, is owned entirely by you, and rolls over indefinitely with no expiration. FSAs also allow both employee and employer to fund them, while HSAs are typically employee-funded with optional employer contributions." } },
+      { "@type": "Question", "name": "What happens to FSA money if I don't use it?", "acceptedAnswer": { "@type": "Answer", "text": "Under the standard use-it-or-lose-it rule, unused health FSA funds are forfeited at the end of the plan year. Some employers offer either a $680 carryover (2026 limit) into the next year or a grace period of up to 2.5 extra months to spend the money — but not both, and not automatically. Check your specific plan's rules." } },
+      { "@type": "Question", "name": "What is the Dependent Care FSA limit for 2026?", "acceptedAnswer": { "@type": "Answer", "text": "The Dependent Care FSA limit for 2026 is $7,500 per household, or $3,750 if married and filing separately, under the One Big Beautiful Bill Act — the first increase to this limit since 1986. This is a completely separate account and limit from the health FSA." } },
+      { "@type": "Question", "name": "Can I use FSA money for anything?", "acceptedAnswer": { "@type": "Answer", "text": "No. FSA funds can only reimburse IRS-qualified medical expenses as defined in IRS Publication 502, such as copays, prescriptions, dental and vision care, and certain over-the-counter items. Dependent Care FSA funds are restricted separately to eligible child or adult daycare costs that allow you or your spouse to work." } }
+    ]
+  }
+  </script>
 
-:root {
---bg: #FFFFFF;
---ink: #0D1B2A;
---muted: #6B7A8D;
---accent: #1B4B8A;
---accent-light: #EAF0FA;
---accent-border: #B5CEFA;
---warn: #993C1D;
---warn-light: #FAECE7;
---warn-border: #F5C4B3;
---success-light: #EAF3DE;
---success-border: #C0DD97;
---success-text: #27500A;
---amber: #92400E;
---amber-light: #FEF3C7;
---amber-border: #F59E0B;
---border: #DDE3EC;
---white: #FFFFFF;
-}
-
-body {
-background: var(--bg);
-color: var(--ink);
-font-family: 'DM Sans', sans-serif;
-min-height: 100vh;
-}
-
-.wrap {
-max-width: 720px;
-margin: 0 auto;
-padding: 40px 24px 80px;
-}
-
-nav {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 40px;
-}
-
-.logo-mark {
-width: 32px;
-height: 32px;
-background: var(--accent);
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.logo-mark svg {
-width: 18px;
-height: 18px;
-fill: white;
-}
-
-.logo-text {
-font-family: 'DM Mono', monospace;
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-text-decoration: none;
-}
-
-.logo-text span {
-color: var(--accent);
-}
-
-.breadcrumb {
-font-size: 13px;
-color: var(--muted);
-margin-bottom: 20px;
-font-family: 'DM Mono', monospace;
-}
-
-.breadcrumb a {
-color: var(--accent);
-text-decoration: none;
-}
-
-h1 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(28px, 5vw, 42px);
-line-height: 1.15;
-letter-spacing: -0.5px;
-margin-bottom: 8px;
-}
-
-h2 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(20px, 3vw, 26px);
-line-height: 1.2;
-letter-spacing: -0.3px;
-margin-bottom: 12px;
-color: var(--ink);
-}
-
-h3 {
-font-family: 'DM Sans', sans-serif;
-font-size: 16px;
-font-weight: 500;
-margin-bottom: 8px;
-color: var(--ink);
-}
-
-.category-tag {
-display: inline-block;
-background: var(--accent-light);
-color: var(--accent);
-font-family: 'DM Mono', monospace;
-font-size: 11px;
-letter-spacing: 1px;
-text-transform: uppercase;
-padding: 4px 12px;
-border-radius: 20px;
-margin-bottom: 24px;
-}
-
-.disclaimer {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 14px 18px;
-margin-bottom: 36px;
-font-size: 13px;
-color: var(--amber);
-line-height: 1.5;
-}
-
-.card {
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 14px;
-padding: 28px;
-margin-bottom: 20px;
-}
-
-.section-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-font-weight: 500;
-letter-spacing: 1.8px;
-text-transform: uppercase;
-color: var(--muted);
-margin-bottom: 10px;
-}
-
-p {
-font-size: 16px;
-line-height: 1.75;
-color: var(--ink);
-}
-
-p + p {
-margin-top: 14px;
-}
-
-.two-col {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-}
-
-.range-box {
-padding: 16px;
-border-radius: 10px;
-}
-
-.range-box.warn {
-background: var(--warn-light);
-border: 1px solid var(--warn-border);
-}
-
-.range-box.blue {
-background: var(--accent-light);
-border: 1px solid var(--accent-border);
-}
-
-.range-box-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-letter-spacing: 1px;
-text-transform: uppercase;
-margin-bottom: 8px;
-}
-
-.range-box.warn .range-box-label {
-color: var(--warn);
-}
-
-.range-box.blue .range-box-label {
-color: var(--accent);
-}
-
-.range-box p {
-font-size: 14px;
-line-height: 1.65;
-}
-
-.symptom-list {
-list-style: none;
-padding: 0;
-}
-
-.symptom-list li {
-font-size: 14px;
-color: var(--ink);
-line-height: 1.6;
-padding: 4px 0;
-border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.symptom-list li:last-child {
-border-bottom: none;
-}
-
-.symptom-list li::before {
-content: "→ ";
-color: var(--muted);
-}
-
-.timing-box {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 18px 20px;
-margin-top: 16px;
-}
-
-.timing-box h3 {
-font-size: 14px;
-color: var(--amber);
-font-family: 'DM Mono', monospace;
-letter-spacing: 0.5px;
-margin-bottom: 8px;
-}
-
-.timing-box p {
-font-size: 14px;
-color: #78350F;
-line-height: 1.65;
-}
-
-.next-steps {
-background: var(--success-light);
-border: 1px solid var(--success-border);
-border-radius: 10px;
-padding: 20px;
-font-size: 15px;
-line-height: 1.7;
-color: var(--success-text);
-}
-
-.questions-list {
-list-style: none;
-padding: 0;
-margin-top: 8px;
-}
-
-.questions-list li {
-font-size: 15px;
-color: var(--ink);
-line-height: 1.65;
-padding: 10px 0;
-border-bottom: 1px solid var(--border);
-display: flex;
-gap: 10px;
-}
-
-.questions-list li:last-child {
-border-bottom: none;
-}
-
-.q-num {
-font-family: 'DM Mono', monospace;
-font-size: 12px;
-color: var(--accent);
-font-weight: 500;
-flex-shrink: 0;
-margin-top: 2px;
-}
-
-.faq-item {
-padding: 18px 0;
-border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-border-bottom: none;
-}
-
-.faq-q {
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-margin-bottom: 8px;
-}
-
-.faq-a {
-font-size: 15px;
-color: var(--muted);
-line-height: 1.7;
-}
-
-.tool-cta {
-background: var(--accent);
-color: white;
-border-radius: 12px;
-padding: 28px;
-margin-top: 32px;
-text-align: center;
-}
-
-.tool-cta h3 {
-font-family: 'DM Serif Display', serif;
-font-size: 24px;
-margin-bottom: 8px;
-color: white;
-}
-
-.tool-cta p {
-font-size: 14px;
-opacity: 0.85;
-margin-bottom: 18px;
-color: white;
-}
-
-.tool-cta a {
-display: inline-block;
-background: white;
-color: var(--accent);
-font-weight: 500;
-text-decoration: none;
-padding: 12px 28px;
-border-radius: 8px;
-font-family: 'DM Mono', monospace;
-font-size: 14px;
-}
-
-.related {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-gap: 12px;
-margin-top: 4px;
-}
-
-.related-chip {
-display: block;
-padding: 12px 16px;
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 10px;
-text-decoration: none;
-font-size: 14px;
-color: var(--ink);
-font-family: 'DM Mono', monospace;
-transition: border-color 0.15s;
-}
-
-.related-chip:hover {
-border-color: var(--accent);
-color: var(--accent);
-}
-
-footer {
-margin-top: 60px;
-padding-top: 20px;
-border-top: 1px solid var(--border);
-font-size: 12px;
-color: var(--muted);
-font-family: 'DM Mono', monospace;
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 8px;
-}
-
-@media (max-width: 480px) {
-.two-col {
-grid-template-columns: 1fr;
-}
-}
-</style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
 </head>
-
 <body>
-
-<div class="wrap">
-
-<nav>
-<div class="logo-mark">
-<svg viewBox="0 0 24 24">
-<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
-</svg>
-</div>
-
-<a href="/" class="logo-text">tax<span>plain</span></a>
-</nav>
-
-<p class="breadcrumb">
-<a href="/">Home</a> &rsaquo;
-<a href="/guides">Tax Guides</a> &rsaquo;
-FSA
-</p>
-
-<h1>
-What is an<br>
-<em style="font-style:italic;color:var(--accent)">FSA</em>?
-</h1>
-
-<span class="category-tag">Tax Benefit</span>
-
-<div class="disclaimer">
-⚠ <strong>Educational only.</strong>
-TaxPlain does not provide tax, legal, or financial advice.
-Always consult a qualified tax professional or benefits administrator about your specific situation.
-</div>
-
-<div class="card">
-<div class="section-label">What this account is</div>
-
-<p>
-An FSA (Flexible Spending Account) is a special employer-sponsored account that lets you use pre-tax money to pay for eligible healthcare or dependent care expenses. The biggest advantage: money contributed to an FSA is generally not subject to federal income tax, Social Security tax, or Medicare tax.
-</p>
-
-<p>
-In simple terms, an FSA lowers your taxable income. You choose an amount to contribute through payroll deductions, and that money is set aside to pay for approved expenses like doctor visits, prescriptions, glasses, daycare, or child care — depending on the type of FSA.
-</p>
-</div>
-
-<div class="card">
-<div class="section-label">Main types of FSAs</div>
-
-<div class="two-col">
-
-<div class="range-box blue">
-<div class="range-box-label">✓ Healthcare FSA</div>
-
-<p>
-Used for medical, dental, and vision expenses not covered by insurance. Common eligible expenses include copays, prescriptions, contacts, glasses, therapy, and certain medical supplies.
-</p>
-</div>
-
-<div class="range-box blue">
-<div class="range-box-label">✓ Dependent Care FSA</div>
-
-<p>
-Used for qualifying child care or dependent care expenses so you can work or look for work. This can include daycare, preschool, after-school care, and some elder care expenses.
-</p>
-</div>
-
-</div>
-
-<div class="timing-box">
-<h3>📅 Important rule</h3>
-
-<p>
-Most FSAs are "use-it-or-lose-it" accounts. Money left unused at the end of the plan year may expire unless your employer offers a rollover option or grace period.
-</p>
-</div>
-</div>
-
-<div class="card">
-<div class="section-label">How the tax savings work</div>
-
-<h2>Why people use FSAs</h2>
-
-<p>
-FSA contributions are deducted from your paycheck before taxes are calculated. That means you pay taxes on a smaller amount of income.
-</p>
-
-<ul class="symptom-list" style="margin-top:12px;">
-<li><strong>Lower taxable income</strong> — Reduces federal income taxes and payroll taxes</li>
-<li><strong>Immediate access</strong> — Healthcare FSAs often give access to your full annual election amount upfront</li>
-<li><strong>Payroll convenience</strong> — Contributions happen automatically from each paycheck</li>
-<li><strong>Tax-free reimbursements</strong> — Qualified expenses are reimbursed tax-free</li>
-<li><strong>Works with employer benefits</strong> — Often paired with employer health insurance plans</li>
-</ul>
-</div>
-
-<div class="card">
-<div class="section-label">Common eligible expenses</div>
-
-<ul class="symptom-list">
-<li><strong>Doctor visits and copays</strong></li>
-<li><strong>Prescription medications</strong></li>
-<li><strong>Dental care and orthodontics</strong></li>
-<li><strong>Eyeglasses and contact lenses</strong></li>
-<li><strong>Therapy and mental health treatment</strong></li>
-<li><strong>Daycare and after-school care</strong> (Dependent Care FSA)</li>
-<li><strong>Babysitting related to work</strong> (Dependent Care FSA)</li>
-<li><strong>Medical supplies and equipment</strong></li>
-</ul>
-</div>
-
-<div class="card">
-<div class="section-label">Common mistakes to avoid</div>
-
-<div class="two-col">
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Overcontributing</div>
-
-<p>
-FSA elections are usually locked in for the year unless you experience a qualifying life event. Estimating too high can leave unused money that may expire.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Missing deadlines</div>
-
-<p>
-Many people forget reimbursement submission deadlines. Even if you spent the money correctly, failing to submit claims in time can cause you to lose reimbursement rights.
-</p>
-</div>
-
-</div>
-
-<div class="two-col" style="margin-top:16px;">
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Confusing FSA vs HSA</div>
-
-<p>
-An FSA is employer-sponsored and usually has use-it-or-lose-it rules. An HSA is tied to high-deductible health plans and keeps rolling over year after year.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Assuming everything qualifies</div>
-
-<p>
-Not every medical or childcare expense is eligible. Cosmetic procedures and general wellness products often do not qualify unless specifically approved.
-</p>
-</div>
-
-</div>
-</div>
-
-<div class="card">
-<div class="section-label">What to do right now</div>
-
-<div class="next-steps">
-If your employer offers an FSA during open enrollment, estimate your expected medical or dependent care costs for the coming year before choosing a contribution amount. Conservative estimates are usually safer because unused funds may expire. Keep receipts for all eligible expenses and verify reimbursement deadlines with your employer or plan administrator.
-</div>
-</div>
-
-<div class="card">
-<div class="section-label">Questions to ask your HR department</div>
-
-<ul class="questions-list">
-
-<li>
-<span class="q-num">01</span>
-Does my FSA include a rollover option or grace period?
-</li>
-
-<li>
-<span class="q-num">02</span>
-What expenses qualify under my specific plan?
-</li>
-
-<li>
-<span class="q-num">03</span>
-What is the reimbursement submission deadline?
-</li>
-
-<li>
-<span class="q-num">04</span>
-Can I change my contribution amount during the year?
-</li>
-
-<li>
-<span class="q-num">05</span>
-How does this interact with an HSA or HRA?
-</li>
-
-<li>
-<span class="q-num">06</span>
-Do unused funds expire if I leave my job?
-</li>
-
-</ul>
-</div>
-
-<div class="card">
-
-<div class="section-label">Frequently asked questions</div>
-
-<div class="faq-item">
-<div class="faq-q">Is an FSA the same as an HSA?</div>
-
-<div class="faq-a">
-No. FSAs are employer-sponsored and often have use-it-or-lose-it rules. HSAs require a qualifying high-deductible health plan and allow unused balances to roll over indefinitely.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">Do FSA contributions reduce taxes?</div>
-
-<div class="faq-a">
-Yes. Contributions are generally deducted before federal income taxes and payroll taxes are calculated, lowering your taxable income.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">What happens if I don't use all my FSA money?</div>
-
-<div class="faq-a">
-Unused money may expire at the end of the plan year unless your employer offers a rollover feature or grace period. Plan rules vary by employer.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">Can self-employed people open an FSA?</div>
-
-<div class="faq-a">
-Generally no. FSAs are employer-sponsored benefit plans. Self-employed individuals without employees typically cannot participate in a traditional FSA.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-q">Can I use an FSA for over-the-counter medicine?</div>
-
-<div class="faq-a">
-Usually yes. Many over-the-counter medications and medical products qualify, though eligibility rules can vary by plan and IRS guidance.
-</div>
-</div>
-
-</div>
-
-<div class="card">
-<div class="section-label">Related tax topics</div>
-
-<div class="related">
-<a href="/hsa" class="related-chip">HSA →</a>
-<a href="/w4" class="related-chip">Form W-4 →</a>
-<a href="/1095-a" class="related-chip">Form 1095-A →</a>
-<a href="/schedule-c" class="related-chip">Schedule C →</a>
-<a href="/1040" class="related-chip">Form 1040 →</a>
-<a href="/fica" class="related-chip">FICA Tax →</a>
-</div>
-</div>
-
-<div class="tool-cta">
-<h3>Decode any tax form instantly</h3>
-
-<p>
-Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
-</p>
-
-<a href="/">Open the Decoder →</a>
-</div>
-
-<footer>
-<span>taxplain.co</span>
-<span>Understand your taxes. No accountant required.</span>
-</footer>
-
-</div>
-
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
+      <a href="/" class="logo-text">tax<span>plain</span></a>
+    </nav>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; FSA</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">an FSA</em>?</h1>
+    <span class="category-tag">Pre-Tax Accounts</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated August 2026</p>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+
+    <!-- CARD 1: What this is -->
+    <div class="card">
+      <div class="section-label">What this is</div>
+      <p>A Flexible Spending Account (FSA) is a pre-tax account offered through your employer that lets you set aside money from your paycheck before taxes to cover eligible medical or dependent care expenses. Because contributions come out before federal income tax, Social Security tax, and Medicare tax are calculated, an FSA effectively lowers your taxable income while helping you pay for costs you'd have anyway — copays, prescriptions, or daycare.</p>
+      <p>The FSA is easy to confuse with its cousin, the <a href="/hsa.html" class="inline-link">Health Savings Account (HSA)</a>, since both are pre-tax medical accounts. The key difference: an FSA is owned by your employer's plan and generally has a use-it-or-lose-it deadline, while an HSA is owned by you, requires a high-deductible health plan, and rolls over with no expiration. If you're comparing the two, <a href="/hsa.html" class="inline-link">see our HSA guide</a> for the full breakdown.</p>
+      <p>There isn't just one kind of FSA. A Health FSA covers medical expenses, while a Dependent Care FSA — a completely separate account with its own limit — covers childcare or adult daycare costs that let you or your spouse work.</p>
+    </div>
+
+    <!-- CARD 2: Who it affects -->
+    <div class="card">
+      <div class="section-label">Who it affects</div>
+      <div class="two-col">
+        <div class="range-box blue">
+          <div class="range-box-label">✓ Applies to</div>
+          <p>Employees whose employer offers an FSA through a Section 125 cafeteria plan, regardless of whether they also have other health coverage.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Also applies to</div>
+          <p>Parents or caregivers paying for daycare, preschool, or adult dependent care — even if they don't use the health FSA.</p>
+        </div>
+      </div>
+      <div class="timing-box">
+        <h3>📅 OPEN ENROLLMENT DEADLINE</h3>
+        <p>Unlike an HSA, you generally can't open or change FSA contributions any time — you elect an amount during your employer's open enrollment period, and that election typically locks in for the plan year unless you have a qualifying life event (marriage, birth, job change).</p>
+      </div>
+    </div>
+
+    <!-- CARD 3: FSA vs. HSA breakdown -->
+    <div class="card">
+      <div class="section-label">FSA vs. HSA</div>
+      <h2>FSA vs. HSA: what's the real difference?</h2>
+      <p style="margin-top: 12px;">These two accounts get confused constantly because both let you pay medical costs with pre-tax dollars. The differences that actually matter come down to ownership, expiration, and eligibility — not just the acronym.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Ownership</strong> — an FSA belongs to your employer's plan; an <a href="/hsa.html" class="inline-link">HSA</a> belongs entirely to you, even if you change jobs.</li>
+        <li><strong>Eligibility</strong> — anyone with employer FSA access can enroll; an HSA requires you to be covered by a qualifying high-deductible health plan (HDHP).</li>
+        <li><strong>Expiration</strong> — FSA funds are generally use-it-or-lose-it each plan year; HSA funds roll over indefinitely and never expire.</li>
+        <li><strong>Portability</strong> — leaving your job usually means losing unused FSA funds; your HSA balance stays with you for life.</li>
+        <li><strong>2026 contribution limit</strong> — $3,400 for a health FSA vs. $4,400 (self-only) or $8,750 (family) for an HSA.</li>
+        <li><strong>Investing</strong> — FSA funds sit as cash for the plan year; many HSAs let you invest the balance once it hits a threshold.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 4: Dependent Care FSA (dedicated) -->
+    <div class="card">
+      <div class="section-label">A separate account entirely</div>
+      <h2>Dependent Care FSA</h2>
+      <p style="margin-top: 12px;">A Dependent Care FSA (sometimes called a DCAP) is not the same account as your health FSA — it has its own election, its own limit, and its own eligible expense list. It reimburses costs for childcare, preschool, before/after-school care, or adult daycare that allow you (and your spouse, if married) to work or look for work.</p>
+      <div class="two-col" style="margin-top: 16px;">
+        <div class="range-box blue">
+          <div class="range-box-label">2026 limit — household</div>
+          <p><strong>$7,500</strong> per household, the first increase to this limit since 1986, under the One Big Beautiful Bill Act.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">2026 limit — married filing separately</div>
+          <p><strong>$3,750</strong> if you're married and file a separate return from your spouse.</p>
+        </div>
+      </div>
+      <p style="margin-top: 16px;">Because the health FSA and Dependent Care FSA are separate accounts, you can max out both in the same year — a $3,400 health FSA election and a $7,500 dependent care election aren't in competition with each other.</p>
+    </div>
+
+    <!-- CARD 5: 2026 contribution limits -->
+    <div class="card">
+      <div class="section-label">2026 contribution limits</div>
+      <h2>How much can you contribute in 2026?</h2>
+      <p style="margin-top: 12px;">Per IRS Rev. Proc. 2025-32, released October 2025, these are the confirmed 2026 figures:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Health FSA</strong> — $3,400 per employee (up $100 from $3,300 in 2025).</li>
+        <li><strong>Health FSA carryover</strong> — up to $680 may carry into 2026 if your employer's plan allows it (up from $660).</li>
+        <li><strong>Dependent Care FSA</strong> — $7,500 per household ($3,750 if married filing separately).</li>
+        <li><strong>Per-employee basis</strong> — the health FSA limit applies per person, so spouses who each have their own employer FSA can each contribute up to $3,400.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 6: Eligible expenses -->
+    <div class="card">
+      <div class="section-label">Eligible expenses</div>
+      <h2>What can you actually buy with FSA money?</h2>
+      <p style="margin-top: 12px;">FSA funds can only reimburse expenses the IRS defines as qualified medical care, laid out in <a href="/itemized-deductions.html" class="inline-link">IRS Publication 502</a> — the same publication that governs the medical expense itemized deduction.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Copays and deductibles</strong> — amounts you pay out of pocket for covered medical visits.</li>
+        <li><strong>Prescription medications</strong> — including many common maintenance drugs.</li>
+        <li><strong>Dental and vision care</strong> — cleanings, glasses, contacts, and related costs.</li>
+        <li><strong>Certain over-the-counter items</strong> — pain relievers, allergy medication, and similar products, without a prescription required.</li>
+        <li><strong>Dependent Care FSA only</strong> — daycare, preschool tuition, and before/after-school programs, not medical costs.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 7: Common mistakes -->
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Assuming FSA funds roll over like an HSA</div>
+          <p>Health FSAs are use-it-or-lose-it by default. Your employer may offer a $680 carryover or a short grace period — but never both, and neither is automatic unless your plan says so.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Electing too much without a spending plan</div>
+          <p>Because FSA elections lock in at open enrollment, overestimating your medical or dependent care costs can leave you forfeiting money at year-end.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 8: What to do right now -->
+    <div class="card">
+      <div class="section-label">What to do right now</div>
+      <div class="next-steps">
+        Check whether your employer's FSA plan offers a carryover or grace period, and confirm your remaining balance and plan-year deadline before it's too late to spend it. If you're deciding between an FSA and an <a href="/hsa.html" class="inline-link">HSA</a>, compare your expected medical costs against each account's rules before open enrollment closes.
+      </div>
+    </div>
+
+    <!-- CARD 9: Questions to ask your tax professional -->
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Does my employer's FSA offer a carryover, a grace period, or neither?</li>
+        <li><span class="q-num">02</span>Should I use an FSA or an HSA given my current health plan?</li>
+        <li><span class="q-num">03</span>Can I contribute to both a health FSA and a Dependent Care FSA in the same year?</li>
+        <li><span class="q-num">04</span>How does a mid-year job change affect my FSA election?</li>
+        <li><span class="q-num">05</span>What happens to my FSA balance if I leave my employer?</li>
+      </ul>
+    </div>
+
+    <!-- CARD 10: FAQ -->
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">What is the FSA contribution limit for 2026?</div>
+        <div class="faq-a">For 2026, the health FSA contribution limit is $3,400 per employee, up $100 from 2025's $3,300, per IRS Rev. Proc. 2025-32. This limit applies per employee, so a married couple who each have access to their own FSA can each contribute up to $3,400.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between an FSA and an HSA?</div>
+        <div class="faq-a">An FSA is offered through your employer and generally follows a use-it-or-lose-it rule each plan year, while an HSA requires a high-deductible health plan, is owned entirely by you, and rolls over indefinitely with no expiration. FSAs also allow both employee and employer to fund them, while HSAs are typically employee-funded with optional employer contributions.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What happens to FSA money if I don't use it?</div>
+        <div class="faq-a">Under the standard use-it-or-lose-it rule, unused health FSA funds are forfeited at the end of the plan year. Some employers offer either a $680 carryover (2026 limit) into the next year or a grace period of up to 2.5 extra months to spend the money — but not both, and not automatically. Check your specific plan's rules.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the Dependent Care FSA limit for 2026?</div>
+        <div class="faq-a">The Dependent Care FSA limit for 2026 is $7,500 per household, or $3,750 if married and filing separately, under the One Big Beautiful Bill Act — the first increase to this limit since 1986. This is a completely separate account and limit from the health FSA.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I use FSA money for anything?</div>
+        <div class="faq-a">No. FSA funds can only reimburse IRS-qualified medical expenses as defined in IRS Publication 502, such as copays, prescriptions, dental and vision care, and certain over-the-counter items. Dependent Care FSA funds are restricted separately to eligible child or adult daycare costs that allow you or your spouse to work.</div>
+      </div>
+    </div>
+
+    <!-- CARD 11: Related tax forms -->
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/hsa.html" class="related-chip">HSA →</a>
+        <a href="/w2.html" class="related-chip">Form W-2 →</a>
+        <a href="/itemized-deductions.html" class="related-chip">Itemized Deductions →</a>
+        <a href="/standard-deduction.html" class="related-chip">Standard Deduction →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any tax form instantly</h3>
+      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>taxplain.co</span>
+      <span>Not a substitute for professional tax advice.</span>
+    </footer>
+  </div>
 </body>
 </html>
