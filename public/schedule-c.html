@@ -3,12 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Schedule C Explained in Plain English – TaxPlain</title>
-  <meta name="description" content="What is Schedule C? Plain-English guide to reporting self-employment and freelance business income — who must file, every expense category, net profit, self-employment tax, common mistakes, and exactly what to do. No tax jargon.">
+  <title>What Is a Schedule C? (Form 1040) — Self-Employment Tax Explained – TaxPlain</title>
+  <meta name="description" content="Schedule C reports profit or loss from a business you run as a sole proprietor. Learn who files it, how it connects to 1099-NEC, and common mistakes to avoid.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://taxplain.co/schedule-c">
+  <link rel="canonical" href="https://www.taxplain.co/schedule-c.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- FAQ SCHEMA — 5 Q&As, must match visible FAQ card exactly -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is Schedule C used for?", "acceptedAnswer": { "@type": "Answer", "text": "Schedule C is used to report the profit or loss from a business you operate as a sole proprietor or single-member LLC. It calculates your net business income, which then flows to Form 1040 and is used to figure your self-employment tax." } },
+      { "@type": "Question", "name": "Do I need Schedule C if I got a 1099-NEC?", "acceptedAnswer": { "@type": "Answer", "text": "Usually yes. A 1099-NEC just reports income paid to you; it doesn't report your expenses or calculate your tax. If that income came from self-employment or freelance work, you typically report it on Schedule C so you can deduct business expenses against it." } },
+      { "@type": "Question", "name": "What's the difference between Schedule C and 1099-NEC?", "acceptedAnswer": { "@type": "Answer", "text": "Form 1099-NEC is an information return a client sends you showing how much they paid you. Schedule C is the form you file to report your total business income and expenses, including amounts from any 1099-NECs you received, plus cash or other payments." } },
+      { "@type": "Question", "name": "How do I fill out Schedule C?", "acceptedAnswer": { "@type": "Answer", "text": "You'll report your business's gross income, subtract your business expenses in the listed categories (like supplies, advertising, and home office costs), and the result is your net profit or loss, which carries over to Schedule 1 and Form 1040." } },
+      { "@type": "Question", "name": "Do I owe self-employment tax on Schedule C income?", "acceptedAnswer": { "@type": "Answer", "text": "If your net profit from Schedule C is $400 or more, you generally owe self-employment tax, which covers Social Security and Medicare. This is calculated separately on Schedule SE and is in addition to regular income tax." } }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -21,22 +37,26 @@
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
     .logo-mark svg { width: 18px; height: 18px; fill: white; }
     .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
     .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
     h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
     h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
     .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
     p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .range-box { padding: 16px; border-radius: 10px; }
     .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
@@ -46,7 +66,7 @@
     .range-box.blue .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
     .symptom-list { list-style: none; padding: 0; }
-    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
     .symptom-list li:last-child { border-bottom: none; }
     .symptom-list li::before { content: "→ "; color: var(--muted); }
     .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
@@ -78,147 +98,166 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
       <a href="/" class="logo-text">tax<span>plain</span></a>
     </nav>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
+
     <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Schedule C</p>
     <h1>What is<br><em style="font-style:italic;color:var(--accent)">Schedule C</em>?</h1>
-    <span class="category-tag">Tax Form</span>
+    <span class="category-tag">Self-Employment</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated August 2026</p>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+
+    <!-- CARD 1: What this is -->
     <div class="card">
-      <div class="section-label">What this form is</div>
-      <p>Schedule C (Profit or Loss from Business) is the form self-employed people, freelancers, and sole proprietors attach to their Form 1040 to report business income and expenses. If you work for yourself — not as an employee with a W-2 — this is how the IRS knows what your business earned and what it cost to run.</p>
-      <p>The math is straightforward: total business income minus total business expenses equals net profit (or loss). That net profit flows to your 1040 as taxable income and also triggers self-employment tax on Schedule SE. Every legitimate expense you deduct on Schedule C directly reduces both your income tax and your self-employment tax bill.</p>
+      <div class="section-label">What this is</div>
+      <p>Schedule C (officially "Profit or Loss from Business") is the IRS form you use to report income and expenses from a business you run as a sole proprietor or a single-member LLC that hasn't elected corporate tax treatment. It's attached to your <a href="/1040.html" class="inline-link">Form 1040</a> every year you're self-employed.</p>
+      <p>Unlike a W-2 job, self-employment doesn't come with taxes withheld automatically. Schedule C is where you calculate your actual net profit — total business income minus deductible business expenses — and that number is what the IRS taxes, not your gross revenue.</p>
+      <p>If you freelance, drive for a rideshare app, sell products online, consult, or run any kind of one-person business, Schedule C is likely part of your tax return, even if you also have a regular job on the side.</p>
+      <p>You can file more than one Schedule C if you run multiple, distinct businesses — each one gets its own form, with its own income and expense totals. If your side work is more of a hobby without a real intent to turn a profit, different rules apply, and it's worth discussing that distinction with a tax professional before assuming Schedule C is the right form.</p>
     </div>
+
+    <!-- CARD 2: Who it affects -->
     <div class="card">
-      <div class="section-label">Who must file</div>
+      <div class="section-label">Who it affects</div>
       <div class="two-col">
         <div class="range-box blue">
-          <div class="range-box-label">✓ You need Schedule C if...</div>
-          <p>You're a sole proprietor, freelancer, independent contractor, gig worker, or single-member LLC owner with business income. If you received a 1099-NEC or earned more than $400 in self-employment income, you must file — even if your expenses wiped out your profit.</p>
+          <div class="range-box-label">✓ Applies to</div>
+          <p>Sole proprietors, freelancers, independent contractors, and single-member LLCs with business income during the tax year.</p>
         </div>
         <div class="range-box warn">
-          <div class="range-box-label">↑ You may NOT need it if...</div>
-          <p>Your business is structured as a partnership, S-corp, or C-corp — those use different forms (Schedule E, Form 1120-S, etc.). Side income under $400 with no other filing requirement may not trigger a Schedule C, but you still owe tax on it.</p>
+          <div class="range-box-label">↑ Also applies to</div>
+          <p>Side-hustle income — even part-time gig work or occasional freelance projects generally require a Schedule C if you're operating with intent to profit.</p>
         </div>
       </div>
-      <div class="timing-box" style="margin-top:16px;">
-        <h3>📅 Filing deadline</h3>
-        <p>Schedule C is filed with your Form 1040, due April 15 each year for the prior tax year. If you owe self-employment tax, you should also be making quarterly estimated tax payments throughout the year via Form 1040-ES — waiting until April 15 can trigger underpayment penalties.</p>
+      <div class="timing-box">
+        <h3>📅 SELF-EMPLOYMENT TAX THRESHOLD</h3>
+        <p>If your net profit on Schedule C is $400 or more, you generally owe self-employment tax in addition to income tax, calculated on a separate form (Schedule SE).</p>
       </div>
     </div>
+
+    <!-- CARD 3: What goes on the form -->
     <div class="card">
-      <div class="section-label">What each section covers</div>
-      <h2>Breaking down Schedule C</h2>
-      <p>The form walks you through your business from top to bottom. Here's what each part is actually asking:</p>
+      <div class="section-label">Breakdown</div>
+      <h2>What goes on Schedule C</h2>
+      <p style="margin-top: 12px;">The form walks through your business activity in a few main sections. Getting each part right matters — it directly affects both your income tax and your <a href="/self-employment-tax.html" class="inline-link">self-employment tax</a>. Most filers work through it once a year, but keeping running totals throughout the year makes the process much faster and far less prone to missed deductions.</p>
       <ul class="symptom-list" style="margin-top: 12px;">
-        <li><strong>Part I — Income</strong> — Gross receipts or sales (Line 1), returns and allowances (Line 2), and other income like interest or refunds (Line 6). Line 7 is your total income.</li>
-        <li><strong>Part II — Expenses</strong> — Lines 8–27a list every deductible business expense category: advertising, car/truck, contract labor, insurance, legal fees, office expenses, supplies, travel, meals (50% deductible), utilities, and more.</li>
-        <li><strong>Line 28 — Total expenses</strong> — Add up everything in Part II. This is the number that directly reduces your taxable profit.</li>
-        <li><strong>Line 29 — Tentative profit or loss</strong> — Income minus expenses. A negative number means you had a business loss.</li>
-        <li><strong>Line 30 — Home office deduction</strong> — If you use part of your home exclusively for business, you can deduct a portion of rent, mortgage interest, utilities, and insurance here.</li>
-        <li><strong>Line 31 — Net profit or loss</strong> — The final number that flows to Schedule 1 (Line 3) and then to your 1040. This also feeds into Schedule SE for self-employment tax.</li>
-        <li><strong>Part III — Cost of Goods Sold</strong> — If you sell physical products, this section tracks inventory: beginning inventory, purchases, ending inventory. Relevant for Etsy sellers, retailers, and resellers.</li>
-        <li><strong>Part IV — Vehicle information</strong> — If you claim car/truck expenses, you report whether you used the standard mileage rate or actual expenses, and total business miles driven.</li>
+        <li><strong>Gross income</strong> — total money your business brought in before any expenses.</li>
+        <li><strong>Cost of goods sold</strong> — if you sell physical products, this covers what it cost you to produce or acquire them.</li>
+        <li><strong>Business expenses</strong> — a long list of categories like advertising, supplies, insurance, vehicle use, and contract labor.</li>
+        <li><strong>Home office deduction</strong> — if you use part of your home regularly and exclusively for business.</li>
+        <li><strong>Net profit or loss</strong> — the bottom-line number, which flows to Schedule 1 and then your Form 1040.</li>
+        <li><strong>Depreciation</strong> — for larger business assets like equipment or vehicles, spread out over several years rather than deducted all at once.</li>
       </ul>
     </div>
+
+    <!-- CARD 4: Schedule C vs 1099-NEC -->
     <div class="card">
-      <div class="section-label">Common deductible expenses</div>
-      <p>Most freelancers leave money on the table by not tracking small expenses. Here are the categories Schedule C covers that apply to most self-employed people:</p>
-      <ul class="symptom-list" style="margin-top: 12px;">
-        <li><strong>Software and subscriptions</strong> — Adobe, Canva, QuickBooks, project management tools, cloud storage</li>
-        <li><strong>Phone and internet</strong> — Business-use percentage of your cell phone and home internet bills</li>
-        <li><strong>Contract labor</strong> — Payments to subcontractors or freelancers you hired (report on 1099-NEC if over $600)</li>
-        <li><strong>Professional services</strong> — Accountant, lawyer, business consultant fees</li>
-        <li><strong>Education and training</strong> — Courses, certifications, and books directly related to your current business</li>
-        <li><strong>Business meals</strong> — 50% deductible when discussing business with a client or prospect</li>
-        <li><strong>Travel</strong> — Flights, hotels, and transportation for business trips (not commuting)</li>
-        <li><strong>Health insurance premiums</strong> — Deductible on Form 1040 as an above-the-line adjustment if you're self-employed and not eligible for employer coverage</li>
-      </ul>
-      <div class="timing-box" style="margin-top:16px;">
-        <h3>💡 QBI deduction</h3>
-        <p>If your net profit qualifies, you may also be eligible for the Qualified Business Income (QBI) deduction — up to 20% of your business profit deducted from your taxable income. This is calculated separately on Form 8995 and can save thousands, but has income limits and rules for certain professions.</p>
+      <div class="section-label">Schedule C vs. 1099-NEC</div>
+      <p>This is the single most common point of confusion around Schedule C — and it makes sense, since the two forms are closely related but do very different jobs.</p>
+      <div class="two-col" style="margin-top: 12px;">
+        <div class="range-box blue">
+          <div class="range-box-label">1099-NEC</div>
+          <p>A form a client or platform sends <em>you</em>, reporting how much they paid you during the year. It's informational — it doesn't calculate anything or get "filed" by you.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">Schedule C</div>
+          <p>The form <em>you</em> file, combining all your business income (including 1099-NEC amounts, cash payments, and anything else) with your expenses to calculate what you actually owe tax on.</p>
+        </div>
       </div>
+      <p style="margin-top: 16px;">Getting a <a href="/1099-nec.html" class="inline-link">1099-NEC</a> doesn't automatically mean you file Schedule C — but if that income came from self-employment work, it almost always does. And the reverse matters too: you still owe tax on self-employment income even if a client never sent you a 1099-NEC at all, which is increasingly common now that the reporting threshold has risen from $600 to $2,000 for payments made in 2026.</p>
     </div>
+
+    <!-- CARD 5: Related forms -->
+    <div class="card">
+      <div class="section-label">Related forms often involved</div>
+      <p>Schedule C rarely stands alone. Depending on your business, several other forms typically come along with it.</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Schedule SE</strong> — calculates your self-employment tax based on your Schedule C net profit.</li>
+        <li><strong>Form 1040-ES</strong> — used to pay <a href="/estimated-taxes.html" class="inline-link">estimated quarterly taxes</a>, since self-employment income has no withholding.</li>
+        <li><strong>Form 8829</strong> — the detailed calculation form for the home office deduction, if you're claiming one.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 6: Common mistakes -->
     <div class="card">
       <div class="section-label">Common mistakes to avoid</div>
       <div class="two-col">
         <div class="range-box warn">
-          <div class="range-box-label">⚠️ Mixing personal and business</div>
-          <p>Using one bank account for everything makes it impossible to track deductions and is a red flag in audits. Open a separate business checking account and run all business income and expenses through it.</p>
+          <div class="range-box-label">⚠️ Reporting only 1099-NEC income</div>
+          <p>Some filers assume Schedule C income equals their 1099-NEC totals. If clients paid you in cash, check, or through platforms without issuing a form, that income is still taxable and still belongs on Schedule C.</p>
         </div>
         <div class="range-box warn">
-          <div class="range-box-label">⚠️ Forgetting 1099 income</div>
-          <p>Even if a client didn't send you a 1099-NEC, you're still required to report the income. The IRS receives copies of 1099s from payers and matches them against your return.</p>
+          <div class="range-box-label">⚠️ Skipping the self-employment tax</div>
+          <p>Net profit over $400 triggers self-employment tax whether or not you owe regular income tax that year. Forgetting Schedule SE is one of the most common and costly Schedule C errors.</p>
         </div>
       </div>
-      <div class="two-col" style="margin-top: 16px;">
-        <div class="range-box warn">
-          <div class="range-box-label">⚠️ No quarterly estimated payments</div>
-          <p>Self-employment income has no automatic withholding. If you wait until April 15 to pay the full year's tax, you'll owe interest and possibly underpayment penalties on top of the tax itself.</p>
-        </div>
-        <div class="range-box warn">
-          <div class="range-box-label">⚠️ Deducting personal expenses</div>
-          <p>Commuting, personal clothing, and general life expenses aren't deductible just because you work from home. Every deduction must be ordinary and necessary for your specific business.</p>
-        </div>
-      </div>
+      <p style="margin-top: 16px;">A third common issue: mixing personal and business expenses in the same account. It makes Schedule C far harder to prepare accurately, and it's one of the first things that draws scrutiny if your return is ever reviewed. Separate accounts, even simple ones, save real time and reduce errors.</p>
     </div>
+
+    <!-- CARD 7: What to do right now -->
     <div class="card">
       <div class="section-label">What to do right now</div>
       <div class="next-steps">
-        If you're self-employed and haven't been tracking expenses, start today — open a separate business bank account, save every receipt, and use free accounting software like Wave or QuickBooks Self-Employed. When tax season arrives, gather all 1099-NEC forms, your income records, and expense receipts. Tax software like FreeTaxUSA or TurboTax Self-Employed handles Schedule C well for straightforward situations. If you had significant income, multiple income streams, or a home office, a CPA who specializes in freelancers will likely save you more than their fee.
+        Gather every source of business income for the year — not just 1099-NECs — along with receipts or records for business expenses. If you haven't been tracking these separately from personal spending, start now; it makes filing Schedule C and calculating <a href="/self-employment-tax.html" class="inline-link">self-employment tax</a> far more accurate.
       </div>
     </div>
+
+    <!-- CARD 8: Questions to ask your tax professional -->
     <div class="card">
       <div class="section-label">Questions to ask your tax professional</div>
       <ul class="questions-list">
-        <li><span class="q-num">01</span>Am I missing any business deductions I haven't been tracking — home office, mileage, phone, software?</li>
-        <li><span class="q-num">02</span>Should I use the standard mileage rate or actual vehicle expenses for my car deduction?</li>
-        <li><span class="q-num">03</span>Do I qualify for the QBI (Section 199A) deduction, and how much could it save me?</li>
-        <li><span class="q-num">04</span>Am I paying enough in quarterly estimated taxes to avoid underpayment penalties?</li>
-        <li><span class="q-num">05</span>Should I form an LLC or S-corp to reduce self-employment tax on my income?</li>
-        <li><span class="q-num">06</span>Do I need to issue 1099-NEC forms to any subcontractors I paid over $600 this year?</li>
+        <li><span class="q-num">01</span>Which of my business expenses actually qualify as deductions on Schedule C?</li>
+        <li><span class="q-num">02</span>Should I be paying quarterly estimated taxes based on my current profit?</li>
+        <li><span class="q-num">03</span>Do I qualify for the home office deduction, and is it worth claiming?</li>
+        <li><span class="q-num">04</span>Would an LLC or S-corp election change how I'm taxed on this income?</li>
+        <li><span class="q-num">05</span>Am I tracking mileage and depreciation correctly for business assets?</li>
       </ul>
     </div>
+
+    <!-- CARD 9: FAQ -->
     <div class="card">
       <div class="section-label">Frequently asked questions</div>
       <div class="faq-item">
-        <div class="faq-q">Do I need Schedule C if I only had a small side gig?</div>
-        <div class="faq-a">If your net self-employment earnings exceed $400, yes — you must file Schedule C and pay self-employment tax regardless of how small the income seems. Below $400, you may not be required to file Schedule C, but the income is still technically taxable and should be reported on your 1040.</div>
+        <div class="faq-q">What is Schedule C used for?</div>
+        <div class="faq-a">Schedule C is used to report the profit or loss from a business you operate as a sole proprietor or single-member LLC. It calculates your net business income, which then flows to Form 1040 and is used to figure your self-employment tax.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What's the difference between Schedule C and a 1099-NEC?</div>
-        <div class="faq-a">They're completely different things. A 1099-NEC is a tax document a client sends you showing how much they paid you — you don't fill it out. Schedule C is the form you fill out and attach to your 1040 to report all your business income and expenses. You may receive multiple 1099-NECs from different clients, and all of that income goes on one Schedule C.</div>
+        <div class="faq-q">Do I need Schedule C if I got a 1099-NEC?</div>
+        <div class="faq-a">Usually yes. A 1099-NEC just reports income paid to you; it doesn't report your expenses or calculate your tax. If that income came from self-employment or freelance work, you typically report it on Schedule C so you can deduct business expenses against it.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Can I deduct my home office on Schedule C?</div>
-        <div class="faq-a">Yes, if you use part of your home regularly and exclusively for business. You can use the simplified method ($5 per square foot, up to 300 sq ft = $1,500 max) or the regular method (actual expenses prorated by business-use percentage). The home office deduction goes on Line 30 of Schedule C.</div>
+        <div class="faq-q">What's the difference between Schedule C and 1099-NEC?</div>
+        <div class="faq-a">Form 1099-NEC is an information return a client sends you showing how much they paid you. Schedule C is the form you file to report your total business income and expenses, including amounts from any 1099-NECs you received, plus cash or other payments.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What happens if my business had a loss?</div>
-        <div class="faq-a">A net loss on Schedule C (expenses exceeding income) reduces your overall taxable income on your 1040 — which can lower your tax bill or increase your refund. However, the IRS may scrutinize businesses that consistently report losses, as this can indicate a hobby rather than a profit-motivated business. The hobby loss rules limit deductions if your activity isn't genuinely run for profit.</div>
+        <div class="faq-q">How do I fill out Schedule C?</div>
+        <div class="faq-a">You'll report your business's gross income, subtract your business expenses in the listed categories (like supplies, advertising, and home office costs), and the result is your net profit or loss, which carries over to Schedule 1 and Form 1040.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">How does Schedule C connect to self-employment tax?</div>
-        <div class="faq-a">Your net profit from Schedule C Line 31 flows to Schedule SE, where self-employment tax is calculated at 15.3% (12.4% Social Security + 2.9% Medicare) on 92.35% of your net earnings. You can deduct half of your self-employment tax as an above-the-line adjustment on your 1040 — so it partially offsets itself.</div>
+        <div class="faq-q">Do I owe self-employment tax on Schedule C income?</div>
+        <div class="faq-a">If your net profit from Schedule C is $400 or more, you generally owe self-employment tax, which covers Social Security and Medicare. This is calculated separately on Schedule SE and is in addition to regular income tax.</div>
       </div>
     </div>
+
+    <!-- CARD 10: Related tax forms -->
     <div class="card">
       <div class="section-label">Related tax forms</div>
       <div class="related">
-        <a href="/1040" class="related-chip">Form 1040 →</a>
-        <a href="/1099-nec" class="related-chip">Form 1099-NEC →</a>
-        <a href="/self-employment-tax" class="related-chip">Self-Employment Tax →</a>
-        <a href="/1040-es" class="related-chip">Form 1040-ES →</a>
-        <a href="/qbi-deduction" class="related-chip">QBI Deduction →</a>
-        <a href="/home-office-deduction" class="related-chip">Home Office →</a>
+        <a href="/1099-nec.html" class="related-chip">1099-NEC →</a>
+        <a href="/self-employment-tax.html" class="related-chip">Self-Employment Tax →</a>
+        <a href="/estimated-taxes.html" class="related-chip">Estimated Taxes →</a>
+        <a href="/1040.html" class="related-chip">Form 1040 →</a>
       </div>
     </div>
+
     <div class="tool-cta">
       <h3>Decode any tax form instantly</h3>
       <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
+
     <footer>
       <span>taxplain.co</span>
-      <span>Understand your taxes. No accountant required.</span>
+      <span>Not a substitute for professional tax advice.</span>
     </footer>
   </div>
 </body>
