@@ -1,738 +1,246 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Earned Income Credit Explained in Plain English – TaxPlain</title>
-<meta name="description" content="What is the Earned Income Credit (EIC)? Plain-English guide to who qualifies, income limits, refund amounts, common mistakes, and how to claim it correctly.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://taxplain.co/earned-income-credit">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is the Earned Income Tax Credit (EITC)? — 2026 Eligibility & Amounts – TaxPlain</title>
+  <meta name="description" content="The Earned Income Tax Credit (EITC) explained in plain English — 2026 income limits, credit amounts by number of kids, and how to check if you qualify.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.taxplain.co/earned-income-credit.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<style>
-*, *::before, *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
+  <!-- FAQ SCHEMA — 5 Q&As, must match visible FAQ card exactly -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is the Earned Income Tax Credit the same as the EIC?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. EITC and EIC refer to the exact same credit — the IRS uses \"Earned Income Tax Credit\" in its official guidance, while \"EIC\" is the older, shorter name still used on some forms and by many filers. There is no difference in eligibility or amount between the two names." } },
+      { "@type": "Question", "name": "What's the difference between the EITC and the Child Tax Credit?", "acceptedAnswer": { "@type": "Answer", "text": "The EITC is based on your earned income and can apply even if you have no children, while the Child Tax Credit is worth up to $2,200 per qualifying child for 2026 regardless of how much you earned, as long as you have taxable income. Many families qualify for both credits at once, since they use different eligibility rules and don't reduce each other." } },
+      { "@type": "Question", "name": "Can I get the EITC if I have no children?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Workers age 25 to 64 without qualifying children can claim up to $664 for 2026 if their income falls below roughly $19,540 (single or head of household) or $26,820 (married filing jointly). The credit is much smaller without children, but it is not zero." } },
+      { "@type": "Question", "name": "How much is the EITC for 2026?", "acceptedAnswer": { "@type": "Answer", "text": "For tax year 2026, the maximum EITC is $664 with no qualifying children, $4,427 with one child, $7,316 with two children, and $8,231 with three or more children, per IRS Revenue Procedure 2025-32." } },
+      { "@type": "Question", "name": "Does investment income affect my EITC eligibility?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. For 2026, if your investment income — interest, dividends, capital gains, or rental income — exceeds $12,200, you cannot claim the EITC at all, regardless of how little you earned from work. This is a hard cutoff, not a gradual phase-out." } }
+    ]
+  }
+  </script>
 
-:root {
---bg: #FFFFFF;
---ink: #0D1B2A;
---muted: #6B7A8D;
---accent: #1B4B8A;
---accent-light: #EAF0FA;
---accent-border: #B5CEFA;
---warn: #993C1D;
---warn-light: #FAECE7;
---warn-border: #F5C4B3;
---success-light: #EAF3DE;
---success-border: #C0DD97;
---success-text: #27500A;
---amber: #92400E;
---amber-light: #FEF3C7;
---amber-border: #F59E0B;
---border: #DDE3EC;
---white: #FFFFFF;
-}
-
-body {
-background: var(--bg);
-color: var(--ink);
-font-family: 'DM Sans', sans-serif;
-min-height: 100vh;
-}
-
-.wrap {
-max-width: 720px;
-margin: 0 auto;
-padding: 40px 24px 80px;
-}
-
-nav {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 40px;
-}
-
-.logo-mark {
-width: 32px;
-height: 32px;
-background: var(--accent);
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.logo-mark svg {
-width: 18px;
-height: 18px;
-fill: white;
-}
-
-.logo-text {
-font-family: 'DM Mono', monospace;
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-text-decoration: none;
-}
-
-.logo-text span {
-color: var(--accent);
-}
-
-.breadcrumb {
-font-size: 13px;
-color: var(--muted);
-margin-bottom: 20px;
-font-family: 'DM Mono', monospace;
-}
-
-.breadcrumb a {
-color: var(--accent);
-text-decoration: none;
-}
-
-h1 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(28px, 5vw, 42px);
-line-height: 1.15;
-letter-spacing: -0.5px;
-margin-bottom: 8px;
-}
-
-h2 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(20px, 3vw, 26px);
-line-height: 1.2;
-letter-spacing: -0.3px;
-margin-bottom: 12px;
-color: var(--ink);
-}
-
-h3 {
-font-family: 'DM Sans', sans-serif;
-font-size: 16px;
-font-weight: 500;
-margin-bottom: 8px;
-color: var(--ink);
-}
-
-.category-tag {
-display: inline-block;
-background: var(--accent-light);
-color: var(--accent);
-font-family: 'DM Mono', monospace;
-font-size: 11px;
-letter-spacing: 1px;
-text-transform: uppercase;
-padding: 4px 12px;
-border-radius: 20px;
-margin-bottom: 24px;
-}
-
-.disclaimer {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 14px 18px;
-margin-bottom: 36px;
-font-size: 13px;
-color: var(--amber);
-line-height: 1.5;
-}
-
-.card {
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 14px;
-padding: 28px;
-margin-bottom: 20px;
-}
-
-.section-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-font-weight: 500;
-letter-spacing: 1.8px;
-text-transform: uppercase;
-color: var(--muted);
-margin-bottom: 10px;
-}
-
-p {
-font-size: 16px;
-line-height: 1.75;
-color: var(--ink);
-}
-
-p + p {
-margin-top: 14px;
-}
-
-.two-col {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-}
-
-.range-box {
-padding: 16px;
-border-radius: 10px;
-}
-
-.range-box.warn {
-background: var(--warn-light);
-border: 1px solid var(--warn-border);
-}
-
-.range-box.blue {
-background: var(--accent-light);
-border: 1px solid var(--accent-border);
-}
-
-.range-box-label {
-font-family: 'DM Mono', monospace;
-font-size: 10px;
-letter-spacing: 1px;
-text-transform: uppercase;
-margin-bottom: 8px;
-}
-
-.range-box.warn .range-box-label {
-color: var(--warn);
-}
-
-.range-box.blue .range-box-label {
-color: var(--accent);
-}
-
-.range-box p {
-font-size: 14px;
-line-height: 1.65;
-}
-
-.symptom-list {
-list-style: none;
-padding: 0;
-}
-
-.symptom-list li {
-font-size: 14px;
-color: var(--ink);
-line-height: 1.6;
-padding: 4px 0;
-border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.symptom-list li:last-child {
-border-bottom: none;
-}
-
-.symptom-list li::before {
-content: "→ ";
-color: var(--muted);
-}
-
-.timing-box {
-background: var(--amber-light);
-border: 1px solid var(--amber-border);
-border-radius: 10px;
-padding: 18px 20px;
-margin-top: 16px;
-}
-
-.timing-box h3 {
-font-size: 14px;
-color: var(--amber);
-font-family: 'DM Mono', monospace;
-letter-spacing: 0.5px;
-margin-bottom: 8px;
-}
-
-.timing-box p {
-font-size: 14px;
-color: #78350F;
-line-height: 1.65;
-}
-
-.next-steps {
-background: var(--success-light);
-border: 1px solid var(--success-border);
-border-radius: 10px;
-padding: 20px;
-font-size: 15px;
-line-height: 1.7;
-color: var(--success-text);
-}
-
-.questions-list {
-list-style: none;
-padding: 0;
-margin-top: 8px;
-}
-
-.questions-list li {
-font-size: 15px;
-color: var(--ink);
-line-height: 1.65;
-padding: 10px 0;
-border-bottom: 1px solid var(--border);
-display: flex;
-gap: 10px;
-}
-
-.questions-list li:last-child {
-border-bottom: none;
-}
-
-.q-num {
-font-family: 'DM Mono', monospace;
-font-size: 12px;
-color: var(--accent);
-font-weight: 500;
-flex-shrink: 0;
-margin-top: 2px;
-}
-
-.faq-item {
-padding: 18px 0;
-border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-border-bottom: none;
-}
-
-.faq-q {
-font-size: 16px;
-font-weight: 500;
-color: var(--ink);
-margin-bottom: 8px;
-}
-
-.faq-a {
-font-size: 15px;
-color: var(--muted);
-line-height: 1.7;
-}
-
-.tool-cta {
-background: var(--accent);
-color: white;
-border-radius: 12px;
-padding: 28px;
-margin-top: 32px;
-text-align: center;
-}
-
-.tool-cta h3 {
-font-family: 'DM Serif Display', serif;
-font-size: 24px;
-margin-bottom: 8px;
-color: white;
-}
-
-.tool-cta p {
-font-size: 14px;
-opacity: 0.85;
-margin-bottom: 18px;
-color: white;
-}
-
-.tool-cta a {
-display: inline-block;
-background: white;
-color: var(--accent);
-font-weight: 500;
-text-decoration: none;
-padding: 12px 28px;
-border-radius: 8px;
-font-family: 'DM Mono', monospace;
-font-size: 14px;
-}
-
-.related {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-gap: 12px;
-margin-top: 4px;
-}
-
-.related-chip {
-display: block;
-padding: 12px 16px;
-background: var(--white);
-border: 1.5px solid var(--border);
-border-radius: 10px;
-text-decoration: none;
-font-size: 14px;
-color: var(--ink);
-font-family: 'DM Mono', monospace;
-transition: border-color 0.15s;
-}
-
-.related-chip:hover {
-border-color: var(--accent);
-color: var(--accent);
-}
-
-footer {
-margin-top: 60px;
-padding-top: 20px;
-border-top: 1px solid var(--border);
-font-size: 12px;
-color: var(--muted);
-font-family: 'DM Mono', monospace;
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 8px;
-}
-
-@media (max-width: 480px) {
-.two-col {
-grid-template-columns: 1fr;
-}
-}
-</style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
 </head>
-
 <body>
-
-<div class="wrap">
-
-<nav>
-<div class="logo-mark">
-<svg viewBox="0 0 24 24">
-<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/>
-</svg>
-</div>
-
-<a href="/" class="logo-text">tax<span>plain</span></a>
-</nav>
-
-<p class="breadcrumb">
-<a href="/">Home</a> &rsaquo;
-<a href="/guides">Tax Guides</a> &rsaquo;
-Earned Income Credit
-</p>
-
-<h1>
-What is the<br>
-<em style="font-style:italic;color:var(--accent)">Earned Income Credit</em>?
-</h1>
-
-<span class="category-tag">Tax Credit</span>
-
-<div class="disclaimer">
-⚠ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.
-</div>
-
-<div class="card">
-<div class="section-label">What this credit is</div>
-
-<p>
-The Earned Income Credit (EIC or EITC) is a refundable federal tax credit designed for low- to moderate-income workers. It reduces the amount of tax you owe — and in many cases gives you a refund even if you owe no taxes at all.
-</p>
-
-<p>
-Think of it as a wage boost built into the tax system. The government created the credit to help working individuals and families keep more of what they earn.
-</p>
-
-<p>
-Unlike a deduction, which only lowers taxable income, the Earned Income Credit directly increases your refund dollar-for-dollar.
-</p>
-</div>
-
-<div class="card">
-<div class="section-label">Who qualifies</div>
-
-<div class="two-col">
-
-<div class="range-box blue">
-<div class="range-box-label">✓ Usually Qualifies</div>
-
-<p>
-Workers with earned income from jobs, self-employment, gig work, or small businesses who fall under IRS income limits. Families with children typically qualify for much larger credits.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">↑ Common Disqualifiers</div>
-
-<p>
-Investment income above IRS limits, filing as Married Filing Separately, invalid Social Security numbers, or claiming children who don't meet relationship or residency rules.
-</p>
-</div>
-
-</div>
-
-<div class="timing-box" style="margin-top:16px;">
-<h3>💵 Maximum credit amounts</h3>
-
-<p>
-The exact credit changes every year and depends on income, filing status, and number of qualifying children. Families with three or more children can receive several thousand dollars in refundable credits.
-</p>
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">How the credit works</div>
-
-<h2>Breaking down the EIC</h2>
-
-<p>
-The Earned Income Credit works differently from most tax benefits because the credit increases as your earned income rises — up to a point. After reaching a peak, the credit slowly phases out as income continues increasing.
-</p>
-
-<ul class="symptom-list" style="margin-top: 12px;">
-
-<li><strong>Earned income required</strong> — Wages, salaries, tips, self-employment income, or gig income generally count. Passive income does not.</li>
-
-<li><strong>Refundable credit</strong> — If the credit exceeds your tax bill, you may still receive the remaining amount as a refund.</li>
-
-<li><strong>Children increase the credit</strong> — Taxpayers with qualifying children usually receive much larger credits than workers without children.</li>
-
-<li><strong>Investment income limit</strong> — Too much interest, dividends, or investment income can make you ineligible.</li>
-
-<li><strong>Age rules</strong> — Workers without qualifying children generally must be within certain age limits to claim the credit.</li>
-
-<li><strong>Residency rules</strong> — Qualifying children usually must live with you in the United States for more than half the year.</li>
-
-<li><strong>Social Security numbers required</strong> — You, your spouse (if filing jointly), and any qualifying children generally need valid SSNs.</li>
-
-<li><strong>Credit phases out</strong> — Once income passes certain thresholds, the credit gradually decreases until it disappears entirely.</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Common situations where people qualify</div>
-
-<p>
-Many taxpayers miss the Earned Income Credit because they assume their income is too high or they don't realize gig work counts as earned income.
-</p>
-
-<ul class="symptom-list" style="margin-top: 12px;">
-
-<li><strong>Single parent working full-time</strong> — Often one of the largest EIC categories.</li>
-
-<li><strong>Part-time workers</strong> — Even modest earned income can qualify.</li>
-
-<li><strong>Gig workers</strong> — Uber, DoorDash, freelance, Etsy, and side-hustle income may count.</li>
-
-<li><strong>Married couples with children</strong> — Joint filers frequently qualify depending on total household income.</li>
-
-<li><strong>Workers without children</strong> — Smaller credits are still possible if income is low enough.</li>
-
-<li><strong>Recently unemployed workers</strong> — Partial-year work may still qualify.</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Common mistakes to avoid</div>
-
-<div class="two-col">
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Wrong Child Claimed</div>
-
-<p>
-The IRS closely audits EIC claims involving children. Multiple people claiming the same child is one of the biggest triggers for delays and audits.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Forgetting Gig Income</div>
-
-<p>
-Freelance or cash income still counts as earned income and usually must be reported. Underreporting income can create penalties and future IRS issues.
-</p>
-</div>
-
-</div>
-
-<div class="two-col" style="margin-top: 16px;">
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Filing Separately</div>
-
-<p>
-Married Filing Separately generally disqualifies taxpayers from claiming the Earned Income Credit entirely.
-</p>
-</div>
-
-<div class="range-box warn">
-<div class="range-box-label">⚠ Incorrect SSNs</div>
-
-<p>
-A missing, incorrect, or invalid Social Security number can cause the IRS to deny the credit automatically.
-</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">What to do right now</div>
-
-<div class="next-steps">
-
-If your income was moderate or low this year, check EIC eligibility even if you normally don't file taxes. Many workers miss refunds worth hundreds or thousands of dollars simply because they assume they don't qualify. Tax software can usually calculate the credit automatically, but you must enter income, dependents, and Social Security numbers correctly.
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Questions to ask your tax professional</div>
-
-<ul class="questions-list">
-
-<li><span class="q-num">01</span>Do all of my income sources count as earned income for EIC purposes?</li>
-
-<li><span class="q-num">02</span>Am I eligible for the credit even without children?</li>
-
-<li><span class="q-num">03</span>Which parent should claim the children if we're divorced or separated?</li>
-
-<li><span class="q-num">04</span>Would filing jointly or separately change my eligibility?</li>
-
-<li><span class="q-num">05</span>Could investment income disqualify me from the credit?</li>
-
-<li><span class="q-num">06</span>If the IRS denied my EIC in a prior year, what documentation do I need now?</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Frequently asked questions</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-Is the Earned Income Credit the same as a refund?
-</div>
-
-<div class="faq-a">
-No. The Earned Income Credit is a tax credit that can increase your refund. Your actual refund depends on withholding, other credits, and how much tax you owe overall.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-Can I claim the EIC if I am self-employed?
-</div>
-
-<div class="faq-a">
-Yes. Self-employment income generally counts as earned income for EIC purposes. Many freelancers, gig workers, and small-business owners qualify.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-What happens if the IRS audits my EIC claim?
-</div>
-
-<div class="faq-a">
-The IRS may ask for documents proving your income, residency, relationship to children claimed, school records, medical records, or other supporting paperwork. Incorrect claims can delay refunds for months.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-Can I get the credit if I owe no taxes?
-</div>
-
-<div class="faq-a">
-Yes. The Earned Income Credit is refundable, meaning you can still receive money back even if your tax bill is zero.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">
-Why is my refund delayed when claiming EIC?
-</div>
-
-<div class="faq-a">
-Federal law requires the IRS to hold many refunds involving the Earned Income Credit until additional fraud checks are completed. Refunds are commonly delayed until late February or March.
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="section-label">Related tax forms</div>
-
-<div class="related">
-
-<a href="/1040" class="related-chip">Form 1040 →</a>
-
-<a href="/w2" class="related-chip">Form W-2 →</a>
-
-<a href="/1099-nec" class="related-chip">Form 1099-NEC →</a>
-
-<a href="/schedule-c" class="related-chip">Schedule C →</a>
-
-<a href="/w4" class="related-chip">Form W-4 →</a>
-
-<a href="/child-tax-credit" class="related-chip">Child Tax Credit →</a>
-
-</div>
-
-</div>
-
-<div class="tool-cta">
-
-<h3>Decode any tax form instantly</h3>
-
-<p>
-Use our free AI-powered tool to look up any IRS notice or tax term in plain English.
-</p>
-
-<a href="/">
-Open the Decoder →
-</a>
-
-</div>
-
-<footer>
-
-<span>taxplain.co</span>
-
-<span>Understand your taxes. No accountant required.</span>
-
-</footer>
-
-</div>
-
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM9 13h6v1H9v-1zm0 3h6v1H9v-1zm0-6h2v1H9v-1z"/></svg></div>
+      <a href="/" class="logo-text">tax<span>plain</span></a>
+    </nav>
+    <p class="tagline">Understand your taxes. No accountant required.</p>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Tax Guides</a> &rsaquo; Earned Income Tax Credit</p>
+    <h1>What is<br><em style="font-style:italic;color:var(--accent)">the Earned Income Tax Credit (EITC)</em>?</h1>
+    <span class="category-tag">Credits</span>
+    <p class="byline">Written by the TaxPlain Editorial Team · Reviewed for accuracy · Last updated August 2026</p>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> TaxPlain does not provide tax, legal, or financial advice. Always consult a qualified tax professional about your specific situation.</div>
+
+    <!-- CARD 1: What this is -->
+    <div class="card">
+      <div class="section-label">What this is</div>
+      <p>The Earned Income Tax Credit (EITC), also called the EIC, is a refundable federal tax credit for people who work but earn a low-to-moderate income. "Refundable" is the key word — unlike most credits, the EITC can reduce your tax bill below zero, meaning the IRS pays you the difference as part of your refund even if you owe no tax at all.</p>
+      <p>The credit was designed to reward work and offset the cost of payroll taxes for lower-income earners. It's calculated using your earned income, your adjusted gross income (AGI), your filing status, and how many qualifying children you have — and for 2026, it's worth anywhere from $664 to $8,231 depending on your situation.</p>
+      <p>You don't need children to qualify, though the credit is much larger if you have them. The IRS estimates roughly one in five eligible workers never claims the EITC, often because they assume they earn too little to bother filing or don't realize the credit applies to them.</p>
+      <p>The credit isn't a flat number tied to your income bracket — it works in three stages. As your earned income rises from zero, the credit grows with it (the "phase-in" range). Once you hit the maximum for your family size, the credit holds steady for a stretch (the "plateau"). Then, as income climbs further, the credit gradually shrinks back down to zero (the "phase-out"). Understanding which stage you're in matters, because a small raise or an extra freelance gig can move you from the plateau into the phase-out without you realizing it.</p>
+    </div>
+
+    <!-- CARD 2: Who it affects -->
+    <div class="card">
+      <div class="section-label">Who it affects</div>
+      <div class="two-col">
+        <div class="range-box blue">
+          <div class="range-box-label">✓ Applies to</div>
+          <p>Workers with earned income from a job or self-employment who fall under the income limits for their filing status and number of children.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">↑ Also applies to</div>
+          <p>Workers age 25–64 with no qualifying children, as long as income and investment-income limits are met.</p>
+        </div>
+      </div>
+      <div class="timing-box">
+        <h3>📅 PATH ACT REFUND HOLD</h3>
+        <p>By law, the IRS cannot issue refunds that include the EITC before mid-February. If you file early and claim this credit, expect your refund to land later than a return without it — most EITC filers see funds by early March.</p>
+      </div>
+    </div>
+
+    <!-- CARD 3: Do I qualify -->
+    <div class="card">
+      <div class="section-label">2026 income limits</div>
+      <h2>Do I qualify for the EITC?</h2>
+      <p style="margin-top: 12px;">Your earned income and your <a href="/agi.html" class="inline-link">AGI</a> both have to fall below the ceiling for your filing status and number of qualifying children. These are the 2026 figures from IRS Revenue Procedure 2025-32 — the income level where the credit disappears completely:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>No children</strong> — max credit $664. Phases out completely around $19,540 (single/head of household) or $26,820 (married filing jointly).</li>
+        <li><strong>One child</strong> — max credit $4,427. Phases out well above the no-children threshold; check the IRS EITC table for your exact cutoff.</li>
+        <li><strong>Two children</strong> — max credit $7,316. Higher phase-out ceiling than one-child filers.</li>
+        <li><strong>Three or more children</strong> — max credit $8,231, the highest tier. Phases out completely around $62,974 (single/head of household) or $70,244 (married filing jointly).</li>
+        <li><strong>Investment income cap</strong> — if your interest, dividends, capital gains, or rental income totals more than $12,200 for 2026, you cannot claim the EITC at all, no matter how low your earned income is.</li>
+        <li><strong>Filing status</strong> — Married Filing Separately generally disqualifies you, with narrow exceptions for separated spouses who meet specific IRS living-apart rules.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 4: Related forms -->
+    <div class="card">
+      <div class="section-label">Related forms often involved</div>
+      <p>The EITC rarely stands alone on a return — these forms and schedules typically come up alongside it:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Schedule EIC</strong> — attached to your <a href="/1040.html" class="inline-link">Form 1040</a> to list your qualifying children's names, ages, and relationship to you</li>
+        <li><strong>Schedule C</strong> — required if your earned income comes from self-employment; see our <a href="/schedule-c.html" class="inline-link">Schedule C guide</a> for how net profit counts toward earned income</li>
+        <li><strong>Child Tax Credit</strong> — a separate credit families with kids often claim in the same year; see how it compares in our <a href="/child-tax-credit.html" class="inline-link">Child Tax Credit guide</a></li>
+      </ul>
+    </div>
+
+    <!-- CARD 5: Common mistakes -->
+    <div class="card">
+      <div class="section-label">Common mistakes to avoid</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Claiming a child who doesn't qualify</div>
+          <p>The child must live with you more than half the year and meet age, relationship, and residency tests. Divorced or separated parents often get this wrong — the IRS tiebreaker favors whichever parent the child spent more nights with.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Overlooking self-employment income</div>
+          <p>Net profit from freelance or gig work counts as earned income for the EITC, but it also means paying <a href="/schedule-c.html" class="inline-link">self-employment tax</a>. Skipping this step can understate both your tax due and your credit.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 6: What to do right now -->
+    <div class="card">
+      <div class="section-label">What to do right now</div>
+      <div class="next-steps">
+        Compare your earned income and AGI against the 2026 thresholds above for your filing status and number of children. If you're close to a phase-out line, a tax professional can help you see whether a deduction or filing-status change moves you into a better position before you file.
+      </div>
+    </div>
+
+    <!-- CARD 7: Questions to ask your tax professional -->
+    <div class="card">
+      <div class="section-label">Questions to ask your tax professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Based on my earned income and AGI, do I qualify for the EITC this year?</li>
+        <li><span class="q-num">02</span>Does my self-employment income count in a way that changes my credit amount?</li>
+        <li><span class="q-num">03</span>Can I claim both the EITC and the Child Tax Credit?</li>
+        <li><span class="q-num">04</span>Will my investment income disqualify me entirely?</li>
+        <li><span class="q-num">05</span>If I'm separated but still married, do I meet the exception to file without my spouse?</li>
+      </ul>
+    </div>
+
+    <!-- CARD 8: FAQ -->
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Is the Earned Income Tax Credit the same as the EIC?</div>
+        <div class="faq-a">Yes. EITC and EIC refer to the exact same credit — the IRS uses "Earned Income Tax Credit" in its official guidance, while "EIC" is the older, shorter name still used on some forms and by many filers. There is no difference in eligibility or amount between the two names.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between the EITC and the Child Tax Credit?</div>
+        <div class="faq-a">The EITC is based on your earned income and can apply even if you have no children, while the Child Tax Credit is worth up to $2,200 per qualifying child for 2026 regardless of how much you earned, as long as you have taxable income. Many families qualify for both credits at once, since they use different eligibility rules and don't reduce each other.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I get the EITC if I have no children?</div>
+        <div class="faq-a">Yes. Workers age 25 to 64 without qualifying children can claim up to $664 for 2026 if their income falls below roughly $19,540 (single or head of household) or $26,820 (married filing jointly). The credit is much smaller without children, but it is not zero.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How much is the EITC for 2026?</div>
+        <div class="faq-a">For tax year 2026, the maximum EITC is $664 with no qualifying children, $4,427 with one child, $7,316 with two children, and $8,231 with three or more children, per IRS Revenue Procedure 2025-32.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does investment income affect my EITC eligibility?</div>
+        <div class="faq-a">Yes. For 2026, if your investment income — interest, dividends, capital gains, or rental income — exceeds $12,200, you cannot claim the EITC at all, regardless of how little you earned from work. This is a hard cutoff, not a gradual phase-out.</div>
+      </div>
+    </div>
+
+    <!-- CARD 9: Related tax forms -->
+    <div class="card">
+      <div class="section-label">Related tax forms</div>
+      <div class="related">
+        <a href="/1040.html" class="related-chip">Form 1040 →</a>
+        <a href="/child-tax-credit.html" class="related-chip">Child Tax Credit →</a>
+        <a href="/schedule-c.html" class="related-chip">Schedule C →</a>
+        <a href="/agi.html" class="related-chip">AGI →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any tax form instantly</h3>
+      <p>Use our free AI-powered tool to look up any IRS notice or tax term in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>taxplain.co</span>
+      <span>Not a substitute for professional tax advice.</span>
+    </footer>
+  </div>
 </body>
-</html>
 </html>
